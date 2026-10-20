@@ -1,0 +1,28 @@
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[project]
+name = "embedding-benchmark"
+version = "0.1.0"
+description = "Reproducible exact-retrieval embedding benchmarks"
+requires-python = ">=3.11,<3.15"
+dependencies = [
+  "numpy>=2.0,<3",
+  "PyYAML>=6,<7",
+  "huggingface-hub>=0.34,<3",
+  "sentence-transformers>=5,<7",
+  "mteb==2.26.11",
+]
+
+[dependency-groups]
+dev = ["pytest>=8,<10"]
+
+[project.scripts]
+embedding-benchmark = "embedding_benchmark.run:main"
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/embedding_benchmark"]
