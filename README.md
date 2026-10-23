@@ -2,7 +2,7 @@
 
 한국어 법률 RAG 검색에 사용할 임베딩 모델을 비교하고, 모델 선택의 근거를 기록하는 프로젝트입니다. 같은 판례·질의·정답 데이터로 모델별 검색 결과를 평가합니다.
 
-첫 번째 실험인 **문서 단위 Recall@K 평가를 완료했습니다.** 비교한 세 모델 중 **KURE-v1이 모든 K에서 가장 높아**, 이번 한국어 판례 검색의 기본 모델로 선택했습니다.
+첫 번째 실험인 **문서 단위 Recall@K·이진 nDCG@K 평가와 분석을 완료했습니다.** 비교한 세 모델 중 **KURE-v1이 두 지표 모두 모든 K에서 가장 높아**, 이번 한국어 판례 검색의 기본 모델로 선택했습니다.
 
 ## 최신 평가 결과
 
@@ -14,11 +14,25 @@
 | BGE-M3 | 17.50% | 39.32% | 52.38% | 66.04% | 80.95% | 88.70% |
 | Multilingual E5 Large | 16.82% | 37.13% | 48.53% | 60.49% | 74.41% | 82.83% |
 
+같은 검색 순위로 계산한 **이진 nDCG**는 관련 판례가 얼마나 앞에 배치되었는지를 평가합니다. 값은 백분율이 아닌 0~1 점수입니다.
+
+| 모델 | nDCG@1 | nDCG@5 | nDCG@10 | nDCG@20 | nDCG@50 | nDCG@100 |
+| --- | ---: | ---: | ---: | ---: | ---: | ---: |
+| KURE-v1 | **0.81594** | **0.61369** | **0.61221** | **0.67081** | **0.72516** | **0.74510** |
+| BGE-M3 | 0.77859 | 0.58248 | 0.57940 | 0.62496 | 0.68324 | 0.70776 |
+| Multilingual E5 Large | 0.74175 | 0.54993 | 0.54037 | 0.57941 | 0.63369 | 0.66070 |
+
+![모델별 Recall과 이진 nDCG 비교](assets/images/legal-embedding-recall/metrics-overview.png)
+
+Recall은 관련 문서 회수율, 이진 nDCG는 관련 문서의 상위 배치를 평가합니다. 이번 nDCG는 relevance > 0을 모두 1로 처리하므로 관련성 등급 간 차이를 반영하지 않습니다. 같은 K에서 모델을 비교하며, nDCG는 K가 커져도 반드시 증가하지 않습니다.
+
 KURE-v1은 BGE-M3보다 Recall@20이 **5.96%p** 높았고, 입력이 잘린 문서도 없었습니다. E5는 문서 **13.67%**가 512토큰 제한으로 잘렸습니다. 이번 선택은 모델별 공식 입력 규칙과 길이 제한을 적용한 문서 단위 검색 결과에 근거합니다.
 
 Recall은 질의마다 관련 판례 중 검색한 비율을 계산한 뒤 평균한 값입니다. **Recall@100 92.17%가 답변 정확도 92.17% 또는 모든 정답을 찾은 질의 비율을 뜻하지는 않습니다.** 생성 답변 품질과 운영 검색 지연시간은 이번 실험의 평가 대상에 포함하지 않았습니다.
 
 테스트 목적, 결과 해석, 입력 잘림과 실행 시간, 선택 근거의 적용 범위는 [결과 보고서](docs/benchmarks/results/2026-10-20-embedding-recall.md)에 정리했습니다.
+
+세 모델은 로컬 Mac mini M2·16GB 메모리 환경의 자원 제약을 고려해 선정했습니다. 약 5.6억 파라미터 규모의 로컬 실행 가능한 후보를 비교한 것으로, 최신 한국어 검색 상위 세 모델을 비교한 결과는 아닙니다.
 
 ## 평가 방식
 
@@ -26,7 +40,7 @@ Recall은 질의마다 관련 판례 중 검색한 비율을 계산한 뒤 평�
 Corpus · Queries · Qrels 검증
   → 모델별 문서·질의 임베딩
   → 전체 Corpus의 cosine 정확 검색
-  → Recall@K 계산 및 MTEB 교차 검증
+  → Recall@K·이진 nDCG@K 계산 및 검증
   → 모델별·질의별 결과 저장
 ```
 
@@ -37,8 +51,8 @@ Corpus · Queries · Qrels 검증
 | 입력 | 제목과 text를 결합해 판례 1개당 벡터 1개 생성 |
 | 검색 | 전체 Corpus 대상 Exact Top 100, 정규화 벡터의 cosine |
 | 정답 | Qrels에서 relevance > 0인 문서 |
-| 지표 | Recall@1/5/10/20/50/100의 질의별 산술평균 |
-| 검증 | 자체 Recall과 MTEB 2.26.11 지표 비교 |
+| 지표 | K=1/5/10/20/50/100의 Recall·이진 nDCG, 질의별 산술평균 |
+| 검증 | Recall 실행 시 MTEB 비교, 두 지표의 저장값 대조와 순위 기반 재계산 |
 
 모델·데이터 리비전과 실행 조건은 [configs/legal_recall.yaml](configs/legal_recall.yaml)에 고정합니다. 중복 질의는 관련 문서 합집합·최대 등급을 보존하는 `merge_max` 정책으로 병합합니다. 청킹, ANN/HNSW, Hybrid Search, Reranker는 이번 평가에 포함하지 않았습니다.
 
@@ -77,7 +91,7 @@ uv sync --locked --cache-dir cache/uv
 results/<run_id>/
   manifest.json          # 설정·버전·실행 상태·잘림 통계
   recall_summary.csv     # 모델별 Recall 비교
-  raw/                   # 모델별 MTEB 원본 결과
+  raw/                   # 모델별 MTEB 원본 결과(Recall·nDCG 등)
   per_query/             # 질의별 검색 문서·점수·Recall
 
 results/probes/          # 소량 실제 추론 확인 보고서
@@ -117,7 +131,7 @@ uv.lock                    # 의존성 잠금 파일
 
 | 문서 | 내용 |
 | --- | --- |
-| [결과와 모델 선택](docs/benchmarks/results/2026-10-20-embedding-recall.md) | 실측 점수, 해석, KURE-v1 선택 근거 |
+| [결과와 모델 선택](docs/benchmarks/results/2026-10-20-embedding-recall.md) | Recall·이진 nDCG, 해석, KURE-v1 선택 근거 |
 | [평가 설계](docs/benchmarks/embedding-recall.md) | Recall 정의, 비교 조건, 완료 기준 |
 | [설치·실행 방법](docs/engineering/running.md) | 명령, 옵션, 캐시와 실패 처리 |
 | [개발 아키텍처](docs/engineering/architecture.md) | 네 모듈의 책임과 데이터 흐름 |
