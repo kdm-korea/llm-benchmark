@@ -1,7 +1,7 @@
 from types import SimpleNamespace
 import numpy as np
 import pytest
-from embedding_benchmark.embeddings import cached_encode
+from llm_benchmark.embedding.embeddings import cached_encode
 
 
 class FakeEncoder:

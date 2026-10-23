@@ -18,9 +18,10 @@ from zoneinfo import ZoneInfo
 
 import yaml
 
-from embedding_benchmark.dataset import download_dataset, prepare_dataset, write_json
-from embedding_benchmark.embeddings import EmbeddingModel, cached_encode, resolve_model
-from embedding_benchmark.evaluation import evaluate_recall, evaluate_with_mteb, exact_search
+from llm_benchmark.common.io import write_json
+from llm_benchmark.embedding.dataset import download_dataset, prepare_dataset
+from llm_benchmark.embedding.embeddings import EmbeddingModel, cached_encode, resolve_model
+from llm_benchmark.embedding.evaluation import evaluate_recall, evaluate_with_mteb, exact_search
 
 
 def select_models(config, names=None):

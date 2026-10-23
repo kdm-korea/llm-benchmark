@@ -1,17 +1,17 @@
 """Offline checks of the actual experiment flow and native MTEB integration."""
 
 import json
+from pathlib import Path
 
 import numpy as np
 import pytest
 
-import embedding_benchmark.run as benchmark
-from test_dataset import make_source
+import llm_benchmark.embedding.run as benchmark
 
 
 @pytest.fixture
-def experiment_config(tmp_path):
-    config = benchmark.load_config('configs/legal_recall.yaml')
+def experiment_config(tmp_path, make_source):
+    config = benchmark.load_config(Path(__file__).resolve().parents[2] / 'configs/legal_recall.yaml')
     raw = tmp_path / 'raw'
     raw.mkdir()
     make_source(raw, [

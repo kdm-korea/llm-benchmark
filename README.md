@@ -1,6 +1,6 @@
-# embedding-benchmark
+# llm-benchmark
 
-한국어 법률 RAG 검색에 사용할 임베딩 모델을 비교하고, 모델 선택의 근거를 기록하는 프로젝트입니다. 같은 판례·질의·정답 데이터로 모델별 검색 결과를 평가합니다.
+한국어 법률 RAG 개발에 필요한 평가 데이터와 실험 근거를 축적하는 프로젝트입니다. 판례 임베딩 검색 실험을 관리하며 공통 기능과 실험별 코드를 분리합니다.
 
 첫 번째 실험인 **문서 단위 Recall@K·이진 nDCG@K 평가와 분석을 완료했습니다.** 비교한 세 모델 중 **KURE-v1이 두 지표 모두 모든 K에서 가장 높아**, 이번 한국어 판례 검색의 기본 모델로 선택했습니다.
 
@@ -61,7 +61,7 @@ Corpus · Queries · Qrels 검증
 Python **3.11 이상 3.15 미만**과 uv가 필요합니다. 기존 실행 환경은 Python 3.12로 검증했습니다. 아래 명령은 프로젝트 루트에서 실행합니다.
 
 ```bash
-uv sync --locked --cache-dir cache/uv
+uv sync --locked --extra embedding --cache-dir cache/uv
 
 # 데이터 다운로드와 정합성 검증
 .venv/bin/embedding-benchmark download
@@ -106,18 +106,25 @@ cache/embeddings/        # 문서·질의 벡터 캐시
 
 ```text
 configs/                   # 실험 설정
-src/embedding_benchmark/
-  dataset.py               # 법률 데이터 로드·검증·정규화
-  embeddings.py            # 모델 실행·입력 구성·벡터 캐시
-  evaluation.py            # 정확 검색·Recall·MTEB
-  run.py                   # CLI·실험 흐름·결과 저장
-tests/                     # 데이터·캐시·평가·실행 검증
+src/llm_benchmark/
+  common/                  # 실험을 모르는 표준 라이브러리 공통 코드
+    hashing.py             # 파일 해시·기존 JSON 해시 형식
+    io.py                  # 원자적 JSON·JSONL 저장과 읽기
+  embedding/               # 문서 단위 임베딩 검색 실험
+    dataset.py             # EVE 데이터 로드·검증·정규화
+    embeddings.py          # 모델 실행·입력 구성·벡터 캐시
+    evaluation.py          # 정확 검색·Recall·MTEB
+    run.py                 # 임베딩 CLI·실험 흐름·결과 저장
+tests/
+  common/                  # 공통 저장·해시 호환성 검증
+  architecture/            # 실험 간 import 경계·독립 로드 검증
+  embedding/               # 기존 임베딩 실험 테스트
 docs/                      # 개발·도메인·평가·작업 기록
 pyproject.toml             # 패키지·의존성·CLI 설정
 uv.lock                    # 의존성 잠금 파일
 ```
 
-실험 흐름은 [run.py](src/embedding_benchmark/run.py)의 `run_benchmark()`부터 읽으면 됩니다. GitHub 저장소 이름은 `llm-benchmark`, Python 패키지 이름은 `embedding_benchmark`입니다.
+임베딩 실험 흐름은 [run.py](src/llm_benchmark/embedding/run.py)의 `run_benchmark()`부터 읽으면 됩니다. 프로젝트 이름은 `llm-benchmark`, Python 상위 패키지는 `llm_benchmark`입니다. 기존 `embedding-benchmark` 명령은 임베딩 실험용으로 유지합니다.
 
 ## 검증
 
@@ -125,7 +132,7 @@ uv.lock                    # 의존성 잠금 파일
 .venv/bin/python -m pytest -q
 ```
 
-기존 검증에서 테스트 **17개가 통과**했습니다. 테스트는 모델 다운로드 없이 데이터 정합성, 캐시 무결성, 정확 검색, Recall 계산, MTEB 연동과 실행 결과 저장을 확인합니다. 모델 성능 비교는 위 전체 평가 결과로 별도 관리합니다.
+구조 변경 검증에서 테스트 **25개가 통과**했습니다. 임베딩 테스트는 `tests/embedding/`, 공통 저장·해시 검증은 `tests/common/`, 의존 경계 검증은 `tests/architecture/`에 둡니다. 별도 환경 설치·검증 명령은 [실행 방법](docs/engineering/running.md)을 참조합니다.
 
 ## 문서
 

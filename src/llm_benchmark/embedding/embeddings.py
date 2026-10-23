@@ -8,7 +8,8 @@ from pathlib import Path
 from huggingface_hub import HfApi
 import numpy as np
 
-from embedding_benchmark.dataset import file_sha256, fingerprint, write_json
+from llm_benchmark.common.hashing import file_sha256, fingerprint
+from llm_benchmark.common.io import write_json
 
 
 def resolve_model(config):

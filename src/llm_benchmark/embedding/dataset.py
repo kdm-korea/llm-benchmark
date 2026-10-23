@@ -1,25 +1,16 @@
 """Load, validate and prepare the EVE legal retrieval dataset.
 
-This module owns legal dataset rules, IDs, source integrity and JSON storage.
+This module owns EVE dataset rules and IDs; file utilities live in common.
 """
 
 from dataclasses import dataclass
-import hashlib
 import json
 import math
 from pathlib import Path
 import shutil
 
-
-def fingerprint(value: object) -> str:
-    """Hash JSON content deterministically, preserving existing IDs and cache keys."""
-    payload = json.dumps(value, ensure_ascii=False, sort_keys=True, allow_nan=False)
-    return hashlib.sha256(payload.encode()).hexdigest()
-
-
-def file_sha256(path) -> str:
-    with Path(path).open("rb") as stream:
-        return hashlib.file_digest(stream, "sha256").hexdigest()
+from llm_benchmark.common.hashing import file_sha256, fingerprint
+from llm_benchmark.common.io import read_jsonl, write_json
 
 
 def _validate_qrels(corpus, query_id, grades):
@@ -75,27 +66,6 @@ class RetrievalData:
             qrels={qid: self.qrels[qid] for qid in ids},
             metadata=self.metadata,
         )
-
-
-def write_json(path, value):
-    """Replace a JSON file only after its complete contents have been written."""
-    path = Path(path)
-    path.parent.mkdir(parents=True, exist_ok=True)
-    temporary = path.with_suffix(path.suffix + ".tmp")
-    content = json.dumps(value, ensure_ascii=False, indent=2, allow_nan=False)
-    temporary.write_text(content + "\n", encoding="utf-8")
-    temporary.replace(path)
-
-
-def read_jsonl(path):
-    with Path(path).open(encoding="utf-8") as stream:
-        for number, line in enumerate(stream, 1):
-            if not line.strip():
-                continue
-            try:
-                yield json.loads(line)
-            except ValueError as exc:
-                raise ValueError(f"Invalid JSON: {path}:{number}") from exc
 
 
 def identifier(value):
