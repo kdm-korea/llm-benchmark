@@ -2,7 +2,7 @@
 
 ## 목적과 범위
 
-[제공 계획서](../references/legal_embedding_recall_benchmark.md)를 기준으로 EVE-Bench-Legal-2.0에서 한국어 법률 판례 검색용 임베딩 모델을 비교합니다. 1차는 판례 문서 단위 Recall@K만 평가합니다. 아직 실험 결과는 없습니다.
+[제공 계획서](../references/legal_embedding_recall_benchmark.md)를 기준으로 EVE-Bench-Legal-2.0에서 한국어 법률 판례 검색용 임베딩 모델을 비교합니다. 1차는 판례 문서 단위 Recall@K만 평가합니다. 2026-10-20 전체 평가를 완료했습니다. [결과와 모델 선택 근거](results/2026-10-20-embedding-recall.md)를 참조하세요.
 
 | 항목 | 설계 |
 | --- | --- |
@@ -60,10 +60,10 @@ MTEB 2.26.11에서 양수 relevance를 이진 정답으로 변환하고 정답 �
 ## 1차 완료 기준
 
 - [x] 원본 스키마와 분할을 확인하고 Corpus·Queries·Qrels 정합성을 검증했다.
-- [ ] 세 모델의 공식 규칙을 확인하고 문서·질의 벡터를 생성했다.
-- [ ] 각 모델로 전체 Corpus에서 Exact Top 100 검색을 수행했다.
-- [ ] Recall@1/5/10/20/50/100 및 평가·제외 질의 수를 계산했다.
-- [ ] 원본 JSON, 통합 CSV, 질의 상세 결과와 실행 정보를 저장했다.
-- [ ] 모델별 점수, 입력 잘림 비율과 Qrels 한계를 비교 문서에 기록했다.
+- [x] 세 모델의 공식 규칙을 확인하고 문서·질의 벡터를 생성했다.
+- [x] 각 모델로 전체 Corpus에서 Exact Top 100 검색을 수행했다.
+- [x] Recall@1/5/10/20/50/100 및 평가·제외 질의 수를 계산했다.
+- [x] 원본 JSON, 통합 CSV, 질의 상세 결과와 실행 정보를 저장했다.
+- [x] 모델별 점수, 입력 잘림 비율과 Qrels 한계를 비교 문서에 기록했다.
 
 청킹, nDCG, Hybrid Search, Reranker, Elasticsearch 운영 성능과 HNSW/ANN 평가는 후속 실험으로 분리합니다.

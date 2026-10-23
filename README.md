@@ -1,52 +1,129 @@
 # embedding-benchmark
 
-한국어 법률·판례 검색에 사용할 임베딩 모델을 비교하고 모델 선택의 근거를 남기는 프로젝트입니다.
+한국어 법률 RAG 검색에 사용할 임베딩 모델을 비교하고, 모델 선택의 근거를 기록하는 프로젝트입니다. 같은 판례·질의·정답 데이터로 모델별 검색 결과를 평가합니다.
 
-[제공된 벤치마크 계획서](docs/references/legal_embedding_recall_benchmark.md)를 바탕으로 EVE-Bench-Legal-2.0의 전체 Corpus에서 정확 검색을 수행하고, 판례 문서 단위 Recall@K를 평가하도록 설계했습니다. 데이터 다운로드·정합성 검증과 실행 파이프라인을 구현했습니다. 세 모델의 실제 문서·질의 추론 확인과 테스트 17개가 통과했습니다. 전체 Recall 평가는 아직 실행하지 않았습니다.
+첫 번째 실험인 **문서 단위 Recall@K 평가를 완료했습니다.** 비교한 세 모델 중 **KURE-v1이 모든 K에서 가장 높아**, 이번 한국어 판례 검색의 기본 모델로 선택했습니다.
 
-## 1차 실험
+## 최신 평가 결과
 
-| 항목 | 계획 |
+2026-10-20 실행한 EVE-Bench-Legal-2.0 전체 평가 결과입니다. 판례 **59,786개**와 고유 질의 **5,998개**를 사용했고, 평가에서 제외된 질의는 없습니다.
+
+| 모델 | Recall@1 | Recall@5 | Recall@10 | Recall@20 | Recall@50 | Recall@100 |
+| --- | ---: | ---: | ---: | ---: | ---: | ---: |
+| **KURE-v1** | **18.36%** | **41.35%** | **55.51%** | **72.00%** | **85.82%** | **92.17%** |
+| BGE-M3 | 17.50% | 39.32% | 52.38% | 66.04% | 80.95% | 88.70% |
+| Multilingual E5 Large | 16.82% | 37.13% | 48.53% | 60.49% | 74.41% | 82.83% |
+
+KURE-v1은 BGE-M3보다 Recall@20이 **5.96%p** 높았고, 입력이 잘린 문서도 없었습니다. E5는 문서 **13.67%**가 512토큰 제한으로 잘렸습니다. 이번 선택은 모델별 공식 입력 규칙과 길이 제한을 적용한 문서 단위 검색 결과에 근거합니다.
+
+Recall은 질의마다 관련 판례 중 검색한 비율을 계산한 뒤 평균한 값입니다. **Recall@100 92.17%가 답변 정확도 92.17% 또는 모든 정답을 찾은 질의 비율을 뜻하지는 않습니다.** 생성 답변 품질과 운영 검색 지연시간은 이번 실험의 평가 대상에 포함하지 않았습니다.
+
+테스트 목적, 결과 해석, 입력 잘림과 실행 시간, 선택 근거의 적용 범위는 [결과 보고서](docs/benchmarks/results/2026-10-20-embedding-recall.md)에 정리했습니다.
+
+## 평가 방식
+
+```text
+Corpus · Queries · Qrels 검증
+  → 모델별 문서·질의 임베딩
+  → 전체 Corpus의 cosine 정확 검색
+  → Recall@K 계산 및 MTEB 교차 검증
+  → 모델별·질의별 결과 저장
+```
+
+| 항목 | 설정 |
 | --- | --- |
-| 데이터셋 | EVE-Bench-Legal-2.0 |
-| 모델 | BAAI/bge-m3, nlpai-lab/KURE-v1, intfloat/multilingual-e5-large |
-| 평가 프레임워크 | MTEB 2.26.11 지표 교차 검증 |
-| 입력 단위 | 판례 1개 = 벡터 1개 |
-| 검색 | 전체 Corpus 대상 Exact Top 100 |
+| 데이터셋 | EVE-Bench-Legal-2.0, 데이터 리비전 고정 |
+| 비교 모델 | `BAAI/bge-m3`, `nlpai-lab/KURE-v1`, `intfloat/multilingual-e5-large` |
+| 입력 | 제목과 text를 결합해 판례 1개당 벡터 1개 생성 |
+| 검색 | 전체 Corpus 대상 Exact Top 100, 정규화 벡터의 cosine |
+| 정답 | Qrels에서 relevance > 0인 문서 |
 | 지표 | Recall@1/5/10/20/50/100의 질의별 산술평균 |
-| 정답 | Qrels relevance > 0 |
-| 결과 | 모델별 원본 JSON, 통합 CSV, 질의별 상세 결과 |
+| 검증 | 자체 Recall과 MTEB 2.26.11 지표 비교 |
 
-데이터셋과 세 모델의 리비전을 고정하고 MTEB 2.26.11을 연결했습니다. Corpus 59,786개와 고유 질의 5,998개를 검증했습니다. 비교 점수는 전체 평가를 실제 실행한 뒤 기록합니다.
+모델·데이터 리비전과 실행 조건은 [configs/legal_recall.yaml](configs/legal_recall.yaml)에 고정합니다. 중복 질의는 관련 문서 합집합·최대 등급을 보존하는 `merge_max` 정책으로 병합합니다. 청킹, ANN/HNSW, Hybrid Search, Reranker는 이번 평가에 포함하지 않았습니다.
+
+## 설치와 실행
+
+Python **3.11 이상 3.15 미만**과 uv가 필요합니다. 기존 실행 환경은 Python 3.12로 검증했습니다. 아래 명령은 프로젝트 루트에서 실행합니다.
+
+```bash
+uv sync --locked --cache-dir cache/uv
+
+# 데이터 다운로드와 정합성 검증
+.venv/bin/embedding-benchmark download
+.venv/bin/embedding-benchmark prepare
+
+# 실제 문서·질의 각 2개로 모델 추론 확인
+.venv/bin/embedding-benchmark probe
+
+# 전체 데이터로 세 모델의 Recall 비교
+.venv/bin/embedding-benchmark run
+```
+
+모델은 Hugging Face에서 내려받고 임베딩·검색·평가는 로컬에서 실행합니다. `probe`는 추론 동작 확인용이며 Recall 평가 점수를 생성하지 않습니다. `run`은 질의 제한 없이 실행하면 전체 데이터를 평가합니다.
+
+특정 모델만 평가하거나 실행 장치와 배치 크기를 지정할 수 있습니다.
+
+```bash
+.venv/bin/embedding-benchmark run --models kure-v1
+.venv/bin/embedding-benchmark run --models kure-v1 --device mps --batch-size 4
+```
+
+`--query-limit 10`처럼 질의를 제한해도 검색 Corpus는 전체를 유지합니다. 최초 실행의 문서 임베딩 비용은 줄지 않습니다. 설치 방법과 옵션 설명은 [실행 안내](docs/engineering/running.md)를 참조하세요.
+
+## 결과와 캐시
+
+```text
+results/<run_id>/
+  manifest.json          # 설정·버전·실행 상태·잘림 통계
+  recall_summary.csv     # 모델별 Recall 비교
+  raw/                   # 모델별 MTEB 원본 결과
+  per_query/             # 질의별 검색 문서·점수·Recall
+
+results/probes/          # 소량 실제 추론 확인 보고서
+cache/embeddings/        # 문서·질의 벡터 캐시
+```
+
+평가 결과는 **모델 하나의 평가가 끝날 때마다** 저장합니다. 임베딩 캐시는 **문서 또는 질의 집합 전체 인코딩이 끝나야** 저장하므로, 처리 중인 집합의 중간 재시작은 지원하지 않습니다. 전체 실행은 소량 추론 확인보다 오래 걸립니다.
+
+원본 데이터·모델·캐시·실행 결과는 Git 추적에서 제외합니다. 공유할 평가 결과와 모델 선택 근거는 `docs/benchmarks/results/`의 Markdown 보고서로 관리합니다.
 
 ## 코드 구조
 
 ```text
+configs/                   # 실험 설정
 src/embedding_benchmark/
-  dataset.py       # 법률 데이터 로드·검증
-  embeddings.py    # 모델 실행·벡터 캐시
-  evaluation.py    # 정확 검색·Recall·MTEB
-  run.py           # CLI·실험 흐름·결과 저장
+  dataset.py               # 법률 데이터 로드·검증·정규화
+  embeddings.py            # 모델 실행·입력 구성·벡터 캐시
+  evaluation.py            # 정확 검색·Recall·MTEB
+  run.py                   # CLI·실험 흐름·결과 저장
+tests/                     # 데이터·캐시·평가·실행 검증
+docs/                      # 개발·도메인·평가·작업 기록
+pyproject.toml             # 패키지·의존성·CLI 설정
+uv.lock                    # 의존성 잠금 파일
 ```
 
-실험 흐름은 `run.py`의 `run_benchmark()`부터 읽으면 됩니다. 개발 문서와 법률 도메인 문서는 분리해 관리합니다.
+실험 흐름은 [run.py](src/embedding_benchmark/run.py)의 `run_benchmark()`부터 읽으면 됩니다. GitHub 저장소 이름은 `llm-benchmark`, Python 패키지 이름은 `embedding_benchmark`입니다.
 
-## 문서 안내
-
-- [문서 목차](docs/README.md)
-- [개발 아키텍처](docs/engineering/architecture.md)
-- [설치 및 실행 방법](docs/engineering/running.md)
-- [실제 데이터 확인 기록](docs/domain/legal/data-inspection-2026-10-19.md)
-- [Recall@K 평가 설계와 완료 기준](docs/benchmarks/embedding-recall.md)
-- [법률 데이터셋 및 정답 관리](docs/domain/legal/dataset.md)
-- [시스템 프롬프트 관리](docs/prompts/README.md)
-- [수행 작업 기록](docs/work-log/README.md)
-
-프로젝트명은 `embedding-benchmark`, Python 패키지명은 `embedding_benchmark`입니다. 현재 작업 폴더명 `llm-benchmark`는 유지합니다. 실행 명령은 아래와 같습니다. `probe`는 실제 추론 확인이며, `run`이 전체 Corpus를 검색하는 Recall 평가입니다.
+## 검증
 
 ```bash
-.venv/bin/embedding-benchmark prepare
-.venv/bin/embedding-benchmark probe
-.venv/bin/embedding-benchmark run
 .venv/bin/python -m pytest -q
 ```
+
+기존 검증에서 테스트 **17개가 통과**했습니다. 테스트는 모델 다운로드 없이 데이터 정합성, 캐시 무결성, 정확 검색, Recall 계산, MTEB 연동과 실행 결과 저장을 확인합니다. 모델 성능 비교는 위 전체 평가 결과로 별도 관리합니다.
+
+## 문서
+
+| 문서 | 내용 |
+| --- | --- |
+| [결과와 모델 선택](docs/benchmarks/results/2026-10-20-embedding-recall.md) | 실측 점수, 해석, KURE-v1 선택 근거 |
+| [평가 설계](docs/benchmarks/embedding-recall.md) | Recall 정의, 비교 조건, 완료 기준 |
+| [설치·실행 방법](docs/engineering/running.md) | 명령, 옵션, 캐시와 실패 처리 |
+| [개발 아키텍처](docs/engineering/architecture.md) | 네 모듈의 책임과 데이터 흐름 |
+| [모델 설정](docs/engineering/models.md) | 입력 규칙과 고정 리비전 |
+| [법률 데이터셋](docs/domain/legal/dataset.md) | 데이터 구조와 정답 관리 |
+| [시스템 프롬프트](docs/prompts/README.md) | 용도별 프롬프트 관리 규칙 |
+| [Git 작업 규칙](docs/engineering/git-workflow.md) | 커밋·브랜치·PR 규칙 |
+| [작업 기록](docs/work-log/README.md) | 실제 변경·실행·검증 이력 |
+| [전체 문서 목차](docs/README.md) | 문서별 안내 |

@@ -18,6 +18,7 @@
 - [실행 방법](engineering/running.md)
 - [모델 설정과 근거](engineering/models.md)
 - [실제 데이터 확인 기록](domain/legal/data-inspection-2026-10-19.md)
+- [전체 평가 결과와 모델 선택](benchmarks/results/2026-10-20-embedding-recall.md)
 - [Recall@K 평가 설계](benchmarks/embedding-recall.md)
 - [법률 데이터셋](domain/legal/dataset.md)
 - [시스템 프롬프트 관리](prompts/README.md)
