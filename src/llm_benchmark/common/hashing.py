@@ -13,6 +13,12 @@ def fingerprint(value: object) -> str:
     return hashlib.sha256(payload.encode()).hexdigest()
 
 
-def file_sha256(path) -> str:
+def file_sha256(path: str | Path) -> str:
     with Path(path).open("rb") as stream:
         return hashlib.file_digest(stream, "sha256").hexdigest()
+
+
+def compact_digest(value: object) -> str:
+    """KoBLEX v1 profile: insertion order and compact JSON separators."""
+    payload = json.dumps(value, ensure_ascii=False, separators=(",", ":"))
+    return hashlib.sha256(payload.encode()).hexdigest()

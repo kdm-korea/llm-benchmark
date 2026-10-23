@@ -17,6 +17,7 @@ embedding = [
   "sentence-transformers>=5,<7",
   "mteb==2.26.11",
 ]
+koblex = ["pyarrow>=21,<27"]
 
 [dependency-groups]
 dev = ["pytest>=8,<10"]
@@ -30,3 +31,11 @@ addopts = ["--import-mode=importlib"]
 
 [tool.hatch.build.targets.wheel]
 packages = ["src/llm_benchmark"]
+
+[tool.mypy]
+files = ["src/llm_benchmark/koblex"]
+ignore_missing_imports = true
+disallow_untyped_defs = true
+warn_return_any = true
+warn_unused_ignores = true
+cache_dir = "cache/mypy"

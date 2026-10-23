@@ -1,0 +1,228 @@
+{
+  "normalization_version": "koblex-v1",
+  "source_manifest_sha256": "1194ad33afc9fe7baec26fd5c7880805a231d71a6873b566428fd1a485ae8b15",
+  "runtime": {
+    "python": "3.12.10",
+    "pyarrow": "26.0.0"
+  },
+  "configuration": {
+    "qa_file": "KoBLEX-koblex/data/test-00000-of-00001.parquet",
+    "corpus_file": "KoBLEX-statute/data/corpus-00000-of-00001.parquet",
+    "source_split": "test",
+    "split": {
+      "seed": 20261023,
+      "dev_ratio": 0.2,
+      "similarity_threshold": 0.65,
+      "shingle_size": 5
+    }
+  },
+  "qa_rows": 226,
+  "corpus_rows": 233544,
+  "canonical_units": 209564,
+  "exact_duplicate_rows": 23980,
+  "index_unique": 60130,
+  "index_duplicated_values": 41223,
+  "hierarchy_unique": 208708,
+  "hierarchy_duplicated_values": 22441,
+  "hierarchies_with_different_bodies": 807,
+  "schema": {
+    "qa": [
+      {
+        "name": "id",
+        "type": "string",
+        "nullable": true
+      },
+      {
+        "name": "question",
+        "type": "string",
+        "nullable": true
+      },
+      {
+        "name": "answer",
+        "type": "string",
+        "nullable": true
+      },
+      {
+        "name": "question_eng",
+        "type": "string",
+        "nullable": true
+      },
+      {
+        "name": "answer_eng",
+        "type": "string",
+        "nullable": true
+      },
+      {
+        "name": "background",
+        "type": "string",
+        "nullable": true
+      },
+      {
+        "name": "background_eng",
+        "type": "string",
+        "nullable": true
+      },
+      {
+        "name": "contexts",
+        "type": "list<element: struct<content: string, content_eng: string, hierarchy: string, hierarchy_eng: string, index: string, index_eng: string>>",
+        "nullable": true
+      },
+      {
+        "name": "n_hops",
+        "type": "int64",
+        "nullable": true
+      }
+    ],
+    "corpus": [
+      {
+        "name": "index",
+        "type": "string",
+        "nullable": true
+      },
+      {
+        "name": "hierarchy",
+        "type": "string",
+        "nullable": true
+      },
+      {
+        "name": "content",
+        "type": "string",
+        "nullable": true
+      }
+    ]
+  },
+  "null_or_empty": {
+    "qa": {
+      "id": 0,
+      "question": 0,
+      "answer": 0,
+      "question_eng": 0,
+      "answer_eng": 0,
+      "background": 0,
+      "background_eng": 0,
+      "contexts": 0,
+      "n_hops": 0
+    },
+    "corpus": {
+      "index": 0,
+      "hierarchy": 0,
+      "content": 0
+    }
+  },
+  "context_null_or_empty": {
+    "content": 0,
+    "content_eng": 0,
+    "hierarchy": 0,
+    "hierarchy_eng": 0,
+    "index": 0,
+    "index_eng": 0
+  },
+  "train_file_equivalence": {
+    "qa_byte_identical_to_test": true,
+    "statute_byte_identical_to_corpus": true
+  },
+  "unit_kinds": {
+    "structural_heading": 5613,
+    "article_body": 21713,
+    "article_title": 33637,
+    "paragraph": 124350,
+    "item": 24246,
+    "other": 5
+  },
+  "raw_row_kinds": {
+    "structural_heading": 6175,
+    "article_body": 23839,
+    "article_title": 37479,
+    "paragraph": 139413,
+    "item": 26633,
+    "other": 5
+  },
+  "parent_status": {
+    "structural_unresolved": 5613,
+    "article_or_unresolved_root": 55355,
+    "unique_syntactic": 148586,
+    "ambiguous": 10
+  },
+  "n_hops": {
+    "1": 57,
+    "2": 127,
+    "3": 42
+  },
+  "context_counts": {
+    "1": 55,
+    "2": 125,
+    "3": 46
+  },
+  "n_hops_context_count_mismatches": [
+    "qa_260_2hop_995_rand",
+    "qa_25_1hop_37",
+    "qa_67_2hop_261_rand",
+    "qa_69_1hop_102",
+    "qa_344_2hop_543",
+    "qa_19_2hop_77_rand"
+  ],
+  "normalized_unique": {
+    "id": 226,
+    "background": 226,
+    "question": 226,
+    "answer": 226
+  },
+  "mapping_status": {
+    "exact": 410,
+    "assembled": 24,
+    "unresolved": 4,
+    "assembled_reordered": 5
+  },
+  "duplicate_evidence_annotations": 0,
+  "evaluation_status": {
+    "ready": 222,
+    "hold": 4
+  },
+  "held_queries": [
+    "qa_163_2hop_630_rand",
+    "qa_503_2hop_790",
+    "qa_148_3hop_273",
+    "qa_552_2hop_839"
+  ],
+  "split_counts": {
+    "test": 178,
+    "dev": 44,
+    "holdout": 4
+  },
+  "groups": 186,
+  "similarity_edges": 44,
+  "shared_dev_test_evidence": 10,
+  "artifacts": {
+    "evidence.jsonl": {
+      "sha256": "dd8e9e4bee3b881ce7153865cb6e69e0ef38e4b6211df6e897415e4b0675336a",
+      "size_bytes": 872350
+    },
+    "mapping-issues.jsonl": {
+      "sha256": "1e40c182ecb9bccf555a71a45d41b348a1d997955260c74a33d8fd92430b26bd",
+      "size_bytes": 13816
+    },
+    "qrels.json": {
+      "sha256": "0a30e3604cb1c9dafd22977f62c8bd578ec1b3d3a368465af0bb4fdc336a1fd0",
+      "size_bytes": 87811
+    },
+    "queries.jsonl": {
+      "sha256": "466a218388a2b4a21cfe388fa8ca13ff04f5577edacc8aa5b53152ed5305825b",
+      "size_bytes": 405952
+    },
+    "splits.jsonl": {
+      "sha256": "4d9da967cb13ee00cb6ac3075f9af706f70958d6ffcab5f34482111e7edb0823",
+      "size_bytes": 30685
+    },
+    "units.jsonl": {
+      "sha256": "5648ccbf14adac8a0530fe1acadb7c3f73f3e4407ea9b3c79866c4bd28a5ca81",
+      "size_bytes": 188594041
+    }
+  },
+  "validation": {
+    "all_source_hashes_verified": true,
+    "qrel_units_exist": true,
+    "ideal_metrics_all_one": true,
+    "empty_metrics_all_zero": true,
+    "no_group_crosses_dev_test": true
+  }
+}
