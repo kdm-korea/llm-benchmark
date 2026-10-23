@@ -1,0 +1,38 @@
+dataset:
+  id: ysmeta/EVE-Bench-Legal-2.0
+  revision: 1580448204d13ec8af13745086ffa91cfda407c3
+  raw_dir: data/raw/eve_legal
+  prepared_dir: data/prepared/eve_legal
+  split: test
+  input_template: title_newline_text
+  duplicate_query_policy: merge_max
+evaluation:
+  k: [1, 5, 10, 20, 50, 100]
+  query_batch_size: 32
+  # Full corpus is always retained. Set via --query-limit for a smoke run.
+  query_limit: null
+runtime:
+  device: auto
+  batch_size: 4
+  cache_dir: cache/embeddings
+  model_cache_dir: cache/models
+  results_dir: results
+models:
+  - name: bge-m3
+    id: BAAI/bge-m3
+    revision: 5617a9f61b028005a4858fdac845db406aefb181
+    max_length: 8192
+    query_prefix: ''
+    document_prefix: ''
+  - name: kure-v1
+    id: nlpai-lab/KURE-v1
+    revision: 8b418a58414668e75532ed045c22d9ca018ae2b2
+    max_length: 8192
+    query_prefix: ''
+    document_prefix: ''
+  - name: multilingual-e5-large
+    id: intfloat/multilingual-e5-large
+    revision: 3d7cfbdacd47fdda877c5cd8a79fbcc4f2a574f3
+    max_length: 512
+    query_prefix: 'query: '
+    document_prefix: 'passage: '

@@ -1,0 +1,16 @@
+.venv/
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.DS_Store
+data/raw/*
+!data/raw/.gitkeep
+data/prepared/*
+!data/prepared/.gitkeep
+cache/*
+!cache/embeddings/
+cache/embeddings/*
+!cache/embeddings/.gitkeep
+results/*
+!results/.gitkeep
+!results/README.md
