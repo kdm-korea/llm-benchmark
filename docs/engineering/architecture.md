@@ -56,10 +56,10 @@ tests/architecture/       실험 간 의존 경계 검증
 
 docs/engineering/         개발 기술과 실행 방법
 docs/domain/legal/        법률 데이터와 정답 규칙
-docs/benchmarks/          평가 설계
+docs/benchmarks/          실험 목록·개별 안내·평가 기준·결과
 docs/prompts/             시스템 프롬프트
 docs/references/          제공 원본 문서
-docs/work-log/            실제 수행 기록
+docs/work-log/            로컬 전용 수행 기록 (Git 추적 제외)
 ```
 
 자세한 명령은 [실행 방법](running.md), 입력 규칙은 [모델 설정](models.md), 법률 데이터 규칙은 [데이터셋 문서](../domain/legal/dataset.md)를 참조합니다.

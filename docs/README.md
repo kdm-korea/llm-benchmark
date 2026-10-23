@@ -1,30 +1,42 @@
-# 문서 구조
+# 문서 목차
 
-개발 기술, 평가 방법, 법률 도메인, 제공 자료와 실제 작업 기록을 분리합니다.
+[프로젝트 소개](../README.md) · [전체 실험 목록](benchmarks/README.md)
+
+## 실험 문서
+
+실험은 [실험 목록](benchmarks/README.md)에 등록하고 개별 문서에서 관리합니다.
+
+- [한국어 판례 임베딩 검색 비교](benchmarks/embedding/README.md)
+- [새 실험 문서 양식](benchmarks/experiment-template.md)
+
+평가 조건과 지표는 각 실험의 설계 문서에, 실제 실행 수치와 한계는 결과 보고서에 기록합니다. 프로젝트의 후속 작업 방향은 [루트 README](../README.md)에서 확인합니다.
+
+## 공통 개발 문서
+
+- [개발 아키텍처](engineering/architecture.md)
+- [설치·실행 환경과 실험별 격리](engineering/running.md)
+- [Git 커밋·브랜치 규칙](engineering/git-workflow.md)
+- [한국어 주석 작성 규칙](../AGENTS.md)
+- [시스템 프롬프트 관리](prompts/README.md)
+
+## 분야별 자료
+
+- [법률 데이터셋과 정답 관리](domain/legal/dataset.md)
+- [법률 데이터 확인 기록](domain/legal/data-inspection-2026-10-19.md)
+- [임베딩 모델 입력 규칙과 리비전](engineering/models.md)
+- [참고 자료 안내](references/README.md)
+- [블로그 원고 목록](posts/README.md)
+
+## 폴더 역할
 
 | 폴더 | 관리 내용 |
 | --- | --- |
+| `benchmarks/` | 실험 목록, 실험별 안내, 평가 설계와 결과 보고서 |
 | `engineering/` | 언어, 의존성, 모듈 구조, 실행 환경 |
-| `benchmarks/` | 평가 단위, 지표, 실험 통제, 완료 기준 |
-| `domain/legal/` | 법률 데이터셋, 식별자, Qrels 해석 |
-| `prompts/` | 용도별 시스템 프롬프트와 버전 관리 |
-| `posts/` | 블로그 포스팅용 Markdown 원고 |
+| `domain/` | 분야별 데이터 규칙과 해석 |
+| `prompts/` | 용도별 프롬프트와 버전 관리 |
+| `posts/` | 공유용 글과 블로그 원고 |
 | `references/` | 제공받은 참고 자료의 원본 사본 |
-| `work-log/` | 실제 변경, 검증 결과, 미완료 사항 |
+| `work-log/` | 로컬 전용 수행 기록, Git 추적 제외 |
 
-## 기준 문서
-
-- [개발 아키텍처](engineering/architecture.md)
-- [Git 커밋·브랜치 규칙](engineering/git-workflow.md)
-- [실행 방법](engineering/running.md)
-- [모델 설정과 근거](engineering/models.md)
-- [실제 데이터 확인 기록](domain/legal/data-inspection-2026-10-19.md)
-- [전체 평가 결과와 모델 선택](benchmarks/results/2026-10-20-embedding-recall.md)
-- [블로그 포스팅용 글](posts/2026-10-23-legal-embedding-recall-benchmark.md)
-- [Recall@K 평가 설계](benchmarks/embedding-recall.md)
-- [법률 데이터셋](domain/legal/dataset.md)
-- [시스템 프롬프트 관리](prompts/README.md)
-- [참고 자료 안내](references/README.md)
-- [작업 기록](work-log/README.md)
-
-설계 문서는 현재 기준을 설명하고 작업 기록은 실제 이력을 보존합니다. 초기 기록의 청크 단위 평가와 MD 원문 가정은 제공된 계획서를 확인한 뒤 문서 단위 평가와 공개 데이터셋 사용으로 변경했습니다. 참고 원본은 수정하지 않고, 변경된 설계는 현재 문서와 작업 기록에 반영합니다.
+참고 원본과 날짜별 결과 보고서는 기존 경로에 보존합니다. 현재 기준은 실험별 안내와 설계 문서에서 확인하고, 작업 과정은 로컬 기록으로 관리합니다.
