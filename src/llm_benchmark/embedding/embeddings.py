@@ -1,4 +1,4 @@
-"""Encode documents and queries with pinned models, reusing validated caches."""
+"""고정 리비전 모델로 문서·질의를 임베딩하고, 검증된 벡터 캐시를 재사용한다."""
 
 import gc
 import importlib.metadata
@@ -13,14 +13,14 @@ from llm_benchmark.common.io import write_json
 
 
 def resolve_model(config):
-    """Resolve the configured model revision to its exact Hub commit."""
+    """모델 설정의 리비전을 Hugging Face의 정확한 커밋 해시로 확인한다."""
     resolved = dict(config)
     resolved["revision"] = HfApi().model_info(config["id"], revision=config["revision"]).sha
     return resolved
 
 
 class EmbeddingModel:
-    """Dense embeddings using the pinned model's tokenizer and pooling rules."""
+    """고정 모델의 토크나이저·풀링 규칙을 그대로 사용하는 밀집 벡터 인코더."""
     def __init__(self, config, runtime):
         import torch
         from sentence_transformers import SentenceTransformer
@@ -40,7 +40,7 @@ class EmbeddingModel:
         )
         self.model.max_seq_length = config["max_length"]
         self.device = device
-        # Record the actual pooling architecture loaded from the pinned model.
+        # 설정 이름만 믿지 않고 고정 모델에서 실제로 로드된 풀링 구조를 기록한다.
         self.pooling = [
             {"module": type(module).__name__, "config": module.get_config_dict()}
             for module in self.model
@@ -48,7 +48,9 @@ class EmbeddingModel:
         ]
 
     def encode(self, texts, kind):
-        """Encode inputs and measure truncation before applying the length limit."""
+        """접두사를 적용한 입력을 임베딩한다.
+
+        길이 제한 전에 토큰 수를 측정해 실제로 잘릴 문서·질의의 수와 비율을 기록한다."""
         prefix = self.config["query_prefix" if kind == "query" else "document_prefix"]
         inputs = [prefix + text for text in texts]
         lengths = []
@@ -85,8 +87,8 @@ class EmbeddingModel:
             torch.cuda.empty_cache()
 
 def cached_encode(encoder, ids, texts, kind, data_metadata):
-    """Reuse matching embeddings only after validating the cached file's checksum."""
-    # Content and ID order are part of the cache contract, not just filenames.
+    """입력·모델·실행 조건이 같은 벡터만 재사용하고, 읽기 전에 캐시 파일 해시를 검증한다."""
+    # 입력 내용과 ID 순서도 캐시 키에 넣어 다른 입력의 벡터가 재사용되지 않게 한다.
     versions = {
         name: importlib.metadata.version(name)
         for name in ("sentence-transformers", "transformers", "torch", "numpy")

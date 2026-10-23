@@ -1,3 +1,3 @@
-"""Tools for LLM and legal RAG research benchmarks."""
+"""LLM과 법률 RAG 연구에 사용하는 실험·평가 도구."""
 
 __version__ = "0.1.0"

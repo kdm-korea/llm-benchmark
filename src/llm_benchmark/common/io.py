@@ -1,4 +1,4 @@
-"""JSON storage without experiment dependencies or process-global state."""
+"""특정 실험이나 프로세스 전역 상태에 의존하지 않는 JSON 파일 입출력."""
 
 from contextlib import contextmanager
 import json
@@ -29,13 +29,13 @@ def _atomic_text_file(path):
 
 
 def write_json(path, value):
-    """Atomically replace JSON, preserving the existing UTF-8 pretty format."""
+    """기존 UTF-8 JSON 형식을 유지하고, 저장이 끝난 임시 파일로 대상 파일을 교체한다."""
     with _atomic_text_file(path) as stream:
         stream.write(json.dumps(value, ensure_ascii=False, indent=2, allow_nan=False) + '\n')
 
 
 def write_jsonl(path, rows):
-    """Commit only a completely serialized JSONL stream."""
+    """모든 행의 직렬화가 성공한 경우에만 JSONL 파일을 교체해 불완전한 저장을 막는다."""
     with _atomic_text_file(path) as stream:
         for row in rows:
             stream.write(json.dumps(row, ensure_ascii=False, allow_nan=False) + '\n')

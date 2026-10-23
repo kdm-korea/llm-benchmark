@@ -1,1 +1,1 @@
-"""Document embedding retrieval experiments."""
+"""문서 임베딩을 이용한 검색 실험."""

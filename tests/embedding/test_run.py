@@ -1,4 +1,4 @@
-"""Offline checks of the actual experiment flow and native MTEB integration."""
+"""모델 추론을 테스트 대역으로 바꿔 실행 흐름과 실제 MTEB 연동을 네트워크 없이 검증한다."""
 
 import json
 from pathlib import Path

@@ -1,4 +1,4 @@
-"""Check published metric tables and images against native and independently verified data."""
+"""공개 문서의 표·이미지가 원본 평가 결과 및 독립 재계산 결과와 일치하는지 확인한다."""
 import csv
 import hashlib
 import json
@@ -35,10 +35,10 @@ def verify():
             assert len(metric_rows) == 2, (name, label, metric_rows)
             recall = next(r[1:] for r in metric_rows if r[1].endswith('%'))
             ndcg = next(r[1:] for r in metric_rows if not r[1].endswith('%'))
-            # First pass against original artifacts, including native rounded nDCG.
+            # 1차 검증: MTEB가 반올림한 nDCG를 포함해 원본 평가 결과와 문서 표를 대조한다.
             assert recall == [f"{float(csv_rows[model][f'recall_at_{k}']) * 100:.2f}%" for k in K]
             assert ndcg == [f"{native[model]['ndcg'][f'NDCG@{k}']:.5f}" for k in K]
-            # Second pass against full precision values independently recomputed by render script.
+            # 2차 검증: 그래프 생성 스크립트가 독립 재계산한 반올림 전 값과 대조한다.
             assert recall == [f"{audit['recall'][model][str(k)] * 100:.2f}%" for k in K]
             assert ndcg == [f"{audit['ndcg'][model][str(k)]:.5f}" for k in K]
             cells += 12
@@ -52,7 +52,7 @@ def verify():
             assert (p.parent / link.split('#')[0]).exists(), (name, link)
             links += 1
     for model in LABELS.values():
-        # Binary nDCG@1 must equal Hit@1; check with independently stored success values.
+        # 이진 nDCG@1은 Hit@1과 같아야 하므로 별도로 저장한 정답 검색 성공 수와 대조한다.
         hit = mean(v['success_1'] for v in native[model]['all_scores'].values())
         assert abs(audit['ndcg'][model]['1'] - hit) < 1e-12
     for relative, expected in audit['source_sha256'].items():

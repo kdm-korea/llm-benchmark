@@ -1,6 +1,6 @@
-"""Load, validate and prepare the EVE legal retrieval dataset.
+"""EVE 법률 검색 데이터를 읽고 정합성을 검증해 실험 입력으로 준비한다.
 
-This module owns EVE dataset rules and IDs; file utilities live in common.
+이 모듈은 EVE 데이터 규칙과 ID를 관리하며, 공통 파일 처리는 common에 둔다.
 """
 
 from dataclasses import dataclass
@@ -17,6 +17,7 @@ def _validate_qrels(corpus, query_id, grades):
     for document_id, grade in grades.items():
         if document_id not in corpus:
             raise ValueError(f"Unknown qrels document: {query_id}/{document_id}")
+        # bool도 int로 판정되므로 별도로 제외하고 유한한 비음수 점수만 허용한다.
         valid_grade = (
             isinstance(grade, (int, float))
             and not isinstance(grade, bool)
@@ -29,7 +30,7 @@ def _validate_qrels(corpus, query_id, grades):
 
 @dataclass
 class RetrievalData:
-    """Corpus, queries and relevance labels used by one evaluation."""
+    """한 번의 검색 평가에서 사용하는 문서·질의·관련성 정답과 출처 정보."""
     corpus: dict[str, dict[str, str]]
     queries: dict[str, str]
     qrels: dict[str, dict[str, float]]
@@ -56,7 +57,9 @@ class RetrievalData:
         return texts
 
     def subset_queries(self, limit: int | None) -> "RetrievalData":
-        """Limit queries while retaining every searchable corpus document."""
+        """질의 수만 제한하고 검색 대상 문서는 모두 유지한다.
+
+        문서까지 줄이면 전체 코퍼스 검색과 평가 조건이 달라지므로 질의만 잘라낸다."""
         if limit is not None and limit < 1:
             raise ValueError("query_limit must be positive")
         ids = list(self.queries)[:limit]
@@ -71,11 +74,13 @@ class RetrievalData:
 def identifier(value):
     if not isinstance(value, str) or not value.strip():
         raise ValueError(f"Expected nonempty string ID, got {value!r}")
-    return value  # Preserve leading zeros; do not coerce IDs through integers.
+    return value  # 앞자리 0도 ID의 일부이므로 정수 변환 없이 원본 문자열을 유지한다.
 
 
 def load_eve(raw_dir, duplicate_query_policy="error"):
-    """Map EVE rows to retrieval data; audit any explicitly allowed query merges."""
+    """EVE 원본 행을 검색 평가 입력으로 변환한다.
+
+    중복 질의 병합은 설정에서 허용한 경우에만 수행하고, 병합 전 정답을 기록한다."""
     if duplicate_query_policy not in ("error", "merge_max"):
         raise ValueError("Unknown duplicate_query_policy")
     raw_dir = Path(raw_dir)
@@ -110,7 +115,7 @@ def load_eve(raw_dir, duplicate_query_policy="error"):
         if not isinstance(row["grades"], dict):
             raise ValueError(f"Invalid grades: {qid}")
         grades = {identifier(d): grade for d, grade in row["grades"].items()}
-        # Validate before merging so invalid duplicate rows cannot be masked.
+        # 잘못된 중복 행이 병합 과정에서 가려지지 않도록 각 행을 먼저 검증한다.
         _validate_qrels(corpus, qid, grades)
         if qid in queries:
             if queries[qid] != query or duplicate_query_policy == "error":
@@ -148,7 +153,7 @@ def load_eve(raw_dir, duplicate_query_policy="error"):
 
 
 def download_dataset(config):
-    """Download a pinned source snapshot and record each file's checksum."""
+    """지정한 원본 리비전을 내려받고 파일별 해시를 기록해 데이터 출처를 고정한다."""
     from huggingface_hub import HfApi, hf_hub_download
     revision = HfApi().dataset_info(config["id"], revision=config["revision"]).sha
     raw = Path(config["raw_dir"])
@@ -167,7 +172,7 @@ def download_dataset(config):
 
 
 def prepare_dataset(config):
-    """Validate local source data and save normalized data plus an audit report."""
+    """로컬 원본의 출처·해시·정답을 검증하고 정규화 데이터와 검증 보고서를 저장한다."""
     dataset = config["dataset"]
     data = load_eve(dataset["raw_dir"], dataset["duplicate_query_policy"])
     if (
