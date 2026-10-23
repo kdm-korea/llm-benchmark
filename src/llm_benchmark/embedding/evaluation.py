@@ -1,5 +1,6 @@
 """전체 문서 코사인 정확 검색, 질의별 Recall 평균 계산 및 MTEB 결과 대조."""
 
+from collections.abc import Mapping, Sequence
 import importlib.metadata
 import math
 import os
@@ -7,9 +8,17 @@ from pathlib import Path
 import warnings
 
 import numpy as np
+from numpy.typing import ArrayLike
+
+from llm_benchmark.embedding.models import Query, QueryEvaluation, Rankings, RecallEvaluation
+from llm_benchmark.embedding.parsing import mapping
 
 
-def exact_search(corpus_ids, corpus_vectors, query_ids, query_vectors, top_k=100, batch_size=32):
+def exact_search(
+    corpus_ids: Sequence[str], corpus_vectors: ArrayLike,
+    query_ids: Sequence[str], query_vectors: ArrayLike,
+    top_k: int = 100, batch_size: int = 32,
+) -> Rankings:
     """질의 벡터를 전체 문서 벡터와 비교해 코사인 유사도 상위 결과를 반환한다.
 
     동점은 문서 ID 내림차순으로 정렬해 MTEB와 같은 순위 규칙을 사용한다."""
@@ -32,7 +41,7 @@ def exact_search(corpus_ids, corpus_vectors, query_ids, query_vectors, top_k=100
     order = np.argsort(np.asarray(corpus_ids), kind="stable")[::-1]
     corpus = corpus[order]
     ids = [corpus_ids[i] for i in order]
-    result = {}
+    result: Rankings = {}
     for start in range(0, len(queries), batch_size):
         # L2 정규화한 벡터의 내적은 코사인 유사도이므로 행렬 곱으로 일괄 계산한다.
         scores = queries[start:start + batch_size] @ corpus.T
@@ -42,13 +51,17 @@ def exact_search(corpus_ids, corpus_vectors, query_ids, query_vectors, top_k=100
     return result
 
 
-def evaluate_recall(queries, qrels, rankings, ks):
+def evaluate_recall(
+    queries: Mapping[str, Query], qrels: Mapping[str, Mapping[str, float]],
+    rankings: Rankings, ks: Sequence[int],
+) -> RecallEvaluation:
     """질의별 관련 문서 회수율을 구해 같은 가중치로 평균낸다.
 
     질의별 순위·점수와 정답이 없어 평가에서 제외한 질의의 사유도 함께 반환한다."""
     if not ks or any(type(k) is not int or k <= 0 for k in ks):
         raise ValueError("K values must be positive integers")
-    rows, excluded = [], []
+    rows: list[QueryEvaluation] = []
+    excluded: list[dict[str, str]] = []
     for qid, query in queries.items():
         relevant = {d for d, grade in qrels[qid].items() if grade > 0}
         if not relevant:
@@ -58,26 +71,28 @@ def evaluate_recall(queries, qrels, rankings, ks):
         docids = [d for d, _ in ranked]
         if len(docids) != len(set(docids)):
             raise ValueError(f"Duplicate retrieved document: {qid}")
-        row = {
-            "query_id": qid,
-            "query_text": query,
-            "relevant_doc_ids": sorted(relevant),
-            "retrieved_doc_ids_top100": docids,
-            "scores": [float(score) for _, score in ranked],
-        }
-        for k in ks:
-            row[f"recall_at_{k}"] = len(set(docids[:k]) & relevant) / len(relevant)
+        row = QueryEvaluation(
+            query_id=qid, query_text=query.text, relevant_doc_ids=sorted(relevant),
+            retrieved_doc_ids=docids, scores=[float(score) for _, score in ranked],
+            recall={
+                f"recall_at_{k}": len(set(docids[:k]) & relevant) / len(relevant)
+                for k in ks
+            },
+        )
         rows.append(row)
     if not rows:
         raise ValueError("No evaluable queries: all queries have no positive qrels")
     summary = {
-        f"recall_at_{k}": sum(row[f"recall_at_{k}"] for row in rows) / len(rows)
+        f"recall_at_{k}": sum(row.recall[f"recall_at_{k}"] for row in rows) / len(rows)
         for k in ks
     }
-    return summary, rows, excluded
+    return RecallEvaluation(summary, rows, excluded)
 
 
-def evaluate_with_mteb(qrels, rankings, ks, expected):
+def evaluate_with_mteb(
+    qrels: Mapping[str, Mapping[str, float]], rankings: Rankings,
+    ks: list[int], expected: Mapping[str, float],
+) -> dict[str, object]:
     """직접 계산한 Recall을 MTEB 평가기가 사용하는 지표 함수의 결과와 대조한다.
 
     비공개 API 의존은 이 함수에 모으고 MTEB 버전을 고정한다. 이미 구한 검색
@@ -108,10 +123,10 @@ def evaluate_with_mteb(qrels, rankings, ks, expected):
         ):
             raise ValueError(f"MTEB/local Recall mismatch at K={k}")
 
-    return _json_safe(native._asdict())
+    return mapping(_json_safe(native._asdict()))
 
 
-def _json_safe(value):
+def _json_safe(value: object) -> object:
     """MTEB 결과 필드는 유지하고, 정의되지 않은 보조 지표는 JSON의 null로 저장한다."""
     if isinstance(value, dict):
         return {str(key): _json_safe(item) for key, item in value.items()}

@@ -30,3 +30,19 @@ addopts = ["--import-mode=importlib"]
 
 [tool.hatch.build.targets.wheel]
 packages = ["src/llm_benchmark"]
+
+[tool.mypy]
+cache_dir = "cache/mypy"
+files = ["src/llm_benchmark/embedding", "src/llm_benchmark/common"]
+python_version = "3.11"
+disallow_untyped_defs = true
+disallow_incomplete_defs = true
+check_untyped_defs = true
+warn_return_any = true
+warn_unused_ignores = true
+no_implicit_optional = true
+follow_imports = "silent"
+
+[[tool.mypy.overrides]]
+module = ["yaml", "sentence_transformers.*", "mteb.*"]
+ignore_missing_imports = true

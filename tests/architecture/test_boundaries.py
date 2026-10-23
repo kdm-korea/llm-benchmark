@@ -104,3 +104,15 @@ def test_imports_in_fresh_process_with_other_experiments_blocked(area):
     ]
     result = subprocess.run(command, cwd=ROOT, capture_output=True, text=True)
     assert result.returncode == 0, result.stderr
+
+
+def test_embedding_data_models_import_without_optional_libraries() -> None:
+    import json
+
+    command = [
+        sys.executable, '-I', '-c', IMPORT_PROBE,
+        str(ROOT / 'src'), json.dumps(OPTIONAL_LIBRARIES),
+        json.dumps(['embedding.models', 'embedding.dataset']),
+    ]
+    result = subprocess.run(command, cwd=ROOT, capture_output=True, text=True)
+    assert result.returncode == 0, result.stderr
