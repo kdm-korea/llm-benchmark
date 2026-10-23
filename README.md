@@ -1,150 +1,43 @@
 # llm-benchmark
 
-한국어 법률 RAG 개발에 필요한 평가 데이터와 실험 근거를 축적하는 프로젝트입니다. 판례 임베딩 검색 실험을 관리하며 공통 기능과 실험별 코드를 분리합니다.
+LLM·RAG 개발에 필요한 기능을 직접 만들고 실험하면서, 무엇이 잘 동작하는지와 그 판단 근거를 축적하는 프로젝트입니다. 현재는 한국어 법률 데이터를 중심으로 검색과 평가 기반을 만들고 있으며, 이후 다른 데이터와 실험도 같은 프로젝트에서 관리합니다.
 
-첫 번째 실험인 **문서 단위 Recall@K·이진 nDCG@K 평가와 분석을 완료했습니다.** 비교한 세 모델 중 **KURE-v1이 두 지표 모두 모든 K에서 가장 높아**, 이번 한국어 판례 검색의 기본 모델로 선택했습니다.
+## 프로젝트 목적
 
-## 최신 평가 결과
+- 모델과 구현 방식을 동일한 조건에서 비교하고 선택 근거를 남깁니다.
+- 데이터 준비부터 문서 처리·임베딩·검색·답변 생성까지 단계별로 검증합니다.
+- 성공한 결과와 실패 사례를 함께 기록하고, 같은 조건으로 다시 실행할 수 있게 만듭니다.
 
-2026-10-20 실행한 EVE-Bench-Legal-2.0 전체 평가 결과입니다. 판례 **59,786개**와 고유 질의 **5,998개**를 사용했고, 평가에서 제외된 질의는 없습니다.
+## 지금까지 만든 것
 
-| 모델 | Recall@1 | Recall@5 | Recall@10 | Recall@20 | Recall@50 | Recall@100 |
-| --- | ---: | ---: | ---: | ---: | ---: | ---: |
-| **KURE-v1** | **18.36%** | **41.35%** | **55.51%** | **72.00%** | **85.82%** | **92.17%** |
-| BGE-M3 | 17.50% | 39.32% | 52.38% | 66.04% | 80.95% | 88.70% |
-| Multilingual E5 Large | 16.82% | 37.13% | 48.53% | 60.49% | 74.41% | 82.83% |
+- **실험 실행 기반:** 고정된 데이터·모델 리비전, 임베딩 캐시, 정확 검색, 평가 결과와 실행 정보 저장을 구현했습니다.
+- **판례 임베딩 비교:** 한국어 법률 판례의 문서 단위 검색에서 세 모델을 비교하고 KURE-v1을 기본 모델로 선택했습니다. [실험과 결과](docs/benchmarks/embedding/README.md)
+- **실험별 코드와 검증 구조:** 개별 실험과 공통 코드를 분리하고, 테스트 fixture·캐시·의존 경계를 검증하도록 구성했습니다.
+- **실험 문서 체계:** 실험 목록과 실험별 목적·실행 방법·평가 기준·결과를 분리해 관리합니다.
 
-같은 검색 순위로 계산한 **이진 nDCG**는 관련 판례가 얼마나 앞에 배치되었는지를 평가합니다. 값은 백분율이 아닌 0~1 점수입니다.
+## 앞으로 만들고 확인할 것
 
-| 모델 | nDCG@1 | nDCG@5 | nDCG@10 | nDCG@20 | nDCG@50 | nDCG@100 |
-| --- | ---: | ---: | ---: | ---: | ---: | ---: |
-| KURE-v1 | **0.81594** | **0.61369** | **0.61221** | **0.67081** | **0.72516** | **0.74510** |
-| BGE-M3 | 0.77859 | 0.58248 | 0.57940 | 0.62496 | 0.68324 | 0.70776 |
-| Multilingual E5 Large | 0.74175 | 0.54993 | 0.54037 | 0.57941 | 0.63369 | 0.66070 |
+- [ ] KoBLEX 법령 평가 기반과 검색 기준선을 연결하고 근거 회수 성능·실패 사례를 기록합니다.
+- [ ] 법률 텍스트의 조·항·호 구조와 청킹 방식에 따른 검색 품질을 비교합니다.
+- [ ] 벡터DB 검색을 정확 검색 기준선과 비교하고 인덱스 설정·지연시간·검색 손실을 확인합니다.
+- [ ] PDF의 문단·페이지·표·이미지 추출과 청킹·검색을 평가합니다.
+- [ ] BM25·벡터·하이브리드 검색 및 재정렬 방식을 비교합니다.
+- [ ] 검색 근거를 이용한 답변 생성과 결론·인용·근거 충실성 평가를 연결합니다.
+- [ ] 근거 부족·상충·문서 갱신 상황과 실행 시간·자원·비용을 검증합니다.
 
-![모델별 Recall과 이진 nDCG 비교](assets/images/legal-embedding-recall/metrics-overview.png)
+현재 후속 작업은 법률 RAG를 중심으로 진행합니다. 등록된 실험의 조건·상태·결과는 [실험 목록](docs/benchmarks/README.md)에서 관리합니다. 새 실험은 준비된 코드와 개별 문서를 함께 등록합니다.
 
-Recall은 관련 문서 회수율, 이진 nDCG는 관련 문서의 상위 배치를 평가합니다. 이번 nDCG는 relevance > 0을 모두 1로 처리하므로 관련성 등급 간 차이를 반영하지 않습니다. 같은 K에서 모델을 비교하며, nDCG는 K가 커져도 반드시 증가하지 않습니다.
+## 구성과 관리 방식
 
-KURE-v1은 BGE-M3보다 Recall@20이 **5.96%p** 높았고, 입력이 잘린 문서도 없었습니다. E5는 문서 **13.67%**가 512토큰 제한으로 잘렸습니다. 이번 선택은 모델별 공식 입력 규칙과 길이 제한을 적용한 문서 단위 검색 결과에 근거합니다.
+실험별 코드는 `src/llm_benchmark/<실험명>/`, 코드 테스트는 `tests/<실험명>/`, 안내와 결과는 `docs/benchmarks/`에 둡니다. 실제로 공유하는 기능만 `common/`으로 분리합니다.
 
-Recall은 질의마다 관련 판례 중 검색한 비율을 계산한 뒤 평균한 값입니다. **Recall@100 92.17%가 답변 정확도 92.17% 또는 모든 정답을 찾은 질의 비율을 뜻하지는 않습니다.** 생성 답변 품질과 운영 검색 지연시간은 이번 실험의 평가 대상에 포함하지 않았습니다.
+원본 데이터·모델·벡터 캐시·실행 결과는 로컬에 보존하고, 공유할 설정·평가 기준·결과 보고서를 Git으로 관리합니다. 코드 테스트의 통과 여부와 모델·검색·답변의 성능 결과는 구분해 기록합니다.
 
-테스트 목적, 결과 해석, 입력 잘림과 실행 시간, 선택 근거의 적용 범위는 [결과 보고서](docs/benchmarks/results/2026-10-20-embedding-recall.md)에 정리했습니다.
+## 시작하기
 
-세 모델은 로컬 Mac mini M2·16GB 메모리 환경의 자원 제약을 고려해 선정했습니다. 약 5.6억 파라미터 규모의 로컬 실행 가능한 후보를 비교한 것으로, 최신 한국어 검색 상위 세 모델을 비교한 결과는 아닙니다.
-
-## 평가 방식
-
-```text
-Corpus · Queries · Qrels 검증
-  → 모델별 문서·질의 임베딩
-  → 전체 Corpus의 cosine 정확 검색
-  → Recall@K·이진 nDCG@K 계산 및 검증
-  → 모델별·질의별 결과 저장
-```
-
-| 항목 | 설정 |
-| --- | --- |
-| 데이터셋 | EVE-Bench-Legal-2.0, 데이터 리비전 고정 |
-| 비교 모델 | `BAAI/bge-m3`, `nlpai-lab/KURE-v1`, `intfloat/multilingual-e5-large` |
-| 입력 | 제목과 text를 결합해 판례 1개당 벡터 1개 생성 |
-| 검색 | 전체 Corpus 대상 Exact Top 100, 정규화 벡터의 cosine |
-| 정답 | Qrels에서 relevance > 0인 문서 |
-| 지표 | K=1/5/10/20/50/100의 Recall·이진 nDCG, 질의별 산술평균 |
-| 검증 | Recall 실행 시 MTEB 비교, 두 지표의 저장값 대조와 순위 기반 재계산 |
-
-모델·데이터 리비전과 실행 조건은 [configs/legal_recall.yaml](configs/legal_recall.yaml)에 고정합니다. 중복 질의는 관련 문서 합집합·최대 등급을 보존하는 `merge_max` 정책으로 병합합니다. 청킹, ANN/HNSW, Hybrid Search, Reranker는 이번 평가에 포함하지 않았습니다.
-
-## 설치와 실행
-
-Python **3.11 이상 3.15 미만**과 uv가 필요합니다. 기존 실행 환경은 Python 3.12로 검증했습니다. 아래 명령은 프로젝트 루트에서 실행합니다.
-
-```bash
-uv sync --locked --extra embedding --cache-dir cache/uv
-
-# 데이터 다운로드와 정합성 검증
-.venv/bin/embedding-benchmark download
-.venv/bin/embedding-benchmark prepare
-
-# 실제 문서·질의 각 2개로 모델 추론 확인
-.venv/bin/embedding-benchmark probe
-
-# 전체 데이터로 세 모델의 Recall 비교
-.venv/bin/embedding-benchmark run
-```
-
-모델은 Hugging Face에서 내려받고 임베딩·검색·평가는 로컬에서 실행합니다. `probe`는 추론 동작 확인용이며 Recall 평가 점수를 생성하지 않습니다. `run`은 질의 제한 없이 실행하면 전체 데이터를 평가합니다.
-
-특정 모델만 평가하거나 실행 장치와 배치 크기를 지정할 수 있습니다.
-
-```bash
-.venv/bin/embedding-benchmark run --models kure-v1
-.venv/bin/embedding-benchmark run --models kure-v1 --device mps --batch-size 4
-```
-
-`--query-limit 10`처럼 질의를 제한해도 검색 Corpus는 전체를 유지합니다. 최초 실행의 문서 임베딩 비용은 줄지 않습니다. 설치 방법과 옵션 설명은 [실행 안내](docs/engineering/running.md)를 참조하세요.
-
-## 결과와 캐시
-
-```text
-results/<run_id>/
-  manifest.json          # 설정·버전·실행 상태·잘림 통계
-  recall_summary.csv     # 모델별 Recall 비교
-  raw/                   # 모델별 MTEB 원본 결과(Recall·nDCG 등)
-  per_query/             # 질의별 검색 문서·점수·Recall
-
-results/probes/          # 소량 실제 추론 확인 보고서
-cache/embeddings/        # 문서·질의 벡터 캐시
-```
-
-평가 결과는 **모델 하나의 평가가 끝날 때마다** 저장합니다. 임베딩 캐시는 **문서 또는 질의 집합 전체 인코딩이 끝나야** 저장하므로, 처리 중인 집합의 중간 재시작은 지원하지 않습니다. 전체 실행은 소량 추론 확인보다 오래 걸립니다.
-
-원본 데이터·모델·캐시·실행 결과는 Git 추적에서 제외합니다. 공유할 평가 결과와 모델 선택 근거는 `docs/benchmarks/results/`의 Markdown 보고서로 관리합니다.
-
-## 코드 구조
-
-```text
-configs/                   # 실험 설정
-src/llm_benchmark/
-  common/                  # 실험을 모르는 표준 라이브러리 공통 코드
-    hashing.py             # 파일 해시·기존 JSON 해시 형식
-    io.py                  # 원자적 JSON·JSONL 저장과 읽기
-  embedding/               # 문서 단위 임베딩 검색 실험
-    dataset.py             # EVE 데이터 로드·검증·정규화
-    embeddings.py          # 모델 실행·입력 구성·벡터 캐시
-    evaluation.py          # 정확 검색·Recall·MTEB
-    run.py                 # 임베딩 CLI·실험 흐름·결과 저장
-tests/
-  common/                  # 공통 저장·해시 호환성 검증
-  architecture/            # 실험 간 import 경계·독립 로드 검증
-  embedding/               # 기존 임베딩 실험 테스트
-docs/                      # 개발·도메인·평가·작업 기록
-pyproject.toml             # 패키지·의존성·CLI 설정
-uv.lock                    # 의존성 잠금 파일
-```
-
-임베딩 실험 흐름은 [run.py](src/llm_benchmark/embedding/run.py)의 `run_benchmark()`부터 읽으면 됩니다. 프로젝트 이름은 `llm-benchmark`, Python 상위 패키지는 `llm_benchmark`입니다. 기존 `embedding-benchmark` 명령은 임베딩 실험용으로 유지합니다.
-
-## 검증
-
-```bash
-.venv/bin/python -m pytest -q
-```
-
-구조 변경 검증에서 테스트 **25개가 통과**했습니다. 임베딩 테스트는 `tests/embedding/`, 공통 저장·해시 검증은 `tests/common/`, 의존 경계 검증은 `tests/architecture/`에 둡니다. 별도 환경 설치·검증 명령은 [실행 방법](docs/engineering/running.md)을 참조합니다.
-
-## 문서
-
-| 문서 | 내용 |
-| --- | --- |
-| [결과와 모델 선택](docs/benchmarks/results/2026-10-20-embedding-recall.md) | Recall·이진 nDCG, 해석, KURE-v1 선택 근거 |
-| [평가 설계](docs/benchmarks/embedding-recall.md) | Recall 정의, 비교 조건, 완료 기준 |
-| [설치·실행 방법](docs/engineering/running.md) | 명령, 옵션, 캐시와 실패 처리 |
-| [개발 아키텍처](docs/engineering/architecture.md) | 네 모듈의 책임과 데이터 흐름 |
-| [모델 설정](docs/engineering/models.md) | 입력 규칙과 고정 리비전 |
-| [법률 데이터셋](docs/domain/legal/dataset.md) | 데이터 구조와 정답 관리 |
-| [시스템 프롬프트](docs/prompts/README.md) | 용도별 프롬프트 관리 규칙 |
-| [Git 작업 규칙](docs/engineering/git-workflow.md) | 커밋·브랜치·PR 규칙 |
-| [작업 기록](docs/work-log/README.md) | 실제 변경·실행·검증 이력 |
-| [전체 문서 목차](docs/README.md) | 문서별 안내 |
+- [실험 목록과 개별 실행 안내](docs/benchmarks/README.md)
+- [설치·실행 환경](docs/engineering/running.md)
+- [전체 문서 목차](docs/README.md)
+- [개발 아키텍처](docs/engineering/architecture.md)
+- [Git 작업 규칙](docs/engineering/git-workflow.md)
+- [코드 주석 작성 규칙](AGENTS.md)

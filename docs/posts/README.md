@@ -2,6 +2,10 @@
 
 `2026-10-23-legal-embedding-recall-benchmark.md`는 Jekyll 포스트 원고입니다.
 
+- [게시된 글](https://kdm-korea.github.io/rag/embedding/2026/10/23/legal-embedding-recall-benchmark.html)
+- [현재 실험 안내](../benchmarks/embedding/README.md)
+- [게시 링크·지표 검증 기록](2026-10-23-link-audit.md)
+
 ## 게시 파일 배치
 
 | 이 저장소 | 블로그 저장소 |

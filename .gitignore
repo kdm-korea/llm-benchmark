@@ -3,6 +3,11 @@ __pycache__/
 *.py[cod]
 .pytest_cache/
 .DS_Store
+# 로컬 로그와 작업 기록
+*.log
+*.log.*
+logs/
+docs/work-log/
 data/raw/*
 !data/raw/.gitkeep
 data/prepared/*

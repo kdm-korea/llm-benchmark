@@ -11,7 +11,7 @@ RUN = ROOT / 'results/20261020T020620+0900-de87f657'
 K = [1, 5, 10, 20, 50, 100]
 LABELS = {'KURE-v1': 'kure-v1', 'BGE-M3': 'bge-m3',
           'Multilingual E5 Large': 'multilingual-e5-large'}
-DOCS = ['README.md', 'docs/benchmarks/results/2026-10-20-embedding-recall.md',
+DOCS = ['docs/benchmarks/embedding/README.md', 'docs/benchmarks/results/2026-10-20-embedding-recall.md',
         'docs/posts/2026-10-23-legal-embedding-recall-benchmark.md']
 
 
