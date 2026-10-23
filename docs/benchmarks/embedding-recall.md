@@ -1,8 +1,8 @@
-# 임베딩 Recall@K 벤치마크
+# 임베딩 Recall@K·이진 nDCG@K 벤치마크
 
 ## 목적과 범위
 
-[제공 계획서](../references/legal_embedding_recall_benchmark.md)를 기준으로 EVE-Bench-Legal-2.0에서 한국어 법률 판례 검색용 임베딩 모델을 비교합니다. 1차는 판례 문서 단위 Recall@K만 평가합니다. 2026-10-20 전체 평가를 완료했습니다. [결과와 모델 선택 근거](results/2026-10-20-embedding-recall.md)를 참조하세요.
+[제공 계획서](../references/legal_embedding_recall_benchmark.md)를 기준으로 EVE-Bench-Legal-2.0에서 한국어 법률 판례 검색용 임베딩 모델을 비교합니다. 판례 문서 단위 Recall@K와 같은 검색 순위의 이진 nDCG@K를 평가합니다. nDCG는 전체 실행에서 저장된 값을 문서 개정 시 독립 재계산해 분석에 포함했습니다. 2026-10-20 전체 평가를 완료했습니다. [결과와 모델 선택 근거](results/2026-10-20-embedding-recall.md)를 참조하세요.
 
 | 항목 | 설계 |
 | --- | --- |
@@ -13,9 +13,11 @@
 | 검색 방식 | Exact Top 100 |
 | K | 1, 5, 10, 20, 50, 100 |
 | 관련 문서 | Qrels relevance > 0 |
-| 최종 집계 | 평가 가능한 질의별 Recall의 산술평균 |
+| 최종 집계 | 평가 가능한 질의별 Recall·이진 nDCG의 산술평균 |
 
 공식 모델 카드와 접근 가능한 리비전을 확인하고 `configs/legal_recall.yaml`에 고정했습니다. 실제 모델 동작 확인은 probe, 전체 Recall 비교는 run으로 구분합니다.
+
+모델 후보는 로컬 Mac mini M2·16GB 메모리 환경의 자원 제약을 고려해 선정했습니다. 약 5.6억 파라미터 규모의 실행 가능한 후보 간 비교이며, 최신 한국어 검색 상위 세 모델을 포괄하지 않습니다.
 
 ## 실행 흐름
 
@@ -23,7 +25,7 @@
 2. 모델별 공식 규칙에 맞게 문서와 질의 입력을 구성합니다.
 3. 문서·질의 벡터를 생성하거나 동일 조건의 캐시를 사용합니다.
 4. 각 질의에 대해 전체 Corpus에서 정확 검색으로 상위 100개 문서를 구합니다.
-5. 같은 검색 결과에서 모든 K의 Recall을 계산합니다.
+5. 같은 검색 결과에서 모든 K의 Recall과 이진 nDCG를 계산합니다.
 6. 모델별 원본 JSON, 통합 CSV, 질의별 상세 결과와 실행 정보를 저장합니다.
 
 ## Recall 정의와 예외
@@ -41,6 +43,14 @@ K가 Corpus 크기보다 크면 전체 Corpus만 검색하며 Recall 분모는 �
 검증된 Qrels와 정확 검색 순위를 `evaluation.py`의 `evaluate_with_mteb()`에 전달합니다. MTEB RetrievalEvaluator와 같은 지표 함수를 직접 사용하므로 별도 Task 객체나 Corpus 재변환이 필요하지 않습니다.
 
 MTEB 2.26.11에서 양수 relevance를 이진 정답으로 변환하고 정답 없는 질의를 제외한 동일 검색 결과를 평가합니다. 여섯 K의 Recall을 프로젝트 집계와 교차 검증합니다. 요청 지표가 기본 제공되지 않으면 동일 Top 100 결과에서 별도 집계합니다. MTEB 원본 결과와 프로젝트 집계의 차이는 결과에 명시합니다.
+
+## 이진 nDCG 정의와 검증
+
+관련 문서의 검색 순위 i에 `1 / log₂(i + 1)`을 더한 DCG@K를, 관련 문서를 상위에 모두 배치했을 때의 IDCG@K로 나눕니다. IDCG는 상위 `min(K, 관련 문서 수)`개 순위의 할인 가중치 합입니다. 각 질의의 점수를 구한 뒤 산술평균합니다.
+
+Qrels의 양수 등급은 모두 1로 처리하므로, 이 지표는 관련 판례의 상위 배치를 평가하지만 등급 1과 2의 차이를 반영하지 않습니다. 0~1 점수이며 백분율이나 답변 정확도가 아닙니다. K에 따라 이상적 점수도 바뀌므로 단조 증가하지 않으며 동일한 K에서 모델끼리 비교합니다.
+
+실행 시 MTEB가 저장한 원본 nDCG 집계와 질의별 평균을 대조하고, 문서 개정 시 저장 순위와 양수 Qrels로 DCG/IDCG를 독립 재계산했습니다. 모델 추론을 다시 실행하지 않았고 원본 결과를 변경하지 않았습니다. 기존 `recall_summary.csv`는 Recall 전용이며, nDCG 원본은 `raw/`의 JSON에 있습니다. 재계산 수치와 원본 해시는 `assets/images/legal-embedding-recall/verification.json`으로 보존합니다.
 
 ## 비교 통제와 재현성
 
@@ -65,5 +75,6 @@ MTEB 2.26.11에서 양수 relevance를 이진 정답으로 변환하고 정답 �
 - [x] Recall@1/5/10/20/50/100 및 평가·제외 질의 수를 계산했다.
 - [x] 원본 JSON, 통합 CSV, 질의 상세 결과와 실행 정보를 저장했다.
 - [x] 모델별 점수, 입력 잘림 비율과 Qrels 한계를 비교 문서에 기록했다.
+- [x] 저장된 이진 nDCG를 독립 재계산하고 두 지표를 문서와 그래프에 반영했다.
 
-청킹, nDCG, Hybrid Search, Reranker, Elasticsearch 운영 성능과 HNSW/ANN 평가는 후속 실험으로 분리합니다.
+청킹, 원본 등급을 반영하는 graded nDCG, Hybrid Search, Reranker, Elasticsearch 운영 성능과 HNSW/ANN 평가는 후속 실험으로 분리합니다.

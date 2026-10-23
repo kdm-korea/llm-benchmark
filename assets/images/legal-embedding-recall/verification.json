@@ -1,0 +1,104 @@
+{
+  "source_run": "20261020T020620+0900-de87f657",
+  "verification": [
+    "stored per-query + MTEB means vs CSV",
+    "recomputed Recall and binary DCG/IDCG from rankings and positive qrels",
+    "plotted coordinates and labels vs verified values"
+  ],
+  "recall": {
+    "kure-v1": {
+      "1": 0.18355863511365597,
+      "5": 0.4135089263444478,
+      "10": 0.5551067669931222,
+      "20": 0.720013117238734,
+      "50": 0.8581805263086658,
+      "100": 0.9216659391387102
+    },
+    "bge-m3": {
+      "1": 0.17503493408573348,
+      "5": 0.393234567673918,
+      "10": 0.5238271310089426,
+      "20": 0.6604235174530916,
+      "50": 0.8095326390768797,
+      "100": 0.8870111275269368
+    },
+    "multilingual-e5-large": {
+      "1": 0.16816436996285483,
+      "5": 0.3713472187930305,
+      "10": 0.4853150577788289,
+      "20": 0.6049063020105099,
+      "50": 0.7440574360341463,
+      "100": 0.8282543370847022
+    }
+  },
+  "ndcg": {
+    "kure-v1": {
+      "1": 0.8159386462154051,
+      "5": 0.6136892637699692,
+      "10": 0.6122055243809585,
+      "20": 0.6708078285004169,
+      "50": 0.7251558764249787,
+      "100": 0.7451001145727237
+    },
+    "bge-m3": {
+      "1": 0.778592864288096,
+      "5": 0.5824849983345655,
+      "10": 0.5793997254786629,
+      "20": 0.6249602547853496,
+      "50": 0.6832353361687596,
+      "100": 0.7077644303332327
+    },
+    "multilingual-e5-large": {
+      "1": 0.7417472490830277,
+      "5": 0.5499295283865312,
+      "10": 0.5403701165999367,
+      "20": 0.5794084249733819,
+      "50": 0.6336903174191726,
+      "100": 0.6606960242837937
+    }
+  },
+  "ndcg_relevance": "binary_grade_gt_zero",
+  "rendering": {
+    "matplotlib": "3.11.2",
+    "dpi": 200
+  },
+  "auxiliary": {
+    "kure-v1": {
+      "hit_at_1_count": 4894,
+      "hit_at_1_percent": 81.59386462154052,
+      "no_hit_at_100_count": 8,
+      "full_recall_at_100_count": 4088,
+      "full_recall_at_100_percent": 68.1560520173391
+    },
+    "bge-m3": {
+      "hit_at_1_count": 4670,
+      "hit_at_1_percent": 77.85928642880961,
+      "no_hit_at_100_count": 14,
+      "full_recall_at_100_count": 3493,
+      "full_recall_at_100_percent": 58.23607869289763
+    },
+    "multilingual-e5-large": {
+      "hit_at_1_count": 4449,
+      "hit_at_1_percent": 74.17472490830276,
+      "no_hit_at_100_count": 32,
+      "full_recall_at_100_count": 2829,
+      "full_recall_at_100_percent": 47.165721907302434
+    }
+  },
+  "source_sha256": {
+    "results/20261020T020620+0900-de87f657/recall_summary.csv": "f74858c46eeb92d35a3b107b4ad6ed9c2d5a611e2ef4cd63d8536a9ad4e74821",
+    "results/20261020T020620+0900-de87f657/manifest.json": "f83d16d9b1e54312166eee68aad1d78387092e160cdf27571e0efb69e5e0023d",
+    "data/prepared/eve_legal/qrels.json": "170a406fce8ade4ced9a07e6a98f4b5ba6a2d2627ff09f55a0da0304d8c835d6",
+    "results/20261020T020620+0900-de87f657/raw/kure-v1.json": "2614165d3fc94bc1b9d90dcac0fee251ec59f517d92bdd4142513b9d9c3fab46",
+    "results/20261020T020620+0900-de87f657/raw/bge-m3.json": "b3b4eac30e5c5d882815f68dfc64a402f0d44ada027bb6e4a7bdb7305bc418bb",
+    "results/20261020T020620+0900-de87f657/raw/multilingual-e5-large.json": "ec0316b4aadf6fe416443249eeff9b3ac462ea88e2cee3627e66ca1691b9c21b",
+    "results/20261020T020620+0900-de87f657/per_query/kure-v1.json": "0f8601f52fe1a31658d37ff8759de295ea67de8aecfdba8306114783c8cf5376",
+    "results/20261020T020620+0900-de87f657/per_query/bge-m3.json": "657fa7eb24a9b9ce10e38980162f6d3039f26ed3f2d9158feebaf45af37431fb",
+    "results/20261020T020620+0900-de87f657/per_query/multilingual-e5-large.json": "b16521b2d8adb4a4b682d855a9a214fed1c8105d7206f71c44c0f885736a91e5"
+  },
+  "image_sha256": {
+    "metrics-overview.png": "3a6df43d38e34abd262883e0b3f40fcfd750a74468fa528d3ab5de84888bff53",
+    "ndcg-curve.png": "c80dda5f8e4c6c693c266b0c6d502452d73fa1c0706606e55115e7ae5e7c44a2",
+    "recall-curve.png": "f3c6f5e7a4084909f637f79729d519a17aeca941f56239d076ac337b1b085403"
+  }
+}

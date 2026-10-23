@@ -9,3 +9,5 @@
 실행 결과와 캐시는 Git에서 제외하며 이 안내 문서만 추적합니다. `status: complete`는 해당 실행 범위의 완료를 의미합니다. `mode: query_subset`이나 추론 probe는 전체 벤치마크 완료로 해석하지 않습니다.
 
 전체 평가 결과의 비교와 모델 선택은 [결과 보고서](../docs/benchmarks/results/2026-10-20-embedding-recall.md)에 정리했습니다.
+
+`raw/` JSON에는 이진 nDCG도 저장됩니다. `recall_summary.csv`는 Recall 전용이며, 문서·그래프에 사용한 nDCG는 저장 순위와 양수 Qrels로 독립 재계산했습니다. 원본 등급 차이를 반영한 graded nDCG와 구분합니다.
