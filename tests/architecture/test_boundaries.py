@@ -1,4 +1,4 @@
-"""Enforce experiment boundaries without relying on test collection order."""
+"""테스트 수집 순서와 관계없이 실험 사이의 import 경계가 지켜지는지 검증한다."""
 
 import ast
 import importlib.util
@@ -59,12 +59,12 @@ def test_experiments_and_their_tests_never_import_each_other():
                         assert not _is_blocked(module_name, blocked_modules), path
                         assert not module_name.startswith('test_'), path
                     if isinstance(node, ast.ImportFrom) and node.level:
-                        # A relative import may stay inside this area, but not reach siblings.
+                        # 상대 import가 현재 실험 폴더를 벗어나 다른 실험을 참조하지 못하게 한다.
                         package_depth = len(path.relative_to(source_root).parent.parts) + 1
                         assert node.level <= package_depth, path
 
 
-# Run in a clean interpreter so prior test imports cannot satisfy blocked imports.
+# 앞선 테스트의 import 캐시가 의존 경계를 가리지 않도록 새 인터프리터에서 검사한다.
 IMPORT_PROBE = '''
 import importlib
 import importlib.abc

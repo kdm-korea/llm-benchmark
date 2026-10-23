@@ -1,4 +1,4 @@
-"""Fixtures local to embedding experiments; never import another test file."""
+"""임베딩 테스트 안에서만 쓰는 fixture. 다른 테스트 파일을 import해 재사용하지 않는다."""
 
 import json
 

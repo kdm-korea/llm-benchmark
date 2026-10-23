@@ -1,7 +1,7 @@
-"""Validate saved benchmark outputs twice, then render publication figures.
+"""저장된 평가 결과를 두 방식으로 대조한 뒤 보고서용 그래프를 생성한다.
 
-Usage: MPLCONFIGDIR=/private/tmp/legal-mpl .venv/bin/python scripts/render_benchmark_figures.py
-Requires matplotlib (plotting only; no model inference).
+실행: MPLCONFIGDIR=/private/tmp/legal-mpl .venv/bin/python scripts/render_benchmark_figures.py
+그래프 생성에 matplotlib이 필요하며 모델 추론은 수행하지 않는다.
 """
 import csv
 import hashlib
@@ -47,11 +47,11 @@ def main():
         assert len(queries) == len(qrels) == manifest['query_count'] == 5998
         assert {q['query_id'] for q in queries} == set(qrels) == set(raw)
         values[model] = [float(rows[model][f'recall_at_{k}']) for k in K]
-        # Pass 1: independently aggregate stored per-query and MTEB scores.
+        # 1차 검증: 저장된 질의별 점수와 MTEB 점수를 각각 집계해 일치 여부를 확인한다.
         for k, expected in zip(K, values[model]):
             close(mean(q[f'recall_at_{k}'] for q in queries), expected)
             close(mean(s[f'recall_{k}'] for s in raw.values()), expected)
-        # Pass 2: recompute from ranked document IDs and prepared positive qrels.
+        # 2차 검증: 검색 순위와 양수 정답 라벨에서 지표를 다시 계산해 저장값을 대조한다.
         computed = {k: [] for k in K}
         computed_ndcg = {k: [] for k in K}
         first_hits = no_hits = full_hits = 0

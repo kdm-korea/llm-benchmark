@@ -1,1 +1,1 @@
-"""Standard-library utilities shared by independent experiments."""
+"""실험별 코드에 의존하지 않고 표준 라이브러리만 사용하는 공통 유틸리티."""

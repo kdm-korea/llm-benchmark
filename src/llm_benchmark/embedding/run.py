@@ -1,7 +1,7 @@
-"""Run experiments in order: prepare → encode → search → evaluate → save.
+"""데이터 준비 → 임베딩 → 검색 → 평가 → 저장 순서로 실험을 실행한다.
 
-The CLI and experiment flow live together so a run can be followed in one file.
-Paths in YAML settings are relative to the current working directory.
+CLI와 실행 흐름을 같은 파일에 두어 전체 과정을 따라 읽을 수 있게 한다.
+YAML 설정의 상대 경로는 명령을 실행한 작업 디렉터리를 기준으로 해석한다.
 """
 
 import argparse
@@ -25,7 +25,7 @@ from llm_benchmark.embedding.evaluation import evaluate_recall, evaluate_with_mt
 
 
 def select_models(config, names=None):
-    """Keep configured model order and reject misspelled model names."""
+    """설정에 있는 모델 순서를 유지하고, 존재하지 않는 모델 이름은 오류로 처리한다."""
     models = config["models"]
     if not names:
         return models
@@ -67,7 +67,7 @@ def _create_manifest(config, data, validation, query_limit, run_id):
 
 
 def _encode_dataset(model_config, runtime, data):
-    """Release model memory before searching the resulting vectors."""
+    """문서·질의 벡터를 만든 뒤 모델 메모리를 해제해 검색 단계의 메모리 부담을 줄인다."""
     model = EmbeddingModel(model_config, runtime)
     try:
         document_vectors, document_stats = cached_encode(
@@ -107,7 +107,9 @@ def _write_summary(path, summaries, ks):
 
 
 def run_benchmark(config, selected_models=None, query_limit=None):
-    """Execute selected models against the entire corpus; save each as it finishes."""
+    """선택한 모델을 전체 코퍼스에서 평가하고 모델 하나가 끝날 때마다 결과를 저장한다.
+
+    뒤의 모델이 실패해도 앞서 완료한 모델의 결과와 실행 상태를 확인할 수 있게 한다."""
     models = select_models(config, selected_models)
     data, validation = prepare_dataset(config)
     limit = query_limit if query_limit is not None else config["evaluation"]["query_limit"]
@@ -132,12 +134,12 @@ def run_benchmark(config, selected_models=None, query_limit=None):
             write_json(manifest_path, manifest)
             print(f"Encoding {model['name']} ({model['revision']})", flush=True)
 
-            # 1. Encode documents and queries with the same model.
+            # 1. 같은 모델로 문서와 질의를 임베딩해 서로 비교할 수 있는 벡터를 만든다.
             documents, queries, document_stats, query_stats = _encode_dataset(
                 model, config["runtime"], data
             )
 
-            # 2. Search every corpus document, then evaluate this same ranking twice.
+            # 2. 전체 문서에서 검색한 동일 순위를 자체 Recall 계산과 MTEB 대조에 함께 사용한다.
             rankings = exact_search(
                 list(data.corpus), documents, list(data.queries), queries,
                 top_k=max(100, max(ks)),
@@ -146,7 +148,7 @@ def run_benchmark(config, selected_models=None, query_limit=None):
             summary, rows, excluded = evaluate_recall(data.queries, data.qrels, rankings, ks)
             native = evaluate_with_mteb(data.qrels, rankings, ks, summary)
 
-            # 3. Save completed models immediately, including partial multi-model runs.
+            # 3. 여러 모델 중 일부만 완료됐어도 완료한 모델의 결과는 즉시 저장한다.
             _save_model_results(output_dir, model, data, native, rows, excluded)
             summaries.append({
                 "model": model["name"],
@@ -182,7 +184,9 @@ def run_benchmark(config, selected_models=None, query_limit=None):
 
 
 def probe_models(config, selected_models=None):
-    """Check real inference on two documents and queries, without reporting Recall."""
+    """문서 2개·질의 2개로 실제 모델 추론이 가능한지 확인한다.
+
+    검색 성능 실험이 아니므로 Recall 점수는 산출하지 않는다."""
     models = select_models(config, selected_models)
     data, _ = prepare_dataset(config)
     output_path = Path(config["runtime"]["results_dir"]) / "probes" / f"{_new_run_id()}.json"
@@ -224,7 +228,7 @@ def probe_models(config, selected_models=None):
 
 
 def load_config(path):
-    """Load YAML and reject unsupported or ambiguous experiment settings."""
+    """YAML을 읽고 지원하지 않는 데이터 조건·잘못된 모델 이름·실행 크기를 미리 거부한다."""
     config = yaml.safe_load(Path(path).read_text(encoding="utf-8"))
     dataset = config["dataset"]
     if dataset["split"] != "test" or dataset["input_template"] != "title_newline_text":

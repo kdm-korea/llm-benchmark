@@ -9,7 +9,7 @@ dataset:
 evaluation:
   k: [1, 5, 10, 20, 50, 100]
   query_batch_size: 32
-  # Full corpus is always retained. Set via --query-limit for a smoke run.
+  # 검색 대상 문서는 모두 유지한다. 소량 실행은 --query-limit으로 질의 수만 줄인다.
   query_limit: null
 runtime:
   device: auto
