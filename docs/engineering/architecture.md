@@ -1,18 +1,26 @@
 # 개발 아키텍처
 
-현재 목표는 법률 검색용 임베딩 모델의 Recall@K를 비교하는 로컬 CLI입니다. 실행 코드는 네 모듈로 구성하고, 개발 기술과 법률 도메인 설명은 문서에서 구분합니다.
+법률 RAG 연구를 위해 임베딩 검색 실험과 평가 데이터 구축을 관리합니다. 상위 패키지는 `llm_benchmark`이며, 공통 유틸리티와 임베딩 실험 코드를 구분합니다.
 
 ## 코드 구조
 
 ```text
-src/embedding_benchmark/
-  dataset.py       # EVE 다운로드, 데이터 검증, 정규화, JSON 저장
-  embeddings.py    # 모델 로드, 입력 구성, 임베딩, 캐시 검증
-  evaluation.py    # 전체 Corpus 정확 검색, Recall 계산, MTEB 검증
-  run.py           # CLI, 실험 순서, probe, 결과 저장
+src/llm_benchmark/
+  common/
+    hashing.py       # 파일 SHA-256·기존 JSON 해시 형식 유지
+    io.py            # 원자적 JSON·JSONL 읽기/쓰기
+  embedding/
+    dataset.py       # EVE 다운로드, 데이터 검증, 정규화, JSON 저장
+    embeddings.py    # 모델 로드, 입력 구성, 임베딩, 캐시 검증
+    evaluation.py    # 전체 Corpus 정확 검색, Recall 계산, MTEB 검증
+    run.py           # 임베딩 CLI, 실험 순서, probe, 결과 저장
 ```
 
-`run.py`의 `run_benchmark()`부터 읽으면 실험 전체를 따라갈 수 있습니다.
+`embedding/run.py`의 `run_benchmark()`부터 읽으면 임베딩 실험 전체를 따라갈 수 있습니다. 기존 `embedding-benchmark` 명령은 이 모듈을 실행합니다.
+
+의존 방향은 `embedding → common`입니다. `common`은 표준 라이브러리만 사용하고 실험 코드를 import하지 않습니다. 법률 데이터 규칙·검색 지표·모델 설정은 임베딩 실험에 둡니다. 파일 저장과 해시 함수는 공통으로 분리하되 기존 질의 ID·캐시 키 형식은 유지합니다.
+
+임베딩 의존성은 `embedding` extra로 설치합니다. 테스트 fixture와 MTEB 캐시는 해당 실험의 임시 폴더를 사용하며 환경변수는 테스트 후 복구합니다. `--import-mode=importlib`로 테스트 파일 이름 충돌을 방지합니다. `tests/architecture/`는 실험 폴더를 자동 발견하고 교차 import 및 공통 모듈의 실험 의존을 검사합니다.
 
 1. `prepare_dataset()`으로 데이터를 검증합니다.
 2. `_encode_dataset()`으로 문서와 질의 벡터를 준비합니다.
@@ -42,7 +50,9 @@ data/prepared/            정규화 데이터와 검증 보고서
 cache/                    모델·임베딩 캐시
 results/<run_id>/         원본 JSON, 질의별 결과, CSV, manifest
 results/probes/           소량 실제 추론 확인 결과
-tests/                    데이터·임베딩·평가·실행 회귀 테스트
+tests/embedding/          기존 임베딩 실험 회귀 테스트
+tests/common/             공통 저장·해시 호환성 검증
+tests/architecture/       실험 간 의존 경계 검증
 
 docs/engineering/         개발 기술과 실행 방법
 docs/domain/legal/        법률 데이터와 정답 규칙

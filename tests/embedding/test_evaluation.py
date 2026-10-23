@@ -1,7 +1,7 @@
 import numpy as np
 import pytest
 
-from embedding_benchmark.evaluation import evaluate_recall, evaluate_with_mteb, exact_search
+from llm_benchmark.embedding.evaluation import evaluate_recall, evaluate_with_mteb, exact_search
 
 def test_exhaustive_cosine_normalizes_without_mutating_and_breaks_ties_like_mteb():
     corpus = np.array([[2., 0.], [1., 0.], [0., 1.]], dtype=np.float32)

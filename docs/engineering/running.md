@@ -7,7 +7,7 @@
 uv가 있는 환경:
 
 ```bash
-uv sync --locked --cache-dir cache/uv
+uv sync --locked --extra embedding --cache-dir cache/uv
 ```
 
 이번 로컬 환경에서는 uv가 없어 아래 순서로 가상환경에 설치했습니다. 다시 설치할 필요 없이 현재 `.venv/bin/embedding-benchmark`를 실행할 수 있습니다.
@@ -15,16 +15,27 @@ uv sync --locked --cache-dir cache/uv
 ```bash
 python3.12 -m venv .venv
 .venv/bin/python -m pip install uv
-.venv/bin/uv sync --locked --cache-dir cache/uv
+.venv/bin/uv sync --locked --extra embedding --cache-dir cache/uv
 ```
 
 모델 및 데이터 다운로드에는 네트워크가 필요합니다. 데이터, 모델, 벡터와 MTEB 캐시는 프로젝트의 `data/` 및 `cache/`에서 관리합니다.
 
+### 실험 의존성과 테스트 분리
+
+기본 패키지와 `common`은 표준 라이브러리만 사용합니다. 임베딩 실험 의존성은 `embedding` extra로 설치합니다. 새 실험을 추가할 때는 독립적인 extra와 코드·테스트 폴더를 사용합니다.
+
+```bash
+UV_PROJECT_ENVIRONMENT=cache/test-envs/embedding uv sync --python 3.12 --locked --extra embedding --group dev --cache-dir cache/uv
+cache/test-envs/embedding/bin/python -m pytest tests/embedding tests/common tests/architecture -q
+```
+
+로컬에서는 `.venv/bin/uv`를 사용할 수도 있습니다. 각 실험 fixture는 해당 폴더의 `conftest.py`에 두고 다른 테스트 파일을 import하지 않습니다. 테스트는 `--import-mode=importlib`로 수집합니다. 생성 데이터·결과·MTEB 캐시는 pytest 임시 폴더를 사용하고 환경변수는 테스트 후 복구합니다. 공통 변경은 공통 테스트와 해당 코드를 사용하는 실험 테스트로 함께 검증합니다.
+
 ## 코드 읽는 순서
 
-`src/embedding_benchmark/run.py`의 `run_benchmark()`에서 시작합니다. 데이터 처리는 `dataset.py`, 모델과 캐시는 `embeddings.py`, 검색과 지표는 `evaluation.py`에 있습니다.
+`src/llm_benchmark/embedding/run.py`의 `run_benchmark()`에서 시작합니다. 데이터 처리는 `dataset.py`, 모델과 캐시는 `embeddings.py`, 검색과 지표는 `evaluation.py`에 있습니다.
 
-CLI 외에 `.venv/bin/python -m embedding_benchmark.run prepare` 방식도 사용할 수 있습니다. 기존 CLI 명령과 옵션은 유지했습니다.
+CLI 외에 `.venv/bin/python -m llm_benchmark.embedding.run prepare` 방식도 사용할 수 있습니다. 기존 CLI 명령과 옵션은 유지했습니다.
 
 ## 데이터 준비
 
