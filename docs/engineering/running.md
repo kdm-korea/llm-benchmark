@@ -20,16 +20,24 @@ python3.12 -m venv .venv
 
 모델 및 데이터 다운로드에는 네트워크가 필요합니다. 데이터, 모델, 벡터와 MTEB 캐시는 프로젝트의 `data/` 및 `cache/`에서 관리합니다.
 
-### 실험 의존성과 테스트 분리
+### 실험별 의존성·테스트 분리
 
-기본 패키지와 `common`은 표준 라이브러리만 사용합니다. 임베딩 실험 의존성은 `embedding` extra로 설치합니다. 새 실험을 추가할 때는 독립적인 extra와 코드·테스트 폴더를 사용합니다.
+기본 패키지와 `common`은 표준 라이브러리만 사용합니다. `embedding` extra는 임베딩 실험 의존성을, `koblex` extra는 PyArrow만 추가합니다. 같은 환경에 둘 다 필요하면 `--all-extras`를 사용합니다. 서로의 설치 상태까지 분리하려면 프로젝트 루트에서 별도 환경을 만듭니다.
 
 ```bash
 UV_PROJECT_ENVIRONMENT=cache/test-envs/embedding uv sync --python 3.12 --locked --extra embedding --group dev --cache-dir cache/uv
 cache/test-envs/embedding/bin/python -m pytest tests/embedding tests/common tests/architecture -q
+
+UV_PROJECT_ENVIRONMENT=cache/test-envs/koblex uv sync --python 3.12 --locked --extra koblex --group dev --cache-dir cache/uv
+cache/test-envs/koblex/bin/python -m pytest tests/koblex tests/common tests/architecture -q
+cache/test-envs/koblex/bin/python -m llm_benchmark.koblex
 ```
 
-로컬에서는 `.venv/bin/uv`를 사용할 수도 있습니다. 각 실험 fixture는 해당 폴더의 `conftest.py`에 두고 다른 테스트 파일을 import하지 않습니다. 테스트는 `--import-mode=importlib`로 수집합니다. 생성 데이터·결과·MTEB 캐시는 pytest 임시 폴더를 사용하고 환경변수는 테스트 후 복구합니다. 공통 변경은 공통 테스트와 해당 코드를 사용하는 실험 테스트로 함께 검증합니다.
+로컬에서는 `.venv/bin/uv`를 사용할 수도 있습니다. KoBLEX 전용 환경에는 NumPy·Torch·MTEB를 설치하지 않습니다. 임베딩 extra는 MTEB의 전이 의존성으로 PyArrow를 설치할 수 있지만 KoBLEX 코드를 호출하지 않습니다. 새 라이브러리는 필요한 extra에만 추가합니다. 하나의 lockfile은 공유하므로 의존성 버전 충돌까지 완전히 분리한 프로젝트는 아닙니다.
+
+테스트는 `--import-mode=importlib`로 수집해 파일명이 겹쳐도 충돌하지 않습니다. 각 실험의 fixture는 자기 `conftest.py`에 두고 다른 테스트 파일을 import하지 않습니다. 임베딩 테스트의 MTEB 캐시와 생성 데이터·결과는 pytest 임시 폴더를 사용하고, 환경변수는 테스트 후 복구합니다. 공통·다른 실험의 모듈을 우회해서 가져오는 변경은 의존 경계 테스트가 검출합니다.
+
+전체 검증은 두 extra가 설치된 환경에서 `python -m pytest -q`로 수행합니다. 선택한 extra만 있는 환경에서는 다른 실험의 동적 import 검사가 해당 extra 미설치 사유로 skip될 수 있습니다.
 
 ## 코드 읽는 순서
 

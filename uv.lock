@@ -731,6 +731,9 @@ embedding = [
     { name = "pyyaml" },
     { name = "sentence-transformers" },
 ]
+koblex = [
+    { name = "pyarrow" },
+]
 
 [package.dev-dependencies]
 dev = [
@@ -742,10 +745,11 @@ requires-dist = [
     { name = "huggingface-hub", marker = "extra == 'embedding'", specifier = ">=0.34,<3" },
     { name = "mteb", marker = "extra == 'embedding'", specifier = "==2.26.11" },
     { name = "numpy", marker = "extra == 'embedding'", specifier = ">=2.0,<3" },
+    { name = "pyarrow", marker = "extra == 'koblex'", specifier = ">=21,<27" },
     { name = "pyyaml", marker = "extra == 'embedding'", specifier = ">=6,<7" },
     { name = "sentence-transformers", marker = "extra == 'embedding'", specifier = ">=5,<7" },
 ]
-provides-extras = ["embedding"]
+provides-extras = ["embedding", "koblex"]
 
 [package.metadata.requires-dev]
 dev = [{ name = "pytest", specifier = ">=8,<10" }]

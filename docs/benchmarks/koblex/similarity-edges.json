@@ -1,0 +1,310 @@
+[
+  {
+    "a": "qa_19_1hop_28",
+    "b": "qa_19_2hop_77_rand",
+    "source_id_family": true,
+    "scenario_jaccard": 0.006289308176100629,
+    "query_jaccard": 0.005037783375314861
+  },
+  {
+    "a": "qa_92_1hop_149",
+    "b": "qa_92_2hop_361_rand",
+    "source_id_family": true,
+    "scenario_jaccard": 0.0,
+    "query_jaccard": 0.0
+  },
+  {
+    "a": "qa_139_1hop_254",
+    "b": "qa_139_2hop_535_rand",
+    "source_id_family": true,
+    "scenario_jaccard": 0.0,
+    "query_jaccard": 0.0
+  },
+  {
+    "a": "qa_192_2hop_334",
+    "b": "qa_192_1hop_333",
+    "source_id_family": true,
+    "scenario_jaccard": 0.04060913705583756,
+    "query_jaccard": 0.07086614173228346
+  },
+  {
+    "a": "qa_49_2hop_192_rand",
+    "b": "qa_49_2hop_75",
+    "source_id_family": true,
+    "scenario_jaccard": 0.0,
+    "query_jaccard": 0.0
+  },
+  {
+    "a": "qa_116_2hop_452_rand",
+    "b": "qa_116_2hop_208",
+    "source_id_family": true,
+    "scenario_jaccard": 0.0,
+    "query_jaccard": 0.0
+  },
+  {
+    "a": "qa_116_2hop_452_rand",
+    "b": "qa_116_1hop_207",
+    "source_id_family": true,
+    "scenario_jaccard": 0.0,
+    "query_jaccard": 0.0061162079510703364
+  },
+  {
+    "a": "qa_140_3hop_540_rand",
+    "b": "qa_140_1hop_257",
+    "source_id_family": true,
+    "scenario_jaccard": 0.004310344827586207,
+    "query_jaccard": 0.005934718100890208
+  },
+  {
+    "a": "qa_174_1hop_312",
+    "b": "qa_174_2hop_666_rand",
+    "source_id_family": true,
+    "scenario_jaccard": 0.0,
+    "query_jaccard": 0.006514657980456026
+  },
+  {
+    "a": "qa_99_2hop_168",
+    "b": "qa_99_1hop_167",
+    "source_id_family": true,
+    "scenario_jaccard": 0.10714285714285714,
+    "query_jaccard": 0.09174311926605505
+  },
+  {
+    "a": "qa_59_2hop_232_rand",
+    "b": "qa_59_2hop_90",
+    "source_id_family": true,
+    "scenario_jaccard": 0.003875968992248062,
+    "query_jaccard": 0.002967359050445104
+  },
+  {
+    "a": "qa_102_3hop_175",
+    "b": "qa_102_1hop_173",
+    "source_id_family": true,
+    "scenario_jaccard": 0.008426966292134831,
+    "query_jaccard": 0.02736842105263158
+  },
+  {
+    "a": "qa_102_3hop_175",
+    "b": "qa_102_2hop_400_rand",
+    "source_id_family": true,
+    "scenario_jaccard": 0.0,
+    "query_jaccard": 0.0
+  },
+  {
+    "a": "qa_62_1hop_94",
+    "b": "qa_62_2hop_244_rand",
+    "source_id_family": true,
+    "scenario_jaccard": 0.0,
+    "query_jaccard": 0.005649717514124294
+  },
+  {
+    "a": "qa_124_2hop_480_rand",
+    "b": "qa_124_1hop_223",
+    "source_id_family": true,
+    "scenario_jaccard": 0.0,
+    "query_jaccard": 0.0
+  },
+  {
+    "a": "qa_430_3hop_669",
+    "b": "qa_430_2hop_668",
+    "source_id_family": true,
+    "scenario_jaccard": 0.007782101167315175,
+    "query_jaccard": 0.021333333333333333
+  },
+  {
+    "a": "qa_145_1hop_267",
+    "b": "qa_145_2hop_559_rand",
+    "source_id_family": true,
+    "scenario_jaccard": 0.007352941176470588,
+    "query_jaccard": 0.018433179723502304
+  },
+  {
+    "a": "qa_144_3hop_410_rand2",
+    "b": "qa_144_2hop_555_rand",
+    "source_id_family": true,
+    "scenario_jaccard": 0.0,
+    "query_jaccard": 0.0
+  },
+  {
+    "a": "qa_26_1hop_39",
+    "b": "qa_26_2hop_104_rand",
+    "source_id_family": true,
+    "scenario_jaccard": 0.0,
+    "query_jaccard": 0.005797101449275362
+  },
+  {
+    "a": "qa_102_1hop_173",
+    "b": "qa_102_2hop_400_rand",
+    "source_id_family": true,
+    "scenario_jaccard": 0.0,
+    "query_jaccard": 0.0
+  },
+  {
+    "a": "qa_116_2hop_208",
+    "b": "qa_116_1hop_207",
+    "source_id_family": true,
+    "scenario_jaccard": 0.027522935779816515,
+    "query_jaccard": 0.06918238993710692
+  },
+  {
+    "a": "qa_233_2hop_888_rand",
+    "b": "qa_233_2hop_388",
+    "source_id_family": true,
+    "scenario_jaccard": 0.0,
+    "query_jaccard": 0.0
+  },
+  {
+    "a": "qa_41_3hop_66",
+    "b": "qa_41_2hop_160_rand",
+    "source_id_family": true,
+    "scenario_jaccard": 0.0,
+    "query_jaccard": 0.0
+  },
+  {
+    "a": "qa_104_1hop_180",
+    "b": "qa_104_3hop_182",
+    "source_id_family": true,
+    "scenario_jaccard": 0.010869565217391304,
+    "query_jaccard": 0.026515151515151516
+  },
+  {
+    "a": "qa_0_2hop_1_rand",
+    "b": "qa_0_1hop_0",
+    "source_id_family": true,
+    "scenario_jaccard": 0.0,
+    "query_jaccard": 0.0
+  },
+  {
+    "a": "qa_132_2hop_507_rand",
+    "b": "qa_132_3hop_508_rand",
+    "source_id_family": true,
+    "scenario_jaccard": 0.008583690987124463,
+    "query_jaccard": 0.11144578313253012
+  },
+  {
+    "a": "qa_168_3hop_301",
+    "b": "qa_168_2hop_300",
+    "source_id_family": true,
+    "scenario_jaccard": 0.0,
+    "query_jaccard": 0.010416666666666666
+  },
+  {
+    "a": "qa_168_3hop_301",
+    "b": "qa_168_1hop_299",
+    "source_id_family": true,
+    "scenario_jaccard": 0.028925619834710745,
+    "query_jaccard": 0.03498542274052478
+  },
+  {
+    "a": "qa_32_1hop_49",
+    "b": "qa_32_3hop_51",
+    "source_id_family": true,
+    "scenario_jaccard": 0.08275862068965517,
+    "query_jaccard": 0.08108108108108109
+  },
+  {
+    "a": "qa_32_1hop_49",
+    "b": "qa_32_3hop_125_rand",
+    "source_id_family": true,
+    "scenario_jaccard": 0.0,
+    "query_jaccard": 0.0
+  },
+  {
+    "a": "qa_69_1hop_102",
+    "b": "qa_69_2hop_103",
+    "source_id_family": true,
+    "scenario_jaccard": 0.03255813953488372,
+    "query_jaccard": 0.0594059405940594
+  },
+  {
+    "a": "qa_17_2hop_25",
+    "b": "qa_17_1hop_24",
+    "source_id_family": true,
+    "scenario_jaccard": 0.04048582995951417,
+    "query_jaccard": 0.05373134328358209
+  },
+  {
+    "a": "qa_125_2hop_226",
+    "b": "qa_125_1hop_225",
+    "source_id_family": true,
+    "scenario_jaccard": 0.01694915254237288,
+    "query_jaccard": 0.02962962962962963
+  },
+  {
+    "a": "qa_70_2hop_273_rand",
+    "b": "qa_70_1hop_106",
+    "source_id_family": true,
+    "scenario_jaccard": 0.0,
+    "query_jaccard": 0.0
+  },
+  {
+    "a": "qa_32_3hop_51",
+    "b": "qa_32_3hop_125_rand",
+    "source_id_family": true,
+    "scenario_jaccard": 0.0,
+    "query_jaccard": 0.0025906735751295338
+  },
+  {
+    "a": "qa_80_2hop_313_rand",
+    "b": "qa_80_1hop_125",
+    "source_id_family": true,
+    "scenario_jaccard": 0.0,
+    "query_jaccard": 0.0
+  },
+  {
+    "a": "qa_242_2hop_923_rand",
+    "b": "qa_242_3hop_399",
+    "source_id_family": true,
+    "scenario_jaccard": 0.0,
+    "query_jaccard": 0.0028089887640449437
+  },
+  {
+    "a": "qa_209_3hop_360",
+    "b": "qa_209_2hop_798_rand",
+    "source_id_family": true,
+    "scenario_jaccard": 0.0,
+    "query_jaccard": 0.0
+  },
+  {
+    "a": "qa_74_1hop_114",
+    "b": "qa_74_3hop_116",
+    "source_id_family": true,
+    "scenario_jaccard": 0.05333333333333334,
+    "query_jaccard": 0.0440251572327044
+  },
+  {
+    "a": "qa_85_2hop_333_rand",
+    "b": "qa_85_1hop_135",
+    "source_id_family": true,
+    "scenario_jaccard": 0.013452914798206279,
+    "query_jaccard": 0.015625
+  },
+  {
+    "a": "qa_244_2hop_931_rand",
+    "b": "qa_244_2hop_400",
+    "source_id_family": true,
+    "scenario_jaccard": 0.0,
+    "query_jaccard": 0.0
+  },
+  {
+    "a": "qa_608_3hop_919",
+    "b": "qa_608_2hop_918",
+    "source_id_family": true,
+    "scenario_jaccard": 0.03879310344827586,
+    "query_jaccard": 0.06349206349206349
+  },
+  {
+    "a": "qa_168_2hop_300",
+    "b": "qa_168_1hop_299",
+    "source_id_family": true,
+    "scenario_jaccard": 0.0,
+    "query_jaccard": 0.006688963210702341
+  },
+  {
+    "a": "qa_136_2hop_523_rand",
+    "b": "qa_136_3hop_249",
+    "source_id_family": true,
+    "scenario_jaccard": 0.0,
+    "query_jaccard": 0.0
+  }
+]

@@ -1,0 +1,153 @@
+{
+  "checked_on": "2026-10-23 (Asia/Seoul)",
+  "method": "unauthenticated public HTTP GET, no Hugging Face token",
+  "sources": [
+    {
+      "endpoint": "https://huggingface.co/api/datasets/JihyungL/KoBLEX-koblex",
+      "http_status": 200,
+      "repo": "JihyungL/KoBLEX-koblex",
+      "revision": "c61652a4cb72c8d79dd34b8daf7efe08a3a5947f",
+      "private": false,
+      "gated": false,
+      "disabled": false,
+      "cardData": {
+        "dataset_info": {
+          "features": [
+            {
+              "name": "id",
+              "dtype": "string"
+            },
+            {
+              "name": "question",
+              "dtype": "string"
+            },
+            {
+              "name": "answer",
+              "dtype": "string"
+            },
+            {
+              "name": "question_eng",
+              "dtype": "string"
+            },
+            {
+              "name": "answer_eng",
+              "dtype": "string"
+            },
+            {
+              "name": "background",
+              "dtype": "string"
+            },
+            {
+              "name": "background_eng",
+              "dtype": "string"
+            },
+            {
+              "name": "contexts",
+              "list": [
+                {
+                  "name": "content",
+                  "dtype": "string"
+                },
+                {
+                  "name": "content_eng",
+                  "dtype": "string"
+                },
+                {
+                  "name": "hierarchy",
+                  "dtype": "string"
+                },
+                {
+                  "name": "hierarchy_eng",
+                  "dtype": "string"
+                },
+                {
+                  "name": "index",
+                  "dtype": "string"
+                },
+                {
+                  "name": "index_eng",
+                  "dtype": "string"
+                }
+              ]
+            },
+            {
+              "name": "n_hops",
+              "dtype": "int64"
+            }
+          ],
+          "splits": [
+            {
+              "name": "test",
+              "num_bytes": 948798,
+              "num_examples": 226
+            }
+          ],
+          "download_size": 455400,
+          "dataset_size": 948798
+        },
+        "configs": [
+          {
+            "config_name": "default",
+            "data_files": [
+              {
+                "split": "test",
+                "path": "data/test-*"
+              }
+            ]
+          }
+        ]
+      },
+      "api_snapshot_sha256": "b74e147015bb51cc3e98b810d42d053aee5c987b58be833a1a7455e57a6c8d00",
+      "api_snapshot_path": "data/raw/koblex/KoBLEX-koblex/api.json"
+    },
+    {
+      "endpoint": "https://huggingface.co/api/datasets/JihyungL/KoBLEX-statute",
+      "http_status": 200,
+      "repo": "JihyungL/KoBLEX-statute",
+      "revision": "9af89d404f51ee75d1bdd42784e29b0018ee5413",
+      "private": false,
+      "gated": false,
+      "disabled": false,
+      "cardData": {
+        "dataset_info": {
+          "features": [
+            {
+              "name": "index",
+              "dtype": "string"
+            },
+            {
+              "name": "hierarchy",
+              "dtype": "string"
+            },
+            {
+              "name": "content",
+              "dtype": "string"
+            }
+          ],
+          "splits": [
+            {
+              "name": "corpus",
+              "num_bytes": 94334918,
+              "num_examples": 233544
+            }
+          ],
+          "download_size": 28773033,
+          "dataset_size": 94334918
+        },
+        "configs": [
+          {
+            "config_name": "default",
+            "data_files": [
+              {
+                "split": "corpus",
+                "path": "data/corpus-*"
+              }
+            ]
+          }
+        ]
+      },
+      "api_snapshot_sha256": "6e58bbacf600b117cd34972251ed36eb75d01210b5b53f7d3cc88c1d2376f2cd",
+      "api_snapshot_path": "data/raw/koblex/KoBLEX-statute/api.json"
+    }
+  ]
+}

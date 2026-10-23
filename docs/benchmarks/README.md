@@ -7,8 +7,9 @@
 | 실험 | 분야 | 평가 대상 | 상태 | 상세 기준·결과 |
 | --- | --- | --- | --- | --- |
 | [한국어 판례 임베딩 검색 비교](embedding/README.md) | 한국어 법률 검색 | 문서 단위 임베딩 모델의 검색 품질 | 전체 평가 완료 | [평가 설계](embedding-recall.md) · [결과 보고서](results/2026-10-20-embedding-recall.md) |
+| [KoBLEX 법령·정답 근거 구축](koblex/README.md) | 법률 RAG 평가 데이터 | 질문·정답 조문 연결, 검색 지표와 답변 검수 기준 | 평가 기반 구축 완료 | [데이터 검증](koblex/audit-report.md) · [검색 기준](koblex/evaluation-rules.md) · [답변 검수표](koblex/answer-rubric.md) |
 
-등록된 실험은 준비 완료와 실제 성능 평가 완료를 구분해 기록합니다. 후속 작업 방향은 [프로젝트 README](../../README.md)에 정리합니다.
+KoBLEX의 법령 검색·생성 성능 평가는 아직 실행하지 않았습니다. 데이터 준비 완료와 성능 평가 완료를 구분합니다. 이후 법률 분야의 연구 후보는 [법률 RAG 연구 계획](../research-plan.md)에 정리합니다.
 
 ## 문서 관리 규칙
 
