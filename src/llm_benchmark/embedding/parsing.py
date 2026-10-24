@@ -3,23 +3,23 @@
 
 def mapping(value: object) -> dict[str, object]:
     if not isinstance(value, dict) or any(not isinstance(key, str) for key in value):
-        raise ValueError("Expected object with string keys")
+        raise ValueError('Expected object with string keys')
     return {key: item for key, item in value.items()}
 
 
 def string(value: object) -> str:
     if not isinstance(value, str):
-        raise ValueError("Expected string")
+        raise ValueError('Expected string')
     return value
 
 
 def integer(value: object) -> int:
     if type(value) is not int:
-        raise ValueError("Expected integer")
+        raise ValueError('Expected integer')
     return value
 
 
 def sequence(value: object) -> list[object]:
     if not isinstance(value, list):
-        raise ValueError("Expected list")
+        raise ValueError('Expected list')
     return list(value)

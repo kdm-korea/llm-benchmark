@@ -14,5 +14,5 @@ def fingerprint(value: object) -> str:
 
 
 def file_sha256(path: str | Path) -> str:
-    with Path(path).open("rb") as stream:
-        return hashlib.file_digest(stream, "sha256").hexdigest()
+    with Path(path).open('rb') as stream:
+        return hashlib.file_digest(stream, 'sha256').hexdigest()

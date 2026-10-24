@@ -6,7 +6,7 @@ from dataclasses import dataclass, field
 from enum import StrEnum
 from typing import TYPE_CHECKING, NotRequired, TypedDict
 
-from llm_benchmark.embedding.parsing import string
+from .parsing import string
 
 if TYPE_CHECKING:
     import numpy as np
@@ -14,20 +14,20 @@ if TYPE_CHECKING:
 
 
 class DuplicateQueryPolicy(StrEnum):
-    ERROR = "error"
-    MERGE_MAX = "merge_max"
+    ERROR = 'error'
+    MERGE_MAX = 'merge_max'
 
 
 class InputKind(StrEnum):
-    DOCUMENT = "document"
-    QUERY = "query"
+    DOCUMENT = 'document'
+    QUERY = 'query'
 
 
 class RunStatus(StrEnum):
-    RUNNING = "running"
-    COMPLETE = "complete"
-    FAILED = "failed"
-    INTERRUPTED = "interrupted"
+    RUNNING = 'running'
+    COMPLETE = 'complete'
+    FAILED = 'failed'
+    INTERRUPTED = 'interrupted'
 
 
 class CorpusRow(TypedDict):
@@ -82,26 +82,26 @@ class BenchmarkConfig(TypedDict):
     models: list[ModelConfig]
 
 
-@dataclass(frozen=True)
+@dataclass(slots=True, frozen=True, kw_only=True)
 class Document:
     title: str
     text: str
-    kind: str = ""
+    kind: str = ''
 
     def to_dict(self) -> dict[str, str]:
         """기존 준비 데이터와 fingerprint에 쓰던 필드 순서를 유지한다."""
-        return {"title": self.title, "text": self.text, "kind": self.kind}
+        return {'title': self.title, 'text': self.text, 'kind': self.kind}
 
     def embedding_text(self) -> str:
-        return "\n".join(part for part in (self.title.strip(), self.text.strip()) if part)
+        return '\n'.join(part for part in (self.title.strip(), self.text.strip()) if part)
 
 
-@dataclass(frozen=True)
+@dataclass(slots=True, frozen=True, kw_only=True)
 class Query:
     text: str
 
 
-@dataclass
+@dataclass(slots=True, kw_only=True)
 class PreparedQueries:
     queries: dict[str, Query]
     qrels: dict[str, dict[str, float]]
@@ -109,36 +109,36 @@ class PreparedQueries:
     source_rows: int
 
 
-@dataclass
+@dataclass(slots=True, kw_only=True)
 class DataMetadata:
     source: dict[str, object]
     source_qrels_rows: int
     duplicate_query_policy: DuplicateQueryPolicy
     actual_file_sha256: dict[str, str]
     duplicate_rows: list[dict[str, object]]
-    data_hash: str = ""
+    data_hash: str = ''
 
     @property
     def revision(self) -> str:
-        return string(self.source["revision"])
+        return string(self.source['revision'])
 
     def to_dict(self) -> dict[str, object]:
         return {
             **self.source,
-            "split": "test",
-            "query_id_policy": "sha256-json-text-first24",
-            "source_qrels_rows": self.source_qrels_rows,
-            "duplicate_query_policy": self.duplicate_query_policy.value,
-            "actual_file_sha256": self.actual_file_sha256,
-            "duplicate_rows": self.duplicate_rows,
-            "data_hash": self.data_hash,
+            'split': 'test',
+            'query_id_policy': 'sha256-json-text-first24',
+            'source_qrels_rows': self.source_qrels_rows,
+            'duplicate_query_policy': self.duplicate_query_policy.value,
+            'actual_file_sha256': self.actual_file_sha256,
+            'duplicate_rows': self.duplicate_rows,
+            'data_hash': self.data_hash,
         }
 
 
 Rankings = dict[str, list[tuple[str, float]]]
 
 
-@dataclass
+@dataclass(slots=True, kw_only=True)
 class QueryEvaluation:
     query_id: str
     query_text: str
@@ -149,45 +149,49 @@ class QueryEvaluation:
 
     def to_dict(self) -> dict[str, object]:
         return {
-            "query_id": self.query_id,
-            "query_text": self.query_text,
-            "relevant_doc_ids": self.relevant_doc_ids,
-            "retrieved_doc_ids_top100": self.retrieved_doc_ids,
-            "scores": self.scores,
+            'query_id': self.query_id,
+            'query_text': self.query_text,
+            'relevant_doc_ids': self.relevant_doc_ids,
+            'retrieved_doc_ids_top100': self.retrieved_doc_ids,
+            'scores': self.scores,
             **self.recall,
         }
 
 
-@dataclass
+@dataclass(slots=True, kw_only=True)
 class RecallEvaluation:
     summary: dict[str, float]
     queries: list[QueryEvaluation]
     excluded: list[dict[str, str]]
 
 
-@dataclass
+@dataclass(slots=True, kw_only=True)
 class EncodedBatch:
     vectors: NDArray[np.float32]
     stats: dict[str, object]
 
 
-@dataclass
+@dataclass(slots=True, kw_only=True)
 class EncodedDataset:
     documents: EncodedBatch
     queries: EncodedBatch
 
 
-@dataclass
+@dataclass(slots=True, kw_only=True)
 class ModelEvaluation:
     recall: RecallEvaluation
     native: dict[str, object]
 
 
-@dataclass
+@dataclass(slots=True, kw_only=True)
 class ModelProgress:
     resolved_config: ModelConfig
     status: RunStatus = RunStatus.RUNNING
     details: dict[str, object] = field(default_factory=dict)
 
     def to_dict(self) -> dict[str, object]:
-        return {"resolved_config": self.resolved_config, "status": self.status.value, **self.details}
+        return {
+            'resolved_config': self.resolved_config,
+            'status': self.status.value,
+            **self.details,
+        }

@@ -1,29 +1,39 @@
 """모델 추론을 테스트 대역으로 바꿔 실행 흐름과 실제 MTEB 연동을 네트워크 없이 검증한다."""
 
-from collections.abc import Callable, Sequence
 import json
+from collections.abc import Callable, Sequence
 from pathlib import Path
 
 import numpy as np
 import pytest
 
 import llm_benchmark.embedding.run as benchmark
+from llm_benchmark.embedding.config import load_config
 from llm_benchmark.embedding.models import (
-    BenchmarkConfig, EncodedBatch, InputKind, ModelConfig, RuntimeConfig,
+    BenchmarkConfig,
+    EncodedBatch,
+    InputKind,
+    ModelConfig,
+    RuntimeConfig,
 )
 
 
 @pytest.fixture
 def experiment_config(tmp_path: Path, make_source: Callable[..., None]) -> BenchmarkConfig:
-    config = benchmark.load_config(Path(__file__).resolve().parents[2] / 'configs/legal_recall.yaml')
+    config = load_config(Path(__file__).resolve().parents[2] / 'configs/legal_recall.yaml')
     raw = tmp_path / 'raw'
     raw.mkdir()
-    make_source(raw, [
-        {'query': 'first', 'grades': {'001': 2}},
-        {'query': 'second', 'grades': {'002': 1}},
-    ])
+    make_source(
+        raw,
+        [
+            {'query': 'first', 'grades': {'001': 2}},
+            {'query': 'second', 'grades': {'002': 1}},
+        ],
+    )
     config['dataset'].update(
-        id='test', revision='abc', raw_dir=str(raw),
+        id='test',
+        revision='abc',
+        raw_dir=str(raw),
         prepared_dir=str(tmp_path / 'prepared'),
     )
     config['runtime']['results_dir'] = str(tmp_path / 'results')
@@ -32,7 +42,8 @@ def experiment_config(tmp_path: Path, make_source: Callable[..., None]) -> Bench
 
 
 def test_run_writes_coherent_outputs_without_model_network(
-    experiment_config: BenchmarkConfig, monkeypatch: pytest.MonkeyPatch,
+    experiment_config: BenchmarkConfig,
+    monkeypatch: pytest.MonkeyPatch,
 ) -> None:
     class FakeModel:
         def __init__(self, *args: object) -> None:
@@ -42,7 +53,7 @@ def test_run_writes_coherent_outputs_without_model_network(
             pass
 
     def encode_fixture(*args: object) -> EncodedBatch:
-        return EncodedBatch(np.eye(2, dtype=np.float32), {'cache_hit': False})
+        return EncodedBatch(vectors=np.eye(2, dtype=np.float32), stats={'cache_hit': False})
 
     monkeypatch.setattr(benchmark, 'resolve_model', lambda model: model)
     monkeypatch.setattr(benchmark, 'EmbeddingModel', FakeModel)
@@ -55,14 +66,16 @@ def test_run_writes_coherent_outputs_without_model_network(
     assert manifest['corpus_count'] == 2
 
     native = json.loads((output / 'raw/bge-m3.json').read_text())
-    assert native['recall']['Recall@100'] == 1.
+    assert native['recall']['Recall@100'] == 1.0
     per_query = json.loads((output / 'per_query/bge-m3.json').read_text())
     assert len(per_query['queries']) == 2
     assert (output / 'recall_summary.csv').exists()
 
 
 def test_failure_manifest_is_preserved(
-    experiment_config: BenchmarkConfig, tmp_path: Path, monkeypatch: pytest.MonkeyPatch,
+    experiment_config: BenchmarkConfig,
+    tmp_path: Path,
+    monkeypatch: pytest.MonkeyPatch,
 ) -> None:
     def unavailable_model(model: ModelConfig) -> ModelConfig:
         raise ValueError('model not available')
@@ -78,7 +91,8 @@ def test_failure_manifest_is_preserved(
 
 
 def test_probe_reports_inference_only_and_releases_model(
-    experiment_config: BenchmarkConfig, monkeypatch: pytest.MonkeyPatch,
+    experiment_config: BenchmarkConfig,
+    monkeypatch: pytest.MonkeyPatch,
 ) -> None:
     closed_models = []
 
@@ -87,7 +101,7 @@ def test_probe_reports_inference_only_and_releases_model(
             self.name = config['name']
 
         def encode(self, texts: Sequence[str], kind: InputKind) -> EncodedBatch:
-            return EncodedBatch(np.ones((len(texts), 3)), {'count': len(texts)})
+            return EncodedBatch(vectors=np.ones((len(texts), 3)), stats={'count': len(texts)})
 
         def close(self) -> None:
             closed_models.append(self.name)
@@ -106,8 +120,10 @@ def test_probe_reports_inference_only_and_releases_model(
 
 @pytest.mark.parametrize('failure', [ValueError('encoding failed'), KeyboardInterrupt()])
 def test_encoding_failure_releases_model_and_records_active_status(
-    experiment_config: BenchmarkConfig, monkeypatch: pytest.MonkeyPatch,
-    tmp_path: Path, failure: BaseException,
+    experiment_config: BenchmarkConfig,
+    monkeypatch: pytest.MonkeyPatch,
+    tmp_path: Path,
+    failure: BaseException,
 ) -> None:
     closed = []
 
@@ -135,7 +151,9 @@ def test_encoding_failure_releases_model_and_records_active_status(
 
 
 def test_probe_failure_releases_model(
-    experiment_config: BenchmarkConfig, monkeypatch: pytest.MonkeyPatch, tmp_path: Path,
+    experiment_config: BenchmarkConfig,
+    monkeypatch: pytest.MonkeyPatch,
+    tmp_path: Path,
 ) -> None:
     closed = []
 
@@ -159,7 +177,9 @@ def test_probe_failure_releases_model(
 
 
 def test_later_model_failure_keeps_completed_outputs(
-    experiment_config: BenchmarkConfig, monkeypatch: pytest.MonkeyPatch, tmp_path: Path,
+    experiment_config: BenchmarkConfig,
+    monkeypatch: pytest.MonkeyPatch,
+    tmp_path: Path,
 ) -> None:
     first_model = experiment_config['models'][0]
     experiment_config['models'].append({**first_model, 'name': 'second-model'})
@@ -175,7 +195,7 @@ def test_later_model_failure_keeps_completed_outputs(
     def encode_fixture(model: FakeModel, *args: object) -> EncodedBatch:
         if model.name == 'second-model':
             raise ValueError('second model failed')
-        return EncodedBatch(np.eye(2, dtype=np.float32), {'cache_hit': False})
+        return EncodedBatch(vectors=np.eye(2, dtype=np.float32), stats={'cache_hit': False})
 
     monkeypatch.setattr(benchmark, 'resolve_model', lambda model: model)
     monkeypatch.setattr(benchmark, 'EmbeddingModel', FakeModel)

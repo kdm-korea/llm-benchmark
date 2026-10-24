@@ -2,18 +2,21 @@
 
 import ast
 import importlib.util
-from pathlib import Path
 import subprocess
 import sys
+from pathlib import Path
 
 import pytest
 
 ROOT = Path(__file__).resolve().parents[2]
 SOURCE_ROOT = ROOT / 'src/llm_benchmark'
-EXPERIMENTS = tuple(sorted(
-    path.name for path in SOURCE_ROOT.iterdir()
-    if path.is_dir() and path.name != 'common' and (path / '__init__.py').exists()
-))
+EXPERIMENTS = tuple(
+    sorted(
+        path.name
+        for path in SOURCE_ROOT.iterdir()
+        if path.is_dir() and path.name != 'common' and (path / '__init__.py').exists()
+    )
+)
 MODULES = {
     area: [
         '.'.join(path.relative_to(SOURCE_ROOT).with_suffix('').parts)
@@ -23,8 +26,13 @@ MODULES = {
     for area in ('common', *EXPERIMENTS)
 }
 OPTIONAL_LIBRARIES = (
-    'numpy', 'yaml', 'huggingface_hub', 'torch',
-    'sentence_transformers', 'mteb', 'pyarrow',
+    'numpy',
+    'yaml',
+    'huggingface_hub',
+    'torch',
+    'sentence_transformers',
+    'mteb',
+    'pyarrow',
 )
 
 
@@ -47,9 +55,7 @@ def test_experiments_and_their_tests_never_import_each_other():
     for area in (*EXPERIMENTS, 'common'):
         other_experiments = [name for name in EXPERIMENTS if name != area]
         blocked_modules = [
-            prefix + name
-            for name in other_experiments
-            for prefix in ('llm_benchmark.', 'tests.')
+            prefix + name for name in other_experiments for prefix in ('llm_benchmark.', 'tests.')
         ]
         source_roots = [ROOT / 'src/llm_benchmark' / area, ROOT / 'tests' / area]
         for source_root in source_roots:
@@ -65,7 +71,7 @@ def test_experiments_and_their_tests_never_import_each_other():
 
 
 # 앞선 테스트의 import 캐시가 의존 경계를 가리지 않도록 새 인터프리터에서 검사한다.
-IMPORT_PROBE = '''
+IMPORT_PROBE = """
 import importlib
 import importlib.abc
 import json
@@ -84,7 +90,7 @@ class BlockOtherExperiments(importlib.abc.MetaPathFinder):
 sys.meta_path.insert(0, BlockOtherExperiments())
 for module_name in json.loads(modules_json):
     importlib.import_module('llm_benchmark.' + module_name)
-'''
+"""
 
 
 @pytest.mark.parametrize('area', ['common', *EXPERIMENTS])
@@ -99,8 +105,13 @@ def test_imports_in_fresh_process_with_other_experiments_blocked(area):
         blocked_modules.extend(OPTIONAL_LIBRARIES)
 
     command = [
-        sys.executable, '-I', '-c', IMPORT_PROBE,
-        str(ROOT / 'src'), json.dumps(blocked_modules), json.dumps(MODULES[area]),
+        sys.executable,
+        '-I',
+        '-c',
+        IMPORT_PROBE,
+        str(ROOT / 'src'),
+        json.dumps(blocked_modules),
+        json.dumps(MODULES[area]),
     ]
     result = subprocess.run(command, cwd=ROOT, capture_output=True, text=True)
     assert result.returncode == 0, result.stderr
@@ -110,8 +121,12 @@ def test_embedding_data_models_import_without_optional_libraries() -> None:
     import json
 
     command = [
-        sys.executable, '-I', '-c', IMPORT_PROBE,
-        str(ROOT / 'src'), json.dumps(OPTIONAL_LIBRARIES),
+        sys.executable,
+        '-I',
+        '-c',
+        IMPORT_PROBE,
+        str(ROOT / 'src'),
+        json.dumps(OPTIONAL_LIBRARIES),
         json.dumps(['embedding.models', 'embedding.dataset']),
     ]
     result = subprocess.run(command, cwd=ROOT, capture_output=True, text=True)
