@@ -1,10 +1,22 @@
 # 블로그 포스팅 원고
 
+게시 대상 원고는 이 폴더에, 원고용 이미지 생성 코드는 `scripts/` 하위 폴더에 둡니다. 내부 검수·검증 기록은 `docs/work-log/`에서 관리합니다. 생성 코드와 검수 기록은 게시 대상에서 제외합니다.
+
+## 원고 목록
+
+- [법률 RAG 개발을 위한 연구 방향과 단계별 평가 계획](2026-10-24-legal-rag-research-plan.md): 전체 연구 방향과 단계별 실험 계획을 다루는 포스트
+- [한국어 판례 임베딩 검색 비교](2026-10-23-legal-embedding-recall-benchmark.md): 전체 평가 결과를 정리한 게시 원고
+
+연구 방향 원고는 `assets/images/legal-rag-research-plan/research-roadmap.png`를 함께 게시합니다. 프로젝트 루트에서 다음 명령으로 재생성합니다.
+
+```sh
+MPLCONFIGDIR=/private/tmp/legal-rag-mpl XDG_CACHE_HOME=/private/tmp/legal-rag-cache .venv/bin/python docs/posts/scripts/render_research_roadmap.py
+```
+
 `2026-10-23-legal-embedding-recall-benchmark.md`는 Jekyll 포스트 원고입니다.
 
 - [게시된 글](https://kdm-korea.github.io/rag/embedding/2026/10/23/legal-embedding-recall-benchmark.html)
 - [현재 실험 안내](../benchmarks/embedding/README.md)
-- [게시 링크·지표 검증 기록](2026-10-23-link-audit.md)
 
 ## 게시 파일 배치
 
