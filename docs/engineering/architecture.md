@@ -10,13 +10,19 @@ src/llm_benchmark/
     hashing.py       # 파일 SHA-256·기존 JSON 해시 형식 유지
     io.py            # 원자적 JSON·JSONL 읽기/쓰기
   embedding/
+    __main__.py      # CLI 인자 처리와 명령 분기
+    config.py        # YAML 입력 검증과 설정 구성
+    models.py        # 원본 스키마·내부 데이터·단계별 결과 타입
+    parsing.py       # 외부 입력의 자료형 검증
     dataset.py       # EVE 다운로드, 데이터 검증, 정규화, JSON 저장
     embeddings.py    # 모델 로드, 입력 구성, 임베딩, 캐시 검증
     evaluation.py    # 전체 Corpus 정확 검색, Recall 계산, MTEB 검증
-    run.py           # 임베딩 CLI, 실험 순서, probe, 결과 저장
+    run.py           # 실험 순서, probe, 결과 저장
 ```
 
-`embedding/run.py`의 `run_benchmark()`부터 읽으면 임베딩 실험 전체를 따라갈 수 있습니다. 기존 `embedding-benchmark` 명령은 이 모듈을 실행합니다.
+`embedding/run.py`의 `run_benchmark()`부터 읽으면 임베딩 실험 전체를 따라갈 수 있습니다. `embedding-benchmark` 명령은 `embedding/__main__.py`의 `main()`을 실행합니다. 기존 `embedding.run` 직접 실행은 새 CLI에 위임합니다.
+
+실험 내부는 상대 import, 공통 모듈은 절대 import를 사용합니다. 내부 데이터는 `slots=True, kw_only=True` dataclass로 전달하며 원본과 설정 파일의 필드는 TypedDict로 명시합니다. 외부 입력의 검증은 유지하고 단순 형변환으로 대체하지 않습니다. 파일·캐시의 기존 직렬화 형식과 필드 순서는 보존합니다.
 
 의존 방향은 `embedding → common`입니다. `common`은 표준 라이브러리만 사용하고 실험 코드를 import하지 않습니다. 법률 데이터 규칙·검색 지표·모델 설정은 임베딩 실험에 둡니다. 파일 저장과 해시 함수는 공통으로 분리하되 기존 질의 ID·캐시 키 형식은 유지합니다.
 

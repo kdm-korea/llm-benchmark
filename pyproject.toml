@@ -19,10 +19,10 @@ embedding = [
 ]
 
 [dependency-groups]
-dev = ["pytest>=8,<10"]
+dev = ["pytest>=8,<10", "ruff>=0.11,<1", "mypy>=1.15,<2"]
 
 [project.scripts]
-embedding-benchmark = "llm_benchmark.embedding.run:main"
+embedding-benchmark = "llm_benchmark.embedding.__main__:main"
 
 [tool.pytest.ini_options]
 testpaths = ["tests"]
@@ -30,3 +30,29 @@ addopts = ["--import-mode=importlib"]
 
 [tool.hatch.build.targets.wheel]
 packages = ["src/llm_benchmark"]
+
+[tool.mypy]
+cache_dir = "cache/mypy"
+files = ["src/llm_benchmark"]
+disallow_untyped_defs = true
+disallow_incomplete_defs = true
+check_untyped_defs = true
+warn_return_any = true
+warn_unused_ignores = true
+no_implicit_optional = true
+follow_imports = "silent"
+
+[[tool.mypy.overrides]]
+module = ["yaml", "sentence_transformers.*", "mteb.*"]
+ignore_missing_imports = true
+
+[tool.ruff]
+target-version = "py311"
+line-length = 100
+cache-dir = "cache/ruff"
+
+[tool.ruff.format]
+quote-style = "single"
+
+[tool.ruff.lint]
+select = ["E4", "E7", "E9", "F", "I"]

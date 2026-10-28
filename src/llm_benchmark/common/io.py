@@ -1,13 +1,15 @@
 """특정 실험이나 프로세스 전역 상태에 의존하지 않는 JSON 파일 입출력."""
 
-from contextlib import contextmanager
 import json
-from pathlib import Path
 import tempfile
+from collections.abc import Iterable, Iterator
+from contextlib import contextmanager
+from pathlib import Path
+from typing import IO
 
 
 @contextmanager
-def _atomic_text_file(path):
+def _atomic_text_file(path: str | Path) -> Iterator[IO[str]]:
     path = Path(path)
     path.parent.mkdir(parents=True, exist_ok=True)
     temporary = None
@@ -21,27 +23,27 @@ def _atomic_text_file(path):
             delete=False,
         ) as stream:
             temporary = Path(stream.name)
-            yield stream
+            yield stream.file
         temporary.replace(path)
     finally:
         if temporary is not None:
             temporary.unlink(missing_ok=True)
 
 
-def write_json(path, value):
+def write_json(path: str | Path, value: object) -> None:
     """기존 UTF-8 JSON 형식을 유지하고, 저장이 끝난 임시 파일로 대상 파일을 교체한다."""
     with _atomic_text_file(path) as stream:
         stream.write(json.dumps(value, ensure_ascii=False, indent=2, allow_nan=False) + '\n')
 
 
-def write_jsonl(path, rows):
+def write_jsonl(path: str | Path, rows: Iterable[object]) -> None:
     """모든 행의 직렬화가 성공한 경우에만 JSONL 파일을 교체해 불완전한 저장을 막는다."""
     with _atomic_text_file(path) as stream:
         for row in rows:
             stream.write(json.dumps(row, ensure_ascii=False, allow_nan=False) + '\n')
 
 
-def read_jsonl(path):
+def read_jsonl(path: str | Path) -> Iterator[object]:
     with Path(path).open(encoding='utf-8') as stream:
         for number, line in enumerate(stream, 1):
             if not line.strip():
