@@ -1,0 +1,240 @@
+[
+  {
+    "query_id": "qa_19_1hop_28",
+    "source_row_id": 0,
+    "reviewer": "Codex source-text inspection (not independent legal expert)",
+    "review_date": "2026-10-23",
+    "scope": "local pinned QA and statute text, mapping and annotation structure",
+    "split": "test",
+    "evaluation_status": "ready",
+    "evidence_ids": [
+      "e_a6b2bf8e618056b781971d4b9ca1cf68f4e21bbddbeb12af5e67e8a070c2fa36"
+    ],
+    "observation": "단일 항의 소멸기간과 단서가 함께 보존됨. 운송물 인도일/인도할 날 문구와 참고 답변의 범위 차이는 후속 의미 검수 대상."
+  },
+  {
+    "query_id": "qa_92_1hop_149",
+    "source_row_id": 1,
+    "reviewer": "Codex source-text inspection (not independent legal expert)",
+    "review_date": "2026-10-23",
+    "scope": "local pinned QA and statute text, mapping and annotation structure",
+    "split": "test",
+    "evaluation_status": "ready",
+    "evidence_ids": [
+      "e_22976c0c27fffa455eb7e80ddc9aeced7ed21d4687dad92371847be6aceb1714"
+    ],
+    "observation": "단일 조 본문 직접 일치. 질문에 야간·주거 침입·절취 사실이 포함됨."
+  },
+  {
+    "query_id": "qa_139_1hop_254",
+    "source_row_id": 2,
+    "reviewer": "Codex source-text inspection (not independent legal expert)",
+    "review_date": "2026-10-23",
+    "scope": "local pinned QA and statute text, mapping and annotation structure",
+    "split": "test",
+    "evaluation_status": "ready",
+    "evidence_ids": [
+      "e_036374e28ae63cecdbb99aadd90eef44b7d9c36f2d2c84c5f79cefc293cdadf3"
+    ],
+    "observation": "동일 근거가 원본 2행에 중복되나 정규 단위 하나로 연결. 선거권 예외 단서까지 본문 보존."
+  },
+  {
+    "query_id": "qa_312_2hop_499",
+    "source_row_id": 6,
+    "reviewer": "Codex source-text inspection (not independent legal expert)",
+    "review_date": "2026-10-23",
+    "scope": "local pinned QA and statute text, mapping and annotation structure",
+    "split": "test",
+    "evaluation_status": "ready",
+    "evidence_ids": [
+      "e_4039e95b6e936b7ce3d7bce4bd275e1683dc4e3cb02cc9e216e19da95358d817",
+      "e_ef46cf1de5d2de7e6c8b3fd36ed2db8bee10c15c63690bd03f6ac939d1866e34"
+    ],
+    "observation": "민법 840조 본문과 1~6호를 7개 단위로 재구성, 842조는 직접 연결. 주석 두 근거 모두 회수해야 All Hit."
+  },
+  {
+    "query_id": "qa_86_3hop_140",
+    "source_row_id": 16,
+    "reviewer": "Codex source-text inspection (not independent legal expert)",
+    "review_date": "2026-10-23",
+    "scope": "local pinned QA and statute text, mapping and annotation structure",
+    "split": "test",
+    "evaluation_status": "ready",
+    "evidence_ids": [
+      "e_5d8f530b795744ac4608bb6360d099d0b07602e5654dde1169fa45f4af45286b",
+      "e_6aa7288270403c9ab7067d5393a1fe0ea91d4ed98209fda128dd25a934ac6861",
+      "e_ada9f5d075bd3635643df95c20fe9d85337d151481e638555ec802606f1bbb71"
+    ],
+    "observation": "법과 시행령을 구분. 37조1항 직접 연결, 시행령32조와 법5조는 각각 호를 결합. 정의 전체가 주석돼 엄격한 전체본문 규칙의 부담이 큼."
+  },
+  {
+    "query_id": "qa_352_3hop_554",
+    "source_row_id": 17,
+    "reviewer": "Codex source-text inspection (not independent legal expert)",
+    "review_date": "2026-10-23",
+    "scope": "local pinned QA and statute text, mapping and annotation structure",
+    "split": "test",
+    "evaluation_status": "ready",
+    "evidence_ids": [
+      "e_c94f9e420132f176dc6ad2f30fc50bb096acc39689a78929d9cffd3e0672580e",
+      "e_882a630bfc418d880ca6ec63d948937af050e3f19cd622b572b342da4f9d11eb",
+      "e_1faaff7ba5622bbae430aacbb267b67f715703d01b17230254d8d133ac3200f3"
+    ],
+    "observation": "같은 법의 26조1항·47조·48조를 별도 근거로 유지. 47/48조의 비슷한 벌칙 제목만으로 매칭하지 않음."
+  },
+  {
+    "query_id": "qa_102_3hop_175",
+    "source_row_id": 33,
+    "reviewer": "Codex source-text inspection (not independent legal expert)",
+    "review_date": "2026-10-23",
+    "scope": "local pinned QA and statute text, mapping and annotation structure",
+    "split": "test",
+    "evaluation_status": "ready",
+    "evidence_ids": [
+      "e_277852d1660783fc3e19cd5fc25a50ebf5e97b68557cce1fcc512883365cae47",
+      "e_3f814d0338a608a6a4f84c0aeb85a0e65039def7c1598e7d9a2266c24b2b06e3",
+      "e_22747d7d18d88ee05855f9ee01912c85066f47180c053c88f9a26a81be7fb151"
+    ],
+    "observation": "상업등기법26조의 QA 호 순서가 10~17, 1~9. 모든 호 본문은 일치하고 교집합 누락 없이 재구성됨."
+  },
+  {
+    "query_id": "qa_125_2hop_226",
+    "source_row_id": 105,
+    "reviewer": "Codex source-text inspection (not independent legal expert)",
+    "review_date": "2026-10-23",
+    "scope": "local pinned QA and statute text, mapping and annotation structure",
+    "split": "test",
+    "evaluation_status": "ready",
+    "evidence_ids": [
+      "e_fa1512765607040710aa4c413ee1bb3f5b4e9108a3b5d1aa6a52135c39ad6195",
+      "e_8fe939835fad9e094c27e0d7b1e4357e3a5e0cf13035366e462be1ceda594e91"
+    ],
+    "observation": "형사소송법361조의5의 호 순서 차이를 명시. 66조3항은 토요일과 단서가 있는 전체 항으로 직접 연결."
+  },
+  {
+    "query_id": "qa_125_1hop_225",
+    "source_row_id": 148,
+    "reviewer": "Codex source-text inspection (not independent legal expert)",
+    "review_date": "2026-10-23",
+    "scope": "local pinned QA and statute text, mapping and annotation structure",
+    "split": "test",
+    "evaluation_status": "ready",
+    "evidence_ids": [
+      "e_fa1512765607040710aa4c413ee1bb3f5b4e9108a3b5d1aa6a52135c39ad6195"
+    ],
+    "observation": "qa_125_2hop_226과 같은 source ID family로 묶음. 질문·시나리오는 서로 달라 단순 중복 제거 대신 동일 분할에 배치."
+  },
+  {
+    "query_id": "qa_163_2hop_630_rand",
+    "source_row_id": 12,
+    "reviewer": "Codex source-text inspection (not independent legal expert)",
+    "review_date": "2026-10-23",
+    "scope": "local pinned QA and statute text, mapping and annotation structure",
+    "split": "holdout",
+    "evaluation_status": "hold",
+    "evidence_ids": [
+      "e_22267d3a8040c89ad9bc68a16612a32bca3f10c802e87517e77338b8ffe3d29c",
+      "e_749ffcc00483dbcdc7332a5ed5e6d7bab0d4af9317d2358521918e03e4c7e004"
+    ],
+    "observation": "QA에는 img 여는 태그가 없고 닫는 태그만 있으며 코퍼스는 URL 포함 여는 태그가 있음. 표 텍스트는 보이지만 엄격 규칙상 보류. 시나리오의 2023년과 근거 개정표시 2025년, 최초 신고자의 특정 가능성도 후속 검토 필요."
+  },
+  {
+    "query_id": "qa_503_2hop_790",
+    "source_row_id": 42,
+    "reviewer": "Codex source-text inspection (not independent legal expert)",
+    "review_date": "2026-10-23",
+    "scope": "local pinned QA and statute text, mapping and annotation structure",
+    "split": "holdout",
+    "evaluation_status": "hold",
+    "evidence_ids": [
+      "e_0d93ade46de1bf31d11c78482c013a47d2ad2935e287b90cb282e6e4f674b961",
+      "e_be5dbdd0ed1b6bac4c4ee7a9001218411f1451e2d9c21a0fde9b0ef5d4d732af"
+    ],
+    "observation": "제2조의2 본문 뒤에 정의 관련 호들이 섞여 있어 같은 조문 내 전체 재구성 불가. 근거명만 맞춰 정답으로 인정하지 않고 보류."
+  },
+  {
+    "query_id": "qa_148_3hop_273",
+    "source_row_id": 81,
+    "reviewer": "Codex source-text inspection (not independent legal expert)",
+    "review_date": "2026-10-23",
+    "scope": "local pinned QA and statute text, mapping and annotation structure",
+    "split": "holdout",
+    "evaluation_status": "hold",
+    "evidence_ids": [
+      "e_c94f9e420132f176dc6ad2f30fc50bb096acc39689a78929d9cffd3e0672580e",
+      "e_2a05a1fa6100ffcff2e9058a8c4082a5a0f70665c939ad0997b82b85dc5b2446",
+      "e_882a630bfc418d880ca6ec63d948937af050e3f19cd622b572b342da4f9d11eb"
+    ],
+    "observation": "제14조의3제1항 QA 끝에 개정표시 뒤 마침표가 추가됨. 수작업으로 지우지 않고 보류. 다른 두 벌칙 근거는 결합 매핑됨."
+  },
+  {
+    "query_id": "qa_552_2hop_839",
+    "source_row_id": 124,
+    "reviewer": "Codex source-text inspection (not independent legal expert)",
+    "review_date": "2026-10-23",
+    "scope": "local pinned QA and statute text, mapping and annotation structure",
+    "split": "holdout",
+    "evaluation_status": "hold",
+    "evidence_ids": [
+      "e_bc4e0bb46a3c458871179c45cae3fa3b41fb16a4f08b853eef6f9a10ce821026",
+      "e_3cda9b193f0e10e957d805402078f6a0c68e6e6527511a5ab598eb629e1bbede"
+    ],
+    "observation": "제59조의10의 1~6호 뒤에 별도 금지행위 관련 6~8호가 혼입됨. 86조의2제2항이 연결돼도 질문 전체를 보류. 참고 답변과 사실관계의 신고자 불이익 요건도 의미 검수 대상."
+  },
+  {
+    "query_id": "qa_260_2hop_995_rand",
+    "source_row_id": 31,
+    "reviewer": "Codex source-text inspection (not independent legal expert)",
+    "review_date": "2026-10-23",
+    "scope": "local pinned QA and statute text, mapping and annotation structure",
+    "split": "test",
+    "evaluation_status": "ready",
+    "evidence_ids": [
+      "e_a201b9471d6ccb5a15c6e6f1541f0ea2cda9e3a22560f923cd0880ad10083ac8",
+      "e_ec8fb8bcda816a6748c8ff88a7e6337a8cc56832042f89822a69b33a3bde260e",
+      "e_1bb4720b8e38cd5f712fc61599925f243fb8cdc192091b42e668f8b5ee62e174"
+    ],
+    "observation": "n_hops=2이나 contexts=3. 선원법22조2/3/4항 각각 연결하고 근거 수 3을 실제 분모로 사용. 해원 수 10명 이하 예외를 본문에서 확인."
+  },
+  {
+    "query_id": "qa_104_1hop_180",
+    "source_row_id": 84,
+    "reviewer": "Codex source-text inspection (not independent legal expert)",
+    "review_date": "2026-10-23",
+    "scope": "local pinned QA and statute text, mapping and annotation structure",
+    "split": "dev",
+    "evaluation_status": "ready",
+    "evidence_ids": [
+      "e_1cc880260ebe01dd354c1b118b7bcf151d0eb62f20b6dcdcc48286c660f352ce"
+    ],
+    "observation": "고의 문서손괴 질문과 형법366조 전체 본문을 대조. 기간·금액을 참고 답변과 확인."
+  },
+  {
+    "query_id": "qa_104_3hop_182",
+    "source_row_id": 96,
+    "reviewer": "Codex source-text inspection (not independent legal expert)",
+    "review_date": "2026-10-23",
+    "scope": "local pinned QA and statute text, mapping and annotation structure",
+    "split": "dev",
+    "evaluation_status": "ready",
+    "evidence_ids": [
+      "e_1cc880260ebe01dd354c1b118b7bcf151d0eb62f20b6dcdcc48286c660f352ce",
+      "e_04f958e5dc12a4125b42590bb91aefa88ef8d4bd165758050dc12a127ad58b6c",
+      "e_be154152c0a466c0da69b9b8e16e1b874ca453801837dce42481cbb1979cd427"
+    ],
+    "observation": "법령에 의한 정당행위라는 전제와 형법20조·366조 및 형사소송법325조 세 근거의 연결을 확인. source family 104의 다른 질문과 같은 dev 그룹."
+  },
+  {
+    "query_id": "qa_105_1hop_183",
+    "source_row_id": 102,
+    "reviewer": "Codex source-text inspection (not independent legal expert)",
+    "review_date": "2026-10-23",
+    "scope": "local pinned QA and statute text, mapping and annotation structure",
+    "split": "dev",
+    "evaluation_status": "ready",
+    "evidence_ids": [
+      "e_97bb6f8528ad1dc577040265662378f4025d60ef7c7c4f77dd58262bcddce019"
+    ],
+    "observation": "세무사 무자격 세무대리 질문과 세무사법22조1항 연결. 1항에 별도 위반행위도 함께 있어 전체 본문 회수 규칙을 적용."
+  }
+]

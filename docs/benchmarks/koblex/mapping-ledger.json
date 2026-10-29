@@ -1,0 +1,5046 @@
+[
+  {
+    "query_id": "qa_19_1hop_28",
+    "evidence_id": "e_a6b2bf8e618056b781971d4b9ca1cf68f4e21bbddbeb12af5e67e8a070c2fa36",
+    "context_position": 0,
+    "status": "exact",
+    "unit_ids": [
+      "u_fb809a75618cd97bbdf86f7774d6730bd89f39bc566d0efd8df12c5cfc71f987"
+    ],
+    "reason": "normalized index, hierarchy and full body agree",
+    "duplicate_annotation": false
+  },
+  {
+    "query_id": "qa_92_1hop_149",
+    "evidence_id": "e_22976c0c27fffa455eb7e80ddc9aeced7ed21d4687dad92371847be6aceb1714",
+    "context_position": 0,
+    "status": "exact",
+    "unit_ids": [
+      "u_46206b9aac53a042e0e4fa47613378d17a9b7feba917dd2d2869a9b49361274e"
+    ],
+    "reason": "normalized index, hierarchy and full body agree",
+    "duplicate_annotation": false
+  },
+  {
+    "query_id": "qa_139_1hop_254",
+    "evidence_id": "e_036374e28ae63cecdbb99aadd90eef44b7d9c36f2d2c84c5f79cefc293cdadf3",
+    "context_position": 0,
+    "status": "exact",
+    "unit_ids": [
+      "u_bbb1bddb18b53b1cc601ea73b89a302318cf96d8f0a41fee1155abcb69518a63"
+    ],
+    "reason": "normalized index, hierarchy and full body agree",
+    "duplicate_annotation": false
+  },
+  {
+    "query_id": "qa_172_1hop_308",
+    "evidence_id": "e_327c5375e95b36961143beaf37ef954c9545cca0a0dfbc007cb1f048a7527764",
+    "context_position": 0,
+    "status": "exact",
+    "unit_ids": [
+      "u_1e118f4243de6caae1e66afcf93391aa14affce098e905189d312fd7ede9355e"
+    ],
+    "reason": "normalized index, hierarchy and full body agree",
+    "duplicate_annotation": false
+  },
+  {
+    "query_id": "qa_90_2hop_147",
+    "evidence_id": "e_94b40eb892adbb221bf4d1a39c2a2fd478ed6e616f03cc4e4710cc9caee03c45",
+    "context_position": 0,
+    "status": "exact",
+    "unit_ids": [
+      "u_1c61bab7ed7fa6beaf4f83b9d3b852a6daa35c9a0d0b6dbcad4e3fe101370d39"
+    ],
+    "reason": "normalized index, hierarchy and full body agree",
+    "duplicate_annotation": false
+  },
+  {
+    "query_id": "qa_90_2hop_147",
+    "evidence_id": "e_6e5bcb6f55c66bc62db5f88a53546346f8b3418b2c35f5e59fb8b552cadcee4b",
+    "context_position": 1,
+    "status": "exact",
+    "unit_ids": [
+      "u_6d957bff304bb0e535df10fd8d1db8afaec376079c0864cee05093ba5990ca8b"
+    ],
+    "reason": "normalized index, hierarchy and full body agree",
+    "duplicate_annotation": false
+  },
+  {
+    "query_id": "qa_192_2hop_334",
+    "evidence_id": "e_3b3ac64e17615007500c80c16d703150c5db953f9db4475daa663c8037edfc1f",
+    "context_position": 0,
+    "status": "exact",
+    "unit_ids": [
+      "u_f74041ac7eaca43e749972b7efaaf684c1f5e05e9406a41508f61518d7f47539"
+    ],
+    "reason": "normalized index, hierarchy and full body agree",
+    "duplicate_annotation": false
+  },
+  {
+    "query_id": "qa_192_2hop_334",
+    "evidence_id": "e_3f814d0338a608a6a4f84c0aeb85a0e65039def7c1598e7d9a2266c24b2b06e3",
+    "context_position": 1,
+    "status": "exact",
+    "unit_ids": [
+      "u_7a916098f7513c47730c567efcbef8d51ca6f0828941c9617303f7046fd52d30"
+    ],
+    "reason": "normalized index, hierarchy and full body agree",
+    "duplicate_annotation": false
+  },
+  {
+    "query_id": "qa_312_2hop_499",
+    "evidence_id": "e_4039e95b6e936b7ce3d7bce4bd275e1683dc4e3cb02cc9e216e19da95358d817",
+    "context_position": 0,
+    "status": "assembled",
+    "unit_ids": [
+      "u_c2b379754a67d794ed4fe08d46ba247b0ea52ab6af14ba7d9078c74b46f8ceed",
+      "u_23e4f4c718799e882025bd6705a26fe3a72418197f6f78467ef2d32c0ca9fcbb",
+      "u_1b6097f52a416cd6bec598133b1f2d6e16deb6b40297ea106820523c3cf53dd8",
+      "u_a1978a9f31053ec7c3e231f44e9f8372063d288036fa841a217ae0a2e54096d4",
+      "u_1a317dbad2436d4e5f383031b61a5842e986812b49c37c7959b8800c47c94774",
+      "u_5aafb80920493c8223ab360bd312c9bfd4ab5302ac831ca45396f3d5345a0963",
+      "u_933f84aa15104519c6b3a831142aead4ad053c361fc3867de10e467b5860ab9c"
+    ],
+    "reason": "ordered full bodies exactly reconstruct reference",
+    "duplicate_annotation": false
+  },
+  {
+    "query_id": "qa_312_2hop_499",
+    "evidence_id": "e_ef46cf1de5d2de7e6c8b3fd36ed2db8bee10c15c63690bd03f6ac939d1866e34",
+    "context_position": 1,
+    "status": "exact",
+    "unit_ids": [
+      "u_627d5cdba173a2a0b9f0ac7bc69b6764a57f3d18039d6aa4de21c59105f5d9a4"
+    ],
+    "reason": "normalized index, hierarchy and full body agree",
+    "duplicate_annotation": false
+  },
+  {
+    "query_id": "qa_387_2hop_603",
+    "evidence_id": "e_777498763872faf91556195c70eb0971ef2bcf8e62991f4629275411b2326cff",
+    "context_position": 0,
+    "status": "exact",
+    "unit_ids": [
+      "u_e51c35048da240117e5b4b36cedfa4677af84f568fc22a286e8b29a1c11cbd2f"
+    ],
+    "reason": "normalized index, hierarchy and full body agree",
+    "duplicate_annotation": false
+  },
+  {
+    "query_id": "qa_387_2hop_603",
+    "evidence_id": "e_3d25aabeca407071d10d8d06b59a6b65312817605b47ec893b88bed17195b04e",
+    "context_position": 1,
+    "status": "exact",
+    "unit_ids": [
+      "u_22f462a4041d582be19f1fefe982b39cb69e587ab9701becf06434f08ab5b139"
+    ],
+    "reason": "normalized index, hierarchy and full body agree",
+    "duplicate_annotation": false
+  },
+  {
+    "query_id": "qa_476_2hop_749",
+    "evidence_id": "e_188db4a3a70165af473a40825b97d8b5eee78e03bf211de7b165d033068e45a1",
+    "context_position": 0,
+    "status": "exact",
+    "unit_ids": [
+      "u_8f95e1e9aad6fc2499b3fd055af8c463a4187bacb24232baeb0feddf6c4b2c5c"
+    ],
+    "reason": "normalized index, hierarchy and full body agree",
+    "duplicate_annotation": false
+  },
+  {
+    "query_id": "qa_476_2hop_749",
+    "evidence_id": "e_ab6ad3554a130963826cabee176bd0729d2a87bde7946c1caf7d1f9c75afd33d",
+    "context_position": 1,
+    "status": "exact",
+    "unit_ids": [
+      "u_697df300171d776955f53c159e2202a9171f60edf7b547b9e343d90cbbbd2ef8"
+    ],
+    "reason": "normalized index, hierarchy and full body agree",
+    "duplicate_annotation": false
+  },
+  {
+    "query_id": "qa_621_2hop_937",
+    "evidence_id": "e_143aa310970e7bc829ec291e542c768054afc4e196c163646899481adc82be9e",
+    "context_position": 0,
+    "status": "exact",
+    "unit_ids": [
+      "u_82ea55f8cbf2608ce227635fe5b6b4976723c2a9e841b775e82167a765b102cb"
+    ],
+    "reason": "normalized index, hierarchy and full body agree",
+    "duplicate_annotation": false
+  },
+  {
+    "query_id": "qa_621_2hop_937",
+    "evidence_id": "e_e09247c0ad0375ef9d196f04a8f4199879958e87a9b415c2813a3bd4700b5ed0",
+    "context_position": 1,
+    "status": "exact",
+    "unit_ids": [
+      "u_41a06ca713b900196b074d5c12017a831da88e8712fb94100921ff4eec8e538e"
+    ],
+    "reason": "normalized index, hierarchy and full body agree",
+    "duplicate_annotation": false
+  },
+  {
+    "query_id": "qa_49_2hop_192_rand",
+    "evidence_id": "e_1e2af980b9fe6c59273ac72c9cf56fae496baad59bfd924ad881b6c49a165359",
+    "context_position": 0,
+    "status": "exact",
+    "unit_ids": [
+      "u_df11d67c87130e47776b503ecc501251d35ba12863d63e579a9733161523aa34"
+    ],
+    "reason": "normalized index, hierarchy and full body agree",
+    "duplicate_annotation": false
+  },
+  {
+    "query_id": "qa_49_2hop_192_rand",
+    "evidence_id": "e_99afb4f21accbe0386cf1357fcd91828a29ecb44219d908b2f16f931653d13b1",
+    "context_position": 1,
+    "status": "exact",
+    "unit_ids": [
+      "u_0ab58a422f9da2f08664bc26c116c03752d8f0e32b6b026107fa6bddd536dd76"
+    ],
+    "reason": "normalized index, hierarchy and full body agree",
+    "duplicate_annotation": false
+  },
+  {
+    "query_id": "qa_116_2hop_452_rand",
+    "evidence_id": "e_2f3ffa2d41b74660d528d00e30ddd22d2e2fcb00eb9788afbe0d1252ceb7f06b",
+    "context_position": 0,
+    "status": "exact",
+    "unit_ids": [
+      "u_ebaad57911f37b55ad17899aa5f85f10d68951730117500f32adbae97f9de4d8"
+    ],
+    "reason": "normalized index, hierarchy and full body agree",
+    "duplicate_annotation": false
+  },
+  {
+    "query_id": "qa_116_2hop_452_rand",
+    "evidence_id": "e_1383ed8f65feeb061b34ae052b396101a062fbf38cb143c14fa8cbe7dbcece03",
+    "context_position": 1,
+    "status": "exact",
+    "unit_ids": [
+      "u_67983eb02e5733e40211b525e4287712183af683247439f6702a5ba6012f74b3"
+    ],
+    "reason": "normalized index, hierarchy and full body agree",
+    "duplicate_annotation": false
+  },
+  {
+    "query_id": "qa_163_2hop_630_rand",
+    "evidence_id": "e_22267d3a8040c89ad9bc68a16612a32bca3f10c802e87517e77338b8ffe3d29c",
+    "context_position": 0,
+    "status": "unresolved",
+    "unit_ids": [],
+    "reason": "same-article candidates do not exactly reconstruct reference body",
+    "duplicate_annotation": false
+  },
+  {
+    "query_id": "qa_163_2hop_630_rand",
+    "evidence_id": "e_749ffcc00483dbcdc7332a5ed5e6d7bab0d4af9317d2358521918e03e4c7e004",
+    "context_position": 1,
+    "status": "exact",
+    "unit_ids": [
+      "u_2d61aa86ce617e75fe1d1b1767fd3744940092fe21f35020a1004bf1514420da"
+    ],
+    "reason": "normalized index, hierarchy and full body agree",
+    "duplicate_annotation": false
+  },
+  {
+    "query_id": "qa_213_2hop_812_rand",
+    "evidence_id": "e_313ddf329a12c38a4bd0d94de34eb8a4b08263a487412a6bc6e06194c9d1d74c",
+    "context_position": 0,
+    "status": "exact",
+    "unit_ids": [
+      "u_25436b7c49c11266428da9ed3828e4ffbe45cc804f05aa8177c15fc5dc450cbf"
+    ],
+    "reason": "normalized index, hierarchy and full body agree",
+    "duplicate_annotation": false
+  },
+  {
+    "query_id": "qa_213_2hop_812_rand",
+    "evidence_id": "e_a1d9b1dcc6452327e67e12b85c6c8c291508195c4924c18a23f76e6a2fc09562",
+    "context_position": 1,
+    "status": "exact",
+    "unit_ids": [
+      "u_1899104f087619cac34a58e13cfe54172af556a24a2a01afc448c5c9f8554c00"
+    ],
+    "reason": "normalized index, hierarchy and full body agree",
+    "duplicate_annotation": false
+  },
+  {
+    "query_id": "qa_257_2hop_983_rand",
+    "evidence_id": "e_93691c64e3ce138245bffef5d0951d26c68cdab9b7ddaf31f3bd90f3405ffdee",
+    "context_position": 0,
+    "status": "exact",
+    "unit_ids": [
+      "u_7ca8a73c4fbacbae7dffa9afbf490fe514e4222f85ec8276adc5db15ac5bb9a7"
+    ],
+    "reason": "normalized index, hierarchy and full body agree",
+    "duplicate_annotation": false
+  },
+  {
+    "query_id": "qa_257_2hop_983_rand",
+    "evidence_id": "e_9395455ba7a798ecbec5240646450fc720fc088f37fc79ba04f4cbbc9aedea26",
+    "context_position": 1,
+    "status": "exact",
+    "unit_ids": [
+      "u_d669af7849afa04e457fa966de6cad86af63d8898e41739e3c5c6e56de69baab"
+    ],
+    "reason": "normalized index, hierarchy and full body agree",
+    "duplicate_annotation": false
+  },
+  {
+    "query_id": "qa_140_3hop_540_rand",
+    "evidence_id": "e_ddd6a911df5dfc676fda532816df8f28ad60f31fef37b24629c4cd8ec99be673",
+    "context_position": 0,
+    "status": "exact",
+    "unit_ids": [
+      "u_3716010959fc5079d9a2c8be86fe05d11c853fb13f0898a0cbea806b047743de"
+    ],
+    "reason": "normalized index, hierarchy and full body agree",
+    "duplicate_annotation": false
+  },
+  {
+    "query_id": "qa_140_3hop_540_rand",
+    "evidence_id": "e_1dffe405779d34898223bde2cf1132dbb71798243cebd9223aa13850726bfe61",
+    "context_position": 1,
+    "status": "exact",
+    "unit_ids": [
+      "u_d9d914c3ddcd9ce42cd7c51c054a1d26c1454a21a11964e3b3e58ce9af3ea062"
+    ],
+    "reason": "normalized index, hierarchy and full body agree",
+    "duplicate_annotation": false
+  },
+  {
+    "query_id": "qa_140_3hop_540_rand",
+    "evidence_id": "e_4f79578654b786aab775d063e51ce567635d150ff8500ce67beef063a7825aa6",
+    "context_position": 2,
+    "status": "exact",
+    "unit_ids": [
+      "u_ca2086d81127ae0bb56501bad626dd55455b796d0be1c4d0f3dde12cff736490"
+    ],
+    "reason": "normalized index, hierarchy and full body agree",
+    "duplicate_annotation": false
+  },
+  {
+    "query_id": "qa_86_3hop_140",
+    "evidence_id": "e_5d8f530b795744ac4608bb6360d099d0b07602e5654dde1169fa45f4af45286b",
+    "context_position": 0,
+    "status": "exact",
+    "unit_ids": [
+      "u_1cfee083f0fd58e55ff204bbb5cb43330a385532dc45d73ac67cd0ddb64b9466"
+    ],
+    "reason": "normalized index, hierarchy and full body agree",
+    "duplicate_annotation": false
+  },
+  {
+    "query_id": "qa_86_3hop_140",
+    "evidence_id": "e_6aa7288270403c9ab7067d5393a1fe0ea91d4ed98209fda128dd25a934ac6861",
+    "context_position": 1,
+    "status": "assembled",
+    "unit_ids": [
+      "u_1cad13729edab80e15155f02c7fa7d07dba5fae9df56cb4d5f3fed4f2a4e2cd6",
+      "u_21943e6e8da17c537a939fcb3328810cd20b5a7149291b122ca1dbd568f52537",
+      "u_c5c8e7ff4a7555103a7c42ea91c83514a1db74c072e1b6d1bd878561e06467de",
+      "u_259b27e040acb558d8c5f49217b50f18f9a67ee8e5a7d4fadd9552a7b96e4fbe"
+    ],
+    "reason": "ordered full bodies exactly reconstruct reference",
+    "duplicate_annotation": false
+  },
+  {
+    "query_id": "qa_86_3hop_140",
+    "evidence_id": "e_ada9f5d075bd3635643df95c20fe9d85337d151481e638555ec802606f1bbb71",
+    "context_position": 2,
+    "status": "assembled",
+    "unit_ids": [
+      "u_2372c285cd5424b065523de7503ae9bf34c6912b70d3020bfb477ba3a020a0d1",
+      "u_505158e8789c2b4d6588780e416c1ad154e6d8ba6d7be451bcb017b5499a2f43",
+      "u_ea860c55a2aefd6e3f2aa0b34b9ddd1017f76f84e40cc4eb607f1388ffd72a23",
+      "u_029c0fbd10f69458356598a8bc4c02061d9cb23405d50273fc9f97e32863169a",
+      "u_1073c869ce3c266bf8281c5952088071d4add827d3d5af44d50a56f1e02cb1d0",
+      "u_9adc3155d70387a531af5fa3e31b01565cb61a2e0d3ffca9b21e1c2eb78018b6",
+      "u_41ab1a5e0b54c8ab1797cef13ca0425fc97ed5252f3580176375d4bb5f01e3c9",
+      "u_e970acc478c1b52c31d9ffe9a52279becfe0c8a03c4d66d80807a374efcdefa7",
+      "u_4d9d0f7dc25f8fbef39496e492cb76e25ea2c867eeb0ad9000273f2479a8b434"
+    ],
+    "reason": "ordered full bodies exactly reconstruct reference",
+    "duplicate_annotation": false
+  },
+  {
+    "query_id": "qa_352_3hop_554",
+    "evidence_id": "e_c94f9e420132f176dc6ad2f30fc50bb096acc39689a78929d9cffd3e0672580e",
+    "context_position": 0,
+    "status": "assembled",
+    "unit_ids": [
+      "u_2460c591cf1cc59c00e7168887f07f8a00901cf3457ae023706aff5282bfb3db",
+      "u_8ffcbf0b496235767d18f7780eaf3056e7becfef29cd516de7c38817380a113d",
+      "u_2ddcbb9fb2853d62991036cb9c0b957f3fc6835b276c14607f1f2399ced254d9"
+    ],
+    "reason": "ordered full bodies exactly reconstruct reference",
+    "duplicate_annotation": false
+  },
+  {
+    "query_id": "qa_352_3hop_554",
+    "evidence_id": "e_882a630bfc418d880ca6ec63d948937af050e3f19cd622b572b342da4f9d11eb",
+    "context_position": 1,
+    "status": "assembled",
+    "unit_ids": [
+      "u_90f45781a730ea2b33518d2adaf2674a4fbf3003920d583c0278c2e23e46bcd3",
+      "u_47381edcc3a895479c6a8178aa7bfda7b83626f1f3099152f65dfb0cb77905e0",
+      "u_a30132c8d7849ff48adbda57198d76d992771737d1808110c4ed547630a34388",
+      "u_e938e583c063e8c21e09815ed926dfedf110524ece2952aae5a8315f0042cf9f",
+      "u_face27993fd64f4105005f843435dbec81dd805afbd000a831fcc7d04eff268b",
+      "u_a423f22e03e0eac0a1486d2e625d5cb7a04be935e9bd34ad0daf58fae4bc2798",
+      "u_8f2a33cbee0c7ad9750c9e3af33d09f04e3e8d2c5492e7fcc959f77b014eb55c"
+    ],
+    "reason": "ordered full bodies exactly reconstruct reference",
+    "duplicate_annotation": false
+  },
+  {
+    "query_id": "qa_352_3hop_554",
+    "evidence_id": "e_1faaff7ba5622bbae430aacbb267b67f715703d01b17230254d8d133ac3200f3",
+    "context_position": 2,
+    "status": "exact",
+    "unit_ids": [
+      "u_3abc701b2f7f1463ffaae785bfdbfebb5aa458c75767c8729fe698e71ac93a90"
+    ],
+    "reason": "normalized index, hierarchy and full body agree",
+    "duplicate_annotation": false
+  },
+  {
+    "query_id": "qa_61_1hop_93",
+    "evidence_id": "e_921ebc34a085d04482e871cfff5af19bda47f486f7e39c2c60a7f7e37f7e941f",
+    "context_position": 0,
+    "status": "exact",
+    "unit_ids": [
+      "u_c8931fda06ca65c59b475af2e74ae6e494740b570d63a8c9ddb7f623ca644c49"
+    ],
+    "reason": "normalized index, hierarchy and full body agree",
+    "duplicate_annotation": false
+  },
+  {
+    "query_id": "qa_94_1hop_155",
+    "evidence_id": "e_ecaff665bea6345a00ebc15dc162236e2faf20470b93ae96d40a135c2ee88a0f",
+    "context_position": 0,
+    "status": "exact",
+    "unit_ids": [
+      "u_ff38bb8314f4823e09ceea05fc8162cd466209d710e1c5d8402fb7b66a400da9"
+    ],
+    "reason": "normalized index, hierarchy and full body agree",
+    "duplicate_annotation": false
+  },
+  {
+    "query_id": "qa_140_1hop_257",
+    "evidence_id": "e_d1a888c6fb3e45e462f6b1d0b74b468c98e733b7a471ef3539bb2f0eece66713",
+    "context_position": 0,
+    "status": "exact",
+    "unit_ids": [
+      "u_6a00cdda496f1e3edc6179310faf386c2e1cf4597abbfe3a86220d3ad31c90a4"
+    ],
+    "reason": "normalized index, hierarchy and full body agree",
+    "duplicate_annotation": false
+  },
+  {
+    "query_id": "qa_174_1hop_312",
+    "evidence_id": "e_14f45a0b5ccfcf43f3d935ce0761eacdff0f96a0556876c03cb99b7857feb6a5",
+    "context_position": 0,
+    "status": "exact",
+    "unit_ids": [
+      "u_18c7bfa342509645608b9cbd24c101c03e44d784e0ec38d974814cc874cb4bc0"
+    ],
+    "reason": "normalized index, hierarchy and full body agree",
+    "duplicate_annotation": false
+  },
+  {
+    "query_id": "qa_99_2hop_168",
+    "evidence_id": "e_c6c62637489193764ecf89484a83dc601a85377ffb9df06f21b5e40c626e2b9d",
+    "context_position": 0,
+    "status": "exact",
+    "unit_ids": [
+      "u_adc3a8f1a749d0907fe12f2cb5ffd8f1b87ceca0bfa5ce0826c4262028b7a9ea"
+    ],
+    "reason": "normalized index, hierarchy and full body agree",
+    "duplicate_annotation": false
+  },
+  {
+    "query_id": "qa_99_2hop_168",
+    "evidence_id": "e_5e2316145afa2b361fc30e8983c80122b74e07b4cdf03628ff283dcf0e39a7d4",
+    "context_position": 1,
+    "status": "exact",
+    "unit_ids": [
+      "u_eb3273b31ead7be5f5f732fb0db20bbab701d9288af6d4af0f81e2e02961f479"
+    ],
+    "reason": "normalized index, hierarchy and full body agree",
+    "duplicate_annotation": false
+  },
+  {
+    "query_id": "qa_324_2hop_515",
+    "evidence_id": "e_d394f53567584a6f4da04e31bf62c7a807f9bb9e41ecca96aa2db11e72ab6732",
+    "context_position": 0,
+    "status": "exact",
+    "unit_ids": [
+      "u_98596ca76dcfdd71968c057c1601d8a934f62191693ad836d53a34c7e25b428a"
+    ],
+    "reason": "normalized index, hierarchy and full body agree",
+    "duplicate_annotation": false
+  },
+  {
+    "query_id": "qa_324_2hop_515",
+    "evidence_id": "e_6194ee06647c9cf4ebfea2dc4b2d8333f134f168c633a1d009137cdb8658bd78",
+    "context_position": 1,
+    "status": "exact",
+    "unit_ids": [
+      "u_f05ca0f85ef4db54aba4997e2473047ccbb5fbfed80c06b3fc6b4ad4f22fc02d"
+    ],
+    "reason": "normalized index, hierarchy and full body agree",
+    "duplicate_annotation": false
+  },
+  {
+    "query_id": "qa_401_2hop_619",
+    "evidence_id": "e_73b7bab9efbdf50d2b3fa93fe2a72da92541f160dd94baf10cf1325cdc5d9b93",
+    "context_position": 0,
+    "status": "exact",
+    "unit_ids": [
+      "u_382c0395f9a3fb299479880a8664234bc65d2f6a714ff93a992fc672d76624c8"
+    ],
+    "reason": "normalized index, hierarchy and full body agree",
+    "duplicate_annotation": false
+  },
+  {
+    "query_id": "qa_401_2hop_619",
+    "evidence_id": "e_6333335ca16f876b7fa294ff8f44660c180feedfeca49abc9b86a5a57a9d4988",
+    "context_position": 1,
+    "status": "exact",
+    "unit_ids": [
+      "u_ee919f7d80320a84c237b79a5f5c073297cfcdbc1b4a271a82be1a5f47558a38"
+    ],
+    "reason": "normalized index, hierarchy and full body agree",
+    "duplicate_annotation": false
+  },
+  {
+    "query_id": "qa_488_2hop_766",
+    "evidence_id": "e_c2ea11642d08510e2fd05e8105eba4d07a520ec0f20e616525e249ac9cc0c8cb",
+    "context_position": 0,
+    "status": "assembled",
+    "unit_ids": [
+      "u_e508c1fdd7c4a288fd653f304ccdf97294f8293d1d6461dd364c5d79e4abee7d",
+      "u_cffa6b5d23daf228955f3b7b819d24279c3e8461ebd61c2a708b727c0c2b04ff",
+      "u_2d0b6758834e82770471b5a40f43cbc187152664d05d663559f37efb723dd1ae",
+      "u_90eaec7515ca5b87f61e43d516cfe8b0cd9689d41fb9f6118dc9a19c98386228",
+      "u_77b734179179780c588c053d589ffdfb1d7c35b2691d50ef2ac7708403365d1e"
+    ],
+    "reason": "ordered full bodies exactly reconstruct reference",
+    "duplicate_annotation": false
+  },
+  {
+    "query_id": "qa_488_2hop_766",
+    "evidence_id": "e_f92c398b53aacf03a221e74ea66421e249a86161912b99d2c4ca441848f42c9a",
+    "context_position": 1,
+    "status": "exact",
+    "unit_ids": [
+      "u_03d9530cc7ed74c958a7ac05fa47e50e31fe1c2d6cbade2c40ee7050ff6346cd"
+    ],
+    "reason": "normalized index, hierarchy and full body agree",
+    "duplicate_annotation": false
+  },
+  {
+    "query_id": "qa_624_2hop_943",
+    "evidence_id": "e_1dce6e6f952dc66a4a310af77b2cbd2924ba03fc932543fd67aebd1ae18886aa",
+    "context_position": 0,
+    "status": "exact",
+    "unit_ids": [
+      "u_a896de385c61d27826d20e8a699938024615cda82b58a61b409ee393d32b4304"
+    ],
+    "reason": "normalized index, hierarchy and full body agree",
+    "duplicate_annotation": false
+  },
+  {
+    "query_id": "qa_624_2hop_943",
+    "evidence_id": "e_8b0a45a5f5b9a47ef33a949c9896c1a86c7574b621957f95e361fed8ad7c725f",
+    "context_position": 1,
+    "status": "exact",
+    "unit_ids": [
+      "u_87ba1feda4bbefef0942d41d6d956801ce188578e8643404abe26ff5e78b3e47"
+    ],
+    "reason": "normalized index, hierarchy and full body agree",
+    "duplicate_annotation": false
+  },
+  {
+    "query_id": "qa_59_2hop_232_rand",
+    "evidence_id": "e_256579385e47ced0cb328f00cc22d7b86b5558f0e10d22e0e126e805fddce400",
+    "context_position": 0,
+    "status": "exact",
+    "unit_ids": [
+      "u_e48fa180ce86db23bd05ee5f1a9c073945585ee19573f199da9d13da1a744275"
+    ],
+    "reason": "normalized index, hierarchy and full body agree",
+    "duplicate_annotation": false
+  },
+  {
+    "query_id": "qa_59_2hop_232_rand",
+    "evidence_id": "e_0892c584fca9cf90ceeae453662ffb21c6bfd39210db5fe7a333a9ee629ddb8d",
+    "context_position": 1,
+    "status": "exact",
+    "unit_ids": [
+      "u_e028a5d7e2e40d931c6e3297d4e8a4c945b46f9a6ea260b6edfd61df40dbfe4d"
+    ],
+    "reason": "normalized index, hierarchy and full body agree",
+    "duplicate_annotation": false
+  },
+  {
+    "query_id": "qa_119_2hop_464_rand",
+    "evidence_id": "e_cdba0e1789cbf23970433b6e64b84a5025fb364d25ad505cf5b40ca46a87d6a6",
+    "context_position": 0,
+    "status": "exact",
+    "unit_ids": [
+      "u_96ef4e5467214c94ab7574bbd172e09f0e0761b9750027816fc88f853f802d46"
+    ],
+    "reason": "normalized index, hierarchy and full body agree",
+    "duplicate_annotation": false
+  },
+  {
+    "query_id": "qa_119_2hop_464_rand",
+    "evidence_id": "e_f4e9d95b2b001a1f8923f37740a615edc1c7a9597741eecfcc1b353953232300",
+    "context_position": 1,
+    "status": "assembled",
+    "unit_ids": [
+      "u_c675fd8d0d8653eba49661b1b53b1d1e904a62f6f0d0429017a2d16294cbeeaa",
+      "u_ec29e92955a0bcc7df8bf9e7530ae5a75097d627518e8c3d51060c05c20563e3",
+      "u_2daac25954c6a79af96d1d58c12c80020dfeb23acaf5964df85a53b4b6045345"
+    ],
+    "reason": "ordered full bodies exactly reconstruct reference",
+    "duplicate_annotation": false
+  },
+  {
+    "query_id": "qa_171_2hop_658_rand",
+    "evidence_id": "e_0978999e0a69b2aab1c1055b4956d70714c3a7350b2b0e1bba373a1af08433b7",
+    "context_position": 0,
+    "status": "exact",
+    "unit_ids": [
+      "u_a7b49122512437ca556c0ea2f8fbdaa6cd71526decc66f84a7c023329516ecdd"
+    ],
+    "reason": "normalized index, hierarchy and full body agree",
+    "duplicate_annotation": false
+  },
+  {
+    "query_id": "qa_171_2hop_658_rand",
+    "evidence_id": "e_604202be887a62a85061514f39dd24550d28cff334c71d3f1e10f2983dc64b47",
+    "context_position": 1,
+    "status": "exact",
+    "unit_ids": [
+      "u_4cd18c918955b15dd6cdc7aa2ef587a355cde09deee62d92f7e79bb1af2ecf42"
+    ],
+    "reason": "normalized index, hierarchy and full body agree",
+    "duplicate_annotation": false
+  },
+  {
+    "query_id": "qa_215_2hop_820_rand",
+    "evidence_id": "e_d3fcae0fe81665733573e6def5bec7d2f0de4ba8271a07ef10ce5c5669718e67",
+    "context_position": 0,
+    "status": "assembled",
+    "unit_ids": [
+      "u_23bd7d5fa2142f226940a248748c51b044d41a5220685eda277031ea1143c19b",
+      "u_4802db3378ca81b4ec58085e0958f213e5d6a29e83a31f01bf5d7363cfe44cee",
+      "u_0869a07191882fe6634ed109cdbcaa8189fbdc4cca6eed645fad71032ca43a26",
+      "u_e39f1d4f18d5ed2bd6e8270879812f7ae184e32ea1773d67de0f96c193aa932e",
+      "u_029f59c596ca03ac2a75586e65a488a0302816e69325fcf98ab9ffd84f3807d6",
+      "u_c40c7be34dbccd4d928d85d74012ee9cb9f26bf655a0381bdb708a62e53415a8"
+    ],
+    "reason": "ordered full bodies exactly reconstruct reference",
+    "duplicate_annotation": false
+  },
+  {
+    "query_id": "qa_215_2hop_820_rand",
+    "evidence_id": "e_de3932c128fa63e2166bc51c39c4ae385691ae402329e98dc980209fbce19eb2",
+    "context_position": 1,
+    "status": "exact",
+    "unit_ids": [
+      "u_b6c6c5e624ff95cb3a1d98c0e97d1eb0c289003ddafb6894506066fca51397dd"
+    ],
+    "reason": "normalized index, hierarchy and full body agree",
+    "duplicate_annotation": false
+  },
+  {
+    "query_id": "qa_260_2hop_995_rand",
+    "evidence_id": "e_a201b9471d6ccb5a15c6e6f1541f0ea2cda9e3a22560f923cd0880ad10083ac8",
+    "context_position": 0,
+    "status": "exact",
+    "unit_ids": [
+      "u_2d2b7a9f3d01741c505f8443539961a1d0b765cea2306cf20a37324d835a21eb"
+    ],
+    "reason": "normalized index, hierarchy and full body agree",
+    "duplicate_annotation": false
+  },
+  {
+    "query_id": "qa_260_2hop_995_rand",
+    "evidence_id": "e_ec8fb8bcda816a6748c8ff88a7e6337a8cc56832042f89822a69b33a3bde260e",
+    "context_position": 1,
+    "status": "exact",
+    "unit_ids": [
+      "u_36352a182ae7f2f774b3da7c0e0542c62f5fa6405b9557546ac8c88c9dbf6c45"
+    ],
+    "reason": "normalized index, hierarchy and full body agree",
+    "duplicate_annotation": false
+  },
+  {
+    "query_id": "qa_260_2hop_995_rand",
+    "evidence_id": "e_1bb4720b8e38cd5f712fc61599925f243fb8cdc192091b42e668f8b5ee62e174",
+    "context_position": 2,
+    "status": "exact",
+    "unit_ids": [
+      "u_02938ee2e818f3dce052f459c2102da102658c05738a84a5d3964585ad2bdaec"
+    ],
+    "reason": "normalized index, hierarchy and full body agree",
+    "duplicate_annotation": false
+  },
+  {
+    "query_id": "qa_279_3hop_1064_rand",
+    "evidence_id": "e_d1b7ecfd5f0a8e51499a64f7bf34d2d5a4b7446565d965b54b7eacd2feedde2f",
+    "context_position": 0,
+    "status": "exact",
+    "unit_ids": [
+      "u_38e97ad20b442781d8f343176a9f5c0b539afcd2c8c9934ceb9a15a528c47e88"
+    ],
+    "reason": "normalized index, hierarchy and full body agree",
+    "duplicate_annotation": false
+  },
+  {
+    "query_id": "qa_279_3hop_1064_rand",
+    "evidence_id": "e_7a93b88a7381852e88764783f739e255146aed758ad41ebf8aa501e7b85079f5",
+    "context_position": 1,
+    "status": "exact",
+    "unit_ids": [
+      "u_e644c8b9a65bfdfce1e41a078495e96bedd3d2706027c82c59fc613d5134e269"
+    ],
+    "reason": "normalized index, hierarchy and full body agree",
+    "duplicate_annotation": false
+  },
+  {
+    "query_id": "qa_279_3hop_1064_rand",
+    "evidence_id": "e_2abbb2cdf63ca29befbb0ac665f805fe5fb5d1b3970983c69e0fd528e4a7140c",
+    "context_position": 2,
+    "status": "exact",
+    "unit_ids": [
+      "u_d732371281451e683a6b9d01b0e8ecf1e26ab57789dcf92a31241a65ca530097"
+    ],
+    "reason": "normalized index, hierarchy and full body agree",
+    "duplicate_annotation": false
+  },
+  {
+    "query_id": "qa_102_3hop_175",
+    "evidence_id": "e_277852d1660783fc3e19cd5fc25a50ebf5e97b68557cce1fcc512883365cae47",
+    "context_position": 0,
+    "status": "exact",
+    "unit_ids": [
+      "u_8d84e47a6f8d859e4aa1ce10b09e8c5f6edd32e6468e34930816ea6587ab1dcd"
+    ],
+    "reason": "normalized index, hierarchy and full body agree",
+    "duplicate_annotation": false
+  },
+  {
+    "query_id": "qa_102_3hop_175",
+    "evidence_id": "e_3f814d0338a608a6a4f84c0aeb85a0e65039def7c1598e7d9a2266c24b2b06e3",
+    "context_position": 1,
+    "status": "exact",
+    "unit_ids": [
+      "u_7a916098f7513c47730c567efcbef8d51ca6f0828941c9617303f7046fd52d30"
+    ],
+    "reason": "normalized index, hierarchy and full body agree",
+    "duplicate_annotation": false
+  },
+  {
+    "query_id": "qa_102_3hop_175",
+    "evidence_id": "e_22747d7d18d88ee05855f9ee01912c85066f47180c053c88f9a26a81be7fb151",
+    "context_position": 2,
+    "status": "assembled_reordered",
+    "unit_ids": [
+      "u_86fb22fc007a641da3f865bcee9db02c5d3567c3f2d087e1495a0e87689400e6",
+      "u_5e9286027738799e4d644a41a81ae7de1c82c9b45849fd34d615c5773cb8f89d",
+      "u_506c9a804b26922b914bebfb2545cf39faefbbb4baa63372fbf085f3aeaa0790",
+      "u_9e6ffd7ea0ccfb34ea683477cda7f1bcf35b14d27bf1e0ad43165cf5b5bde9d5",
+      "u_475a219385f9d793028ca2a8892efff4492b8abb3c0765654eafcc672d1252e5",
+      "u_fce177dda9e67e4960d6efe03b8885ae7ba791b4546c17703b2fa4350c7c80e6",
+      "u_bc8ab213120eb26943db1a028a6c479f4038dd781f5bfb5ad2c4a5b0dff56094",
+      "u_619c6a15fe3f7ef6e3319ff8d95d72d51ba7d142418daafe2baec5c1fc4b4a47",
+      "u_2d22a53745ef681095fdbd9fa3db5b01a8074db86f6967f266022611ab0452c5",
+      "u_3855bff174cf56521dc647eef21ae750a481381a90ef2e23a1cd5737caa68bad",
+      "u_a439a197c45dc7b137bb4ff5c03d0f17e6fc40e29c389473256077ab1176f6cf",
+      "u_a6d5b5a09372dd4b64d5ae8a744fbb7947de2ee0570e2a2227664fc1244d0804",
+      "u_e71d1232a6da141c224ce9e08680250ded7e6c865ab18ab3672355c274653532",
+      "u_15d4ad3db7a7c4986b9ecca371e9801a0d75e8aeb31378ea5e49c1b445f5ec68",
+      "u_d1e406d4038ab8b2b44ede6477acb62e2ed7aacbac5f8fbfc361c5366c396c0a",
+      "u_531601741232daead05fe2acf2515bc8df81640991455e008ff2abd710f9ad34",
+      "u_444d6501aded65211ca5c7eadf135d9075c71096d274821612b020d00ead3ebc",
+      "u_c8510c70af18b43933e493c92f61a68d6eedbad9834a3da1310a32865b84945d"
+    ],
+    "reason": "complete bodies reconstruct reference in QA item order",
+    "duplicate_annotation": false
+  },
+  {
+    "query_id": "qa_422_3hop_653",
+    "evidence_id": "e_ac6af853d3da64d16c83a0a67ae0aac3edcafd81dbe2cf2d1c73ac6de83f0be9",
+    "context_position": 0,
+    "status": "exact",
+    "unit_ids": [
+      "u_aa2d05def65ecfde60985a4db8c5b05974eebe6877578d2a668f7b9b99f254b7"
+    ],
+    "reason": "normalized index, hierarchy and full body agree",
+    "duplicate_annotation": false
+  },
+  {
+    "query_id": "qa_422_3hop_653",
+    "evidence_id": "e_fa3f5797c8afa70451f08273dc5e93d4d75f22f93d95b5662aba8b4e3aa56e1c",
+    "context_position": 1,
+    "status": "exact",
+    "unit_ids": [
+      "u_76d7c7ac956a8eaffcca5bb0e3f47f619e8543626961967e616733f5a8a8fe20"
+    ],
+    "reason": "normalized index, hierarchy and full body agree",
+    "duplicate_annotation": false
+  },
+  {
+    "query_id": "qa_422_3hop_653",
+    "evidence_id": "e_80cbd26f3335ee7f56090e6e96810c40f10d5a751f385836ddedf27e40fecc08",
+    "context_position": 2,
+    "status": "exact",
+    "unit_ids": [
+      "u_5393e4b6dfd22ae8e5b1380ff2c8111e15dbda19cc8852879964879176ac4a16"
+    ],
+    "reason": "normalized index, hierarchy and full body agree",
+    "duplicate_annotation": false
+  },
+  {
+    "query_id": "qa_24_1hop_35",
+    "evidence_id": "e_496d37e93ec7c587159ba2e4493393619e3b224e90b39cc8da4606d6bc36d312",
+    "context_position": 0,
+    "status": "assembled",
+    "unit_ids": [
+      "u_3967bd13ebcc1fa2bebf3196185777b7b4344178b94eb3dde0d66ce79073e230",
+      "u_5cb4ba31bbb888bc06de677cd01316a0a0a358a0237da89af7d75f3e98e5e9b6",
+      "u_c302a0914048013cfed5bf597b48f928397f714c11e0b04a098a5c6fe492361f",
+      "u_3bda5fa67086d73f1e137a6d232bca28288c2b3bcc5d0db21cd11c765d81e67e",
+      "u_24c88ca709900eccb1861bd0caff655424adcc2783a93554769743639efdcd3f",
+      "u_a1cd955147d26cadce6432a34e50483fee61e6873ae2985e72d7bcec0c8e1b49",
+      "u_19084ade5d22843fda401a660d7162289cf1ede3d2fe59919bf6c221c6d53c88",
+      "u_91bee6719737d90391a6d46ba1da2c49292aa5085648d9853e925afdef3dedd8"
+    ],
+    "reason": "ordered full bodies exactly reconstruct reference",
+    "duplicate_annotation": false
+  },
+  {
+    "query_id": "qa_62_1hop_94",
+    "evidence_id": "e_63ac4e53263d1c0e90263a21d41ebafd3ae622517401366b1e16f42fa72668af",
+    "context_position": 0,
+    "status": "exact",
+    "unit_ids": [
+      "u_eb5da5e0be2f9322c5a4ef417458424e34cd22d7c38ad8f8baf12b11c04e98ae"
+    ],
+    "reason": "normalized index, hierarchy and full body agree",
+    "duplicate_annotation": false
+  },
+  {
+    "query_id": "qa_95_1hop_156",
+    "evidence_id": "e_510b9ddf34ce6a9df467025c1f6a6e9b31c28d531ec20759cdbda3e886298e98",
+    "context_position": 0,
+    "status": "exact",
+    "unit_ids": [
+      "u_d1914a6a4d40cf7a2ed993e3cea0a5fe60e01c63f09c96c264b4843abd614717"
+    ],
+    "reason": "normalized index, hierarchy and full body agree",
+    "duplicate_annotation": false
+  },
+  {
+    "query_id": "qa_141_1hop_258",
+    "evidence_id": "e_b2047d607ec7a58623f313003a5f344e28e132ac3ce134d6830dacde3cbc66a0",
+    "context_position": 0,
+    "status": "exact",
+    "unit_ids": [
+      "u_f9bd8a527fec4cd120314101639cd72e66aaf9e908ad7619eacc9a33a5e01e50"
+    ],
+    "reason": "normalized index, hierarchy and full body agree",
+    "duplicate_annotation": false
+  },
+  {
+    "query_id": "qa_113_2hop_200",
+    "evidence_id": "e_5bc33bbf272942cce5a32d3e88099c9228a75044b4353adad1d0ce7d4a2252fe",
+    "context_position": 0,
+    "status": "exact",
+    "unit_ids": [
+      "u_c805e07302a2e715d68b03031890518bd2b9276cc7eb9c7a89198d420de7b9ae"
+    ],
+    "reason": "normalized index, hierarchy and full body agree",
+    "duplicate_annotation": false
+  },
+  {
+    "query_id": "qa_113_2hop_200",
+    "evidence_id": "e_bf47210c19e225bd55a9c7c1be3eb911bf1ed4a19f65864d8f4b1afb96de8338",
+    "context_position": 1,
+    "status": "exact",
+    "unit_ids": [
+      "u_85daaf1aad9ebd3b27dc84a3974e1ba8ea090e60685b3b1ddddd4d21017a550b"
+    ],
+    "reason": "normalized index, hierarchy and full body agree",
+    "duplicate_annotation": false
+  },
+  {
+    "query_id": "qa_330_2hop_525",
+    "evidence_id": "e_5e256ba4d29ddf2ca31ce4a3d1531b67c6b916142b09d73f532acfdff6572498",
+    "context_position": 0,
+    "status": "exact",
+    "unit_ids": [
+      "u_6d8ebbd2ffd604d6a62a26d81a6eba1f4757e831869c07cca05254b2cd56b04d"
+    ],
+    "reason": "normalized index, hierarchy and full body agree",
+    "duplicate_annotation": false
+  },
+  {
+    "query_id": "qa_330_2hop_525",
+    "evidence_id": "e_8fcf151a0d4eb21ebbc7541e64e76242f9e875608f91408d748ce7e08145daf0",
+    "context_position": 1,
+    "status": "exact",
+    "unit_ids": [
+      "u_0f02af9a2d11733c274754916f4b30c5075eb1dd6f9558b649874592d5db31dd"
+    ],
+    "reason": "normalized index, hierarchy and full body agree",
+    "duplicate_annotation": false
+  },
+  {
+    "query_id": "qa_406_2hop_622",
+    "evidence_id": "e_1b90f83427f123cf60f23be1a3634399985e1d81c59282aecd9e46b3457f5bea",
+    "context_position": 0,
+    "status": "exact",
+    "unit_ids": [
+      "u_4d698ab20e6901bece2d73686c273cc8a2773b78d610a9480cad802f9aa51905"
+    ],
+    "reason": "normalized index, hierarchy and full body agree",
+    "duplicate_annotation": false
+  },
+  {
+    "query_id": "qa_406_2hop_622",
+    "evidence_id": "e_48f104cfb867c05d65648b3e9e13fedd6d4a6835ce1b9ec92bf22b177b4719c1",
+    "context_position": 1,
+    "status": "exact",
+    "unit_ids": [
+      "u_bd2a6b1b0d54649e0a683e100b308f6f3658cf2c8ac351fba00dce8bad489d63"
+    ],
+    "reason": "normalized index, hierarchy and full body agree",
+    "duplicate_annotation": false
+  },
+  {
+    "query_id": "qa_503_2hop_790",
+    "evidence_id": "e_0d93ade46de1bf31d11c78482c013a47d2ad2935e287b90cb282e6e4f674b961",
+    "context_position": 0,
+    "status": "unresolved",
+    "unit_ids": [],
+    "reason": "same-article candidates do not exactly reconstruct reference body",
+    "duplicate_annotation": false
+  },
+  {
+    "query_id": "qa_503_2hop_790",
+    "evidence_id": "e_be5dbdd0ed1b6bac4c4ee7a9001218411f1451e2d9c21a0fde9b0ef5d4d732af",
+    "context_position": 1,
+    "status": "exact",
+    "unit_ids": [
+      "u_6a3afba53b585d4c48aa3bd85b400e52ed7b639bfa8ef70f743442a5dc76a2e3"
+    ],
+    "reason": "normalized index, hierarchy and full body agree",
+    "duplicate_annotation": false
+  },
+  {
+    "query_id": "qa_633_2hop_954",
+    "evidence_id": "e_df82ca12a30909ff99e86be37fcd4ead593bb03d552a73c0a0b1863338ad90af",
+    "context_position": 0,
+    "status": "exact",
+    "unit_ids": [
+      "u_786b87c98641007d4b44854aa4580b4941e994de15256bf3dc4f11f32333af1f"
+    ],
+    "reason": "normalized index, hierarchy and full body agree",
+    "duplicate_annotation": false
+  },
+  {
+    "query_id": "qa_633_2hop_954",
+    "evidence_id": "e_2ff80811ca04c4a4d14564fbc5f51a1b6dd57752d03db67e7e97804a13668eeb",
+    "context_position": 1,
+    "status": "exact",
+    "unit_ids": [
+      "u_61d0596cd2dda90eeea3406a995185a9bd1608a9216154c5ce9c80e98380ebad"
+    ],
+    "reason": "normalized index, hierarchy and full body agree",
+    "duplicate_annotation": false
+  },
+  {
+    "query_id": "qa_62_2hop_244_rand",
+    "evidence_id": "e_b9b4d1f553500fc956d880d9d558f31dfb900b34861ae65e521b025b99a0c741",
+    "context_position": 0,
+    "status": "exact",
+    "unit_ids": [
+      "u_7dd931f49a11c58fec7b1830be396b0e29ac38ef71dff359bec75f1df8d61d04"
+    ],
+    "reason": "normalized index, hierarchy and full body agree",
+    "duplicate_annotation": false
+  },
+  {
+    "query_id": "qa_62_2hop_244_rand",
+    "evidence_id": "e_b8d3619ce2124944a3239ce07fb5a550f1dbb788f84145f394edf6686c7f6f3f",
+    "context_position": 1,
+    "status": "exact",
+    "unit_ids": [
+      "u_f9ab91becc0417fe096da638dabadc026b077d5e4db9a891c341a748fef13f51"
+    ],
+    "reason": "normalized index, hierarchy and full body agree",
+    "duplicate_annotation": false
+  },
+  {
+    "query_id": "qa_124_2hop_480_rand",
+    "evidence_id": "e_b27569c2a218f95c6de534d1991cebf3daaf0cf6b386fb0a96932f751da7a07f",
+    "context_position": 0,
+    "status": "exact",
+    "unit_ids": [
+      "u_692e4dfbec824029de1c3bdf5d0ed7cd7daf42aa3f6c0126ebf230a9fb0c20f7"
+    ],
+    "reason": "normalized index, hierarchy and full body agree",
+    "duplicate_annotation": false
+  },
+  {
+    "query_id": "qa_124_2hop_480_rand",
+    "evidence_id": "e_61117669be4b08c0b674fc863bcf3446f173c964ab311d25c5baa328873a2428",
+    "context_position": 1,
+    "status": "exact",
+    "unit_ids": [
+      "u_8bb9b0c3c60aa0a80d25f593ea8e5b5189b8f44e434f5c1d00dfdabb6fbaf7a6"
+    ],
+    "reason": "normalized index, hierarchy and full body agree",
+    "duplicate_annotation": false
+  },
+  {
+    "query_id": "qa_174_2hop_666_rand",
+    "evidence_id": "e_5ff184e8d57a9b6182c064d1f07ed21681e3339b52d946c65307e8caf2d2570a",
+    "context_position": 0,
+    "status": "exact",
+    "unit_ids": [
+      "u_e15c004bf9b7d4d7e54caa3ea31f54a5d0d7a2287f8c3540a8ab633d5082835a"
+    ],
+    "reason": "normalized index, hierarchy and full body agree",
+    "duplicate_annotation": false
+  },
+  {
+    "query_id": "qa_174_2hop_666_rand",
+    "evidence_id": "e_72deb2b52aac1dbdccfeb4d5f42b31f656cbd19e202fe4f649c1e9f20754ba69",
+    "context_position": 1,
+    "status": "exact",
+    "unit_ids": [
+      "u_8b28e5d87e10ceb97ec8ab00e7f53ff72f4bb25978ab1bac46001244bd2e701a"
+    ],
+    "reason": "normalized index, hierarchy and full body agree",
+    "duplicate_annotation": false
+  },
+  {
+    "query_id": "qa_216_2hop_824_rand",
+    "evidence_id": "e_01b2b8e96ad7cffaf3a694386cd25ab3b0696e62f950da1c58b135b2daceb246",
+    "context_position": 0,
+    "status": "exact",
+    "unit_ids": [
+      "u_848d2a14c9fcaf7ba8e7838e0ead277b9ff7543a776cd007895400b0f037643d"
+    ],
+    "reason": "normalized index, hierarchy and full body agree",
+    "duplicate_annotation": false
+  },
+  {
+    "query_id": "qa_216_2hop_824_rand",
+    "evidence_id": "e_72a96a65837204ea8b1249ed92f1a019c51494c5588c15c4f142c97764874c2e",
+    "context_position": 1,
+    "status": "exact",
+    "unit_ids": [
+      "u_ec1b5f9eb45abc7e1cec5c4a0502307be4f085b3a249c368a6a65a749ce9fb31"
+    ],
+    "reason": "normalized index, hierarchy and full body agree",
+    "duplicate_annotation": false
+  },
+  {
+    "query_id": "qa_82_3hop_235_rand2",
+    "evidence_id": "e_72f19e8342282d70bc53d1956402e80d4f9d6930f031ae38f7b71f717a655360",
+    "context_position": 0,
+    "status": "exact",
+    "unit_ids": [
+      "u_6c0364bc5715b419ed1b3cb8719fceabc0931d1301abf0840bba9c37b61ea51b"
+    ],
+    "reason": "normalized index, hierarchy and full body agree",
+    "duplicate_annotation": false
+  },
+  {
+    "query_id": "qa_82_3hop_235_rand2",
+    "evidence_id": "e_1f63034819ac55e2ca95513730c26972742fb594267d525cd4a96f455719c040",
+    "context_position": 1,
+    "status": "exact",
+    "unit_ids": [
+      "u_1e63772d5c6366113e38e2146aba05a98d38978ad636148ae8f6c844b09269e6"
+    ],
+    "reason": "normalized index, hierarchy and full body agree",
+    "duplicate_annotation": false
+  },
+  {
+    "query_id": "qa_82_3hop_235_rand2",
+    "evidence_id": "e_07d47d78307d1202ef304fb58261a959195d082fe2147c534f708b30ea905eee",
+    "context_position": 2,
+    "status": "exact",
+    "unit_ids": [
+      "u_c6583c5aa4316960f6e2131cd8660a319e4e6a2c94177a4f6379db7bf3e3a25c"
+    ],
+    "reason": "normalized index, hierarchy and full body agree",
+    "duplicate_annotation": false
+  },
+  {
+    "query_id": "qa_127_3hop_230",
+    "evidence_id": "e_4a9b8a452a57d7abd4e4935fb9387f92856403f5d568c34c7195da7aa6fc90e4",
+    "context_position": 0,
+    "status": "exact",
+    "unit_ids": [
+      "u_8792ffd5fa19c4d6faa3da6ac14579bc3e1ad4f82b016525b804515211cff1cc"
+    ],
+    "reason": "normalized index, hierarchy and full body agree",
+    "duplicate_annotation": false
+  },
+  {
+    "query_id": "qa_127_3hop_230",
+    "evidence_id": "e_84070411006893ecd878862fc037a01a0f00aea3795cb18737bb1ffb2d8e4d52",
+    "context_position": 1,
+    "status": "exact",
+    "unit_ids": [
+      "u_80fba5b5d0f5bdc6e81fef6de4946607f4e3ce111bf249694120dc29d2977316"
+    ],
+    "reason": "normalized index, hierarchy and full body agree",
+    "duplicate_annotation": false
+  },
+  {
+    "query_id": "qa_127_3hop_230",
+    "evidence_id": "e_579ff26e7020ea1dfe1cad0269d1433a9e25de7895c29215f0d7c1e0b6affe48",
+    "context_position": 2,
+    "status": "exact",
+    "unit_ids": [
+      "u_ed49c57bb2f6a8242f93849485655b09c0ba7382e6daa5bdf48541be0f76f883"
+    ],
+    "reason": "normalized index, hierarchy and full body agree",
+    "duplicate_annotation": false
+  },
+  {
+    "query_id": "qa_430_3hop_669",
+    "evidence_id": "e_bc32a1090052ead7c32612ca733834d8c0017e4c12a6e520b8285a9046608e9f",
+    "context_position": 0,
+    "status": "exact",
+    "unit_ids": [
+      "u_3d3c0e7c540f55367b2e01c358285800855db88650fede216ce80e8fa80119ac"
+    ],
+    "reason": "normalized index, hierarchy and full body agree",
+    "duplicate_annotation": false
+  },
+  {
+    "query_id": "qa_430_3hop_669",
+    "evidence_id": "e_06022fc80cbb68deb58333cee8d20c76a68e5aefa6e3bb3ea7dfa14638fe9aa8",
+    "context_position": 1,
+    "status": "exact",
+    "unit_ids": [
+      "u_c031fae9c37903f07abf8f9bfe112a0714486bd73c7f77d24d80347c2332f433"
+    ],
+    "reason": "normalized index, hierarchy and full body agree",
+    "duplicate_annotation": false
+  },
+  {
+    "query_id": "qa_430_3hop_669",
+    "evidence_id": "e_2b22928fd68c2a134845cf02ae13ecdaad6aa76f264db7e4437ba9a3500d4b8f",
+    "context_position": 2,
+    "status": "exact",
+    "unit_ids": [
+      "u_22f14d7b71bd8ef0bff650a582ddb380f6c77ed00fffa612baf235056f58264e"
+    ],
+    "reason": "normalized index, hierarchy and full body agree",
+    "duplicate_annotation": false
+  },
+  {
+    "query_id": "qa_25_1hop_37",
+    "evidence_id": "e_67592212e53611853a521628a7a36a5750138779d876d80c620a89d2bbd92b64",
+    "context_position": 0,
+    "status": "exact",
+    "unit_ids": [
+      "u_a92974b934d81afb07f6536132f613759e314ccdef9cea4c79a52045a290015a"
+    ],
+    "reason": "normalized index, hierarchy and full body agree",
+    "duplicate_annotation": false
+  },
+  {
+    "query_id": "qa_25_1hop_37",
+    "evidence_id": "e_34fbe5dc8b3380624070644e55bd5a75719ea6d91bda17d98301dbfedc0ab769",
+    "context_position": 1,
+    "status": "exact",
+    "unit_ids": [
+      "u_daac8013975b8b9e550c8a3b9a962d1b1cb0b98a067b70e783f958c53b55c2cd"
+    ],
+    "reason": "normalized index, hierarchy and full body agree",
+    "duplicate_annotation": false
+  },
+  {
+    "query_id": "qa_64_1hop_95",
+    "evidence_id": "e_03471dc998ee77a8b2434ab54f54d8d895f63adad3b15b289a4b4aca9751cebd",
+    "context_position": 0,
+    "status": "exact",
+    "unit_ids": [
+      "u_bd22b2218c627fe68977c6950b72d4812471561430c911e95a9409649fa06047"
+    ],
+    "reason": "normalized index, hierarchy and full body agree",
+    "duplicate_annotation": false
+  },
+  {
+    "query_id": "qa_99_1hop_167",
+    "evidence_id": "e_c6c62637489193764ecf89484a83dc601a85377ffb9df06f21b5e40c626e2b9d",
+    "context_position": 0,
+    "status": "exact",
+    "unit_ids": [
+      "u_adc3a8f1a749d0907fe12f2cb5ffd8f1b87ceca0bfa5ce0826c4262028b7a9ea"
+    ],
+    "reason": "normalized index, hierarchy and full body agree",
+    "duplicate_annotation": false
+  },
+  {
+    "query_id": "qa_145_1hop_267",
+    "evidence_id": "e_e41d1579eb3d795e2584f1b0d63c890e3a7c0d92feca4960fb4feed769fd7edd",
+    "context_position": 0,
+    "status": "exact",
+    "unit_ids": [
+      "u_4f812c2c2224ceea86ad3a02e3367b203587ebce73756217350e3516528d0bcb"
+    ],
+    "reason": "normalized index, hierarchy and full body agree",
+    "duplicate_annotation": false
+  },
+  {
+    "query_id": "qa_192_1hop_333",
+    "evidence_id": "e_3b3ac64e17615007500c80c16d703150c5db953f9db4475daa663c8037edfc1f",
+    "context_position": 0,
+    "status": "exact",
+    "unit_ids": [
+      "u_f74041ac7eaca43e749972b7efaaf684c1f5e05e9406a41508f61518d7f47539"
+    ],
+    "reason": "normalized index, hierarchy and full body agree",
+    "duplicate_annotation": false
+  },
+  {
+    "query_id": "qa_115_2hop_204",
+    "evidence_id": "e_a8ee3704db36318d7f9e4a074bf778311fb687ca43fb1555a606a15afd2ce21f",
+    "context_position": 0,
+    "status": "exact",
+    "unit_ids": [
+      "u_b271a41a2dd5a63f4f2180f67c72600c0346bd86bf947e934f21e8c9f9856446"
+    ],
+    "reason": "normalized index, hierarchy and full body agree",
+    "duplicate_annotation": false
+  },
+  {
+    "query_id": "qa_115_2hop_204",
+    "evidence_id": "e_d961478beab6d49433418dab555790f3dbbaae6ab407f1ee5fe1ffbb1c850782",
+    "context_position": 1,
+    "status": "exact",
+    "unit_ids": [
+      "u_403f463381d46b2ff5c6248a21ef5ced87c7b0c1f04940676fa8462035fe7ee4"
+    ],
+    "reason": "normalized index, hierarchy and full body agree",
+    "duplicate_annotation": false
+  },
+  {
+    "query_id": "qa_332_2hop_531",
+    "evidence_id": "e_508e9f8dbdb8bb4276dc0f3a2a83cd23f8c181ac3e23a15b642888c419ea44b3",
+    "context_position": 0,
+    "status": "exact",
+    "unit_ids": [
+      "u_582d3e874ff85f5a0abcc81b1ef40acacc32ee2bcb116332fb9b857635fd00a1"
+    ],
+    "reason": "normalized index, hierarchy and full body agree",
+    "duplicate_annotation": false
+  },
+  {
+    "query_id": "qa_332_2hop_531",
+    "evidence_id": "e_24261b5f2d2a8f6fe01f051365edd0f2db30b9d2d88b4af257f334a1c94ac0d0",
+    "context_position": 1,
+    "status": "exact",
+    "unit_ids": [
+      "u_e1c9c9dadf19cdf4b9c0fca844985967f6e87ab1ab9101a92c8c7b4cbce8e12b"
+    ],
+    "reason": "normalized index, hierarchy and full body agree",
+    "duplicate_annotation": false
+  },
+  {
+    "query_id": "qa_522_2hop_806",
+    "evidence_id": "e_143aa310970e7bc829ec291e542c768054afc4e196c163646899481adc82be9e",
+    "context_position": 0,
+    "status": "exact",
+    "unit_ids": [
+      "u_82ea55f8cbf2608ce227635fe5b6b4976723c2a9e841b775e82167a765b102cb"
+    ],
+    "reason": "normalized index, hierarchy and full body agree",
+    "duplicate_annotation": false
+  },
+  {
+    "query_id": "qa_522_2hop_806",
+    "evidence_id": "e_07b1e9171aa20b4e12565953737cb52d3caf25d6547bee5b45e23bcfe10212ea",
+    "context_position": 1,
+    "status": "exact",
+    "unit_ids": [
+      "u_820767499094809285ee93e885f216bd82f5847ac69239b48c147c7b41f450b4"
+    ],
+    "reason": "normalized index, hierarchy and full body agree",
+    "duplicate_annotation": false
+  },
+  {
+    "query_id": "qa_644_2hop_973",
+    "evidence_id": "e_031f332c74a83d901f42855f88415efa3fb8beb54b2a190abc6a6c20c03b9d50",
+    "context_position": 0,
+    "status": "exact",
+    "unit_ids": [
+      "u_1b42efd551177a3d44eb45784e2d93974ce5094bc3eb07d1d55a925844d9ae63"
+    ],
+    "reason": "normalized index, hierarchy and full body agree",
+    "duplicate_annotation": false
+  },
+  {
+    "query_id": "qa_644_2hop_973",
+    "evidence_id": "e_1ddec1a89d24126c3fb940ca93731781e3f4eb5c22f7396cf64d3da577bd54b9",
+    "context_position": 1,
+    "status": "exact",
+    "unit_ids": [
+      "u_f6f9b0255717d55c7e95be1d035ea149eb352c7b9e7a6c42f48be24c8a83c151"
+    ],
+    "reason": "normalized index, hierarchy and full body agree",
+    "duplicate_annotation": false
+  },
+  {
+    "query_id": "qa_63_2hop_248_rand",
+    "evidence_id": "e_d82b679b34c99a7236dc1eef64932d796c49355ee0f970f8aee2317753eb7719",
+    "context_position": 0,
+    "status": "exact",
+    "unit_ids": [
+      "u_88427e6b530b6617dd31f7622b29f408314b8e559d6c229d177829271ed60085"
+    ],
+    "reason": "normalized index, hierarchy and full body agree",
+    "duplicate_annotation": false
+  },
+  {
+    "query_id": "qa_63_2hop_248_rand",
+    "evidence_id": "e_398def736099f142d9905c8aa65d93576dcbc2bc70f265e569d061f2aae9934d",
+    "context_position": 1,
+    "status": "exact",
+    "unit_ids": [
+      "u_0d204a36ffa0e5b4fa025ae91f83262108f503317cb70d80ad38b73df6cbc716"
+    ],
+    "reason": "normalized index, hierarchy and full body agree",
+    "duplicate_annotation": false
+  },
+  {
+    "query_id": "qa_129_2hop_497_rand",
+    "evidence_id": "e_7340190a1ed4c0f35fc46d52b5d8aa8173dd12007e7f12bef012c1af311936e1",
+    "context_position": 0,
+    "status": "exact",
+    "unit_ids": [
+      "u_50ac4d7fbc8fc7a1a87e074d50e0440a176c035b29edff52b692bd887272209c"
+    ],
+    "reason": "normalized index, hierarchy and full body agree",
+    "duplicate_annotation": false
+  },
+  {
+    "query_id": "qa_129_2hop_497_rand",
+    "evidence_id": "e_5d8486b960b0df114d0e4c85e49bd5a09c6578b51e76eec9b404fe9522c9a58f",
+    "context_position": 1,
+    "status": "exact",
+    "unit_ids": [
+      "u_2d4f0024a2e9acf5faf253e2560a80e7107c708b0bc486ea53145b40e8f4defb"
+    ],
+    "reason": "normalized index, hierarchy and full body agree",
+    "duplicate_annotation": false
+  },
+  {
+    "query_id": "qa_180_2hop_689_rand",
+    "evidence_id": "e_5e7777b63b99cb95b56ab5d0eb976ba9a1748bd264aba419f6533e4ef99b58cd",
+    "context_position": 0,
+    "status": "exact",
+    "unit_ids": [
+      "u_0222c8f5cb1e0e40615dd581e0ffccddd678f4cf6f9b1bab0e6f006ad2eef154"
+    ],
+    "reason": "normalized index, hierarchy and full body agree",
+    "duplicate_annotation": false
+  },
+  {
+    "query_id": "qa_180_2hop_689_rand",
+    "evidence_id": "e_eb1add7502ff66808e9c6a70b37673a106d7f33b74508556c9ba9691d9428a08",
+    "context_position": 1,
+    "status": "exact",
+    "unit_ids": [
+      "u_47c18ac8e9f246a3e9a004e6166b1c6e0ca4626378311b15ceb88a62d8c58ccf"
+    ],
+    "reason": "normalized index, hierarchy and full body agree",
+    "duplicate_annotation": false
+  },
+  {
+    "query_id": "qa_226_2hop_860_rand",
+    "evidence_id": "e_f9f9bb48aa56eecbfc049eb9dccb5f10668d44e6748b1aad4503b7b1470f1e04",
+    "context_position": 0,
+    "status": "exact",
+    "unit_ids": [
+      "u_8b30f4911ba9fbe6f0153d01164590d61bb5e2b72ffd5a5de633152aeb5ea5ad"
+    ],
+    "reason": "normalized index, hierarchy and full body agree",
+    "duplicate_annotation": false
+  },
+  {
+    "query_id": "qa_226_2hop_860_rand",
+    "evidence_id": "e_a963ad0a77c061088ed3deccf44ee676e97767eb47f00a1cb9fc173307c114bb",
+    "context_position": 1,
+    "status": "exact",
+    "unit_ids": [
+      "u_94af9411be63164a93a5315304c135d837f62651139816cda0acff325429d14b"
+    ],
+    "reason": "normalized index, hierarchy and full body agree",
+    "duplicate_annotation": false
+  },
+  {
+    "query_id": "qa_286_2hop_1091_rand",
+    "evidence_id": "e_3b534793ffc1ca189698e3e83d81334d933a38b68dff24bec380ed090c203d42",
+    "context_position": 0,
+    "status": "exact",
+    "unit_ids": [
+      "u_de60ef6d2744b407f393fb7b2bdb8c2e49f2c59c3333091a787f8685de6f7b67"
+    ],
+    "reason": "normalized index, hierarchy and full body agree",
+    "duplicate_annotation": false
+  },
+  {
+    "query_id": "qa_286_2hop_1091_rand",
+    "evidence_id": "e_de45010116a3ac4cee36d4a4c4b71e2a15f0b6b715f71a6e955c5d08f1738971",
+    "context_position": 1,
+    "status": "exact",
+    "unit_ids": [
+      "u_1a099caebf647a84e4815b89e069c28f051a65539c9673035f2072f88aebc1e9"
+    ],
+    "reason": "normalized index, hierarchy and full body agree",
+    "duplicate_annotation": false
+  },
+  {
+    "query_id": "qa_144_3hop_410_rand2",
+    "evidence_id": "e_86449d1f69e0b4adfa7792b0452084ee701f4258ba94b27a154452f16da1f592",
+    "context_position": 0,
+    "status": "exact",
+    "unit_ids": [
+      "u_306e5e7452fef8946edc751626d49cfd2e71cf15fffd8cbd7ead3103d33672e6"
+    ],
+    "reason": "normalized index, hierarchy and full body agree",
+    "duplicate_annotation": false
+  },
+  {
+    "query_id": "qa_144_3hop_410_rand2",
+    "evidence_id": "e_e23a90aa6d026895c2a79a7219cff15b997677788cd6812f1e670d1e2a123920",
+    "context_position": 1,
+    "status": "exact",
+    "unit_ids": [
+      "u_103311e690e739d72932a013339c3956f80233dfbcecc2f216bc1cd8b9f9396e"
+    ],
+    "reason": "normalized index, hierarchy and full body agree",
+    "duplicate_annotation": false
+  },
+  {
+    "query_id": "qa_144_3hop_410_rand2",
+    "evidence_id": "e_a88d81c8be2575b9c6a5324b46116f97f71a7ad64d64f0aa95e2e64276916c86",
+    "context_position": 2,
+    "status": "exact",
+    "unit_ids": [
+      "u_0d3ee37eb5cacef66927b991143ad0e5f089ebd3354fc905c0f3002d7cef9ebe"
+    ],
+    "reason": "normalized index, hierarchy and full body agree",
+    "duplicate_annotation": false
+  },
+  {
+    "query_id": "qa_131_3hop_237",
+    "evidence_id": "e_e4b61314b7f66c007c9989cd55a073d2fceda0a639a158ee363da45afa7046f3",
+    "context_position": 0,
+    "status": "exact",
+    "unit_ids": [
+      "u_1d243dc6d1820a133d9cc4037bb3e92da0740afd040b0ce0ae4496b9d3597b63"
+    ],
+    "reason": "normalized index, hierarchy and full body agree",
+    "duplicate_annotation": false
+  },
+  {
+    "query_id": "qa_131_3hop_237",
+    "evidence_id": "e_1052c5d7d5d3a3fc19ec80946818328e1baa0ba6760cf030db47798c353c26ee",
+    "context_position": 1,
+    "status": "exact",
+    "unit_ids": [
+      "u_9352bda6b010a81649a9c2586e029ac89de2d49f367efb4920ffc38b78ffdbfb"
+    ],
+    "reason": "normalized index, hierarchy and full body agree",
+    "duplicate_annotation": false
+  },
+  {
+    "query_id": "qa_131_3hop_237",
+    "evidence_id": "e_93f519381e6b07922343c40b982d74371131267583958927249c3ef3357bf8a1",
+    "context_position": 2,
+    "status": "exact",
+    "unit_ids": [
+      "u_acb9469f03027b586c8e92452e49b53c85745304bebb712fc201ababe570665b"
+    ],
+    "reason": "normalized index, hierarchy and full body agree",
+    "duplicate_annotation": false
+  },
+  {
+    "query_id": "qa_441_3hop_696",
+    "evidence_id": "e_1d0e9ce4870166913e4d7e7e7c28b6c32246663d21aa1b734042802d66ec0fc1",
+    "context_position": 0,
+    "status": "exact",
+    "unit_ids": [
+      "u_2a5af5a9a3cdd2e5cfccec63f50fac2fa10c51ce631de228ce35e88078ee914d"
+    ],
+    "reason": "normalized index, hierarchy and full body agree",
+    "duplicate_annotation": false
+  },
+  {
+    "query_id": "qa_441_3hop_696",
+    "evidence_id": "e_81e8466f34064a69455d7f740c3ddb65753d19d375da47fa4671fad7ad1cb3d7",
+    "context_position": 1,
+    "status": "exact",
+    "unit_ids": [
+      "u_827dec0688da7aaf9ab12937064b022bce6939cb7072e49bbea5429959e1974a"
+    ],
+    "reason": "normalized index, hierarchy and full body agree",
+    "duplicate_annotation": false
+  },
+  {
+    "query_id": "qa_441_3hop_696",
+    "evidence_id": "e_5072477248d77be0238e53df528f1e73c42acd7fce852ce732764f90eb6e0478",
+    "context_position": 2,
+    "status": "exact",
+    "unit_ids": [
+      "u_629b4f85472f7f7cfda66612b61d08e95814637a6346a00298aa35620dbe85bc"
+    ],
+    "reason": "normalized index, hierarchy and full body agree",
+    "duplicate_annotation": false
+  },
+  {
+    "query_id": "qa_26_1hop_39",
+    "evidence_id": "e_6fa536fc6f16ebf18f387a690b0325b563070ea400d234c1d66c3f941c3a9bd0",
+    "context_position": 0,
+    "status": "exact",
+    "unit_ids": [
+      "u_ea961a84629100b5ed6b494ee16517c37e05f437d382ba74505efb3c36a29eaa"
+    ],
+    "reason": "normalized index, hierarchy and full body agree",
+    "duplicate_annotation": false
+  },
+  {
+    "query_id": "qa_102_1hop_173",
+    "evidence_id": "e_277852d1660783fc3e19cd5fc25a50ebf5e97b68557cce1fcc512883365cae47",
+    "context_position": 0,
+    "status": "exact",
+    "unit_ids": [
+      "u_8d84e47a6f8d859e4aa1ce10b09e8c5f6edd32e6468e34930816ea6587ab1dcd"
+    ],
+    "reason": "normalized index, hierarchy and full body agree",
+    "duplicate_annotation": false
+  },
+  {
+    "query_id": "qa_3_2hop_6",
+    "evidence_id": "e_98a54782de79d2a7437f23858e5e49382ae03c78fe2e565e5f2a47a8b38cad89",
+    "context_position": 0,
+    "status": "exact",
+    "unit_ids": [
+      "u_23cf1f90f9da856653ff076ff730b7e3c475b5b65b53ff9a8a8df1f9c9cc0422"
+    ],
+    "reason": "normalized index, hierarchy and full body agree",
+    "duplicate_annotation": false
+  },
+  {
+    "query_id": "qa_3_2hop_6",
+    "evidence_id": "e_67592212e53611853a521628a7a36a5750138779d876d80c620a89d2bbd92b64",
+    "context_position": 1,
+    "status": "exact",
+    "unit_ids": [
+      "u_a92974b934d81afb07f6536132f613759e314ccdef9cea4c79a52045a290015a"
+    ],
+    "reason": "normalized index, hierarchy and full body agree",
+    "duplicate_annotation": false
+  },
+  {
+    "query_id": "qa_116_2hop_208",
+    "evidence_id": "e_3844ecd88a6ef9a85bc2d7a9b6bfbc7e7720e68c692e76c91e2cdec0a22f8bda",
+    "context_position": 0,
+    "status": "exact",
+    "unit_ids": [
+      "u_4fba663c7d00c7b23e4883ac7c0b8e5053496ed1150520ef77cfb197ab071108"
+    ],
+    "reason": "normalized index, hierarchy and full body agree",
+    "duplicate_annotation": false
+  },
+  {
+    "query_id": "qa_116_2hop_208",
+    "evidence_id": "e_83e1b827a42d56cad37977e6ce01945dcd714b346437e4e0837e88ceb4e066a4",
+    "context_position": 1,
+    "status": "exact",
+    "unit_ids": [
+      "u_ba37bd71147dc70801126e4ec5f5aebe0991c1adf388cf438544c0d27e25009c"
+    ],
+    "reason": "normalized index, hierarchy and full body agree",
+    "duplicate_annotation": false
+  },
+  {
+    "query_id": "qa_202_2hop_350",
+    "evidence_id": "e_8c99a99821733fbef15ceea76798d7565bfc8451d5eec3bca6e3caba2bef87e2",
+    "context_position": 0,
+    "status": "exact",
+    "unit_ids": [
+      "u_2d57bd52bc178165c7a22c5f88c268d1e83d4a3290ed71eb2d527614936ed912"
+    ],
+    "reason": "normalized index, hierarchy and full body agree",
+    "duplicate_annotation": false
+  },
+  {
+    "query_id": "qa_202_2hop_350",
+    "evidence_id": "e_a097c714b7f35adbd71b00ef29745b38fcabefd5b998171ffd6c2f9e205a956a",
+    "context_position": 1,
+    "status": "exact",
+    "unit_ids": [
+      "u_1ae36c5a8809c39b1a3c50e187bff03bf78324e8cb4e0ccfb1e317f1216b8bc5"
+    ],
+    "reason": "normalized index, hierarchy and full body agree",
+    "duplicate_annotation": false
+  },
+  {
+    "query_id": "qa_339_2hop_536",
+    "evidence_id": "e_6407eec2e9b117c495502f6fbbec66b3c7bf97ef3e0935f7633e2b535afd3b0e",
+    "context_position": 0,
+    "status": "exact",
+    "unit_ids": [
+      "u_b1757e961a602a2be0e175808709b8e0c49cc483a69928aaf57d95dd5330f81f"
+    ],
+    "reason": "normalized index, hierarchy and full body agree",
+    "duplicate_annotation": false
+  },
+  {
+    "query_id": "qa_339_2hop_536",
+    "evidence_id": "e_1554919bb5ee07718d0c0ff4ac6e52abc845c893045fe68a7b778f59d309b998",
+    "context_position": 1,
+    "status": "assembled",
+    "unit_ids": [
+      "u_7181f439474be214ae47f8523dcf23e0b7950f44b110f02afa2b80865aa3083f",
+      "u_5724f1c3d1fa8e715c127303f45d991a59a111f134597e296f5be33d86e6c07f",
+      "u_31a93dc6f5c2e448378dbd8f728c2ff717b04865d628482faa63e509439cc187"
+    ],
+    "reason": "ordered full bodies exactly reconstruct reference",
+    "duplicate_annotation": false
+  },
+  {
+    "query_id": "qa_409_2hop_628",
+    "evidence_id": "e_b26d599e6778213f8fcf052b5bfb66ed129aa0cc33dc25c121ff13c8dbf92f3d",
+    "context_position": 0,
+    "status": "exact",
+    "unit_ids": [
+      "u_fba12a8091fe9a8a7162b36849e3e530b79b3202469907028cd056095b9e3b3a"
+    ],
+    "reason": "normalized index, hierarchy and full body agree",
+    "duplicate_annotation": false
+  },
+  {
+    "query_id": "qa_409_2hop_628",
+    "evidence_id": "e_3d433fdcd37c33b39fd65b95944fcf2c22c9ce11ea036a4e04d3358d691b4285",
+    "context_position": 1,
+    "status": "exact",
+    "unit_ids": [
+      "u_89006b4c7e5cdee54ad163ece16e26bc3685b7979ed726e7fecf52f5a0a1890e"
+    ],
+    "reason": "normalized index, hierarchy and full body agree",
+    "duplicate_annotation": false
+  },
+  {
+    "query_id": "qa_653_2hop_987",
+    "evidence_id": "e_ea7a8b00edb9335c28e32ee050a8b6cf2261624205970afbe24aed6303ed1caa",
+    "context_position": 0,
+    "status": "assembled",
+    "unit_ids": [
+      "u_dc2c1a168d6b448ef4f5fc1c5aa2a2ea8b12cc416b135b50b181ebabed5e7d34",
+      "u_829a50831a54cead3ac3782cb6053b204c21afc67ffad0d5b7e5ea0d7e7eb4c2",
+      "u_2305437a797dc508f1638df7cb0859413283f555ef36c4984dcd97ebe4defff7",
+      "u_5154d5c6c0ed7af5f5b7ca65f98c15ceb51277ced746726d1d3aee3ade6a2655"
+    ],
+    "reason": "ordered full bodies exactly reconstruct reference",
+    "duplicate_annotation": false
+  },
+  {
+    "query_id": "qa_653_2hop_987",
+    "evidence_id": "e_bd062304a5e2a6d8b71b651e620cadaef65c2d8b1c068129c8a7bff477aed01c",
+    "context_position": 1,
+    "status": "exact",
+    "unit_ids": [
+      "u_7086465733324c3443f56d86e5d06cb94cc1151a6b1af81b5d668b46579dbd00"
+    ],
+    "reason": "normalized index, hierarchy and full body agree",
+    "duplicate_annotation": false
+  },
+  {
+    "query_id": "qa_130_2hop_501_rand",
+    "evidence_id": "e_12169f62c5b96e2c047209709fa632ebc48102882e8daab97483dc051e129bef",
+    "context_position": 0,
+    "status": "exact",
+    "unit_ids": [
+      "u_ed7dad3691946a06558aecedebf038a59fc32126391a96cad6578ba372d2186b"
+    ],
+    "reason": "normalized index, hierarchy and full body agree",
+    "duplicate_annotation": false
+  },
+  {
+    "query_id": "qa_130_2hop_501_rand",
+    "evidence_id": "e_3bb056948cf01a4c5e4c1042e1ee95060fc1674facb384df51cfc51ab4862889",
+    "context_position": 1,
+    "status": "exact",
+    "unit_ids": [
+      "u_86ce30d9cc5e8b7aa0f0efa29701f07c8d118a7281f32dab40b020fd69504cdd"
+    ],
+    "reason": "normalized index, hierarchy and full body agree",
+    "duplicate_annotation": false
+  },
+  {
+    "query_id": "qa_185_2hop_707_rand",
+    "evidence_id": "e_d9eb4f9257698dc9bb24249c8b13a6a219c9dba8fec806332e3dc5cd443ef8d3",
+    "context_position": 0,
+    "status": "exact",
+    "unit_ids": [
+      "u_64c5a969fa2766fdd68d2f8c2022f686f0d11497c74b414851a236dd207cbad2"
+    ],
+    "reason": "normalized index, hierarchy and full body agree",
+    "duplicate_annotation": false
+  },
+  {
+    "query_id": "qa_185_2hop_707_rand",
+    "evidence_id": "e_bf2882dd7ef3ac1707ed8e147efd9501b0607840a8ad0a63650c98c73e17647c",
+    "context_position": 1,
+    "status": "exact",
+    "unit_ids": [
+      "u_231b57ae2029fdf22ee3611226be6ae65c955e53e50bae743248b9c3dfa5fa19"
+    ],
+    "reason": "normalized index, hierarchy and full body agree",
+    "duplicate_annotation": false
+  },
+  {
+    "query_id": "qa_233_2hop_888_rand",
+    "evidence_id": "e_f3118577cacb27a615e211f722e1f816d3b4d03824d6c9d95f21c974e5c134fa",
+    "context_position": 0,
+    "status": "exact",
+    "unit_ids": [
+      "u_20b9ab025a06c003227f4912cc175f9cb1691a71aaa48fe22baa33a9530ff81a"
+    ],
+    "reason": "normalized index, hierarchy and full body agree",
+    "duplicate_annotation": false
+  },
+  {
+    "query_id": "qa_233_2hop_888_rand",
+    "evidence_id": "e_fcb6c6b2434c1eb15b1d22c3aefc8e54a348035de9de85613e530c64eae3bd15",
+    "context_position": 1,
+    "status": "exact",
+    "unit_ids": [
+      "u_94cc6f48ff7f15888591c171271abaf47413d3a4e150eb0fe2894a48dc1a6ce7"
+    ],
+    "reason": "normalized index, hierarchy and full body agree",
+    "duplicate_annotation": false
+  },
+  {
+    "query_id": "qa_41_3hop_66",
+    "evidence_id": "e_45b6fc783e2caf43dea9aa557211ad4dd5616012d13c7136b71d76a3750b75f9",
+    "context_position": 0,
+    "status": "exact",
+    "unit_ids": [
+      "u_07e0fbdd76dec799a93503ef657bdd5cf485f977b87d0aa79bd029694cef566c"
+    ],
+    "reason": "normalized index, hierarchy and full body agree",
+    "duplicate_annotation": false
+  },
+  {
+    "query_id": "qa_41_3hop_66",
+    "evidence_id": "e_b5e4e0f50d9542d4175794226958052cc32fa8788a066a4c9331a4d0f5d5677b",
+    "context_position": 1,
+    "status": "exact",
+    "unit_ids": [
+      "u_a8ccb73d40ff2b696aa522e4c35ead58e5b7d16bf045e45bf8a26b2744ebfb99"
+    ],
+    "reason": "normalized index, hierarchy and full body agree",
+    "duplicate_annotation": false
+  },
+  {
+    "query_id": "qa_41_3hop_66",
+    "evidence_id": "e_76134d5f25933f94db171f0bc89d22136a96bea5cdb8f896cb60b86bc6cdde1b",
+    "context_position": 2,
+    "status": "exact",
+    "unit_ids": [
+      "u_39e0321ccf422f2f6f40b12e618c50293eeb4ea32cde2e1b449e3f33a1c51bad"
+    ],
+    "reason": "normalized index, hierarchy and full body agree",
+    "duplicate_annotation": false
+  },
+  {
+    "query_id": "qa_304_3hop_869_rand2",
+    "evidence_id": "e_428e694e8247d6b7c1f105c1921e90efa21864c51e34e5bf531c14cb7395d99a",
+    "context_position": 0,
+    "status": "exact",
+    "unit_ids": [
+      "u_bf950c2c0ad2c5d47ca4aa777e5fa7b3751b897dbcdb1f5e78ade58976a496c6"
+    ],
+    "reason": "normalized index, hierarchy and full body agree",
+    "duplicate_annotation": false
+  },
+  {
+    "query_id": "qa_304_3hop_869_rand2",
+    "evidence_id": "e_57eae8404e82d0d7c932a060834062f4104e21e898efd7ce05ea7065acc0f881",
+    "context_position": 1,
+    "status": "exact",
+    "unit_ids": [
+      "u_d6e5d3bf10d38d34b81693a04f5fa882418355c9ab584fc9f652409a72e94b3f"
+    ],
+    "reason": "normalized index, hierarchy and full body agree",
+    "duplicate_annotation": false
+  },
+  {
+    "query_id": "qa_304_3hop_869_rand2",
+    "evidence_id": "e_92dd724a8a6e62c8ab53bee5f3d1590d4a8aa128d6807c7c361adda1c16fb47a",
+    "context_position": 2,
+    "status": "exact",
+    "unit_ids": [
+      "u_66a2fd35c3e7d3da18d22dab8ce6f6b86c87e798883b6618dd1ed8b5cd3baa55"
+    ],
+    "reason": "normalized index, hierarchy and full body agree",
+    "duplicate_annotation": false
+  },
+  {
+    "query_id": "qa_148_3hop_273",
+    "evidence_id": "e_c94f9e420132f176dc6ad2f30fc50bb096acc39689a78929d9cffd3e0672580e",
+    "context_position": 0,
+    "status": "assembled",
+    "unit_ids": [
+      "u_2460c591cf1cc59c00e7168887f07f8a00901cf3457ae023706aff5282bfb3db",
+      "u_8ffcbf0b496235767d18f7780eaf3056e7becfef29cd516de7c38817380a113d",
+      "u_2ddcbb9fb2853d62991036cb9c0b957f3fc6835b276c14607f1f2399ced254d9"
+    ],
+    "reason": "ordered full bodies exactly reconstruct reference",
+    "duplicate_annotation": false
+  },
+  {
+    "query_id": "qa_148_3hop_273",
+    "evidence_id": "e_2a05a1fa6100ffcff2e9058a8c4082a5a0f70665c939ad0997b82b85dc5b2446",
+    "context_position": 1,
+    "status": "unresolved",
+    "unit_ids": [],
+    "reason": "same-article candidates do not exactly reconstruct reference body",
+    "duplicate_annotation": false
+  },
+  {
+    "query_id": "qa_148_3hop_273",
+    "evidence_id": "e_882a630bfc418d880ca6ec63d948937af050e3f19cd622b572b342da4f9d11eb",
+    "context_position": 2,
+    "status": "assembled",
+    "unit_ids": [
+      "u_90f45781a730ea2b33518d2adaf2674a4fbf3003920d583c0278c2e23e46bcd3",
+      "u_47381edcc3a895479c6a8178aa7bfda7b83626f1f3099152f65dfb0cb77905e0",
+      "u_a30132c8d7849ff48adbda57198d76d992771737d1808110c4ed547630a34388",
+      "u_e938e583c063e8c21e09815ed926dfedf110524ece2952aae5a8315f0042cf9f",
+      "u_face27993fd64f4105005f843435dbec81dd805afbd000a831fcc7d04eff268b",
+      "u_a423f22e03e0eac0a1486d2e625d5cb7a04be935e9bd34ad0daf58fae4bc2798",
+      "u_8f2a33cbee0c7ad9750c9e3af33d09f04e3e8d2c5492e7fcc959f77b014eb55c"
+    ],
+    "reason": "ordered full bodies exactly reconstruct reference",
+    "duplicate_annotation": false
+  },
+  {
+    "query_id": "qa_460_3hop_730",
+    "evidence_id": "e_0509f9ef842229e5ea08573025294fcc36d93605673dfb2856cf2cb55c9162e6",
+    "context_position": 0,
+    "status": "exact",
+    "unit_ids": [
+      "u_d6fa6883272bb6a64a87bee1fc967696bdf5ff9200796578181d508417c1b38d"
+    ],
+    "reason": "normalized index, hierarchy and full body agree",
+    "duplicate_annotation": false
+  },
+  {
+    "query_id": "qa_460_3hop_730",
+    "evidence_id": "e_a0d31bceb1dea6adb5b45527cc8920e17cb29a12b44d892590d622d5ca9c0faa",
+    "context_position": 1,
+    "status": "exact",
+    "unit_ids": [
+      "u_1f39959765b917704f1a68a0670a84ec3c7385a11e2084e99e2984847e135d5c"
+    ],
+    "reason": "normalized index, hierarchy and full body agree",
+    "duplicate_annotation": false
+  },
+  {
+    "query_id": "qa_460_3hop_730",
+    "evidence_id": "e_3fbd5b8c60a54b3d6b880fdf0001104613ac746bef10a2d421cf7c80291265d3",
+    "context_position": 2,
+    "status": "exact",
+    "unit_ids": [
+      "u_441655de2c08601c7b18b290df396dc3f87041dc0ad7b18138cc2711a722913a"
+    ],
+    "reason": "normalized index, hierarchy and full body agree",
+    "duplicate_annotation": false
+  },
+  {
+    "query_id": "qa_68_1hop_100",
+    "evidence_id": "e_681cd0e3c02d1fdd3ddc18f5cc675588c7e26513154f42075b2fc1fcb3eb0757",
+    "context_position": 0,
+    "status": "exact",
+    "unit_ids": [
+      "u_9ffeacecf1db7fea610762a0cec2d4002e9a716d308356b2877a2af5f1a69655"
+    ],
+    "reason": "normalized index, hierarchy and full body agree",
+    "duplicate_annotation": false
+  },
+  {
+    "query_id": "qa_104_1hop_180",
+    "evidence_id": "e_1cc880260ebe01dd354c1b118b7bcf151d0eb62f20b6dcdcc48286c660f352ce",
+    "context_position": 0,
+    "status": "exact",
+    "unit_ids": [
+      "u_8e5e614c62a74a355041e9e6eaf6e8c5d2ffdefa440d9877ed046a1fa191d1e1"
+    ],
+    "reason": "normalized index, hierarchy and full body agree",
+    "duplicate_annotation": false
+  },
+  {
+    "query_id": "qa_150_1hop_277",
+    "evidence_id": "e_2f5261dd79e8bbf8248c54340522c4b1e182591f1a00fb0809f151c29f3bbb99",
+    "context_position": 0,
+    "status": "exact",
+    "unit_ids": [
+      "u_3f07d976697cef179187d7a1e00cfa4106b2df09caa48abfa3d27ca2e6cd94b4"
+    ],
+    "reason": "normalized index, hierarchy and full body agree",
+    "duplicate_annotation": false
+  },
+  {
+    "query_id": "qa_5_2hop_8",
+    "evidence_id": "e_c24d2e37051086f99d308ba2bf086c324577ffc93fc69672cf0b92c2c6238b60",
+    "context_position": 0,
+    "status": "exact",
+    "unit_ids": [
+      "u_f2f12864103e9f8781d7677c214c6af26404350a49246823d93626ebd93719df"
+    ],
+    "reason": "normalized index, hierarchy and full body agree",
+    "duplicate_annotation": false
+  },
+  {
+    "query_id": "qa_5_2hop_8",
+    "evidence_id": "e_c041b80acbeeffaeab11d328546cbc3a958e3e4744a78e8fc85923c3dcf5fcdd",
+    "context_position": 1,
+    "status": "exact",
+    "unit_ids": [
+      "u_d6f3ed7d3e38757d9b9e9b035eb1c50405a351cfe6e7e4f1c4a9a0a41efb841d"
+    ],
+    "reason": "normalized index, hierarchy and full body agree",
+    "duplicate_annotation": false
+  },
+  {
+    "query_id": "qa_122_2hop_219",
+    "evidence_id": "e_777498763872faf91556195c70eb0971ef2bcf8e62991f4629275411b2326cff",
+    "context_position": 0,
+    "status": "exact",
+    "unit_ids": [
+      "u_e51c35048da240117e5b4b36cedfa4677af84f568fc22a286e8b29a1c11cbd2f"
+    ],
+    "reason": "normalized index, hierarchy and full body agree",
+    "duplicate_annotation": false
+  },
+  {
+    "query_id": "qa_122_2hop_219",
+    "evidence_id": "e_3f814d0338a608a6a4f84c0aeb85a0e65039def7c1598e7d9a2266c24b2b06e3",
+    "context_position": 1,
+    "status": "exact",
+    "unit_ids": [
+      "u_7a916098f7513c47730c567efcbef8d51ca6f0828941c9617303f7046fd52d30"
+    ],
+    "reason": "normalized index, hierarchy and full body agree",
+    "duplicate_annotation": false
+  },
+  {
+    "query_id": "qa_340_2hop_539",
+    "evidence_id": "e_af23b5dc0d6c8856b4a50fef376c36d84a9debacd0186b8760167551b4a49db0",
+    "context_position": 0,
+    "status": "assembled",
+    "unit_ids": [
+      "u_57db4cf150049dc4d7054cf607e50fd546d4d260fc09fd496f5a2ebf965a751b",
+      "u_7bfb491111912d488941d7a4954ae9b689f07fffbf0d115e6dcb833ecb68b778",
+      "u_cc5f913d9ce35f1089e2d76a23398e8479089284f3c365647f09b5e771504cd1",
+      "u_5c8cef376668df9653819b412a97bb7da5a507ddf9c42bd3923e2ad8be1050cd",
+      "u_e0bbe40f68bd0946e61666e45352bdc4c349ae4d1d939adf5bf9c7ba023cb457"
+    ],
+    "reason": "ordered full bodies exactly reconstruct reference",
+    "duplicate_annotation": false
+  },
+  {
+    "query_id": "qa_340_2hop_539",
+    "evidence_id": "e_b101f0a22bad649fd52d7b203f09fe37d4f7f3cba19046bdbb402820fa3a5bf5",
+    "context_position": 1,
+    "status": "exact",
+    "unit_ids": [
+      "u_42a022e1222da01e61d87b1753a3223f352941b6c21bfa12067a2f3e48dd06d4"
+    ],
+    "reason": "normalized index, hierarchy and full body agree",
+    "duplicate_annotation": false
+  },
+  {
+    "query_id": "qa_421_2hop_650",
+    "evidence_id": "e_69e48f046cd6c7e43e8610500eddd14602dd2b49f3916d21763c2540879936b5",
+    "context_position": 0,
+    "status": "exact",
+    "unit_ids": [
+      "u_a226729d495c0a5948d851030006afcd7e6fe76eb28431a6be3ae904552ca2cc"
+    ],
+    "reason": "normalized index, hierarchy and full body agree",
+    "duplicate_annotation": false
+  },
+  {
+    "query_id": "qa_421_2hop_650",
+    "evidence_id": "e_abdfd3a933aa4a59c717e17ae36771cf53d4c5ae35bbe1cac0e657d9b6bc0dd1",
+    "context_position": 1,
+    "status": "exact",
+    "unit_ids": [
+      "u_7ba02d8d5b27432c3712a46ce3d3cc0472087b52b9735079d0c204cbc71934c5"
+    ],
+    "reason": "normalized index, hierarchy and full body agree",
+    "duplicate_annotation": false
+  },
+  {
+    "query_id": "qa_0_2hop_1_rand",
+    "evidence_id": "e_13174e2fa6a0dfb26a2be1b58eb3f81d0457f8379b45a73216abe321ef424c9b",
+    "context_position": 0,
+    "status": "exact",
+    "unit_ids": [
+      "u_df4dcb0a653b1080f7c25650b3b754decbdd65608b7a72be8c9a680f5077a151"
+    ],
+    "reason": "normalized index, hierarchy and full body agree",
+    "duplicate_annotation": false
+  },
+  {
+    "query_id": "qa_0_2hop_1_rand",
+    "evidence_id": "e_f4e973deb14423c50939191cf5f856d11f5842645ce7ddcde8e47f9ccb5d0802",
+    "context_position": 1,
+    "status": "exact",
+    "unit_ids": [
+      "u_bebef9cd48f0159b7f26601e381615a519da2b52476417357e8cc368cf4cd15c"
+    ],
+    "reason": "normalized index, hierarchy and full body agree",
+    "duplicate_annotation": false
+  },
+  {
+    "query_id": "qa_67_2hop_261_rand",
+    "evidence_id": "e_7327d5e1914e2bab32566479b8df8747198f5e157161bd2ba8d564fdae120720",
+    "context_position": 0,
+    "status": "exact",
+    "unit_ids": [
+      "u_01f31b022c4e82d066b4db5bedf5bd8de691d0f3543c025ef372fd2251c0f69a"
+    ],
+    "reason": "normalized index, hierarchy and full body agree",
+    "duplicate_annotation": false
+  },
+  {
+    "query_id": "qa_67_2hop_261_rand",
+    "evidence_id": "e_51bf849a459d6bf06feecebc9e4940f300e92baec7df3a704e916423c22ce30e",
+    "context_position": 1,
+    "status": "exact",
+    "unit_ids": [
+      "u_2ce7bdd944409b3b8fd62d0469198127abcb9c78853e8d10010f0ae703e69640"
+    ],
+    "reason": "normalized index, hierarchy and full body agree",
+    "duplicate_annotation": false
+  },
+  {
+    "query_id": "qa_67_2hop_261_rand",
+    "evidence_id": "e_e411b0ea464e0c4edee7e35be4624415d6436438831acce696829a3f209c87d2",
+    "context_position": 2,
+    "status": "exact",
+    "unit_ids": [
+      "u_354cc96dbe0589d620b3ff9a1856993c7cb76a2d1c3bbe06d882b6e1b0e06b4f"
+    ],
+    "reason": "normalized index, hierarchy and full body agree",
+    "duplicate_annotation": false
+  },
+  {
+    "query_id": "qa_132_2hop_507_rand",
+    "evidence_id": "e_738af347c5f19cf95f7a0bfb52d66245bb794607803b74373009143fbb0677ad",
+    "context_position": 0,
+    "status": "exact",
+    "unit_ids": [
+      "u_1f60036ec691c778a36c0f15843ca35a2c37ee0d2bdf1571b73c6e78fd2741f2"
+    ],
+    "reason": "normalized index, hierarchy and full body agree",
+    "duplicate_annotation": false
+  },
+  {
+    "query_id": "qa_132_2hop_507_rand",
+    "evidence_id": "e_5f5ccadbd0089bb4f6e5e87921a1556d4ae55a241868e561f957db3ffab3badc",
+    "context_position": 1,
+    "status": "exact",
+    "unit_ids": [
+      "u_f6293648125bee00d31ee59a0f5f5cbe6a723e4de0358effa4dfc36c3a57c2c7"
+    ],
+    "reason": "normalized index, hierarchy and full body agree",
+    "duplicate_annotation": false
+  },
+  {
+    "query_id": "qa_193_2hop_739_rand",
+    "evidence_id": "e_bd172510a858d2eaf4beb14b02127488674e2ac8236acddc91637226d9039019",
+    "context_position": 0,
+    "status": "exact",
+    "unit_ids": [
+      "u_dc34e4712d0c09e3d8ae3dae4bddc9db878b0ccfffebaa0050ec4a4bf9f36b6b"
+    ],
+    "reason": "normalized index, hierarchy and full body agree",
+    "duplicate_annotation": false
+  },
+  {
+    "query_id": "qa_193_2hop_739_rand",
+    "evidence_id": "e_554dbb05b97b58f01b638ec614c131ad66950d5de4a2cc50d4b50d3f28bc945b",
+    "context_position": 1,
+    "status": "exact",
+    "unit_ids": [
+      "u_fe16f48033d4a87adce287853405dcd8f1763edac9e8414308359bb3c7918e5e"
+    ],
+    "reason": "normalized index, hierarchy and full body agree",
+    "duplicate_annotation": false
+  },
+  {
+    "query_id": "qa_234_2hop_892_rand",
+    "evidence_id": "e_9ca3e4572215bce8c096f6904c5bbc2fc9fb72fe6676f3ece8d568c7f7a99ca6",
+    "context_position": 0,
+    "status": "exact",
+    "unit_ids": [
+      "u_d081ccd0998a9088bba0e571beb03f692be30781dbcec87ee0e8225af03c8915"
+    ],
+    "reason": "normalized index, hierarchy and full body agree",
+    "duplicate_annotation": false
+  },
+  {
+    "query_id": "qa_234_2hop_892_rand",
+    "evidence_id": "e_975187af362a1924e16843f0c3782d048282ab23f6d3f218a3fb5bdc8ffb9e97",
+    "context_position": 1,
+    "status": "exact",
+    "unit_ids": [
+      "u_3de8f4ab8bcad03424579986ae96d04095d65b1a3f851fbe900be4622cdc2a4a"
+    ],
+    "reason": "normalized index, hierarchy and full body agree",
+    "duplicate_annotation": false
+  },
+  {
+    "query_id": "qa_291_2hop_1111_rand",
+    "evidence_id": "e_9a26a640c1fc053dc13eebe3120034c193445dc6fb4c3824e75e31ca35a8b332",
+    "context_position": 0,
+    "status": "exact",
+    "unit_ids": [
+      "u_eb42dd4e1082378a0d07b61b95df4d6d2fadeeeeac362abdb39dee369c94e925"
+    ],
+    "reason": "normalized index, hierarchy and full body agree",
+    "duplicate_annotation": false
+  },
+  {
+    "query_id": "qa_291_2hop_1111_rand",
+    "evidence_id": "e_f3ffcad8e38bb6f3a646ab7927399ceecf11ec9df8f6a8bb1d33b4a3d3649c5f",
+    "context_position": 1,
+    "status": "exact",
+    "unit_ids": [
+      "u_8edadab3b20dd6bba33d701f77418d7345b31bedc9d16998584224eff7040363"
+    ],
+    "reason": "normalized index, hierarchy and full body agree",
+    "duplicate_annotation": false
+  },
+  {
+    "query_id": "qa_104_3hop_182",
+    "evidence_id": "e_1cc880260ebe01dd354c1b118b7bcf151d0eb62f20b6dcdcc48286c660f352ce",
+    "context_position": 0,
+    "status": "exact",
+    "unit_ids": [
+      "u_8e5e614c62a74a355041e9e6eaf6e8c5d2ffdefa440d9877ed046a1fa191d1e1"
+    ],
+    "reason": "normalized index, hierarchy and full body agree",
+    "duplicate_annotation": false
+  },
+  {
+    "query_id": "qa_104_3hop_182",
+    "evidence_id": "e_04f958e5dc12a4125b42590bb91aefa88ef8d4bd165758050dc12a127ad58b6c",
+    "context_position": 1,
+    "status": "exact",
+    "unit_ids": [
+      "u_42737ce868800ec5d28d97b3020ad468d1f91d1c1ee09c224d32d20a72f61d3f"
+    ],
+    "reason": "normalized index, hierarchy and full body agree",
+    "duplicate_annotation": false
+  },
+  {
+    "query_id": "qa_104_3hop_182",
+    "evidence_id": "e_be154152c0a466c0da69b9b8e16e1b874ca453801837dce42481cbb1979cd427",
+    "context_position": 2,
+    "status": "exact",
+    "unit_ids": [
+      "u_20b3e9403cc1ba2b4c1d06dea4344fdef14845f7b5f655fb4c2251511233dd30"
+    ],
+    "reason": "normalized index, hierarchy and full body agree",
+    "duplicate_annotation": false
+  },
+  {
+    "query_id": "qa_309_3hop_881_rand2",
+    "evidence_id": "e_d34764fcd405bf8eea993a8306c173b9a664a61e438bbd336d9df98a5e09a690",
+    "context_position": 0,
+    "status": "exact",
+    "unit_ids": [
+      "u_32b1abb396b3a0560164d612f3f675bc8fd60a10bd0afa11e04027757abc5f97"
+    ],
+    "reason": "normalized index, hierarchy and full body agree",
+    "duplicate_annotation": false
+  },
+  {
+    "query_id": "qa_309_3hop_881_rand2",
+    "evidence_id": "e_cd12810a63c774d94ef69ab67dd5936d460e53de6a708b508fe08e9d6ad476ce",
+    "context_position": 1,
+    "status": "exact",
+    "unit_ids": [
+      "u_1a94f027736ca52e2091fe65f8c2b01c87a15736c6a8d6ace9dc1d6ed1554d07"
+    ],
+    "reason": "normalized index, hierarchy and full body agree",
+    "duplicate_annotation": false
+  },
+  {
+    "query_id": "qa_309_3hop_881_rand2",
+    "evidence_id": "e_037707e6a14531765dae02f4725b486abb0ece42bb07ae0e595d98f921e58e6b",
+    "context_position": 2,
+    "status": "exact",
+    "unit_ids": [
+      "u_8e1e89bea9af82cb90e245d7d1793f32fe26635fdb9bc70c9e91bb74dd63651e"
+    ],
+    "reason": "normalized index, hierarchy and full body agree",
+    "duplicate_annotation": false
+  },
+  {
+    "query_id": "qa_168_3hop_301",
+    "evidence_id": "e_0a7bdf705eb440300dab2ce0abbac4d889c209bbc493d575a84bb559c36e13af",
+    "context_position": 0,
+    "status": "exact",
+    "unit_ids": [
+      "u_5ea81619f691cf4bcc784893455bfb32f461c7990ea9f9f0f1b87cad10244728"
+    ],
+    "reason": "normalized index, hierarchy and full body agree",
+    "duplicate_annotation": false
+  },
+  {
+    "query_id": "qa_168_3hop_301",
+    "evidence_id": "e_e766b29d7da3ce0bf7734a1933baca6d109addb4184eb5efc408fda504128e91",
+    "context_position": 1,
+    "status": "exact",
+    "unit_ids": [
+      "u_44dac3db9e3732f8f13a0cb420e26d1d11c39d9e1bc6076d7eeafe28df432ef2"
+    ],
+    "reason": "normalized index, hierarchy and full body agree",
+    "duplicate_annotation": false
+  },
+  {
+    "query_id": "qa_168_3hop_301",
+    "evidence_id": "e_9375bc26357acc83233229ba008b0ba2400a7db0ef8f34869282b48a8214a5d1",
+    "context_position": 2,
+    "status": "exact",
+    "unit_ids": [
+      "u_cdd0df1648b4f4d93914774fcabcd69b5d976c68337cd5cfe3c86a2e50dcd25c"
+    ],
+    "reason": "normalized index, hierarchy and full body agree",
+    "duplicate_annotation": false
+  },
+  {
+    "query_id": "qa_493_3hop_773",
+    "evidence_id": "e_19f7d2bfa36279068f305ffd241733890f3cbb42e53f7a20ec841059730b576f",
+    "context_position": 0,
+    "status": "exact",
+    "unit_ids": [
+      "u_d89f71e93faaff9434bc7020c4f04f850839cb540ae7bf1d09b9553e3903e2ca"
+    ],
+    "reason": "normalized index, hierarchy and full body agree",
+    "duplicate_annotation": false
+  },
+  {
+    "query_id": "qa_493_3hop_773",
+    "evidence_id": "e_6736a5145b5b013fa40c932aea15f8946ff6ffe6050a81715436b30443a7d38a",
+    "context_position": 1,
+    "status": "exact",
+    "unit_ids": [
+      "u_b226b6e727f0b71c65e05bbfa1d3566c7298ca7740d743a30a276f6d90d33d36"
+    ],
+    "reason": "normalized index, hierarchy and full body agree",
+    "duplicate_annotation": false
+  },
+  {
+    "query_id": "qa_493_3hop_773",
+    "evidence_id": "e_2f0e1795477ebec3ac778c943c6922eac2047d978a932236b9f563caada25a51",
+    "context_position": 2,
+    "status": "exact",
+    "unit_ids": [
+      "u_0ca1cbd1c0b3659fc46c1deb368498e16c50a8479305eed7035416caf34b4164"
+    ],
+    "reason": "normalized index, hierarchy and full body agree",
+    "duplicate_annotation": false
+  },
+  {
+    "query_id": "qa_32_1hop_49",
+    "evidence_id": "e_67c6db32df1247806665233d1afc5e08d9e1ba46940197be9e27883cbcde1d30",
+    "context_position": 0,
+    "status": "exact",
+    "unit_ids": [
+      "u_0321f6a62f0d05240ee28617ab4f43f37126ca1096d5b837681213715098917e"
+    ],
+    "reason": "normalized index, hierarchy and full body agree",
+    "duplicate_annotation": false
+  },
+  {
+    "query_id": "qa_69_1hop_102",
+    "evidence_id": "e_c068555022a97d006a2e0de50e55f779fd2980b40b5d202766ef3405f39c1806",
+    "context_position": 0,
+    "status": "exact",
+    "unit_ids": [
+      "u_89aaf8740e4019d8def1e91ce660144e3613048cc8b0af34f285032fd51019b2"
+    ],
+    "reason": "normalized index, hierarchy and full body agree",
+    "duplicate_annotation": false
+  },
+  {
+    "query_id": "qa_69_1hop_102",
+    "evidence_id": "e_dcae655f9b951a7197836178fe9293ea44d6c3da4012c04cebe11e2d328b9ada",
+    "context_position": 1,
+    "status": "exact",
+    "unit_ids": [
+      "u_43acc8f0e49df9f40c4c18018bad5f2208134668b22e2c29fd98aa0a8bef9c66"
+    ],
+    "reason": "normalized index, hierarchy and full body agree",
+    "duplicate_annotation": false
+  },
+  {
+    "query_id": "qa_105_1hop_183",
+    "evidence_id": "e_97bb6f8528ad1dc577040265662378f4025d60ef7c7c4f77dd58262bcddce019",
+    "context_position": 0,
+    "status": "exact",
+    "unit_ids": [
+      "u_637a0793c4c7670592a8cb9bb0f38810d4ffd402cf8507511a4a404023edab0d"
+    ],
+    "reason": "normalized index, hierarchy and full body agree",
+    "duplicate_annotation": false
+  },
+  {
+    "query_id": "qa_152_1hop_280",
+    "evidence_id": "e_0d17200cb823cdd118d0c3a2fbb0737c7b84878e4dd4c6feacc0ad365cebebb6",
+    "context_position": 0,
+    "status": "exact",
+    "unit_ids": [
+      "u_64acaa448d62ed549c7f7b7a1c5fbf458275879a23368e3295552b9bde2c6c8c"
+    ],
+    "reason": "normalized index, hierarchy and full body agree",
+    "duplicate_annotation": false
+  },
+  {
+    "query_id": "qa_17_2hop_25",
+    "evidence_id": "e_8e6b1d491387fe58c36ac099fc386093efbe49815bab58d3d498a95981080028",
+    "context_position": 0,
+    "status": "exact",
+    "unit_ids": [
+      "u_30d7f50403b43864586d512964f984cc9185bec7da3e80526811987e86294d2a"
+    ],
+    "reason": "normalized index, hierarchy and full body agree",
+    "duplicate_annotation": false
+  },
+  {
+    "query_id": "qa_17_2hop_25",
+    "evidence_id": "e_311c1b5ea1b02ebbcf47e3f32b7bef4eb419a87da566c34d360be26c54cc5e23",
+    "context_position": 1,
+    "status": "exact",
+    "unit_ids": [
+      "u_ab9daaf317d4819e39296ea47ef0b1f42bebf98a96bbaed0d0c87cac36c78143"
+    ],
+    "reason": "normalized index, hierarchy and full body agree",
+    "duplicate_annotation": false
+  },
+  {
+    "query_id": "qa_125_2hop_226",
+    "evidence_id": "e_fa1512765607040710aa4c413ee1bb3f5b4e9108a3b5d1aa6a52135c39ad6195",
+    "context_position": 0,
+    "status": "assembled_reordered",
+    "unit_ids": [
+      "u_1978815bfe3efb18f8796a4514f1351794c5a278758f2a4bc5a126121fdd506b",
+      "u_44b04b9daf01e41655c84d93ae186794a9991aa5ff9f7dba358b4fc88e0e7972",
+      "u_26c2e80110de96c7fb3798fc582cb19ac429c7ef5c9a94d3566d2052c74d91dd",
+      "u_0d60e4e11c3a4355c05423ce92847febb149659eecfe5bec894a5ad8dc041201",
+      "u_a02ead9564d49f2a6de25b0cc11cf7499ddba95c337ea050e31b574efdf29120",
+      "u_3fc8673d95bf630452831168e71fcba7873fad658c47b6de627cebcfeab8f1e1",
+      "u_dff15b751f6c279f4787522ef8119052463d0b37a8a93803df4042c1ce83fcab",
+      "u_400931d51c101cfbccb158de3ebb9e8288ec601b6cbd7ab04e9b12c698846104",
+      "u_b4c4ddb0029636081193a90631e6b2373c7d643ebef1704e793ee80affd76e40",
+      "u_25137138d8975d97441ab7b23ca207c21068101e4d9af9b151838dc65280a219",
+      "u_dc203766ea5b52ca3568914da760decfc13db5f19c8e8966e5b5f09a9bf64c82",
+      "u_395a0292270b7f7bd5f248734a4daf398b2eef34d43951180f8faa89a76e51a3",
+      "u_294891ef02f025a45b68fb2f43c06f37db46d0459c147ad1db95a79da0c5ba30",
+      "u_1ea4522c581a371cc9d3e270ab363d857350fe7d6cbbb8743a18333c6f3b8a57",
+      "u_b2f94d2090fa61ea089cc3f0a19c1162064b77a21b3259003910e2bd240d37b2",
+      "u_605db4afef53f97b97c36bdb05f0518947f082cbdab27a361a3e6fa71be5352d"
+    ],
+    "reason": "complete bodies reconstruct reference in QA item order",
+    "duplicate_annotation": false
+  },
+  {
+    "query_id": "qa_125_2hop_226",
+    "evidence_id": "e_8fe939835fad9e094c27e0d7b1e4357e3a5e0cf13035366e462be1ceda594e91",
+    "context_position": 1,
+    "status": "exact",
+    "unit_ids": [
+      "u_d7ec630a08e151ac0261d57bc2551377373cd19ab1ec58cceb79197643795443"
+    ],
+    "reason": "normalized index, hierarchy and full body agree",
+    "duplicate_annotation": false
+  },
+  {
+    "query_id": "qa_233_2hop_388",
+    "evidence_id": "e_8fef1929cd70ec628199a126bc6fd237393d0c40a4ab7e5e1efa9fb51c3d70db",
+    "context_position": 0,
+    "status": "exact",
+    "unit_ids": [
+      "u_1205ca582ea48b65a09aed0fedc0c656e5496a8091d271072bd300925c29f2b1"
+    ],
+    "reason": "normalized index, hierarchy and full body agree",
+    "duplicate_annotation": false
+  },
+  {
+    "query_id": "qa_233_2hop_388",
+    "evidence_id": "e_311c1b5ea1b02ebbcf47e3f32b7bef4eb419a87da566c34d360be26c54cc5e23",
+    "context_position": 1,
+    "status": "exact",
+    "unit_ids": [
+      "u_ab9daaf317d4819e39296ea47ef0b1f42bebf98a96bbaed0d0c87cac36c78143"
+    ],
+    "reason": "normalized index, hierarchy and full body agree",
+    "duplicate_annotation": false
+  },
+  {
+    "query_id": "qa_343_2hop_541",
+    "evidence_id": "e_c225e9d0019765c20f3e412c25bcbd676c3339e66460af35da0a61514e88a137",
+    "context_position": 0,
+    "status": "exact",
+    "unit_ids": [
+      "u_a95fd072ccc59c916a604d0764548e1e6383fdcddf7ffbe9c302d115d21ef7f7"
+    ],
+    "reason": "normalized index, hierarchy and full body agree",
+    "duplicate_annotation": false
+  },
+  {
+    "query_id": "qa_343_2hop_541",
+    "evidence_id": "e_35b12e4e7fd5171e91149ba65fd35e62f0b684d22325f94c2c7dadce52a03b2a",
+    "context_position": 1,
+    "status": "assembled",
+    "unit_ids": [
+      "u_09d17a3a36bc259603875030fafc64fbf6cd4f9c3b1ea6c9b700db79150c538a",
+      "u_0bccde861385b2c0c4a8ed7ed3b42d7dbc24b5fe8ee3d1a35801c018eac11694",
+      "u_3dc9524c8b07a2d104981524fa48ed903983be71765e5fe5a6075fb27a717fbf",
+      "u_0755b59ad0c5df98b7558866970ee0c49dc8a6a6e22779fa8afa74615e6b1b69",
+      "u_b751b085d510950b6cec5ac4f8160d397f819846d5bb60a1796e50d70cc38b1d",
+      "u_8c389f8896e1df73c6a9cf6be3ac773f5431876a7cba41830b04aab576c8e456",
+      "u_6ddae5d935d3143d7c03a5cf66d10d324b7492c394f2d6056ed3b617a762441e",
+      "u_f51cb8000210b5e360e01eb2e4316e1bf6a57fd24500fe566ac6ed5e90422438"
+    ],
+    "reason": "ordered full bodies exactly reconstruct reference",
+    "duplicate_annotation": false
+  },
+  {
+    "query_id": "qa_423_2hop_656",
+    "evidence_id": "e_c4b532dfb4bc8569c048bf4849b199b5168c911c67d050331bcf40a1c8110553",
+    "context_position": 0,
+    "status": "exact",
+    "unit_ids": [
+      "u_eac96d66e655e440ef8111a56aa7ea2b1e3afce8c48e0c4e756de6f2aad5ae2e"
+    ],
+    "reason": "normalized index, hierarchy and full body agree",
+    "duplicate_annotation": false
+  },
+  {
+    "query_id": "qa_423_2hop_656",
+    "evidence_id": "e_6ef6e0489592a0a26239b0d143d63424c21e070741e62ccd6eb51f28bf127734",
+    "context_position": 1,
+    "status": "exact",
+    "unit_ids": [
+      "u_7f2f01c0cab3bafdb6349ddb2b40faab9fca17889e27b694a474a6393fdc437c"
+    ],
+    "reason": "normalized index, hierarchy and full body agree",
+    "duplicate_annotation": false
+  },
+  {
+    "query_id": "qa_8_2hop_33_rand",
+    "evidence_id": "e_fd4187971eab92da89f8baac2ea4728c0d3ca4f676a7c3a72dde56d9bdf63348",
+    "context_position": 0,
+    "status": "exact",
+    "unit_ids": [
+      "u_e667e4c0da59b2e9b160d4a404f32e2dc7c91ecd265f70398f3322a6697216e5"
+    ],
+    "reason": "normalized index, hierarchy and full body agree",
+    "duplicate_annotation": false
+  },
+  {
+    "query_id": "qa_8_2hop_33_rand",
+    "evidence_id": "e_f5129ac6c7d4bbd7e3eaee5872bfc122731bfc4cf39794fe77affe40e330aa92",
+    "context_position": 1,
+    "status": "exact",
+    "unit_ids": [
+      "u_e2c0b10a27bcb4329692e539e5d2cd24b652cdca32980d05da787fb3d69817ec"
+    ],
+    "reason": "normalized index, hierarchy and full body agree",
+    "duplicate_annotation": false
+  },
+  {
+    "query_id": "qa_70_2hop_273_rand",
+    "evidence_id": "e_6cec7acfe806458e772d9c0dfd6a5fb30ceeccf5a16138c592705e85231c9068",
+    "context_position": 0,
+    "status": "exact",
+    "unit_ids": [
+      "u_4f63c0f6d2a6e030aa249f53e39ac437de803504df7c47d0c3ce66151724eac2"
+    ],
+    "reason": "normalized index, hierarchy and full body agree",
+    "duplicate_annotation": false
+  },
+  {
+    "query_id": "qa_70_2hop_273_rand",
+    "evidence_id": "e_f0ffd5f52de0ec99c879367ac22ae5e699dd928c1a1d9dfa2f9222f2547835a7",
+    "context_position": 1,
+    "status": "exact",
+    "unit_ids": [
+      "u_b4e3ec5846eb6a7994582aff3ad22d09c34f20aa69b1ffbcd52c1faedeed7879"
+    ],
+    "reason": "normalized index, hierarchy and full body agree",
+    "duplicate_annotation": false
+  },
+  {
+    "query_id": "qa_134_2hop_515_rand",
+    "evidence_id": "e_57fc9fafab9600c54256bcc78034bf86c086222b9ab266f62cbf8fcefb61b5d0",
+    "context_position": 0,
+    "status": "exact",
+    "unit_ids": [
+      "u_9e5b73d2714a3886f9407f63d26bee5f9e21ae5377e78887b5196bc3d7749f94"
+    ],
+    "reason": "normalized index, hierarchy and full body agree",
+    "duplicate_annotation": false
+  },
+  {
+    "query_id": "qa_134_2hop_515_rand",
+    "evidence_id": "e_7320502ee2692bacc9d328c411b8ab28b847389d823a5911d78c42c81531b207",
+    "context_position": 1,
+    "status": "exact",
+    "unit_ids": [
+      "u_5a18971c885f7f80515c1ce064c07e1dad809db1d6a35b90461a311348e335ab"
+    ],
+    "reason": "normalized index, hierarchy and full body agree",
+    "duplicate_annotation": false
+  },
+  {
+    "query_id": "qa_197_2hop_752_rand",
+    "evidence_id": "e_86178ecd869771d7d0f79ebb542d6b5cae93d972aa969ec19aaa7cef46c25f6f",
+    "context_position": 0,
+    "status": "exact",
+    "unit_ids": [
+      "u_5d7af479443e657df12e7123f9a201073450b995226bd37e8da310e524f517cb"
+    ],
+    "reason": "normalized index, hierarchy and full body agree",
+    "duplicate_annotation": false
+  },
+  {
+    "query_id": "qa_197_2hop_752_rand",
+    "evidence_id": "e_12d22380bbe9800f15942095820257dac4fa3773ace8f02642fad87f25c9d87c",
+    "context_position": 1,
+    "status": "exact",
+    "unit_ids": [
+      "u_2d8f9b138c12b9f61b82cf22a6ebbe7702b60b8da20d8aa147cf6efad9abf94f"
+    ],
+    "reason": "normalized index, hierarchy and full body agree",
+    "duplicate_annotation": false
+  },
+  {
+    "query_id": "qa_239_2hop_912_rand",
+    "evidence_id": "e_4dcc0a972ddad3a95902ff46c6b833eee4aa4b99b0707a2ba21399feb7f7bd13",
+    "context_position": 0,
+    "status": "exact",
+    "unit_ids": [
+      "u_7ab141dc9de228a5b4242e603f7b5b08d26131e791b35425ea8108113cf8935f"
+    ],
+    "reason": "normalized index, hierarchy and full body agree",
+    "duplicate_annotation": false
+  },
+  {
+    "query_id": "qa_239_2hop_912_rand",
+    "evidence_id": "e_62b6ad475a636b9ec29b44a623ff64f1b3c3ec162f6b33f8711c4ebfcb0269d7",
+    "context_position": 1,
+    "status": "exact",
+    "unit_ids": [
+      "u_6d51ee490ef17d550591c50d3d9bd93e6ca77934359ec703452d6155d1b6fe77"
+    ],
+    "reason": "normalized index, hierarchy and full body agree",
+    "duplicate_annotation": false
+  },
+  {
+    "query_id": "qa_366_3hop_580",
+    "evidence_id": "e_c4f57470845909fdec1b6ecff92ac9f1df4f313e031efdb21aa96250be360f31",
+    "context_position": 0,
+    "status": "exact",
+    "unit_ids": [
+      "u_31355e151cc7ee361ed21695e0b6b604ecd0b47a49fc6786cba8839f82854b36"
+    ],
+    "reason": "normalized index, hierarchy and full body agree",
+    "duplicate_annotation": false
+  },
+  {
+    "query_id": "qa_366_3hop_580",
+    "evidence_id": "e_c760ae8ed928fd9b3cf364175794777b7b91039d56d506e08ef4e65878ccd8bd",
+    "context_position": 1,
+    "status": "exact",
+    "unit_ids": [
+      "u_3d1c47a0d830ccca0de505e063df793799f6a2765ee81d75d96f13eb6196539c"
+    ],
+    "reason": "normalized index, hierarchy and full body agree",
+    "duplicate_annotation": false
+  },
+  {
+    "query_id": "qa_366_3hop_580",
+    "evidence_id": "e_27e0e78f11a6a452b997820bf8a941d05ee336d5e3c81ca323f0c6b8080a02c8",
+    "context_position": 2,
+    "status": "exact",
+    "unit_ids": [
+      "u_7cb503932212edaceaed33032d0a8b6291393ac1b6ec75a3c459ea806e82e3d3"
+    ],
+    "reason": "normalized index, hierarchy and full body agree",
+    "duplicate_annotation": false
+  },
+  {
+    "query_id": "qa_32_3hop_51",
+    "evidence_id": "e_67c6db32df1247806665233d1afc5e08d9e1ba46940197be9e27883cbcde1d30",
+    "context_position": 0,
+    "status": "exact",
+    "unit_ids": [
+      "u_0321f6a62f0d05240ee28617ab4f43f37126ca1096d5b837681213715098917e"
+    ],
+    "reason": "normalized index, hierarchy and full body agree",
+    "duplicate_annotation": false
+  },
+  {
+    "query_id": "qa_32_3hop_51",
+    "evidence_id": "e_7cce93bd1fd9f20556d9044062a61451468cd609f83e80822adc80b11bed10c2",
+    "context_position": 1,
+    "status": "exact",
+    "unit_ids": [
+      "u_6832634f316f2e7c8e96d3ee6992170ab20f927b24d44346a093f714db3c0a8d"
+    ],
+    "reason": "normalized index, hierarchy and full body agree",
+    "duplicate_annotation": false
+  },
+  {
+    "query_id": "qa_32_3hop_51",
+    "evidence_id": "e_2e96c1b8563eae62b0f439c2c07c8312d5e1fb0d6e4e13c916af99aea1d5dccd",
+    "context_position": 2,
+    "status": "exact",
+    "unit_ids": [
+      "u_089134be8922a00a42bbc80f3eefaa09ede3f57a9395e165bf4893f25bf470f9"
+    ],
+    "reason": "normalized index, hierarchy and full body agree",
+    "duplicate_annotation": false
+  },
+  {
+    "query_id": "qa_495_3hop_777",
+    "evidence_id": "e_8d6e234c9326192f37e285f14f7cc6fc851ae3293df04b740568d61fb38c5586",
+    "context_position": 0,
+    "status": "exact",
+    "unit_ids": [
+      "u_80f934936e04b6499a6d8b2013a4ddb3c06f275ec13f2b7b46a2bfc96dff7fe0"
+    ],
+    "reason": "normalized index, hierarchy and full body agree",
+    "duplicate_annotation": false
+  },
+  {
+    "query_id": "qa_495_3hop_777",
+    "evidence_id": "e_afd859a0da00f3c359c560fdb3896b2c025951170fa4b4eb61cf39b422f13f34",
+    "context_position": 1,
+    "status": "exact",
+    "unit_ids": [
+      "u_9021962af5b85a8bf78d8ff3b05c5e16ebcf4e77ff4e133617db57ca996760ff"
+    ],
+    "reason": "normalized index, hierarchy and full body agree",
+    "duplicate_annotation": false
+  },
+  {
+    "query_id": "qa_495_3hop_777",
+    "evidence_id": "e_16544a4d66729f60baaa0a894ce94ecd6f682a0a83a685f47c8d6d85d57255b9",
+    "context_position": 2,
+    "status": "exact",
+    "unit_ids": [
+      "u_2397bf68af3af615bd86661867b3deb69066d3e2a980a3828e168dee968022b1"
+    ],
+    "reason": "normalized index, hierarchy and full body agree",
+    "duplicate_annotation": false
+  },
+  {
+    "query_id": "qa_1_1hop_2",
+    "evidence_id": "e_44207a167cd4f55756b9d8854f4af7cbca14be138bb5b7cb2f121579922817d4",
+    "context_position": 0,
+    "status": "exact",
+    "unit_ids": [
+      "u_07ebc50a87413132b836a21655d410db0fb3cca682e46c3ead096145aa00b73e"
+    ],
+    "reason": "normalized index, hierarchy and full body agree",
+    "duplicate_annotation": false
+  },
+  {
+    "query_id": "qa_72_1hop_108",
+    "evidence_id": "e_f19890e2f6eb532921553205ba566d9dc99d76732d0b160a54d8dd4a6dc45b1d",
+    "context_position": 0,
+    "status": "exact",
+    "unit_ids": [
+      "u_57b4ad1ce466ae36df73ce476fa0a57c01150a602c573a3d4591faef4fcf9291"
+    ],
+    "reason": "normalized index, hierarchy and full body agree",
+    "duplicate_annotation": false
+  },
+  {
+    "query_id": "qa_116_1hop_207",
+    "evidence_id": "e_3844ecd88a6ef9a85bc2d7a9b6bfbc7e7720e68c692e76c91e2cdec0a22f8bda",
+    "context_position": 0,
+    "status": "exact",
+    "unit_ids": [
+      "u_4fba663c7d00c7b23e4883ac7c0b8e5053496ed1150520ef77cfb197ab071108"
+    ],
+    "reason": "normalized index, hierarchy and full body agree",
+    "duplicate_annotation": false
+  },
+  {
+    "query_id": "qa_155_1hop_283",
+    "evidence_id": "e_df5553d2b5886838c97b89731e87887da1bc631ac6d57396a1904d25585b9f51",
+    "context_position": 0,
+    "status": "exact",
+    "unit_ids": [
+      "u_ad31f6e9509afed127a1717b57db397fb8b66281a9cd6f946f1db1d3eabda5e9"
+    ],
+    "reason": "normalized index, hierarchy and full body agree",
+    "duplicate_annotation": false
+  },
+  {
+    "query_id": "qa_249_2hop_406",
+    "evidence_id": "e_2fff1d0a4b05c8a4446a5ca9019c8097854fcf3a24227ffd66a6fff1c039ecf5",
+    "context_position": 0,
+    "status": "exact",
+    "unit_ids": [
+      "u_d23dcbaf5f6ccb83785820621f8b239cb73c73828aa50550c8a58a5bf7c993f9"
+    ],
+    "reason": "normalized index, hierarchy and full body agree",
+    "duplicate_annotation": false
+  },
+  {
+    "query_id": "qa_249_2hop_406",
+    "evidence_id": "e_143aa310970e7bc829ec291e542c768054afc4e196c163646899481adc82be9e",
+    "context_position": 1,
+    "status": "exact",
+    "unit_ids": [
+      "u_82ea55f8cbf2608ce227635fe5b6b4976723c2a9e841b775e82167a765b102cb"
+    ],
+    "reason": "normalized index, hierarchy and full body agree",
+    "duplicate_annotation": false
+  },
+  {
+    "query_id": "qa_356_2hop_565",
+    "evidence_id": "e_df82ca12a30909ff99e86be37fcd4ead593bb03d552a73c0a0b1863338ad90af",
+    "context_position": 0,
+    "status": "exact",
+    "unit_ids": [
+      "u_786b87c98641007d4b44854aa4580b4941e994de15256bf3dc4f11f32333af1f"
+    ],
+    "reason": "normalized index, hierarchy and full body agree",
+    "duplicate_annotation": false
+  },
+  {
+    "query_id": "qa_356_2hop_565",
+    "evidence_id": "e_a643b70f6e591716e00ef1a308d96eed9b4fe0c216eb0fa677501eae6c325db1",
+    "context_position": 1,
+    "status": "exact",
+    "unit_ids": [
+      "u_0b91c2883da6f7cda7127df4facf1eef5db664b50942ded5a6e506c627958922"
+    ],
+    "reason": "normalized index, hierarchy and full body agree",
+    "duplicate_annotation": false
+  },
+  {
+    "query_id": "qa_430_2hop_668",
+    "evidence_id": "e_bc32a1090052ead7c32612ca733834d8c0017e4c12a6e520b8285a9046608e9f",
+    "context_position": 0,
+    "status": "exact",
+    "unit_ids": [
+      "u_3d3c0e7c540f55367b2e01c358285800855db88650fede216ce80e8fa80119ac"
+    ],
+    "reason": "normalized index, hierarchy and full body agree",
+    "duplicate_annotation": false
+  },
+  {
+    "query_id": "qa_430_2hop_668",
+    "evidence_id": "e_06022fc80cbb68deb58333cee8d20c76a68e5aefa6e3bb3ea7dfa14638fe9aa8",
+    "context_position": 1,
+    "status": "exact",
+    "unit_ids": [
+      "u_c031fae9c37903f07abf8f9bfe112a0714486bd73c7f77d24d80347c2332f433"
+    ],
+    "reason": "normalized index, hierarchy and full body agree",
+    "duplicate_annotation": false
+  },
+  {
+    "query_id": "qa_552_2hop_839",
+    "evidence_id": "e_bc4e0bb46a3c458871179c45cae3fa3b41fb16a4f08b853eef6f9a10ce821026",
+    "context_position": 0,
+    "status": "exact",
+    "unit_ids": [
+      "u_0604c588c604ddb46f432ad0e3d4e1ae0924890f09fdf8f74b5f73198ce035b8"
+    ],
+    "reason": "normalized index, hierarchy and full body agree",
+    "duplicate_annotation": false
+  },
+  {
+    "query_id": "qa_552_2hop_839",
+    "evidence_id": "e_3cda9b193f0e10e957d805402078f6a0c68e6e6527511a5ab598eb629e1bbede",
+    "context_position": 1,
+    "status": "unresolved",
+    "unit_ids": [],
+    "reason": "same-article candidates do not exactly reconstruct reference body",
+    "duplicate_annotation": false
+  },
+  {
+    "query_id": "qa_23_2hop_93_rand",
+    "evidence_id": "e_58b7989bf6946c2198a7c9377975d7a9a6c6eaa772a9e0ac284226694f35c6ae",
+    "context_position": 0,
+    "status": "exact",
+    "unit_ids": [
+      "u_c4a36f8baa21c880764d5d66b394c2b87e0987d6014e3d2ad785d8478239feca"
+    ],
+    "reason": "normalized index, hierarchy and full body agree",
+    "duplicate_annotation": false
+  },
+  {
+    "query_id": "qa_23_2hop_93_rand",
+    "evidence_id": "e_1ff94e106dd738e5043b8006f0433beb7723e5384f67b7ba57ef8d33211c9d37",
+    "context_position": 1,
+    "status": "exact",
+    "unit_ids": [
+      "u_abc385e9d3df4ec88c93fcf8459957b9100c324f86118329fafa157ba5334b5b"
+    ],
+    "reason": "normalized index, hierarchy and full body agree",
+    "duplicate_annotation": false
+  },
+  {
+    "query_id": "qa_80_2hop_313_rand",
+    "evidence_id": "e_2e18a9f3ee06b9918c58fb0c41063b4e52fbc12186857aeb6bfc5ab0903dd014",
+    "context_position": 0,
+    "status": "exact",
+    "unit_ids": [
+      "u_a8f55996f60bda20f3b93697d8e8939e6b92ae8a36fd40a1f64c21dae73f14a5"
+    ],
+    "reason": "normalized index, hierarchy and full body agree",
+    "duplicate_annotation": false
+  },
+  {
+    "query_id": "qa_80_2hop_313_rand",
+    "evidence_id": "e_ed9250c57739cd0ae859e94b664e47a910b8411f5b409b5faba78c1cb21a16f3",
+    "context_position": 1,
+    "status": "exact",
+    "unit_ids": [
+      "u_a2cd61f577668a0bc5611586b2373a12b85392395906b08b22cacfc0d5e20725"
+    ],
+    "reason": "normalized index, hierarchy and full body agree",
+    "duplicate_annotation": false
+  },
+  {
+    "query_id": "qa_139_2hop_535_rand",
+    "evidence_id": "e_b9ee45e62dcc0b320038790cbe0cf53fa091db8c6f66da79b921554ac4f7867c",
+    "context_position": 0,
+    "status": "exact",
+    "unit_ids": [
+      "u_3c5d5e4468a4b71f989072a74e5a90f055a715464604d0e15488a24bf983a7ca"
+    ],
+    "reason": "normalized index, hierarchy and full body agree",
+    "duplicate_annotation": false
+  },
+  {
+    "query_id": "qa_139_2hop_535_rand",
+    "evidence_id": "e_6911cb4347cb752434834672ddd19b4bd6f67099c4f1fbb6cfd58443a9378e3d",
+    "context_position": 1,
+    "status": "exact",
+    "unit_ids": [
+      "u_9ea050c26dab7d6c6e0b6d288066be2974e45a5e0f059fde4a89879f59b391d6"
+    ],
+    "reason": "normalized index, hierarchy and full body agree",
+    "duplicate_annotation": false
+  },
+  {
+    "query_id": "qa_242_2hop_923_rand",
+    "evidence_id": "e_d0a9c6e5495f707398ad01bbf3e1ef09d330734a99344d6f624bf81ec6686303",
+    "context_position": 0,
+    "status": "exact",
+    "unit_ids": [
+      "u_620f4341fadf414b2223257074a52cae654b1100fc823b58289575e5a7ae300d"
+    ],
+    "reason": "normalized index, hierarchy and full body agree",
+    "duplicate_annotation": false
+  },
+  {
+    "query_id": "qa_242_2hop_923_rand",
+    "evidence_id": "e_f6f8b3e9b29304ba2fd57e46f752acd9341f2149f0e1a2b4033360409b21b48b",
+    "context_position": 1,
+    "status": "exact",
+    "unit_ids": [
+      "u_01d4b9e21cf8d8d3e237eff3b7485383bc936641cd6301ed125969c6c1d4b76a"
+    ],
+    "reason": "normalized index, hierarchy and full body agree",
+    "duplicate_annotation": false
+  },
+  {
+    "query_id": "qa_33_3hop_52",
+    "evidence_id": "e_98a54782de79d2a7437f23858e5e49382ae03c78fe2e565e5f2a47a8b38cad89",
+    "context_position": 0,
+    "status": "exact",
+    "unit_ids": [
+      "u_23cf1f90f9da856653ff076ff730b7e3c475b5b65b53ff9a8a8df1f9c9cc0422"
+    ],
+    "reason": "normalized index, hierarchy and full body agree",
+    "duplicate_annotation": false
+  },
+  {
+    "query_id": "qa_33_3hop_52",
+    "evidence_id": "e_be154152c0a466c0da69b9b8e16e1b874ca453801837dce42481cbb1979cd427",
+    "context_position": 1,
+    "status": "exact",
+    "unit_ids": [
+      "u_20b3e9403cc1ba2b4c1d06dea4344fdef14845f7b5f655fb4c2251511233dd30"
+    ],
+    "reason": "normalized index, hierarchy and full body agree",
+    "duplicate_annotation": false
+  },
+  {
+    "query_id": "qa_33_3hop_52",
+    "evidence_id": "e_15fb64391529e873cf0a022e76dc6079555ee94735675925f71c55e7ab1161fe",
+    "context_position": 2,
+    "status": "exact",
+    "unit_ids": [
+      "u_6cf72eca1516d25c9c59a8a9d202407678480ec51bed3ece3f53102601f7e259"
+    ],
+    "reason": "normalized index, hierarchy and full body agree",
+    "duplicate_annotation": false
+  },
+  {
+    "query_id": "qa_209_3hop_360",
+    "evidence_id": "e_031df37e720d65185a6583b6312a59d70031373f4fdb734ae6f6fbbaffec0717",
+    "context_position": 0,
+    "status": "exact",
+    "unit_ids": [
+      "u_37762bc2815afb0fd377c5a29fd9fc38611bfb8eca8bdfb6dc507312e4ede9ee"
+    ],
+    "reason": "normalized index, hierarchy and full body agree",
+    "duplicate_annotation": false
+  },
+  {
+    "query_id": "qa_209_3hop_360",
+    "evidence_id": "e_79bdf7356bce1ae3e0b035fcc1ed8582af6ad639464a137af2d683bb34e1e471",
+    "context_position": 1,
+    "status": "exact",
+    "unit_ids": [
+      "u_4f3206c67a2457276f8e7d41220fdd1215b9fbac4e80ebd9cb321739be2e7d45"
+    ],
+    "reason": "normalized index, hierarchy and full body agree",
+    "duplicate_annotation": false
+  },
+  {
+    "query_id": "qa_209_3hop_360",
+    "evidence_id": "e_091c82bc050a0bb3c5b37922d5c092ecd759c82f25920c0df9e3f88f72daa5bc",
+    "context_position": 2,
+    "status": "exact",
+    "unit_ids": [
+      "u_5ce040c2ecb7232d72f4b61c88c3a175e4134659cf3b96dd8eb011b16dd5b19e"
+    ],
+    "reason": "normalized index, hierarchy and full body agree",
+    "duplicate_annotation": false
+  },
+  {
+    "query_id": "qa_498_3hop_782",
+    "evidence_id": "e_cc3a0e072cdaf46d799c28d645bccb9683b7f67a1ffc4826599d704489618571",
+    "context_position": 0,
+    "status": "exact",
+    "unit_ids": [
+      "u_000d582aedeeb389cda65e26e49f64a25349c0c4a36a65ddde5a81e953df32ac"
+    ],
+    "reason": "normalized index, hierarchy and full body agree",
+    "duplicate_annotation": false
+  },
+  {
+    "query_id": "qa_498_3hop_782",
+    "evidence_id": "e_1f3472cc0a7a8fce436e04a1387a551ce3cd86695b561025c8b4d4067235593d",
+    "context_position": 1,
+    "status": "assembled",
+    "unit_ids": [
+      "u_4ad9b84cd9c33ed90f82b24234affcd549c480a3e51dd79919bacb00955aa9e0",
+      "u_9085f013598e3d38971b948f2576ab7b1a5bb18ffcdc769b02dd24bcaea47589",
+      "u_828d330f7d17242a6f0cf4d07cb2af628503938db2b06ee20e11a0030b1aec20",
+      "u_f7169c8cc9c0758f7efa975cc9a3115922720919cba25ddb08db7c8a87c7b21e",
+      "u_d9fd5050880106f1d9829e5fd04e4f443919b14ed1785ef2434826c9181df7d4"
+    ],
+    "reason": "ordered full bodies exactly reconstruct reference",
+    "duplicate_annotation": false
+  },
+  {
+    "query_id": "qa_498_3hop_782",
+    "evidence_id": "e_d8ff82af51232bc905e187a6aed601ff2729ee778c7a408270a6478c60b7226e",
+    "context_position": 2,
+    "status": "exact",
+    "unit_ids": [
+      "u_737b5a4ded805bbf9556cadf9882fddf821936932cc885de845b47100f4ac623"
+    ],
+    "reason": "normalized index, hierarchy and full body agree",
+    "duplicate_annotation": false
+  },
+  {
+    "query_id": "qa_2_1hop_4",
+    "evidence_id": "e_98a54782de79d2a7437f23858e5e49382ae03c78fe2e565e5f2a47a8b38cad89",
+    "context_position": 0,
+    "status": "exact",
+    "unit_ids": [
+      "u_23cf1f90f9da856653ff076ff730b7e3c475b5b65b53ff9a8a8df1f9c9cc0422"
+    ],
+    "reason": "normalized index, hierarchy and full body agree",
+    "duplicate_annotation": false
+  },
+  {
+    "query_id": "qa_48_1hop_73",
+    "evidence_id": "e_1a459297b6bf37c138f903bc26801ce6d9c6cd0b6056c4f488d0ce433d776bbd",
+    "context_position": 0,
+    "status": "exact",
+    "unit_ids": [
+      "u_405162836c61114a51865d16856b08915b76da21c0b6588d82786ccac9f0a2cf"
+    ],
+    "reason": "normalized index, hierarchy and full body agree",
+    "duplicate_annotation": false
+  },
+  {
+    "query_id": "qa_74_1hop_114",
+    "evidence_id": "e_bf800a8df21ceacf0ba386635332a0a9735e16c32df6c6a63b1567cf419cb63a",
+    "context_position": 0,
+    "status": "exact",
+    "unit_ids": [
+      "u_5dd527d44c2fe2aa3f412b35d1544ec4437fdd00205937dd504a098087847d9c"
+    ],
+    "reason": "normalized index, hierarchy and full body agree",
+    "duplicate_annotation": false
+  },
+  {
+    "query_id": "qa_124_1hop_223",
+    "evidence_id": "e_1ddec1a89d24126c3fb940ca93731781e3f4eb5c22f7396cf64d3da577bd54b9",
+    "context_position": 0,
+    "status": "exact",
+    "unit_ids": [
+      "u_f6f9b0255717d55c7e95be1d035ea149eb352c7b9e7a6c42f48be24c8a83c151"
+    ],
+    "reason": "normalized index, hierarchy and full body agree",
+    "duplicate_annotation": false
+  },
+  {
+    "query_id": "qa_49_2hop_75",
+    "evidence_id": "e_6adf30d032ad3aad0292702ea7d1af2e8a252c6a50612fc7d4c68e80a1996300",
+    "context_position": 0,
+    "status": "exact",
+    "unit_ids": [
+      "u_45bcb32755905c985af35087c802387a001a4b00406113b51816ad1125e5a8a7"
+    ],
+    "reason": "normalized index, hierarchy and full body agree",
+    "duplicate_annotation": false
+  },
+  {
+    "query_id": "qa_49_2hop_75",
+    "evidence_id": "e_d23b48ce6594dc44d374cbc05b441493276cf27c9c8801fbcceebeccb8eb5771",
+    "context_position": 1,
+    "status": "exact",
+    "unit_ids": [
+      "u_8b2f9e69d69a8ca1718c52c0c88db04b7b26ce25c592f3c437d4297564b271c2"
+    ],
+    "reason": "normalized index, hierarchy and full body agree",
+    "duplicate_annotation": false
+  },
+  {
+    "query_id": "qa_143_2hop_261",
+    "evidence_id": "e_c7840c91b1c272d1ea8806d50897a1fa79c072cac97f55365e753cec5636367f",
+    "context_position": 0,
+    "status": "exact",
+    "unit_ids": [
+      "u_daa4d6d7740b1e54cfeba70174cfba94bd04d46a1787664ea888632a41e03c21"
+    ],
+    "reason": "normalized index, hierarchy and full body agree",
+    "duplicate_annotation": false
+  },
+  {
+    "query_id": "qa_143_2hop_261",
+    "evidence_id": "e_469631a2e0ea1e41734d9fa6a1ca15fe38b1e30a0a64f093f2a5b07b51336200",
+    "context_position": 1,
+    "status": "exact",
+    "unit_ids": [
+      "u_4f8bed8c812cd67aeea6ba511b4f486c67deeaf81efdc3971babe857082ed140"
+    ],
+    "reason": "normalized index, hierarchy and full body agree",
+    "duplicate_annotation": false
+  },
+  {
+    "query_id": "qa_365_2hop_578",
+    "evidence_id": "e_c334e1f962e68c9208e903afea55554437784f07f139a12d53e57b6dcd236e46",
+    "context_position": 0,
+    "status": "exact",
+    "unit_ids": [
+      "u_e0ad73fd0acb01531861a9a9c23034de7aa654dc2aed2361c3c5706c36acceff"
+    ],
+    "reason": "normalized index, hierarchy and full body agree",
+    "duplicate_annotation": false
+  },
+  {
+    "query_id": "qa_365_2hop_578",
+    "evidence_id": "e_24261b5f2d2a8f6fe01f051365edd0f2db30b9d2d88b4af257f334a1c94ac0d0",
+    "context_position": 1,
+    "status": "exact",
+    "unit_ids": [
+      "u_e1c9c9dadf19cdf4b9c0fca844985967f6e87ab1ab9101a92c8c7b4cbce8e12b"
+    ],
+    "reason": "normalized index, hierarchy and full body agree",
+    "duplicate_annotation": false
+  },
+  {
+    "query_id": "qa_435_2hop_678",
+    "evidence_id": "e_840a5e43880ac9a61518371e3d08436d8da69823d2a3cb88ed93cacca1865b6e",
+    "context_position": 0,
+    "status": "exact",
+    "unit_ids": [
+      "u_b34a2fb4c1cb423a0fc3fbfcb587a9a2411c60b1d4b6c55b9fe88edb696eee12"
+    ],
+    "reason": "normalized index, hierarchy and full body agree",
+    "duplicate_annotation": false
+  },
+  {
+    "query_id": "qa_435_2hop_678",
+    "evidence_id": "e_69cab2135576e24e0520aa4bcf9d0fd06631fe9f66f66635281fc3e535c3879a",
+    "context_position": 1,
+    "status": "assembled",
+    "unit_ids": [
+      "u_2217c2fb5a945d14c93b359fcc1bbf7b7bd4cdf2727c2086ca71874e4603f3f4",
+      "u_e1d6866e40e80cfc7809a45c408dee862d2860f9ebb90467c3ad4bb08c13a280",
+      "u_199f14cb42c5c46fb398cdeecc25a2f05eee5c8d347a46cc14fd0df418d36529",
+      "u_2c70b7bf931d3223cda1a9448e5b4c9602359f4bc42b7c23e4dec26a6bf2c474"
+    ],
+    "reason": "ordered full bodies exactly reconstruct reference",
+    "duplicate_annotation": false
+  },
+  {
+    "query_id": "qa_566_2hop_861",
+    "evidence_id": "e_87fbfb96f781fa6083f757b3e8e24e5e7c2503bd0a7e2b625c903b09ad01ca85",
+    "context_position": 0,
+    "status": "exact",
+    "unit_ids": [
+      "u_f43f1643afcad3dc6d2b3cb65cb0dece3da35ce20d6997e9892f5005a7d59daa"
+    ],
+    "reason": "normalized index, hierarchy and full body agree",
+    "duplicate_annotation": false
+  },
+  {
+    "query_id": "qa_566_2hop_861",
+    "evidence_id": "e_c041b80acbeeffaeab11d328546cbc3a958e3e4744a78e8fc85923c3dcf5fcdd",
+    "context_position": 1,
+    "status": "exact",
+    "unit_ids": [
+      "u_d6f3ed7d3e38757d9b9e9b035eb1c50405a351cfe6e7e4f1c4a9a0a41efb841d"
+    ],
+    "reason": "normalized index, hierarchy and full body agree",
+    "duplicate_annotation": false
+  },
+  {
+    "query_id": "qa_83_2hop_325_rand",
+    "evidence_id": "e_0e7cd920285748ca74a0782dab4e28815175d2f7c9777a72a3261ed064d88efc",
+    "context_position": 0,
+    "status": "exact",
+    "unit_ids": [
+      "u_2f55198762ecfeb0d9a155a46379c891b332f6fabcdd16f4a39116714c4f8115"
+    ],
+    "reason": "normalized index, hierarchy and full body agree",
+    "duplicate_annotation": false
+  },
+  {
+    "query_id": "qa_83_2hop_325_rand",
+    "evidence_id": "e_b3704e5834185d9565d25c3804e927bc8e40899ddbcbc7f20867382f48db40f4",
+    "context_position": 1,
+    "status": "exact",
+    "unit_ids": [
+      "u_35ac5cb281f287c14749a6dfa30d912dd318baf5d81e38b121f10a04fd837e0d"
+    ],
+    "reason": "normalized index, hierarchy and full body agree",
+    "duplicate_annotation": false
+  },
+  {
+    "query_id": "qa_144_2hop_555_rand",
+    "evidence_id": "e_a565e41bb7077c7735c7eef1be67da741bca13807db814e010c38c8e7d474a00",
+    "context_position": 0,
+    "status": "exact",
+    "unit_ids": [
+      "u_7645ad0fd40b82bac39faba8a753807adcecd169333d90b8a272e0347da902c4"
+    ],
+    "reason": "normalized index, hierarchy and full body agree",
+    "duplicate_annotation": false
+  },
+  {
+    "query_id": "qa_144_2hop_555_rand",
+    "evidence_id": "e_01711ce194d4c6fb277b399dcde718d2e05c8c33851c7e4ed475d08e7e56ee77",
+    "context_position": 1,
+    "status": "exact",
+    "unit_ids": [
+      "u_af9f46173ae29788670614b22fdc5227fddeaed5c40a31c6f710f30200283baf"
+    ],
+    "reason": "normalized index, hierarchy and full body agree",
+    "duplicate_annotation": false
+  },
+  {
+    "query_id": "qa_243_2hop_927_rand",
+    "evidence_id": "e_7dad531988ac109f7aa965f88d9ea487056c61a8063cd0859a0068a1cefa5655",
+    "context_position": 0,
+    "status": "exact",
+    "unit_ids": [
+      "u_7b0b10e074f0b22152a0e01b95cdf98bf44b17eb0512e87c3183cee1b0a406dc"
+    ],
+    "reason": "normalized index, hierarchy and full body agree",
+    "duplicate_annotation": false
+  },
+  {
+    "query_id": "qa_243_2hop_927_rand",
+    "evidence_id": "e_f044e510b9133eba5c8f8f2c815f13193141abae354876f0032ae5194ebdeed8",
+    "context_position": 1,
+    "status": "exact",
+    "unit_ids": [
+      "u_efc361c884d3ec79a48e83b824d66dd03a69f942e8ef293cb4b9519edeb245b2"
+    ],
+    "reason": "normalized index, hierarchy and full body agree",
+    "duplicate_annotation": false
+  },
+  {
+    "query_id": "qa_242_3hop_399",
+    "evidence_id": "e_ea7a8b00edb9335c28e32ee050a8b6cf2261624205970afbe24aed6303ed1caa",
+    "context_position": 0,
+    "status": "assembled",
+    "unit_ids": [
+      "u_dc2c1a168d6b448ef4f5fc1c5aa2a2ea8b12cc416b135b50b181ebabed5e7d34",
+      "u_829a50831a54cead3ac3782cb6053b204c21afc67ffad0d5b7e5ea0d7e7eb4c2",
+      "u_2305437a797dc508f1638df7cb0859413283f555ef36c4984dcd97ebe4defff7",
+      "u_5154d5c6c0ed7af5f5b7ca65f98c15ceb51277ced746726d1d3aee3ade6a2655"
+    ],
+    "reason": "ordered full bodies exactly reconstruct reference",
+    "duplicate_annotation": false
+  },
+  {
+    "query_id": "qa_242_3hop_399",
+    "evidence_id": "e_b80741c7f7422e67ddf67f3afe748e5407f47e733406bbe4fd4f7fb5062550b7",
+    "context_position": 1,
+    "status": "exact",
+    "unit_ids": [
+      "u_858f98fc7d86df86bb70804519c45ae2b8807a6794ade5f9e7e51b5d788935b1"
+    ],
+    "reason": "normalized index, hierarchy and full body agree",
+    "duplicate_annotation": false
+  },
+  {
+    "query_id": "qa_242_3hop_399",
+    "evidence_id": "e_223092d6f9579ef10856898385094e65eace8730448aef3b69f4e0cdef3aebee",
+    "context_position": 2,
+    "status": "exact",
+    "unit_ids": [
+      "u_aab11087d98ff94972e1bed8d9ffca70c433ef99b2d64f323cf67f38ecac4647"
+    ],
+    "reason": "normalized index, hierarchy and full body agree",
+    "duplicate_annotation": false
+  },
+  {
+    "query_id": "qa_6_1hop_9",
+    "evidence_id": "e_ec2c2a42514d7e6197b2c36ac8174e17eac9bb127625f58c3e4d4782bca88a23",
+    "context_position": 0,
+    "status": "exact",
+    "unit_ids": [
+      "u_6931e24a37bdd3afafc4373ddc413e852e1c034cb2c6b0b4489baec1b1df4925"
+    ],
+    "reason": "normalized index, hierarchy and full body agree",
+    "duplicate_annotation": false
+  },
+  {
+    "query_id": "qa_50_1hop_78",
+    "evidence_id": "e_d15bf7126ccdee1da61b87ddb6ce16815568c036215944320d96dc2c4e513968",
+    "context_position": 0,
+    "status": "exact",
+    "unit_ids": [
+      "u_434899e5cf167a9e4790c1532b4b0f7a58d753afb644c79d29bc56a00863360d"
+    ],
+    "reason": "normalized index, hierarchy and full body agree",
+    "duplicate_annotation": false
+  },
+  {
+    "query_id": "qa_76_1hop_118",
+    "evidence_id": "e_94e438dea4848e5c5b237c93dd407901387f1448422b5d13f9a1c098bd263d43",
+    "context_position": 0,
+    "status": "exact",
+    "unit_ids": [
+      "u_80e8ce9498defb590e0c80857202281dc0a3605dfb0184e1e0ec308a336de9d0"
+    ],
+    "reason": "normalized index, hierarchy and full body agree",
+    "duplicate_annotation": false
+  },
+  {
+    "query_id": "qa_125_1hop_225",
+    "evidence_id": "e_fa1512765607040710aa4c413ee1bb3f5b4e9108a3b5d1aa6a52135c39ad6195",
+    "context_position": 0,
+    "status": "assembled_reordered",
+    "unit_ids": [
+      "u_1978815bfe3efb18f8796a4514f1351794c5a278758f2a4bc5a126121fdd506b",
+      "u_44b04b9daf01e41655c84d93ae186794a9991aa5ff9f7dba358b4fc88e0e7972",
+      "u_26c2e80110de96c7fb3798fc582cb19ac429c7ef5c9a94d3566d2052c74d91dd",
+      "u_0d60e4e11c3a4355c05423ce92847febb149659eecfe5bec894a5ad8dc041201",
+      "u_a02ead9564d49f2a6de25b0cc11cf7499ddba95c337ea050e31b574efdf29120",
+      "u_3fc8673d95bf630452831168e71fcba7873fad658c47b6de627cebcfeab8f1e1",
+      "u_dff15b751f6c279f4787522ef8119052463d0b37a8a93803df4042c1ce83fcab",
+      "u_400931d51c101cfbccb158de3ebb9e8288ec601b6cbd7ab04e9b12c698846104",
+      "u_b4c4ddb0029636081193a90631e6b2373c7d643ebef1704e793ee80affd76e40",
+      "u_25137138d8975d97441ab7b23ca207c21068101e4d9af9b151838dc65280a219",
+      "u_dc203766ea5b52ca3568914da760decfc13db5f19c8e8966e5b5f09a9bf64c82",
+      "u_395a0292270b7f7bd5f248734a4daf398b2eef34d43951180f8faa89a76e51a3",
+      "u_294891ef02f025a45b68fb2f43c06f37db46d0459c147ad1db95a79da0c5ba30",
+      "u_1ea4522c581a371cc9d3e270ab363d857350fe7d6cbbb8743a18333c6f3b8a57",
+      "u_b2f94d2090fa61ea089cc3f0a19c1162064b77a21b3259003910e2bd240d37b2",
+      "u_605db4afef53f97b97c36bdb05f0518947f082cbdab27a361a3e6fa71be5352d"
+    ],
+    "reason": "complete bodies reconstruct reference in QA item order",
+    "duplicate_annotation": false
+  },
+  {
+    "query_id": "qa_160_1hop_289",
+    "evidence_id": "e_dfaacb7ef1a730662e10ae429d11bbb4cda36b1045eaa8c49e6f9cce3a630fa9",
+    "context_position": 0,
+    "status": "exact",
+    "unit_ids": [
+      "u_b03b83045ab194629d49fb23a0699f829791222032e4892d3cd7579e2dc9ea8b"
+    ],
+    "reason": "normalized index, hierarchy and full body agree",
+    "duplicate_annotation": false
+  },
+  {
+    "query_id": "qa_58_2hop_88",
+    "evidence_id": "e_98a54782de79d2a7437f23858e5e49382ae03c78fe2e565e5f2a47a8b38cad89",
+    "context_position": 0,
+    "status": "exact",
+    "unit_ids": [
+      "u_23cf1f90f9da856653ff076ff730b7e3c475b5b65b53ff9a8a8df1f9c9cc0422"
+    ],
+    "reason": "normalized index, hierarchy and full body agree",
+    "duplicate_annotation": false
+  },
+  {
+    "query_id": "qa_58_2hop_88",
+    "evidence_id": "e_c2cd360f8fd639a95ad918670e8802e969c42b067f6c39e3fdbcca70de866c5e",
+    "context_position": 1,
+    "status": "exact",
+    "unit_ids": [
+      "u_9b6fa47333f4b9270777f30b3873af0c5c5d00b2827cc03748548ba73e9a38b1"
+    ],
+    "reason": "normalized index, hierarchy and full body agree",
+    "duplicate_annotation": false
+  },
+  {
+    "query_id": "qa_273_2hop_431",
+    "evidence_id": "e_6b7d30865299c9afdd2dc7887bdc0dcc83ec9bd1ce969b921772814e1fc3b24a",
+    "context_position": 0,
+    "status": "exact",
+    "unit_ids": [
+      "u_44c2b0243f78c4229f9bffe8590e4911f702f86455b217dacc81de8517efa45e"
+    ],
+    "reason": "normalized index, hierarchy and full body agree",
+    "duplicate_annotation": false
+  },
+  {
+    "query_id": "qa_273_2hop_431",
+    "evidence_id": "e_0f5d0c1d88a357492b7d44b9d3a88e40d36b0cb8662f59d7b1fc6eb656a462b7",
+    "context_position": 1,
+    "status": "exact",
+    "unit_ids": [
+      "u_c45508277aeca5dbc6ba47cb9610fded64432393099c50336a7252915d4ce455"
+    ],
+    "reason": "normalized index, hierarchy and full body agree",
+    "duplicate_annotation": false
+  },
+  {
+    "query_id": "qa_584_2hop_884",
+    "evidence_id": "e_fedcd631e3038e49af23eed9a54f355dff2c7323c0a7d7fe1602b3c0c9290fc6",
+    "context_position": 0,
+    "status": "exact",
+    "unit_ids": [
+      "u_28050c6c672c46cff1735c583024c4992eb92090f93361e5b11de655f0579adc"
+    ],
+    "reason": "normalized index, hierarchy and full body agree",
+    "duplicate_annotation": false
+  },
+  {
+    "query_id": "qa_584_2hop_884",
+    "evidence_id": "e_d5c160bdd531c24d3e442d1e8a1d89f230f2d34da8fcbb4aca6462c664f7aaed",
+    "context_position": 1,
+    "status": "exact",
+    "unit_ids": [
+      "u_e6437cc70d46870b0e0b611dd658f49a7028e4d10520f9024faad3a69bf6a9aa"
+    ],
+    "reason": "normalized index, hierarchy and full body agree",
+    "duplicate_annotation": false
+  },
+  {
+    "query_id": "qa_26_2hop_104_rand",
+    "evidence_id": "e_9ff938aad5f64eb66e8d16dadd2dfb7ca800fc1e73fee21da170c076acef9b0d",
+    "context_position": 0,
+    "status": "exact",
+    "unit_ids": [
+      "u_cd1bb69126641695cc963e9aed1d436b91a1d15a2de364db6538d9c3ce3fa018"
+    ],
+    "reason": "normalized index, hierarchy and full body agree",
+    "duplicate_annotation": false
+  },
+  {
+    "query_id": "qa_26_2hop_104_rand",
+    "evidence_id": "e_b14a10789c5517191adf1477ada33a5eabd6e0a2d8dae156cced8d1a12e46e32",
+    "context_position": 1,
+    "status": "assembled_reordered",
+    "unit_ids": [
+      "u_e0d288f8b38eeb25de8e211dbf8036d776c8c66dc1198e7b8f448a002e0374a4",
+      "u_7e3a031e25926afa9814e3369422f85140490e2e1e41f143a88d6937171c3f85",
+      "u_51bcc1d5bbd1f3b75ccb2e71622109db70bcea4acd0309252f3c89bf53379ac9",
+      "u_9669c865cdfb408b269ce3a1f7ec7dc24d56bd7c499241b0b2fb6b17a0723559",
+      "u_372179ed6318b07cbc458e71cb55fcd9fe597f7fdc8e78a1230efd0f880d5ee6",
+      "u_e3a3e177a1a2f64525cc2116b25a84e16f1cad04c7ce724e8cc04620c0fbaf07",
+      "u_7825fb9856694154c0b409dcaf43833bdd4f4a38fc4ee7e07c8fb9d29b6e5bea",
+      "u_6556862020d35f2a34e4cdcbb06802e618c7eb876415a7118a3bb989dbb9933f",
+      "u_599f27cff857fb19594baba7c69a1fcc8d29e6b5b60f4c96b5c785e56099a819",
+      "u_5f9b61580db87e944942624e047a08f3d6593578e62518c24397e92937fe2e07",
+      "u_afa4931731031c64873c4571143aa056cbf8cd5112f3b3a62ac0e5ce79667b83",
+      "u_dd8faebf641def98513e4974245e685f8e2c2719435364118349c02de9da435e"
+    ],
+    "reason": "complete bodies reconstruct reference in QA item order",
+    "duplicate_annotation": false
+  },
+  {
+    "query_id": "qa_85_2hop_333_rand",
+    "evidence_id": "e_60fcd45231127634424ac1e7c4a372f859bcd796578d327616fd3c6aae47d5c3",
+    "context_position": 0,
+    "status": "exact",
+    "unit_ids": [
+      "u_e5daa2e1593ec4b556c9c3b3a9837d58426b3822044465366bb9ea3f464cff47"
+    ],
+    "reason": "normalized index, hierarchy and full body agree",
+    "duplicate_annotation": false
+  },
+  {
+    "query_id": "qa_85_2hop_333_rand",
+    "evidence_id": "e_1cee79477ee9dccbf843fa33b85c04509f6dca2678776417067fca42b6aa7174",
+    "context_position": 1,
+    "status": "exact",
+    "unit_ids": [
+      "u_808d6ad029251a7d7cc252eb870725c9ae7ca1ae03cef6fa37626ac39c4d3897"
+    ],
+    "reason": "normalized index, hierarchy and full body agree",
+    "duplicate_annotation": false
+  },
+  {
+    "query_id": "qa_145_2hop_559_rand",
+    "evidence_id": "e_ef568d3293b569abb56598003c3e7268c4b0a850bee39e751732269d46efc4f3",
+    "context_position": 0,
+    "status": "exact",
+    "unit_ids": [
+      "u_58ee8c0723f970f42f1d4a92837c9c0ead1b636a8e23a0953df2e3f7cc21bf67"
+    ],
+    "reason": "normalized index, hierarchy and full body agree",
+    "duplicate_annotation": false
+  },
+  {
+    "query_id": "qa_145_2hop_559_rand",
+    "evidence_id": "e_636ef856208aaeffbfa9a6426ecd230cb419433b13ddb6bf030836b9c0632863",
+    "context_position": 1,
+    "status": "exact",
+    "unit_ids": [
+      "u_8b071ddc9f58c215bb4d68107ff05fa046425a48cff65b3f7b80bc90eed1341b"
+    ],
+    "reason": "normalized index, hierarchy and full body agree",
+    "duplicate_annotation": false
+  },
+  {
+    "query_id": "qa_206_2hop_786_rand",
+    "evidence_id": "e_068f5aed359987a9bbdbe7d718834c6b88c409adccf72230fefb68899ae4bd41",
+    "context_position": 0,
+    "status": "exact",
+    "unit_ids": [
+      "u_71c5a6d007f585a8395cf84178464f8c64676ece680cf6b36ff9bb5aa154985d"
+    ],
+    "reason": "normalized index, hierarchy and full body agree",
+    "duplicate_annotation": false
+  },
+  {
+    "query_id": "qa_206_2hop_786_rand",
+    "evidence_id": "e_6143bb72240ed006e09e6b3e410927e8cf32890cc620110cb7a608f4559311b9",
+    "context_position": 1,
+    "status": "exact",
+    "unit_ids": [
+      "u_c27f46caff478ce5b076a18531c6093d444b5ff38184bca5cca40c3ba1b7ee74"
+    ],
+    "reason": "normalized index, hierarchy and full body agree",
+    "duplicate_annotation": false
+  },
+  {
+    "query_id": "qa_244_2hop_931_rand",
+    "evidence_id": "e_c4915cb995ed43d90d440d48402c93622b811482a0e5899290c2b2037a7118cd",
+    "context_position": 0,
+    "status": "assembled",
+    "unit_ids": [
+      "u_5b492d6466131b888c8bb3bb8d8d905b25c2ceed69a8284e023242427f2889bc",
+      "u_b1b3e5838ade38ef434125c79cc9f9ac446a4218c64b197da515080118717a31",
+      "u_699819e1e87fe13ba53b82bf1e5b5b201715a49d07a00581cc308411f9a857db",
+      "u_ab2b0d7664c8c364e23348ede725d006cfeceda4cc49e434e2ccd6d13c8c0a52",
+      "u_70cdaaddcfbdc601771bfe0fb4c12cb76991219250fc638e5d453c62ef6b5eb7",
+      "u_e99079dffa6a8293007455715dd4d064b397a61b344c5a79a4566fb15d01cc9a",
+      "u_c5a1b3d0fd2dd25657010c25fef9c67ab16903f0ec5ed9d5e9770e03386dfbed"
+    ],
+    "reason": "ordered full bodies exactly reconstruct reference",
+    "duplicate_annotation": false
+  },
+  {
+    "query_id": "qa_244_2hop_931_rand",
+    "evidence_id": "e_3008b9ce8d91bfa2a83e139e90e3ce5e91d2e78d8df83e0bf25bf288b29eca10",
+    "context_position": 1,
+    "status": "exact",
+    "unit_ids": [
+      "u_fa4bda65c49e225d032627d338ffcd0f3861c7379767d2b62dd3492c2c980e8e"
+    ],
+    "reason": "normalized index, hierarchy and full body agree",
+    "duplicate_annotation": false
+  },
+  {
+    "query_id": "qa_608_3hop_919",
+    "evidence_id": "e_60172f17fdff799cd052ed0261c80e40b5307eb34cc65a362ff988e9de9f0b0a",
+    "context_position": 0,
+    "status": "exact",
+    "unit_ids": [
+      "u_e70b0f2d327317fc043516c99a76257ac9711ae87945b418d1ec3138e7bdb9f2"
+    ],
+    "reason": "normalized index, hierarchy and full body agree",
+    "duplicate_annotation": false
+  },
+  {
+    "query_id": "qa_608_3hop_919",
+    "evidence_id": "e_7cd00d2efd032987169a7e50a08b96691c94063f8d0d0e8a8d51adbc842402be",
+    "context_position": 1,
+    "status": "exact",
+    "unit_ids": [
+      "u_767de1086224509912d320e51df1c152345df79b90307fdafcd06d2c91666820"
+    ],
+    "reason": "normalized index, hierarchy and full body agree",
+    "duplicate_annotation": false
+  },
+  {
+    "query_id": "qa_608_3hop_919",
+    "evidence_id": "e_78d35534ef2956679b5af4e304cddab237bbeec23d42cd794006fd2865d499e8",
+    "context_position": 2,
+    "status": "assembled_reordered",
+    "unit_ids": [
+      "u_652ed48c6b4df2c88fb852ba0fe6cf9021a06c4d0279b141ece1e335007e7231",
+      "u_846af331ad6e4577b810e39a44dde3ba1e9f0f4d81ae9116a29193dff7acaaf4",
+      "u_2d338b688ffea19461068b49f2401262b759ae1c65d4b8f583cc8d0764f037a9",
+      "u_d0abf1fa960f1af34ae0a312a4cb2f8896434465e8800e9109b53d576551b163",
+      "u_cc896ce46ed64d5a19b81c1c131f6d0e7a67fd7c97b3b41a8caeb0405ed22b09",
+      "u_df2d65b4231e37cafe8838d4346fa8b15f06736095dfcf240b718e8a9c85311c",
+      "u_f1920042885b5726b06f1ac9864eff301e4e1a7f431ab8a5219a05e9cc62d822",
+      "u_2831c49a7af20c9303e0cdbbdf029d981da87911a1bb55444a59c07fbfcaa51b",
+      "u_dfc2a1057bff17edd1594340d1746f7aff268e58901f773e7460fdb9b6b98c69",
+      "u_78ce4d835c0c5bd68e7424d5362e2441457acc8dc3b9482b0d735b3e0ec2904d",
+      "u_27a01b85d4c79939de64d9e4568ae987de4f1523d7ad5303121ac6ec0de2f2dd",
+      "u_95392bee9142d4f8c82105418aca766cc3bad9edad4caf87ac0943eebae2d7a4",
+      "u_39aaf4e31219e286d41a741d61a01e2c1b60cc9b0578acb350e646dd14e4e2f1",
+      "u_3fddf63f68ed119bacd8044d6c213c6815fc1fce15707d39bc686fecbf5bb976",
+      "u_534de8343076db46e722c3efaeaeabf60835593adec26aa08a81ba85f8075552",
+      "u_577c8b1a4cf319876cef953481cab97946dfc696c4f47773ac3ae6cbbeca60e9",
+      "u_bd3c1b72e4cb3a2a71b9f9f01bc6d158f0c44c91a5d454828085bfa28b2d3880"
+    ],
+    "reason": "complete bodies reconstruct reference in QA item order",
+    "duplicate_annotation": false
+  },
+  {
+    "query_id": "qa_274_3hop_434",
+    "evidence_id": "e_c4f57470845909fdec1b6ecff92ac9f1df4f313e031efdb21aa96250be360f31",
+    "context_position": 0,
+    "status": "exact",
+    "unit_ids": [
+      "u_31355e151cc7ee361ed21695e0b6b604ecd0b47a49fc6786cba8839f82854b36"
+    ],
+    "reason": "normalized index, hierarchy and full body agree",
+    "duplicate_annotation": false
+  },
+  {
+    "query_id": "qa_274_3hop_434",
+    "evidence_id": "e_0d9b41f0cc1bdaf17d963f49f547e082746f4b7cdcd61f954966d6054c959822",
+    "context_position": 1,
+    "status": "exact",
+    "unit_ids": [
+      "u_9e774824b9f96433430e03b7d046b414674e694fb9d4d45e1fe758f73c964dcf"
+    ],
+    "reason": "normalized index, hierarchy and full body agree",
+    "duplicate_annotation": false
+  },
+  {
+    "query_id": "qa_274_3hop_434",
+    "evidence_id": "e_656af7460e463bc098d87318ac2f7c9b5160404937bc01ae4373e4e874711aed",
+    "context_position": 2,
+    "status": "exact",
+    "unit_ids": [
+      "u_9ca190a17b8f461902a825f127aa263a1752e44aa7b5fa932e7ee01dcc6f6c2b"
+    ],
+    "reason": "normalized index, hierarchy and full body agree",
+    "duplicate_annotation": false
+  },
+  {
+    "query_id": "qa_550_3hop_837",
+    "evidence_id": "e_8fdc34f824c088e6ab4e0f3eac8e270becd9065763fb529c0f4abb06f52f7cd0",
+    "context_position": 0,
+    "status": "exact",
+    "unit_ids": [
+      "u_909961fc4f899196f3f0b744d6ba48953b1f41ab894fd0a6b10e88b23d8bd5c0"
+    ],
+    "reason": "normalized index, hierarchy and full body agree",
+    "duplicate_annotation": false
+  },
+  {
+    "query_id": "qa_550_3hop_837",
+    "evidence_id": "e_765f2c4ac64955b2f4e2e602fc0a80648e4691eb14e25f26cb34fadd7cbeb6f2",
+    "context_position": 1,
+    "status": "exact",
+    "unit_ids": [
+      "u_7a1cbffed8052fa75d55ba2d4cdc673037d084ec591ec179539e4d77dea09549"
+    ],
+    "reason": "normalized index, hierarchy and full body agree",
+    "duplicate_annotation": false
+  },
+  {
+    "query_id": "qa_550_3hop_837",
+    "evidence_id": "e_0b3624667f3dbb00e29d1f569f9f20670cc0de446b1182a93e233afa6f686acf",
+    "context_position": 2,
+    "status": "exact",
+    "unit_ids": [
+      "u_a1ec43f0b35f2b5716d353b7872091aeb4a1a0a6ae5e1cd35a9a9b556cfd9c9d"
+    ],
+    "reason": "normalized index, hierarchy and full body agree",
+    "duplicate_annotation": false
+  },
+  {
+    "query_id": "qa_13_1hop_18",
+    "evidence_id": "e_188db4a3a70165af473a40825b97d8b5eee78e03bf211de7b165d033068e45a1",
+    "context_position": 0,
+    "status": "exact",
+    "unit_ids": [
+      "u_8f95e1e9aad6fc2499b3fd055af8c463a4187bacb24232baeb0feddf6c4b2c5c"
+    ],
+    "reason": "normalized index, hierarchy and full body agree",
+    "duplicate_annotation": false
+  },
+  {
+    "query_id": "qa_52_1hop_80",
+    "evidence_id": "e_f0156e81729698d2d23f96986635a1048a15c21762ffcd25795ccb9764c3394d",
+    "context_position": 0,
+    "status": "exact",
+    "unit_ids": [
+      "u_05048c3b4da19771ad989217b277177f73f50cd643d4c8966013ad57c40b7a99"
+    ],
+    "reason": "normalized index, hierarchy and full body agree",
+    "duplicate_annotation": false
+  },
+  {
+    "query_id": "qa_80_1hop_125",
+    "evidence_id": "e_ab6ad3554a130963826cabee176bd0729d2a87bde7946c1caf7d1f9c75afd33d",
+    "context_position": 0,
+    "status": "exact",
+    "unit_ids": [
+      "u_697df300171d776955f53c159e2202a9171f60edf7b547b9e343d90cbbbd2ef8"
+    ],
+    "reason": "normalized index, hierarchy and full body agree",
+    "duplicate_annotation": false
+  },
+  {
+    "query_id": "qa_162_1hop_291",
+    "evidence_id": "e_c2ea11642d08510e2fd05e8105eba4d07a520ec0f20e616525e249ac9cc0c8cb",
+    "context_position": 0,
+    "status": "assembled",
+    "unit_ids": [
+      "u_e508c1fdd7c4a288fd653f304ccdf97294f8293d1d6461dd364c5d79e4abee7d",
+      "u_cffa6b5d23daf228955f3b7b819d24279c3e8461ebd61c2a708b727c0c2b04ff",
+      "u_2d0b6758834e82770471b5a40f43cbc187152664d05d663559f37efb723dd1ae",
+      "u_90eaec7515ca5b87f61e43d516cfe8b0cd9689d41fb9f6118dc9a19c98386228",
+      "u_77b734179179780c588c053d589ffdfb1d7c35b2691d50ef2ac7708403365d1e"
+    ],
+    "reason": "ordered full bodies exactly reconstruct reference",
+    "duplicate_annotation": false
+  },
+  {
+    "query_id": "qa_59_2hop_90",
+    "evidence_id": "e_c15a60d98243f4c113f882ce8c2fa7812a88985c05722ad7e3a8d53809841463",
+    "context_position": 0,
+    "status": "exact",
+    "unit_ids": [
+      "u_d7d1a3b3bd2cdbfa40fb8008f9c5b569c96f81a42b4b8e492a82b8cef43d06d0"
+    ],
+    "reason": "normalized index, hierarchy and full body agree",
+    "duplicate_annotation": false
+  },
+  {
+    "query_id": "qa_59_2hop_90",
+    "evidence_id": "e_11a544959b6d8c4a1ba83332576ec9ece2effbbbe63694406172955a8edb56b1",
+    "context_position": 1,
+    "status": "exact",
+    "unit_ids": [
+      "u_d631d1d796b8dd31769b631b3fa1792dde66ce4c3a1ffaf490f0f0a2459a1294"
+    ],
+    "reason": "normalized index, hierarchy and full body agree",
+    "duplicate_annotation": false
+  },
+  {
+    "query_id": "qa_158_2hop_287",
+    "evidence_id": "e_009e4b7da29f879215abd12486d3e222be034a2abc903d8149ebecb0f277f379",
+    "context_position": 0,
+    "status": "exact",
+    "unit_ids": [
+      "u_c96827ad06208773cd070d43ba88df485d090dbe87b8c900eb69c637ac7278fe"
+    ],
+    "reason": "normalized index, hierarchy and full body agree",
+    "duplicate_annotation": false
+  },
+  {
+    "query_id": "qa_158_2hop_287",
+    "evidence_id": "e_15f6652a8c3c5e55a783b89d0c6636345cfec16f326d45d0a0648c65e496243b",
+    "context_position": 1,
+    "status": "exact",
+    "unit_ids": [
+      "u_ef59abaa905d7d050656159a4d10aedd09cb9aa817583a996b9d948066234149"
+    ],
+    "reason": "normalized index, hierarchy and full body agree",
+    "duplicate_annotation": false
+  },
+  {
+    "query_id": "qa_281_2hop_441",
+    "evidence_id": "e_d236a7a3a23503ef2a0896d8b48332a961131031852958cb40992c246dbbb705",
+    "context_position": 0,
+    "status": "exact",
+    "unit_ids": [
+      "u_3baf4d413654855fa1d6fec5029231d593fab0982640bbfd200452dc902c80dd"
+    ],
+    "reason": "normalized index, hierarchy and full body agree",
+    "duplicate_annotation": false
+  },
+  {
+    "query_id": "qa_281_2hop_441",
+    "evidence_id": "e_e3221f32944fe03ea81b78f5c7868ec7102cf7b8429b6c68a923ab8777702a63",
+    "context_position": 1,
+    "status": "exact",
+    "unit_ids": [
+      "u_499bbd256850ad15ca7c322e6a7f1174a10c072ee708c065a6c64ed87e43fcd6"
+    ],
+    "reason": "normalized index, hierarchy and full body agree",
+    "duplicate_annotation": false
+  },
+  {
+    "query_id": "qa_368_2hop_584",
+    "evidence_id": "e_578d9655f2cb1f06f021d0623eaf349cd37c197b2c9621571e1c08ec49cfac6f",
+    "context_position": 0,
+    "status": "exact",
+    "unit_ids": [
+      "u_477c0b8e8d630f729dd4e241a5fa7be9513ad564c52ba98f516fedc33e43a789"
+    ],
+    "reason": "normalized index, hierarchy and full body agree",
+    "duplicate_annotation": false
+  },
+  {
+    "query_id": "qa_368_2hop_584",
+    "evidence_id": "e_bcd09fc1ca7b984f6c6b73c9b9efbea0568ee07827b2a8fa9659f7cb94b20d77",
+    "context_position": 1,
+    "status": "exact",
+    "unit_ids": [
+      "u_ed81abf4ade81ac8cb4a530444bbeaedffe6e822667213ddb88f0b664905f43b"
+    ],
+    "reason": "normalized index, hierarchy and full body agree",
+    "duplicate_annotation": false
+  },
+  {
+    "query_id": "qa_602_2hop_910",
+    "evidence_id": "e_28b69476af10c907d5a68ebbe27e6b39f5e4faa1595d8fe750045cb499fb14aa",
+    "context_position": 0,
+    "status": "exact",
+    "unit_ids": [
+      "u_9b372ca0a47f1a6430646f003178159ad6fd1ba75bac0ed812b3fb72c39ddcea"
+    ],
+    "reason": "normalized index, hierarchy and full body agree",
+    "duplicate_annotation": false
+  },
+  {
+    "query_id": "qa_602_2hop_910",
+    "evidence_id": "e_42fa76297dd683c0b9727feec3976b1c2c54e520ae6d4e701ba1996797579825",
+    "context_position": 1,
+    "status": "exact",
+    "unit_ids": [
+      "u_00e91fc09347cb32433916a0b475ce59a9de99213a1fdac91cdde6eca224786c"
+    ],
+    "reason": "normalized index, hierarchy and full body agree",
+    "duplicate_annotation": false
+  },
+  {
+    "query_id": "qa_28_2hop_112_rand",
+    "evidence_id": "e_3a6dc5ff08ee6608867bb9e17a6763804f4737b2b41195fc72875fc6d02228e5",
+    "context_position": 0,
+    "status": "exact",
+    "unit_ids": [
+      "u_c4b97611804b89b4e8f38b9418152d17d99ed723917047585dccd5f80a6184e9"
+    ],
+    "reason": "normalized index, hierarchy and full body agree",
+    "duplicate_annotation": false
+  },
+  {
+    "query_id": "qa_28_2hop_112_rand",
+    "evidence_id": "e_bc0c08e7b0e4acd05adac0af7eed6316c71086a056b15f1e85352b04877a560d",
+    "context_position": 1,
+    "status": "exact",
+    "unit_ids": [
+      "u_2350eb86617ebf26a3c1c92fa43089c569e27ffd7ad6405e77a31bc4ff56931f"
+    ],
+    "reason": "normalized index, hierarchy and full body agree",
+    "duplicate_annotation": false
+  },
+  {
+    "query_id": "qa_157_2hop_606_rand",
+    "evidence_id": "e_9525faf5829a089ad7dc59a4fdf82ee0c1f29cec6ad738cf718a3975abdd45fd",
+    "context_position": 0,
+    "status": "exact",
+    "unit_ids": [
+      "u_72abf81559a8d2f6a42aee10248f4765265cda3af0f9c6207205288a155597a1"
+    ],
+    "reason": "normalized index, hierarchy and full body agree",
+    "duplicate_annotation": false
+  },
+  {
+    "query_id": "qa_157_2hop_606_rand",
+    "evidence_id": "e_46180397288b1872d40b92a0d4e0c43c69c9806b26e4d1a8d0e8a1e72c856f1b",
+    "context_position": 1,
+    "status": "exact",
+    "unit_ids": [
+      "u_4bbe45423cad8dcb7daf2b9169d011d42a3d362f460ff71d4cf1199f6c8c224d"
+    ],
+    "reason": "normalized index, hierarchy and full body agree",
+    "duplicate_annotation": false
+  },
+  {
+    "query_id": "qa_207_2hop_790_rand",
+    "evidence_id": "e_1484c1a0d5a8b048473e503d16075a0df7cdb32042cf80a875c91348d2633123",
+    "context_position": 0,
+    "status": "exact",
+    "unit_ids": [
+      "u_aae08b5868d0a6cee97e1541234788108ecdec6b5b469c2b0585c36dc9231531"
+    ],
+    "reason": "normalized index, hierarchy and full body agree",
+    "duplicate_annotation": false
+  },
+  {
+    "query_id": "qa_207_2hop_790_rand",
+    "evidence_id": "e_b95b5ad07efe2565dcd5dbd28bfe8a631f2f8905a1ad378e35158983d14ba861",
+    "context_position": 1,
+    "status": "exact",
+    "unit_ids": [
+      "u_bb2879fecf890a17ef57ec60acd8801b1acdbcdd49d8d5ecc5ad1234dc818b08"
+    ],
+    "reason": "normalized index, hierarchy and full body agree",
+    "duplicate_annotation": false
+  },
+  {
+    "query_id": "qa_14_3hop_58_rand",
+    "evidence_id": "e_1a0c2a11bf44139a1dc8373c49dad2a0e3d96f667d7c66bef9a4e57681757583",
+    "context_position": 0,
+    "status": "exact",
+    "unit_ids": [
+      "u_b779b79344482c4da1040c87f2d37aef2c7171231fc5af35dfc652cb1497bd54"
+    ],
+    "reason": "normalized index, hierarchy and full body agree",
+    "duplicate_annotation": false
+  },
+  {
+    "query_id": "qa_14_3hop_58_rand",
+    "evidence_id": "e_af65e8a7b8ff637c886c83a78e36915e545ec8b81447d6e27f13f61ffd7ff2e9",
+    "context_position": 1,
+    "status": "exact",
+    "unit_ids": [
+      "u_0f95fd60ee0e4b48a44defc9cb69f9bf1767c3b406961c9643cb62c7b5d6f773"
+    ],
+    "reason": "normalized index, hierarchy and full body agree",
+    "duplicate_annotation": false
+  },
+  {
+    "query_id": "qa_14_3hop_58_rand",
+    "evidence_id": "e_752651b8393700829cf251eb47e0e021d303b969f02f1ec81fa0430511521cbc",
+    "context_position": 2,
+    "status": "exact",
+    "unit_ids": [
+      "u_01f8192d937eb12e21b5b0cd711b76283fd511360a75f58e29cbb31aed2b20d7"
+    ],
+    "reason": "normalized index, hierarchy and full body agree",
+    "duplicate_annotation": false
+  },
+  {
+    "query_id": "qa_73_3hop_113",
+    "evidence_id": "e_188db4a3a70165af473a40825b97d8b5eee78e03bf211de7b165d033068e45a1",
+    "context_position": 0,
+    "status": "exact",
+    "unit_ids": [
+      "u_8f95e1e9aad6fc2499b3fd055af8c463a4187bacb24232baeb0feddf6c4b2c5c"
+    ],
+    "reason": "normalized index, hierarchy and full body agree",
+    "duplicate_annotation": false
+  },
+  {
+    "query_id": "qa_73_3hop_113",
+    "evidence_id": "e_277852d1660783fc3e19cd5fc25a50ebf5e97b68557cce1fcc512883365cae47",
+    "context_position": 1,
+    "status": "exact",
+    "unit_ids": [
+      "u_8d84e47a6f8d859e4aa1ce10b09e8c5f6edd32e6468e34930816ea6587ab1dcd"
+    ],
+    "reason": "normalized index, hierarchy and full body agree",
+    "duplicate_annotation": false
+  },
+  {
+    "query_id": "qa_73_3hop_113",
+    "evidence_id": "e_3f814d0338a608a6a4f84c0aeb85a0e65039def7c1598e7d9a2266c24b2b06e3",
+    "context_position": 2,
+    "status": "exact",
+    "unit_ids": [
+      "u_7a916098f7513c47730c567efcbef8d51ca6f0828941c9617303f7046fd52d30"
+    ],
+    "reason": "normalized index, hierarchy and full body agree",
+    "duplicate_annotation": false
+  },
+  {
+    "query_id": "qa_314_3hop_503",
+    "evidence_id": "e_11bc7bb0d7c7e5b1b9f9cf81e3703199d73314759c43e087acb50ab5b695b5ee",
+    "context_position": 0,
+    "status": "exact",
+    "unit_ids": [
+      "u_47b92bc50ea588667660b21e09ccdbaa32a868f5bb096c4c942596699cffe1e4"
+    ],
+    "reason": "normalized index, hierarchy and full body agree",
+    "duplicate_annotation": false
+  },
+  {
+    "query_id": "qa_314_3hop_503",
+    "evidence_id": "e_966bbdbbae69f2053b9e6e661e2a223db3fd16d605c93bffdc13ffbaa356a8e4",
+    "context_position": 1,
+    "status": "exact",
+    "unit_ids": [
+      "u_69761eb444cfd28dfbad64e7b231b5e71927e2d3ece4e387c4dc2e6c551a5da1"
+    ],
+    "reason": "normalized index, hierarchy and full body agree",
+    "duplicate_annotation": false
+  },
+  {
+    "query_id": "qa_314_3hop_503",
+    "evidence_id": "e_7fbc8875ca12be89f4882a9e560cfc79dd8aa57c7c726bbc7d7e68036bde9369",
+    "context_position": 2,
+    "status": "exact",
+    "unit_ids": [
+      "u_d97d3aebd4ee6624805fc5f1d7bacc474df3d594d6821139c3faf26caedc562c"
+    ],
+    "reason": "normalized index, hierarchy and full body agree",
+    "duplicate_annotation": false
+  },
+  {
+    "query_id": "qa_16_1hop_22",
+    "evidence_id": "e_6407eec2e9b117c495502f6fbbec66b3c7bf97ef3e0935f7633e2b535afd3b0e",
+    "context_position": 0,
+    "status": "exact",
+    "unit_ids": [
+      "u_b1757e961a602a2be0e175808709b8e0c49cc483a69928aaf57d95dd5330f81f"
+    ],
+    "reason": "normalized index, hierarchy and full body agree",
+    "duplicate_annotation": false
+  },
+  {
+    "query_id": "qa_55_1hop_83",
+    "evidence_id": "e_d8a6c35fc807ed35cf934b7c6650897f0459156db6ac1f48c39223a7ec6361e1",
+    "context_position": 0,
+    "status": "exact",
+    "unit_ids": [
+      "u_639fd9d983349b0d911b015a214b8b0eeeff8ce7faee5d2607b78826a942592f"
+    ],
+    "reason": "normalized index, hierarchy and full body agree",
+    "duplicate_annotation": false
+  },
+  {
+    "query_id": "qa_135_1hop_245",
+    "evidence_id": "e_3d470ded467c73f53b0ab4bb65c169bd5999a8ff89c1716b3d58c2a89fb59a62",
+    "context_position": 0,
+    "status": "exact",
+    "unit_ids": [
+      "u_0eddc00e329bc462903bea48da8183d7ef230085518d818bb5ca18c767e117f2"
+    ],
+    "reason": "normalized index, hierarchy and full body agree",
+    "duplicate_annotation": false
+  },
+  {
+    "query_id": "qa_165_1hop_293",
+    "evidence_id": "e_2f2fb925dc70214285215a39e1082bd347bdfb3e9b2d94dc436496831507233a",
+    "context_position": 0,
+    "status": "exact",
+    "unit_ids": [
+      "u_b800028002c6bb7c1002f06ef53309c5f0d1d101f7b54eb93756086401b64c38"
+    ],
+    "reason": "normalized index, hierarchy and full body agree",
+    "duplicate_annotation": false
+  },
+  {
+    "query_id": "qa_69_2hop_103",
+    "evidence_id": "e_c068555022a97d006a2e0de50e55f779fd2980b40b5d202766ef3405f39c1806",
+    "context_position": 0,
+    "status": "exact",
+    "unit_ids": [
+      "u_89aaf8740e4019d8def1e91ce660144e3613048cc8b0af34f285032fd51019b2"
+    ],
+    "reason": "normalized index, hierarchy and full body agree",
+    "duplicate_annotation": false
+  },
+  {
+    "query_id": "qa_69_2hop_103",
+    "evidence_id": "e_0ced4587df4e42d411f20e60eddebbfdb76b64ede72aee502722f7805b124e62",
+    "context_position": 1,
+    "status": "exact",
+    "unit_ids": [
+      "u_bb8aa050a0a8bf0c7c9fe478b7de22acbcc43b7bdc38c3b17ed0d2174d29caaa"
+    ],
+    "reason": "normalized index, hierarchy and full body agree",
+    "duplicate_annotation": false
+  },
+  {
+    "query_id": "qa_168_2hop_300",
+    "evidence_id": "e_0a7bdf705eb440300dab2ce0abbac4d889c209bbc493d575a84bb559c36e13af",
+    "context_position": 0,
+    "status": "exact",
+    "unit_ids": [
+      "u_5ea81619f691cf4bcc784893455bfb32f461c7990ea9f9f0f1b87cad10244728"
+    ],
+    "reason": "normalized index, hierarchy and full body agree",
+    "duplicate_annotation": false
+  },
+  {
+    "query_id": "qa_168_2hop_300",
+    "evidence_id": "e_e766b29d7da3ce0bf7734a1933baca6d109addb4184eb5efc408fda504128e91",
+    "context_position": 1,
+    "status": "exact",
+    "unit_ids": [
+      "u_44dac3db9e3732f8f13a0cb420e26d1d11c39d9e1bc6076d7eeafe28df432ef2"
+    ],
+    "reason": "normalized index, hierarchy and full body agree",
+    "duplicate_annotation": false
+  },
+  {
+    "query_id": "qa_290_2hop_453",
+    "evidence_id": "e_843068de53c1864f8b5803807e900c43ff2287f60304300701f158b197faace2",
+    "context_position": 0,
+    "status": "exact",
+    "unit_ids": [
+      "u_4d9416da7951b3e4969d1f56fe536c5d3251984492387ec0888008e76b629fc3"
+    ],
+    "reason": "normalized index, hierarchy and full body agree",
+    "duplicate_annotation": false
+  },
+  {
+    "query_id": "qa_290_2hop_453",
+    "evidence_id": "e_8322b7f80a71bd726d01c9842f26f399a290d423edd70e00fd5f4e2c5563881c",
+    "context_position": 1,
+    "status": "exact",
+    "unit_ids": [
+      "u_44e667dd4190b53ca59beb9bf74b83b1701657e12dbf94a771dd549a308fe78e"
+    ],
+    "reason": "normalized index, hierarchy and full body agree",
+    "duplicate_annotation": false
+  },
+  {
+    "query_id": "qa_450_2hop_717",
+    "evidence_id": "e_3b3ac64e17615007500c80c16d703150c5db953f9db4475daa663c8037edfc1f",
+    "context_position": 0,
+    "status": "exact",
+    "unit_ids": [
+      "u_f74041ac7eaca43e749972b7efaaf684c1f5e05e9406a41508f61518d7f47539"
+    ],
+    "reason": "normalized index, hierarchy and full body agree",
+    "duplicate_annotation": false
+  },
+  {
+    "query_id": "qa_450_2hop_717",
+    "evidence_id": "e_2aa1654dae30984d0b986c38d2306d4a0ca32d2e4f385434a292e21645c52e54",
+    "context_position": 1,
+    "status": "exact",
+    "unit_ids": [
+      "u_1c2751074c4b0211824556fc66252566f17fe1c07af9e7483c512d9be498e1c7"
+    ],
+    "reason": "normalized index, hierarchy and full body agree",
+    "duplicate_annotation": false
+  },
+  {
+    "query_id": "qa_41_2hop_160_rand",
+    "evidence_id": "e_52d9252d0b9f5d648521e0fe3a96a26fd118c5187e9625200d3f83b27345cfb3",
+    "context_position": 0,
+    "status": "exact",
+    "unit_ids": [
+      "u_925ddc9f97ae4d387584f9ede1575c9db6c61b2f97e549a1a506ca19f4dc5b36"
+    ],
+    "reason": "normalized index, hierarchy and full body agree",
+    "duplicate_annotation": false
+  },
+  {
+    "query_id": "qa_41_2hop_160_rand",
+    "evidence_id": "e_6c4e21aebd56f5f891aa55ffd0a719e9c0905f704b0e20615edf4cc51f9c3445",
+    "context_position": 1,
+    "status": "exact",
+    "unit_ids": [
+      "u_b5a60bc46888e100f4a030b74e2e3a048521502427d3d7e68b729aac819d03e5"
+    ],
+    "reason": "normalized index, hierarchy and full body agree",
+    "duplicate_annotation": false
+  },
+  {
+    "query_id": "qa_92_2hop_361_rand",
+    "evidence_id": "e_cc277982f9a872f1a30c587ec76dbbbf95170fe78f1049304e5b442385b354ab",
+    "context_position": 0,
+    "status": "exact",
+    "unit_ids": [
+      "u_dcc66eb43ce718b924dc27670a7fd96e880e1a18f07b02ac4f6383b3d099153f"
+    ],
+    "reason": "normalized index, hierarchy and full body agree",
+    "duplicate_annotation": false
+  },
+  {
+    "query_id": "qa_92_2hop_361_rand",
+    "evidence_id": "e_a2b515339b1db4821d10b799527488e81bebbc5b4508b872dcb2eab5bac36a75",
+    "context_position": 1,
+    "status": "exact",
+    "unit_ids": [
+      "u_c1d87b54a1f6466eef29293a196811cacbbf5655740e88e347ff2650f233d09e"
+    ],
+    "reason": "normalized index, hierarchy and full body agree",
+    "duplicate_annotation": false
+  },
+  {
+    "query_id": "qa_159_2hop_614_rand",
+    "evidence_id": "e_8ad608ec3c3633bb5cc21b96e5423c0204e01852c247800f9065c4e05f641fdb",
+    "context_position": 0,
+    "status": "exact",
+    "unit_ids": [
+      "u_74d52dd4842cc187b46ca09538ca0ed467b3607b26a96d8778ca5b6ed8009917"
+    ],
+    "reason": "normalized index, hierarchy and full body agree",
+    "duplicate_annotation": false
+  },
+  {
+    "query_id": "qa_159_2hop_614_rand",
+    "evidence_id": "e_6336bcb4c577b6056668b6184dae1229c76112f863905914f479ef7023c7daa8",
+    "context_position": 1,
+    "status": "exact",
+    "unit_ids": [
+      "u_3510484fdf0f0a4295db21ff182ea10e15f0302e19fe1da82fb97e0bee380590"
+    ],
+    "reason": "normalized index, hierarchy and full body agree",
+    "duplicate_annotation": false
+  },
+  {
+    "query_id": "qa_209_2hop_798_rand",
+    "evidence_id": "e_8859e4ed3055bd6dcb7a583e02f66d6ea23043fc27b7309a2a592b39490ecff5",
+    "context_position": 0,
+    "status": "exact",
+    "unit_ids": [
+      "u_c29b15fdaf53c982fc6c4507943004f874e163da10d58afcbac0e86961d0b051"
+    ],
+    "reason": "normalized index, hierarchy and full body agree",
+    "duplicate_annotation": false
+  },
+  {
+    "query_id": "qa_209_2hop_798_rand",
+    "evidence_id": "e_e4f19807637093bd31656fbbbc2e3203a2d7f177bb78cb8881e5d3ccf11ccca4",
+    "context_position": 1,
+    "status": "exact",
+    "unit_ids": [
+      "u_d86a37735a0f60d5a2182fd94b39eb0a1658b662128840113f8c1279f899fd06"
+    ],
+    "reason": "normalized index, hierarchy and full body agree",
+    "duplicate_annotation": false
+  },
+  {
+    "query_id": "qa_248_2hop_947_rand",
+    "evidence_id": "e_a40dee750ce0b8592d0c8d04e193477ab0919cd9d42d649649f8763bda62493d",
+    "context_position": 0,
+    "status": "exact",
+    "unit_ids": [
+      "u_f90c41de0199ed323021e214fd46b01089699e227c49fc101e47d72a213dd585"
+    ],
+    "reason": "normalized index, hierarchy and full body agree",
+    "duplicate_annotation": false
+  },
+  {
+    "query_id": "qa_248_2hop_947_rand",
+    "evidence_id": "e_3a90de3d5a703fe65b89384e24aa43b12201dcf3c8f4d7fb055a89944454bd43",
+    "context_position": 1,
+    "status": "exact",
+    "unit_ids": [
+      "u_c539c09addf882c092b4f00765f93cb3d58b72121b868413ad47c800b3f88ebd"
+    ],
+    "reason": "normalized index, hierarchy and full body agree",
+    "duplicate_annotation": false
+  },
+  {
+    "query_id": "qa_32_3hop_125_rand",
+    "evidence_id": "e_00db5ff6567ce582736aaeb18113d170fd41bddb1d980f85a0d7e8e9ff576388",
+    "context_position": 0,
+    "status": "exact",
+    "unit_ids": [
+      "u_e31473f93123a2a80cc357e47cf38a4c0d340f554af8c962df8e28979a4d7ea5"
+    ],
+    "reason": "normalized index, hierarchy and full body agree",
+    "duplicate_annotation": false
+  },
+  {
+    "query_id": "qa_32_3hop_125_rand",
+    "evidence_id": "e_e915f0e0424ffbba73eb009bdd2eac998e6225defabeee27f668403ed2ad1173",
+    "context_position": 1,
+    "status": "exact",
+    "unit_ids": [
+      "u_664f7380ea4c06eb89232d5c01ee04a88057b121f974d04fcc017a602d2fa0f0"
+    ],
+    "reason": "normalized index, hierarchy and full body agree",
+    "duplicate_annotation": false
+  },
+  {
+    "query_id": "qa_32_3hop_125_rand",
+    "evidence_id": "e_5a766b39f0a19079f7ac0114aac103770bba1fcef29f391cde6cf2fd6d703701",
+    "context_position": 2,
+    "status": "exact",
+    "unit_ids": [
+      "u_5e62d2f32a551d3792c7680d9c34685f7832889e05d6b547a4b05ba7b0096ed0"
+    ],
+    "reason": "normalized index, hierarchy and full body agree",
+    "duplicate_annotation": false
+  },
+  {
+    "query_id": "qa_74_3hop_116",
+    "evidence_id": "e_bf800a8df21ceacf0ba386635332a0a9735e16c32df6c6a63b1567cf419cb63a",
+    "context_position": 0,
+    "status": "exact",
+    "unit_ids": [
+      "u_5dd527d44c2fe2aa3f412b35d1544ec4437fdd00205937dd504a098087847d9c"
+    ],
+    "reason": "normalized index, hierarchy and full body agree",
+    "duplicate_annotation": false
+  },
+  {
+    "query_id": "qa_74_3hop_116",
+    "evidence_id": "e_84525f638d9d71d62f3c2892bbca5f9eb3156b1ceed757163df8b1c0dad366e8",
+    "context_position": 1,
+    "status": "exact",
+    "unit_ids": [
+      "u_352021a9f4a19e8f3c34aedce2b71a9852fc49152f78d61a31333a3c7749b9f3"
+    ],
+    "reason": "normalized index, hierarchy and full body agree",
+    "duplicate_annotation": false
+  },
+  {
+    "query_id": "qa_74_3hop_116",
+    "evidence_id": "e_3f83a7a51a30cee7a23afded2f93322d2b1fc108e7eefeffd827708f987b06fd",
+    "context_position": 2,
+    "status": "exact",
+    "unit_ids": [
+      "u_585b808719dce4321f0398b9c24d9ae452986c1b37f3fd2f3f698522c711eecc"
+    ],
+    "reason": "normalized index, hierarchy and full body agree",
+    "duplicate_annotation": false
+  },
+  {
+    "query_id": "qa_321_3hop_511",
+    "evidence_id": "e_765f2c4ac64955b2f4e2e602fc0a80648e4691eb14e25f26cb34fadd7cbeb6f2",
+    "context_position": 0,
+    "status": "exact",
+    "unit_ids": [
+      "u_7a1cbffed8052fa75d55ba2d4cdc673037d084ec591ec179539e4d77dea09549"
+    ],
+    "reason": "normalized index, hierarchy and full body agree",
+    "duplicate_annotation": false
+  },
+  {
+    "query_id": "qa_321_3hop_511",
+    "evidence_id": "e_56d67200d6a2c4f31c150d7dadc8d7832508852027a9ca3b8f1451ea3ca8874b",
+    "context_position": 1,
+    "status": "exact",
+    "unit_ids": [
+      "u_b3a188a4ce08995ca8e408de0bad638adf0dc736fbc15add11fff65881cc6a09"
+    ],
+    "reason": "normalized index, hierarchy and full body agree",
+    "duplicate_annotation": false
+  },
+  {
+    "query_id": "qa_321_3hop_511",
+    "evidence_id": "e_bf5d0f202614cdda2bcf80729bcebc89a8dea514fb09d3698a16fcc45b053114",
+    "context_position": 2,
+    "status": "exact",
+    "unit_ids": [
+      "u_b029e0114a1bd2f2ff8b2a231b8b564fe406f19f8fa4d443f67183c6651dd22a"
+    ],
+    "reason": "normalized index, hierarchy and full body agree",
+    "duplicate_annotation": false
+  },
+  {
+    "query_id": "qa_17_1hop_24",
+    "evidence_id": "e_8e6b1d491387fe58c36ac099fc386093efbe49815bab58d3d498a95981080028",
+    "context_position": 0,
+    "status": "exact",
+    "unit_ids": [
+      "u_30d7f50403b43864586d512964f984cc9185bec7da3e80526811987e86294d2a"
+    ],
+    "reason": "normalized index, hierarchy and full body agree",
+    "duplicate_annotation": false
+  },
+  {
+    "query_id": "qa_56_1hop_86",
+    "evidence_id": "e_4abc589eb4f68e74b3ba8647c5ae444c636ed0f5991760e1d93e0f2dff4617a4",
+    "context_position": 0,
+    "status": "exact",
+    "unit_ids": [
+      "u_c26a7fa46d5dc91cea11f80ca9863ba0555d5976b6ade4460a40ace2cd9a1c36"
+    ],
+    "reason": "normalized index, hierarchy and full body agree",
+    "duplicate_annotation": false
+  },
+  {
+    "query_id": "qa_85_1hop_135",
+    "evidence_id": "e_9aa4a97ca1e7fbc91b6c560c6af3d0168a21bffa280331ce1c078ac600a3e584",
+    "context_position": 0,
+    "status": "exact",
+    "unit_ids": [
+      "u_55140520a8ddf1247d97d29439705ad02645c1a763fb030227d20cd6c571113b"
+    ],
+    "reason": "normalized index, hierarchy and full body agree",
+    "duplicate_annotation": false
+  },
+  {
+    "query_id": "qa_138_1hop_252",
+    "evidence_id": "e_e1f537a1fd2ff5d04085870d8c54b56936cb1b71f2a083c14a4e53e32bee222d",
+    "context_position": 0,
+    "status": "exact",
+    "unit_ids": [
+      "u_22e06a3c01e193a36355e45eef688aba33fb2fbc4ae3d8f390b6dc8c4e857309"
+    ],
+    "reason": "normalized index, hierarchy and full body agree",
+    "duplicate_annotation": false
+  },
+  {
+    "query_id": "qa_168_1hop_299",
+    "evidence_id": "e_0a7bdf705eb440300dab2ce0abbac4d889c209bbc493d575a84bb559c36e13af",
+    "context_position": 0,
+    "status": "exact",
+    "unit_ids": [
+      "u_5ea81619f691cf4bcc784893455bfb32f461c7990ea9f9f0f1b87cad10244728"
+    ],
+    "reason": "normalized index, hierarchy and full body agree",
+    "duplicate_annotation": false
+  },
+  {
+    "query_id": "qa_299_2hop_473",
+    "evidence_id": "e_fd2e4dc091ae4d67d8f3f01a0cfd7524b644c952fcfce4726024d3ce5df645b3",
+    "context_position": 0,
+    "status": "exact",
+    "unit_ids": [
+      "u_5665cab8dbeabbe3fe09c85419af3d1d8887f9b02cc29fa5392a276938ad3e3f"
+    ],
+    "reason": "normalized index, hierarchy and full body agree",
+    "duplicate_annotation": false
+  },
+  {
+    "query_id": "qa_299_2hop_473",
+    "evidence_id": "e_6fa536fc6f16ebf18f387a690b0325b563070ea400d234c1d66c3f941c3a9bd0",
+    "context_position": 1,
+    "status": "exact",
+    "unit_ids": [
+      "u_ea961a84629100b5ed6b494ee16517c37e05f437d382ba74505efb3c36a29eaa"
+    ],
+    "reason": "normalized index, hierarchy and full body agree",
+    "duplicate_annotation": false
+  },
+  {
+    "query_id": "qa_473_2hop_745",
+    "evidence_id": "e_98380fe5fde98a2828ad268c8ff844f420d555aa417ac714d427d34b1023a809",
+    "context_position": 0,
+    "status": "exact",
+    "unit_ids": [
+      "u_c29199d19764fc4fcd8f36c075600fc7705435a38b231666f2ef1e8562bf456a"
+    ],
+    "reason": "normalized index, hierarchy and full body agree",
+    "duplicate_annotation": false
+  },
+  {
+    "query_id": "qa_473_2hop_745",
+    "evidence_id": "e_7a08beb3b1ff00e900d2efda3138ec6b742864fc5cdc8d7327bc63ccb69a2a6b",
+    "context_position": 1,
+    "status": "exact",
+    "unit_ids": [
+      "u_18ad15cdbd45b06de309e44821a5503fb89b8c0ae428c32b55bab79982f7093a"
+    ],
+    "reason": "normalized index, hierarchy and full body agree",
+    "duplicate_annotation": false
+  },
+  {
+    "query_id": "qa_608_2hop_918",
+    "evidence_id": "e_60172f17fdff799cd052ed0261c80e40b5307eb34cc65a362ff988e9de9f0b0a",
+    "context_position": 0,
+    "status": "exact",
+    "unit_ids": [
+      "u_e70b0f2d327317fc043516c99a76257ac9711ae87945b418d1ec3138e7bdb9f2"
+    ],
+    "reason": "normalized index, hierarchy and full body agree",
+    "duplicate_annotation": false
+  },
+  {
+    "query_id": "qa_608_2hop_918",
+    "evidence_id": "e_7cd00d2efd032987169a7e50a08b96691c94063f8d0d0e8a8d51adbc842402be",
+    "context_position": 1,
+    "status": "exact",
+    "unit_ids": [
+      "u_767de1086224509912d320e51df1c152345df79b90307fdafcd06d2c91666820"
+    ],
+    "reason": "normalized index, hierarchy and full body agree",
+    "duplicate_annotation": false
+  },
+  {
+    "query_id": "qa_47_2hop_184_rand",
+    "evidence_id": "e_54c87675406d2112ad89e4e6c8006925d24222733d9eda20f465412a053e5b39",
+    "context_position": 0,
+    "status": "exact",
+    "unit_ids": [
+      "u_ebf4d13663a19b1d7eb06e76341cff0e7188c7bf6dc9abfa3131a7c48d8b1326"
+    ],
+    "reason": "normalized index, hierarchy and full body agree",
+    "duplicate_annotation": false
+  },
+  {
+    "query_id": "qa_47_2hop_184_rand",
+    "evidence_id": "e_45c255897aff4d009bc63f07ce1f4e7b609c5f62347960bd9f9b53db4838e045",
+    "context_position": 1,
+    "status": "exact",
+    "unit_ids": [
+      "u_8000cb0479153842abba92c298a03bddf8111f0382cb99aa5e166a5cc0c740dc"
+    ],
+    "reason": "normalized index, hierarchy and full body agree",
+    "duplicate_annotation": false
+  },
+  {
+    "query_id": "qa_102_2hop_400_rand",
+    "evidence_id": "e_06b1ce798908face91f490e73d8dc28119cc64fde250f8b1d30160b00376cc0e",
+    "context_position": 0,
+    "status": "exact",
+    "unit_ids": [
+      "u_f508dc2795fc13ad1df1de5897f3ff2d6c3a68ee294e9ad5487b87e142f21094"
+    ],
+    "reason": "normalized index, hierarchy and full body agree",
+    "duplicate_annotation": false
+  },
+  {
+    "query_id": "qa_102_2hop_400_rand",
+    "evidence_id": "e_0978999e0a69b2aab1c1055b4956d70714c3a7350b2b0e1bba373a1af08433b7",
+    "context_position": 1,
+    "status": "exact",
+    "unit_ids": [
+      "u_a7b49122512437ca556c0ea2f8fbdaa6cd71526decc66f84a7c023329516ecdd"
+    ],
+    "reason": "normalized index, hierarchy and full body agree",
+    "duplicate_annotation": false
+  },
+  {
+    "query_id": "qa_211_2hop_804_rand",
+    "evidence_id": "e_47976801eff3a6bfe1adf109c69cce553928ab55487232606888798e20b8c425",
+    "context_position": 0,
+    "status": "exact",
+    "unit_ids": [
+      "u_ca29457c0c8a7375031568e21a37ce29fb9e61fc8cb0d36b7d3f74c6bf806271"
+    ],
+    "reason": "normalized index, hierarchy and full body agree",
+    "duplicate_annotation": false
+  },
+  {
+    "query_id": "qa_211_2hop_804_rand",
+    "evidence_id": "e_6e433915eb73edeb28f6572d484f1655d478309601df1d91c1782157f390fb94",
+    "context_position": 1,
+    "status": "exact",
+    "unit_ids": [
+      "u_d10853c21ee506735ef79a5e8ac04735abaa834abd48d6e40b0fcb5749d5155a"
+    ],
+    "reason": "normalized index, hierarchy and full body agree",
+    "duplicate_annotation": false
+  },
+  {
+    "query_id": "qa_250_2hop_955_rand",
+    "evidence_id": "e_ebac8ef50c17348e9174dc3870a3b67fe69a1912d8314b10c736f29c32928601",
+    "context_position": 0,
+    "status": "exact",
+    "unit_ids": [
+      "u_6c5787944f5f9b83cf35a1f3f9e4afe80bce820ffbc0ad6a03ce061112e23190"
+    ],
+    "reason": "normalized index, hierarchy and full body agree",
+    "duplicate_annotation": false
+  },
+  {
+    "query_id": "qa_250_2hop_955_rand",
+    "evidence_id": "e_b9ab31a620503a8872488e635883d2e2f0c6701bd390a0a8855af2e2c7a0630f",
+    "context_position": 1,
+    "status": "exact",
+    "unit_ids": [
+      "u_1b7f1ea73339126688fe0cea5f7c1659b40c3678589e29cc2635d3cd7c282340"
+    ],
+    "reason": "normalized index, hierarchy and full body agree",
+    "duplicate_annotation": false
+  },
+  {
+    "query_id": "qa_132_3hop_508_rand",
+    "evidence_id": "e_738af347c5f19cf95f7a0bfb52d66245bb794607803b74373009143fbb0677ad",
+    "context_position": 0,
+    "status": "exact",
+    "unit_ids": [
+      "u_1f60036ec691c778a36c0f15843ca35a2c37ee0d2bdf1571b73c6e78fd2741f2"
+    ],
+    "reason": "normalized index, hierarchy and full body agree",
+    "duplicate_annotation": false
+  },
+  {
+    "query_id": "qa_132_3hop_508_rand",
+    "evidence_id": "e_5f5ccadbd0089bb4f6e5e87921a1556d4ae55a241868e561f957db3ffab3badc",
+    "context_position": 1,
+    "status": "exact",
+    "unit_ids": [
+      "u_f6293648125bee00d31ee59a0f5f5cbe6a723e4de0358effa4dfc36c3a57c2c7"
+    ],
+    "reason": "normalized index, hierarchy and full body agree",
+    "duplicate_annotation": false
+  },
+  {
+    "query_id": "qa_132_3hop_508_rand",
+    "evidence_id": "e_7a13598e01c7444b6739f91c387f54312a121cf3dc8b6a1e3680af1e5848be1c",
+    "context_position": 2,
+    "status": "exact",
+    "unit_ids": [
+      "u_fb90ac58e78789ce49375471a645fcc79c3ef7011aa9d9638f51aabda960554d"
+    ],
+    "reason": "normalized index, hierarchy and full body agree",
+    "duplicate_annotation": false
+  },
+  {
+    "query_id": "qa_77_3hop_121",
+    "evidence_id": "e_c77f1c1d8b6f4ace3a44055766adf8520c6d81d5f7ef4eaff19676fa3467c2b8",
+    "context_position": 0,
+    "status": "exact",
+    "unit_ids": [
+      "u_62ecb32035d4d0a2154fbc27852cd343d9cf8c240b5f06907dd202d68f103e69"
+    ],
+    "reason": "normalized index, hierarchy and full body agree",
+    "duplicate_annotation": false
+  },
+  {
+    "query_id": "qa_77_3hop_121",
+    "evidence_id": "e_78cd07e39d95d800b1e9a816d012ca6928038a986c9730628e69bd5efe0bc141",
+    "context_position": 1,
+    "status": "exact",
+    "unit_ids": [
+      "u_bde66f21674cad52dc06d063eb7c44ff3527a94682a6b3cf4636043044ed7c4a"
+    ],
+    "reason": "normalized index, hierarchy and full body agree",
+    "duplicate_annotation": false
+  },
+  {
+    "query_id": "qa_77_3hop_121",
+    "evidence_id": "e_b2750f38433175c7444e14fd2c43149f22ac30e55a2ffc6fe861e9a8c70d9de3",
+    "context_position": 2,
+    "status": "assembled",
+    "unit_ids": [
+      "u_0acccbd430d95c1e1f9a6f104d64cd9dd521330ad6052494ca9c3bd6ca6f22e8",
+      "u_72064a45ac30a2003d53f5bc8a043288f0930fdd24172ca192ae0c0a53ddebf6",
+      "u_914d1b9ec42a5edd28951bd43b1f74686bdea10f8cbefc24ab92929deb93cbdd",
+      "u_37355a0c8329414e4d123d8d76d383a1b487ed54e2414f72cd2614ecf6f36455"
+    ],
+    "reason": "ordered full bodies exactly reconstruct reference",
+    "duplicate_annotation": false
+  },
+  {
+    "query_id": "qa_329_3hop_523",
+    "evidence_id": "e_8e6b1d491387fe58c36ac099fc386093efbe49815bab58d3d498a95981080028",
+    "context_position": 0,
+    "status": "exact",
+    "unit_ids": [
+      "u_30d7f50403b43864586d512964f984cc9185bec7da3e80526811987e86294d2a"
+    ],
+    "reason": "normalized index, hierarchy and full body agree",
+    "duplicate_annotation": false
+  },
+  {
+    "query_id": "qa_329_3hop_523",
+    "evidence_id": "e_d5c62b54386cd6bba4f7b2320157c766ef8e1c219a8e3045ee3ce69d8e810b1f",
+    "context_position": 1,
+    "status": "exact",
+    "unit_ids": [
+      "u_4d99ccb7ef53380319264d62d1387e8717172b9c4b3e34ab5ca5739d1a54221e"
+    ],
+    "reason": "normalized index, hierarchy and full body agree",
+    "duplicate_annotation": false
+  },
+  {
+    "query_id": "qa_329_3hop_523",
+    "evidence_id": "e_fa3f5797c8afa70451f08273dc5e93d4d75f22f93d95b5662aba8b4e3aa56e1c",
+    "context_position": 2,
+    "status": "exact",
+    "unit_ids": [
+      "u_76d7c7ac956a8eaffcca5bb0e3f47f619e8543626961967e616733f5a8a8fe20"
+    ],
+    "reason": "normalized index, hierarchy and full body agree",
+    "duplicate_annotation": false
+  },
+  {
+    "query_id": "qa_0_1hop_0",
+    "evidence_id": "e_1ad6ad8064d13fa894e5d3b001ee915f48870f8243fb18c66420553d37a9de09",
+    "context_position": 0,
+    "status": "exact",
+    "unit_ids": [
+      "u_0b302989ef11c9e1d54a201293e5e8486ac330b118d81881b3b3b43d67f89c49"
+    ],
+    "reason": "normalized index, hierarchy and full body agree",
+    "duplicate_annotation": false
+  },
+  {
+    "query_id": "qa_45_1hop_69",
+    "evidence_id": "e_ef4b878758eed876cd9f9c7b52719598c31b979fdfe8ac54afb979af6b3a8c81",
+    "context_position": 0,
+    "status": "exact",
+    "unit_ids": [
+      "u_807dc61a42586322737807929a5bfbcdf1c1d4177db73baeb43b40f306174119"
+    ],
+    "reason": "normalized index, hierarchy and full body agree",
+    "duplicate_annotation": false
+  },
+  {
+    "query_id": "qa_70_1hop_106",
+    "evidence_id": "e_81ca4f5378990d745db294de997dbb9a1575e1b3be4786094197237d547ac589",
+    "context_position": 0,
+    "status": "exact",
+    "unit_ids": [
+      "u_625b834a8039f4a71057f6eeb6cd90804a56340562ba589c0ad8cd760ec8b3ba"
+    ],
+    "reason": "normalized index, hierarchy and full body agree",
+    "duplicate_annotation": false
+  },
+  {
+    "query_id": "qa_110_1hop_193",
+    "evidence_id": "e_19f7d2bfa36279068f305ffd241733890f3cbb42e53f7a20ec841059730b576f",
+    "context_position": 0,
+    "status": "exact",
+    "unit_ids": [
+      "u_d89f71e93faaff9434bc7020c4f04f850839cb540ae7bf1d09b9553e3903e2ca"
+    ],
+    "reason": "normalized index, hierarchy and full body agree",
+    "duplicate_annotation": false
+  },
+  {
+    "query_id": "qa_154_1hop_281",
+    "evidence_id": "e_9b2fa3980165de9c5396425cf2541d84f58e48ea2f965e3da1f08b69692e615f",
+    "context_position": 0,
+    "status": "exact",
+    "unit_ids": [
+      "u_3241bfb5d955717320f4773a9dd1410f8eec0b16a47ce86e6a3d5368fb775fa3"
+    ],
+    "reason": "normalized index, hierarchy and full body agree",
+    "duplicate_annotation": false
+  },
+  {
+    "query_id": "qa_22_2hop_33",
+    "evidence_id": "e_6de6b910b71064b226f942719fa66b0e1ba1c282ba0cc98ec25428cd3e0954d5",
+    "context_position": 0,
+    "status": "assembled",
+    "unit_ids": [
+      "u_5f800738ca5c863c2c2d9ff30afd3c6121ad57dc9f9d610ca08a9c4ba902d065",
+      "u_c2303ddc0e49fa560b6256297feee3b38cc384911fc72f0796b688b0f3809687",
+      "u_50790c200555523d262429d40f2ef6ce6988ceee6ff2e290aab09f4211af5cd4",
+      "u_ee84b6b39d68605f7d14bed6ad1a344c0f89b89ad311767f5b027c960e484562",
+      "u_bf817232605fbfad3430e217698c625cf04ff7a531f48573935b33ea16a2e562",
+      "u_4ccba2400f1eaf8a09e8d3d898b0fda5dd3078ac1c74c484eda69840561d0812",
+      "u_f409d86f951a283a139f9dd93c837cef1c38023a6e935da267b054c36e2d0eb0"
+    ],
+    "reason": "ordered full bodies exactly reconstruct reference",
+    "duplicate_annotation": false
+  },
+  {
+    "query_id": "qa_22_2hop_33",
+    "evidence_id": "e_3d8b4b62b7b9d8745b817e333f52f9cdbc5afd9120909292e44c53ec3d49526a",
+    "context_position": 1,
+    "status": "exact",
+    "unit_ids": [
+      "u_efac3fca5da6b66f041f35f5996c9db68020022a6928b2259d96f373de27380c"
+    ],
+    "reason": "normalized index, hierarchy and full body agree",
+    "duplicate_annotation": false
+  },
+  {
+    "query_id": "qa_244_2hop_400",
+    "evidence_id": "e_d17c6aa7a2a78cdf66a928ef30bb9bdd7f1eaa4a3e82763856630a3470da3ad9",
+    "context_position": 0,
+    "status": "exact",
+    "unit_ids": [
+      "u_7882bbc0969b4c90c3d37297646926c9bee7e1119ff7d881584f064af359387f"
+    ],
+    "reason": "normalized index, hierarchy and full body agree",
+    "duplicate_annotation": false
+  },
+  {
+    "query_id": "qa_244_2hop_400",
+    "evidence_id": "e_9ce389ca9745cf8a37e9fb135392c517bfe606678dfedee944755b214c3023c9",
+    "context_position": 1,
+    "status": "exact",
+    "unit_ids": [
+      "u_c0ae49243cfbe2e3a6ad87476f1c2ceedd05b96905de03c2a9dbfb11c044f48f"
+    ],
+    "reason": "normalized index, hierarchy and full body agree",
+    "duplicate_annotation": false
+  },
+  {
+    "query_id": "qa_344_2hop_543",
+    "evidence_id": "e_031c336b46e5cc92233f30aed49cd407d657556373bc8ab4c7b876adcdf446ed",
+    "context_position": 0,
+    "status": "exact",
+    "unit_ids": [
+      "u_1c481dab307cf63ed5633071a915f7e9777516d0f3182d46f96bbf26137fedfc"
+    ],
+    "reason": "normalized index, hierarchy and full body agree",
+    "duplicate_annotation": false
+  },
+  {
+    "query_id": "qa_344_2hop_543",
+    "evidence_id": "e_a0d31bceb1dea6adb5b45527cc8920e17cb29a12b44d892590d622d5ca9c0faa",
+    "context_position": 1,
+    "status": "exact",
+    "unit_ids": [
+      "u_1f39959765b917704f1a68a0670a84ec3c7385a11e2084e99e2984847e135d5c"
+    ],
+    "reason": "normalized index, hierarchy and full body agree",
+    "duplicate_annotation": false
+  },
+  {
+    "query_id": "qa_344_2hop_543",
+    "evidence_id": "e_a66f1c119812dcbdba88e68dc35204705a5be0959ca9ba0bcda98fd2b95c06af",
+    "context_position": 2,
+    "status": "exact",
+    "unit_ids": [
+      "u_8f27ed6886da1da14b4a2ad69c0a5ddb4ef3b2820ef5855f08e71104c2931d2c"
+    ],
+    "reason": "normalized index, hierarchy and full body agree",
+    "duplicate_annotation": false
+  },
+  {
+    "query_id": "qa_429_2hop_665",
+    "evidence_id": "e_f147115d296fd9f70f520c6f3daca2b4664e52b3cdde8559df5756387eac11fa",
+    "context_position": 0,
+    "status": "exact",
+    "unit_ids": [
+      "u_53db92660cb6f5ad4b28774bf6de8b79c4759a7a5e53c93df4d02603ea26af35"
+    ],
+    "reason": "normalized index, hierarchy and full body agree",
+    "duplicate_annotation": false
+  },
+  {
+    "query_id": "qa_429_2hop_665",
+    "evidence_id": "e_41593c04987f14ee26f68fcbca710f2466ef72357f6b43522250366e6a8fb5fb",
+    "context_position": 1,
+    "status": "exact",
+    "unit_ids": [
+      "u_8078339e96b72d1bf0bf77e125cd69a131f1039a73f46fafb6b467c88c9c7937"
+    ],
+    "reason": "normalized index, hierarchy and full body agree",
+    "duplicate_annotation": false
+  },
+  {
+    "query_id": "qa_549_2hop_834",
+    "evidence_id": "e_510b9ddf34ce6a9df467025c1f6a6e9b31c28d531ec20759cdbda3e886298e98",
+    "context_position": 0,
+    "status": "exact",
+    "unit_ids": [
+      "u_d1914a6a4d40cf7a2ed993e3cea0a5fe60e01c63f09c96c264b4843abd614717"
+    ],
+    "reason": "normalized index, hierarchy and full body agree",
+    "duplicate_annotation": false
+  },
+  {
+    "query_id": "qa_549_2hop_834",
+    "evidence_id": "e_e1ba0d60bc3279ff8063aada319efd4aacff8afe925982ac503f32811dcb533f",
+    "context_position": 1,
+    "status": "exact",
+    "unit_ids": [
+      "u_ffd305b2dba495f10b2ee84949b8dd370e241f67628e849269819310e22328f5"
+    ],
+    "reason": "normalized index, hierarchy and full body agree",
+    "duplicate_annotation": false
+  },
+  {
+    "query_id": "qa_19_2hop_77_rand",
+    "evidence_id": "e_08a5ed5df6532518c28514d52aba7444e977fc87fca3fccdfbce7c2dfda48c28",
+    "context_position": 0,
+    "status": "exact",
+    "unit_ids": [
+      "u_3d44fb64808a7595629cc80730fefc4de4a9cc54809b21096f5387e4edf8fd0b"
+    ],
+    "reason": "normalized index, hierarchy and full body agree",
+    "duplicate_annotation": false
+  },
+  {
+    "query_id": "qa_19_2hop_77_rand",
+    "evidence_id": "e_4aa4d223ead3df3032f98a08b991b40321ca192b76fb93d50f2871c45f5171c3",
+    "context_position": 1,
+    "status": "exact",
+    "unit_ids": [
+      "u_6228551dd34789f811b63260a67412551dbe83b54c12c1ff49e9189bff0ea1ac"
+    ],
+    "reason": "normalized index, hierarchy and full body agree",
+    "duplicate_annotation": false
+  },
+  {
+    "query_id": "qa_19_2hop_77_rand",
+    "evidence_id": "e_4e3f1b0424c0147ce2e1bf447809cc135dd315ffce85c03c7fd9cbfb2dce93a0",
+    "context_position": 2,
+    "status": "exact",
+    "unit_ids": [
+      "u_e90fb645c3052c86bde11ddd0be106a50286cb16255ae5889466b05cb31889bf"
+    ],
+    "reason": "normalized index, hierarchy and full body agree",
+    "duplicate_annotation": false
+  },
+  {
+    "query_id": "qa_71_2hop_277_rand",
+    "evidence_id": "e_011fd54525720ed166c1a0fb0b58722237a8db5cee6ba17eb5ebfcd560b6be99",
+    "context_position": 0,
+    "status": "exact",
+    "unit_ids": [
+      "u_9bfe3ebf49880418ed2558a6a526b726fc7210fb0d6d294f73807941894d781b"
+    ],
+    "reason": "normalized index, hierarchy and full body agree",
+    "duplicate_annotation": false
+  },
+  {
+    "query_id": "qa_71_2hop_277_rand",
+    "evidence_id": "e_6824c20122563add3f74d8cb479465eb97b3720e578d02f0f4be088a626e2c7c",
+    "context_position": 1,
+    "status": "exact",
+    "unit_ids": [
+      "u_28e365890b2c1d0bb17e53798373166d8a18142494fc787309943bdf6fd19e6a"
+    ],
+    "reason": "normalized index, hierarchy and full body agree",
+    "duplicate_annotation": false
+  },
+  {
+    "query_id": "qa_136_2hop_523_rand",
+    "evidence_id": "e_f5d4ebbefe447dcc370217bd5ee649a50ef681b9c314ae5549c26615051cea38",
+    "context_position": 0,
+    "status": "exact",
+    "unit_ids": [
+      "u_5c032ab239281c0be601e4b903c2947835efb2463fb791d6bef24c527d27d96b"
+    ],
+    "reason": "normalized index, hierarchy and full body agree",
+    "duplicate_annotation": false
+  },
+  {
+    "query_id": "qa_136_2hop_523_rand",
+    "evidence_id": "e_95d9de54a863592b8a76613205ec132be7ee7c5bdd67a5b841c7cc27ae73c057",
+    "context_position": 1,
+    "status": "assembled",
+    "unit_ids": [
+      "u_7c6e67ad57a867eb9afd2c1f263302871e6d3e1b1cde9353b7b05c7da9b7a289",
+      "u_692d7af82906a2123dfb4631c111b3b41b9a2eac06c5d63be170161f9b682f88",
+      "u_228ca55a03fbeb217ce6d9023b581d83f53a8e850004724cce4ba73f05aea3eb",
+      "u_432fc0ee117bdd336852a2de763e49f207d1ab976539a3613f01c39591f8ba4c",
+      "u_73face1faf897491d4fae49e38385fe2ffc2dea6655e87fca1319f4b78abf1bd",
+      "u_1328405ce6c62c01fb54d43030d032fa3c186bc9ef16f4f61b7b1026b170767b"
+    ],
+    "reason": "ordered full bodies exactly reconstruct reference",
+    "duplicate_annotation": false
+  },
+  {
+    "query_id": "qa_198_2hop_756_rand",
+    "evidence_id": "e_37417177d8e5aa8302e8a32c6fbbc3a1223e3323120682716018e2bdd3b6c94e",
+    "context_position": 0,
+    "status": "exact",
+    "unit_ids": [
+      "u_05e10944148e8f8558e90d05c4db7d9dcd18885deb1a6dbe4271980a7f9d2086"
+    ],
+    "reason": "normalized index, hierarchy and full body agree",
+    "duplicate_annotation": false
+  },
+  {
+    "query_id": "qa_198_2hop_756_rand",
+    "evidence_id": "e_663afec19dbc4c1934da9f225cffbeb0d852c1293745feed1b33d79461b7d367",
+    "context_position": 1,
+    "status": "exact",
+    "unit_ids": [
+      "u_0d790387276118ff8c81fc85ced94c135d215a833cd90a63f9da20261ae79278"
+    ],
+    "reason": "normalized index, hierarchy and full body agree",
+    "duplicate_annotation": false
+  },
+  {
+    "query_id": "qa_240_2hop_916_rand",
+    "evidence_id": "e_cb27f94550c993a2a1afc9fcf709344afd77422c045bc1d6cc772c36e8671ba3",
+    "context_position": 0,
+    "status": "exact",
+    "unit_ids": [
+      "u_9df1c10ddd08f6ed87a3a9029b22a866d338c6f5d55418f05c9a251ce3ce224d"
+    ],
+    "reason": "normalized index, hierarchy and full body agree",
+    "duplicate_annotation": false
+  },
+  {
+    "query_id": "qa_240_2hop_916_rand",
+    "evidence_id": "e_436729d030ad2dd42085499afb95dcf416696828c7c46c7ebcf3c0d6f6ca00af",
+    "context_position": 1,
+    "status": "exact",
+    "unit_ids": [
+      "u_ef4cd0cbc4a8035910926c2cbf8dcaa5277b4981c380f0effdc35d348d03869b"
+    ],
+    "reason": "normalized index, hierarchy and full body agree",
+    "duplicate_annotation": false
+  },
+  {
+    "query_id": "qa_297_2hop_1135_rand",
+    "evidence_id": "e_ef73c55d0e1a1dc834e881ad5590e27fccd06023aaf1d67c99a192f8d9dbfc64",
+    "context_position": 0,
+    "status": "exact",
+    "unit_ids": [
+      "u_9e24e9d9958ae94882d75e4d27a112de5a6ef401aaed6148098d55872b9d89cc"
+    ],
+    "reason": "normalized index, hierarchy and full body agree",
+    "duplicate_annotation": false
+  },
+  {
+    "query_id": "qa_297_2hop_1135_rand",
+    "evidence_id": "e_0fb9eacfd3163b4db0afe07475223081d3446acd301d4848199ce0405314dc08",
+    "context_position": 1,
+    "status": "exact",
+    "unit_ids": [
+      "u_9aec92ddb6d145d2ac0bf80ba273be0e7ca894fe4fe925c2fa2f432bd2278c35"
+    ],
+    "reason": "normalized index, hierarchy and full body agree",
+    "duplicate_annotation": false
+  },
+  {
+    "query_id": "qa_293_3hop_839_rand2",
+    "evidence_id": "e_965b2bb167fbed2bd6e2a46d7b387ac152ceaac1060ad4040685b5482933f38b",
+    "context_position": 0,
+    "status": "exact",
+    "unit_ids": [
+      "u_5e8a2c8e2c8901b9b2fc606080db14e8e94de2befa2749be5f048bdca57293e0"
+    ],
+    "reason": "normalized index, hierarchy and full body agree",
+    "duplicate_annotation": false
+  },
+  {
+    "query_id": "qa_293_3hop_839_rand2",
+    "evidence_id": "e_e606186e5cd5e5575a66d36b1428f2addeb5b4b74eac12acdcd350c8a7867309",
+    "context_position": 1,
+    "status": "exact",
+    "unit_ids": [
+      "u_b1d965edd53213366dc14de65f55871eeca01458352435a5245702a8e0ad3e80"
+    ],
+    "reason": "normalized index, hierarchy and full body agree",
+    "duplicate_annotation": false
+  },
+  {
+    "query_id": "qa_293_3hop_839_rand2",
+    "evidence_id": "e_02f83e21a2d4ffeb1aedb6e87f63a7b12896f9310c108bde23c288999f4f1fb2",
+    "context_position": 2,
+    "status": "exact",
+    "unit_ids": [
+      "u_8f11aff08b52283923c602e2279f3faddc4d7211425cae1a7b5105123ca5ec66"
+    ],
+    "reason": "normalized index, hierarchy and full body agree",
+    "duplicate_annotation": false
+  },
+  {
+    "query_id": "qa_136_3hop_249",
+    "evidence_id": "e_d2ba80cb302972cd27bdb90be4dfff0888805ba18d5081d8cec204b5e1d1b77e",
+    "context_position": 0,
+    "status": "exact",
+    "unit_ids": [
+      "u_941300043a35c058c77e2cc77a3c16e46056b19947aa4a8fb96cf9280ae809b2"
+    ],
+    "reason": "normalized index, hierarchy and full body agree",
+    "duplicate_annotation": false
+  },
+  {
+    "query_id": "qa_136_3hop_249",
+    "evidence_id": "e_41d89d3f7f2a61537e20bdb5c5faeb6f37c1662aadd77f83233c3df3fdd00132",
+    "context_position": 1,
+    "status": "exact",
+    "unit_ids": [
+      "u_027a3065edd88698207a55bfb5e75ada1c61f3cdcac7897e39f207987f4006ef"
+    ],
+    "reason": "normalized index, hierarchy and full body agree",
+    "duplicate_annotation": false
+  },
+  {
+    "query_id": "qa_136_3hop_249",
+    "evidence_id": "e_e29376c1baf625a02a319237210df48ad6d959c6e02199a2eaa8424b8e422d94",
+    "context_position": 2,
+    "status": "exact",
+    "unit_ids": [
+      "u_6d2c31291b48daee9e017176f0c0d73f4efe2801a043222570a1e984e0d6658d"
+    ],
+    "reason": "normalized index, hierarchy and full body agree",
+    "duplicate_annotation": false
+  },
+  {
+    "query_id": "qa_443_3hop_703",
+    "evidence_id": "e_f92c398b53aacf03a221e74ea66421e249a86161912b99d2c4ca441848f42c9a",
+    "context_position": 0,
+    "status": "exact",
+    "unit_ids": [
+      "u_03d9530cc7ed74c958a7ac05fa47e50e31fe1c2d6cbade2c40ee7050ff6346cd"
+    ],
+    "reason": "normalized index, hierarchy and full body agree",
+    "duplicate_annotation": false
+  },
+  {
+    "query_id": "qa_443_3hop_703",
+    "evidence_id": "e_508e9f8dbdb8bb4276dc0f3a2a83cd23f8c181ac3e23a15b642888c419ea44b3",
+    "context_position": 1,
+    "status": "exact",
+    "unit_ids": [
+      "u_582d3e874ff85f5a0abcc81b1ef40acacc32ee2bcb116332fb9b857635fd00a1"
+    ],
+    "reason": "normalized index, hierarchy and full body agree",
+    "duplicate_annotation": false
+  },
+  {
+    "query_id": "qa_443_3hop_703",
+    "evidence_id": "e_c2ea11642d08510e2fd05e8105eba4d07a520ec0f20e616525e249ac9cc0c8cb",
+    "context_position": 2,
+    "status": "assembled",
+    "unit_ids": [
+      "u_e508c1fdd7c4a288fd653f304ccdf97294f8293d1d6461dd364c5d79e4abee7d",
+      "u_cffa6b5d23daf228955f3b7b819d24279c3e8461ebd61c2a708b727c0c2b04ff",
+      "u_2d0b6758834e82770471b5a40f43cbc187152664d05d663559f37efb723dd1ae",
+      "u_90eaec7515ca5b87f61e43d516cfe8b0cd9689d41fb9f6118dc9a19c98386228",
+      "u_77b734179179780c588c053d589ffdfb1d7c35b2691d50ef2ac7708403365d1e"
+    ],
+    "reason": "ordered full bodies exactly reconstruct reference",
+    "duplicate_annotation": false
+  }
+]

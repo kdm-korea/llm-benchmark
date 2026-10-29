@@ -1,0 +1,114 @@
+{
+  "raw_root": "data/raw/koblex",
+  "retrieved_at_utc": "2026-10-23T11:44:12.264263+00:00",
+  "sources": [
+    {
+      "repo": "JihyungL/KoBLEX-koblex",
+      "revision": "c61652a4cb72c8d79dd34b8daf7efe08a3a5947f",
+      "files": [
+        {
+          "path": "data/raw/koblex/KoBLEX-koblex/.gitattributes",
+          "url": "https://huggingface.co/datasets/JihyungL/KoBLEX-koblex/resolve/c61652a4cb72c8d79dd34b8daf7efe08a3a5947f/.gitattributes",
+          "size_bytes": 2461,
+          "sha256": "e7a120ab07b1bc5b486be249e9fc6c83d59448d0093e1dfebe95d1566d9cafc0"
+        },
+        {
+          "path": "data/raw/koblex/KoBLEX-koblex/README.md",
+          "url": "https://huggingface.co/datasets/JihyungL/KoBLEX-koblex/resolve/c61652a4cb72c8d79dd34b8daf7efe08a3a5947f/README.md",
+          "size_bytes": 814,
+          "sha256": "bf62edfee230b1cef9ebcaf6084e997ed246d20199b42aca08ecb9452769f7b0"
+        },
+        {
+          "path": "data/raw/koblex/KoBLEX-koblex/data/test-00000-of-00001.parquet",
+          "url": "https://huggingface.co/datasets/JihyungL/KoBLEX-koblex/resolve/c61652a4cb72c8d79dd34b8daf7efe08a3a5947f/data/test-00000-of-00001.parquet",
+          "size_bytes": 455400,
+          "sha256": "afdaff3a8000cdf5e0a64adbcfc8e6aff0042b318bf03718155f2b70f551c47b"
+        },
+        {
+          "path": "data/raw/koblex/KoBLEX-koblex/data/train-00000-of-00001.parquet",
+          "url": "https://huggingface.co/datasets/JihyungL/KoBLEX-koblex/resolve/c61652a4cb72c8d79dd34b8daf7efe08a3a5947f/data/train-00000-of-00001.parquet",
+          "size_bytes": 455400,
+          "sha256": "afdaff3a8000cdf5e0a64adbcfc8e6aff0042b318bf03718155f2b70f551c47b"
+        }
+      ]
+    },
+    {
+      "repo": "JihyungL/KoBLEX-statute",
+      "revision": "9af89d404f51ee75d1bdd42784e29b0018ee5413",
+      "files": [
+        {
+          "path": "data/raw/koblex/KoBLEX-statute/.gitattributes",
+          "url": "https://huggingface.co/datasets/JihyungL/KoBLEX-statute/resolve/9af89d404f51ee75d1bdd42784e29b0018ee5413/.gitattributes",
+          "size_bytes": 2461,
+          "sha256": "e7a120ab07b1bc5b486be249e9fc6c83d59448d0093e1dfebe95d1566d9cafc0"
+        },
+        {
+          "path": "data/raw/koblex/KoBLEX-statute/README.md",
+          "url": "https://huggingface.co/datasets/JihyungL/KoBLEX-statute/resolve/9af89d404f51ee75d1bdd42784e29b0018ee5413/README.md",
+          "size_bytes": 357,
+          "sha256": "df5147fe9eeb54cf0224103bd370cd306980f0bbf1de43e4144653b77f590ac9"
+        },
+        {
+          "path": "data/raw/koblex/KoBLEX-statute/data/corpus-00000-of-00001.parquet",
+          "url": "https://huggingface.co/datasets/JihyungL/KoBLEX-statute/resolve/9af89d404f51ee75d1bdd42784e29b0018ee5413/data/corpus-00000-of-00001.parquet",
+          "size_bytes": 28773033,
+          "sha256": "6323f7d024ec504f4b2346cd3ab67aa709aac49a5340c9f3d8372ad6bd5f9b8b"
+        },
+        {
+          "path": "data/raw/koblex/KoBLEX-statute/data/train-00000-of-00001.parquet",
+          "url": "https://huggingface.co/datasets/JihyungL/KoBLEX-statute/resolve/9af89d404f51ee75d1bdd42784e29b0018ee5413/data/train-00000-of-00001.parquet",
+          "size_bytes": 28773033,
+          "sha256": "6323f7d024ec504f4b2346cd3ab67aa709aac49a5340c9f3d8372ad6bd5f9b8b"
+        }
+      ]
+    },
+    {
+      "repo": "https://github.com/daehuikim/KoBLEX",
+      "revision": "1a2d225be33a70ebf91e2b6369acf27551dcfbb4",
+      "files": [
+        {
+          "path": "data/raw/koblex/official-repo/README.md",
+          "url": "https://raw.githubusercontent.com/daehuikim/KoBLEX/1a2d225be33a70ebf91e2b6369acf27551dcfbb4/README.md",
+          "size_bytes": 6557,
+          "sha256": "9713e98feb4d654a92aace4c554087d1d5f83bcdb03b2a3842530106750d3b1c"
+        },
+        {
+          "path": "data/raw/koblex/official-repo/LICENSE",
+          "url": "https://raw.githubusercontent.com/daehuikim/KoBLEX/1a2d225be33a70ebf91e2b6369acf27551dcfbb4/LICENSE",
+          "size_bytes": 19345,
+          "sha256": "db2e35513dbadcdc67f5819a3bfee2777786538dd3531620cd5fbd4b6ed6e538"
+        },
+        {
+          "path": "data/raw/koblex/official-repo/experiments/README.md",
+          "url": "https://raw.githubusercontent.com/daehuikim/KoBLEX/1a2d225be33a70ebf91e2b6369acf27551dcfbb4/experiments/README.md",
+          "size_bytes": 9326,
+          "sha256": "f0c07137f00e187d37e6900afe8c56e975eec757bf0f5351d34d6d912927f660"
+        },
+        {
+          "path": "data/raw/koblex/official-repo/experiments/lf-eval/README.md",
+          "url": "https://raw.githubusercontent.com/daehuikim/KoBLEX/1a2d225be33a70ebf91e2b6369acf27551dcfbb4/experiments/lf-eval/README.md",
+          "size_bytes": 6919,
+          "sha256": "fbdc02076aa5711a6879ce0cdbc961bbaa695724ded48b1298b448845fa81a7b"
+        },
+        {
+          "path": "data/raw/koblex/official-repo/experiments/lf-eval/eval_pipeline.py",
+          "url": "https://raw.githubusercontent.com/daehuikim/KoBLEX/1a2d225be33a70ebf91e2b6369acf27551dcfbb4/experiments/lf-eval/eval_pipeline.py",
+          "size_bytes": 12319,
+          "sha256": "89b20578abd491273b7b14d33a4e52c1b401eb3399d074743536e1406b270fa7"
+        },
+        {
+          "path": "data/raw/koblex/official-repo/experiments/parser/openai/utils.py",
+          "url": "https://raw.githubusercontent.com/daehuikim/KoBLEX/1a2d225be33a70ebf91e2b6369acf27551dcfbb4/experiments/parser/openai/utils.py",
+          "size_bytes": 6335,
+          "sha256": "8d8e22a5adee8854cf48ed4fd9c2522e28350136a588dbe65f7b2ab5a4a286b2"
+        },
+        {
+          "path": "data/raw/koblex/official-repo/experiments/parser/openai/selection_retrieval.py",
+          "url": "https://raw.githubusercontent.com/daehuikim/KoBLEX/1a2d225be33a70ebf91e2b6369acf27551dcfbb4/experiments/parser/openai/selection_retrieval.py",
+          "size_bytes": 6829,
+          "sha256": "88ac483f611126ae9efdaf417080f309057e3ae61978019cfe34a96c7ac1c3c9"
+        }
+      ]
+    }
+  ]
+}

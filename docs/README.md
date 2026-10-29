@@ -7,16 +7,17 @@
 실험은 [실험 목록](benchmarks/README.md)에 등록하고 개별 문서에서 관리합니다.
 
 - [한국어 판례 임베딩 검색 비교](benchmarks/embedding/README.md)
+- [KoBLEX 법령·정답 근거 구축](benchmarks/koblex/README.md)
 - [새 실험 문서 양식](benchmarks/experiment-template.md)
 
-평가 조건과 지표는 각 실험의 설계 문서에, 실제 실행 수치와 한계는 결과 보고서에 기록합니다. 프로젝트의 후속 작업 방향은 [루트 README](../README.md)에서 확인합니다.
+평가 조건과 지표는 각 실험의 설계 문서에, 실제 실행 수치와 한계는 결과 보고서에 기록합니다. 법률 분야의 후속 실험 방향은 [법률 RAG 연구 계획](research-plan.md)에서 관리합니다.
 
 ## 공통 개발 문서
 
 - [개발 아키텍처](engineering/architecture.md)
 - [설치·실행 환경과 실험별 격리](engineering/running.md)
 - [Git 커밋·브랜치 규칙](engineering/git-workflow.md)
-- [한국어 주석 작성 규칙](../AGENTS.md)
+- [주석과 코드 설명 작성 규칙](../AGENTS.md)
 - [시스템 프롬프트 관리](prompts/README.md)
 
 ## 분야별 자료
