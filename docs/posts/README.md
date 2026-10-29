@@ -4,14 +4,10 @@
 
 ## 원고 목록
 
+각 테스트 원고는 해당 테스트의 목적·입력·방법·결과·한계를 다룹니다. PDF 파싱, PDF 청킹, 법률 텍스트 청킹, 검색·재정렬, 답변 생성은 별도 테스트로 관리합니다. 전체 연구 계획 글은 테스트별 역할과 순서만 안내합니다.
+
 - [법률 RAG 개발을 위한 연구 방향과 단계별 평가 계획](2026-10-24-legal-rag-research-plan.md): 전체 연구 방향과 단계별 실험 계획을 다루는 포스트
 - [한국어 판례 임베딩 검색 비교](2026-10-23-legal-embedding-recall-benchmark.md): 전체 평가 결과를 정리한 게시 원고
-
-연구 방향 원고는 `assets/images/legal-rag-research-plan/research-roadmap.png`를 함께 게시합니다. 프로젝트 루트에서 다음 명령으로 재생성합니다.
-
-```sh
-MPLCONFIGDIR=/private/tmp/legal-rag-mpl XDG_CACHE_HOME=/private/tmp/legal-rag-cache .venv/bin/python docs/posts/scripts/render_research_roadmap.py
-```
 
 `2026-10-23-legal-embedding-recall-benchmark.md`는 Jekyll 포스트 원고입니다.
 
