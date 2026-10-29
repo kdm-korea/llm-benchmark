@@ -1,0 +1,27 @@
+normalization_version = "koblex-v1"
+source_manifest = "docs/benchmarks/koblex/source-manifest.json"
+
+[paths]
+raw = "data/raw/koblex"
+output = "data/prepared/koblex-v1"
+audit = "docs/benchmarks/koblex"
+
+[qa]
+repo = "JihyungL/KoBLEX-koblex"
+file = "data/test-00000-of-00001.parquet"
+duplicate_file = "data/train-00000-of-00001.parquet"
+split = "test"
+
+[corpus]
+repo = "JihyungL/KoBLEX-statute"
+file = "data/corpus-00000-of-00001.parquet"
+duplicate_file = "data/train-00000-of-00001.parquet"
+
+[split]
+seed = 20261023
+dev_ratio = 0.2
+similarity_threshold = 0.65
+shingle_size = 5
+
+[download]
+timeout_seconds = 120

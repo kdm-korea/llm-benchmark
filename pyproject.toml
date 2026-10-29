@@ -17,6 +17,7 @@ embedding = [
   "sentence-transformers>=5,<7",
   "mteb==2.26.11",
 ]
+koblex = ["pyarrow>=21,<27"]
 
 [dependency-groups]
 dev = ["pytest>=8,<10", "ruff>=0.11,<1", "mypy>=1.15,<2"]
@@ -43,7 +44,7 @@ no_implicit_optional = true
 follow_imports = "silent"
 
 [[tool.mypy.overrides]]
-module = ["yaml", "sentence_transformers.*", "mteb.*"]
+module = ["yaml", "sentence_transformers.*", "mteb.*", "pyarrow", "pyarrow.*"]
 ignore_missing_imports = true
 
 [tool.ruff]

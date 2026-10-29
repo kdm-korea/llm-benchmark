@@ -42,13 +42,34 @@ Recall은 질의마다 관련 판례 중 검색한 비율을 계산한 뒤 평�
 
 ## 평가 방식
 
-```text
-Corpus · Queries · Qrels 검증
-  → 모델별 문서·질의 임베딩
-  → 전체 Corpus의 cosine 정확 검색
-  → Recall@K·이진 nDCG@K 계산 및 검증
-  → 모델별·질의별 결과 저장
+```mermaid
+flowchart TD
+    CORPUS["판례 원본 corpus.jsonl<br/>docid: 문서 ID · title: 제목 · text: 본문"]
+    SOURCE["정답 원본 qrels.jsonl<br/>query: 질의 문장<br/>grades: 문서 ID별 관련성 등급"]
+    DOC["검색 문서<br/>doc_id → 제목 + 본문"]
+    QUERY["검색 질의<br/>질의 문장 해시로 query_id 생성<br/>같은 문장은 하나의 질의로 병합"]
+    GOLD["정답표 qrels<br/>query_id → doc_id → 관련성 등급<br/>중복 행은 문서 합집합·최대 등급 유지"]
+    DV["문서 벡터<br/>doc_id와 벡터의 대응 유지"]
+    QV["질의 벡터<br/>query_id와 벡터의 대응 유지"]
+    SEARCH["코사인 정확 검색<br/>질의 벡터를 전체 문서 벡터와 비교"]
+    RANK["검색 결과<br/>query_id → 순서가 있는 doc_id·점수 목록"]
+    EVAL["정답표와 ID로 비교<br/>양수 등급을 정답으로 사용<br/>Recall·이진 nDCG 계산·검증"]
+    OUT["모델별·질의별 지표<br/>원본 JSON · 요약 CSV · 실행 manifest"]
+    CORPUS --> DOC
+    SOURCE -->|query| QUERY
+    SOURCE -->|grades| GOLD
+    QUERY -->|동일한 query_id 사용| GOLD
+    DOC -->|모델 입력 구성·임베딩| DV
+    QUERY -->|질의만 임베딩| QV
+    DV --> SEARCH
+    QV --> SEARCH
+    SEARCH --> RANK
+    RANK --> EVAL
+    GOLD --> EVAL
+    EVAL --> OUT
 ```
+
+원본 정답의 `grades`가 가리키는 문서 ID가 corpus에 있는지 먼저 검증합니다. KoBLEX와 달리 본문 매핑을 새로 만들 필요가 없으며, 검색 결과와 정답을 `query_id`·`doc_id`로 바로 연결합니다. 정답 등급은 검색 입력에 넣지 않습니다.
 
 | 항목 | 설정 |
 | --- | --- |

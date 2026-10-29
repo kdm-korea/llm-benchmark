@@ -16,3 +16,9 @@ def fingerprint(value: object) -> str:
 def file_sha256(path: str | Path) -> str:
     with Path(path).open('rb') as stream:
         return hashlib.file_digest(stream, 'sha256').hexdigest()
+
+
+def compact_digest(value: object) -> str:
+    """KoBLEX ID의 호환성을 위해 입력 순서와 압축 JSON 구분자를 유지한다."""
+    payload = json.dumps(value, ensure_ascii=False, separators=(',', ':'))
+    return hashlib.sha256(payload.encode()).hexdigest()
