@@ -12,8 +12,6 @@
 
 KoBLEX 원고는 `assets/images/koblex-legal-evaluation-dataset/mapping.png`를 함께 게시합니다.
 
-KoBLEX 원고는 `assets/images/koblex-legal-evaluation-dataset/mapping.png`를 함께 게시합니다.
-
 `2026-10-23-legal-embedding-recall-benchmark.md`는 Jekyll 포스트 원고입니다.
 
 - [게시된 글](https://kdm-korea.github.io/rag/embedding/2026/10/23/legal-embedding-recall-benchmark.html)
