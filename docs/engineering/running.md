@@ -43,7 +43,7 @@ cache/test-envs/koblex/bin/python -m llm_benchmark.koblex
 
 `src/llm_benchmark/embedding/run.py`의 `run_benchmark()`에서 시작합니다. 데이터 처리는 `dataset.py`, 모델과 캐시는 `embeddings.py`, 검색과 지표는 `evaluation.py`에 있습니다.
 
-CLI 외에 `.venv/bin/python -m llm_benchmark.embedding.run prepare` 방식도 사용할 수 있습니다. 기존 CLI 명령과 옵션은 유지했습니다.
+CLI 인자는 `src/llm_benchmark/embedding/__main__.py`에서 처리합니다. `.venv/bin/python -m llm_benchmark.embedding prepare` 방식으로도 실행할 수 있으며, 기존 `.venv/bin/python -m llm_benchmark.embedding.run prepare`는 호환 진입점으로 유지합니다.
 
 ## 데이터 준비
 
@@ -94,6 +94,14 @@ CLI 외에 `.venv/bin/python -m llm_benchmark.embedding.run prepare` 방식도 �
 MTEB 2.26.11의 RetrievalEvaluator가 사용하는 지표 함수에 같은 정확 검색 결과를 직접 전달합니다. 이 연결은 `evaluation.py`에서 관리하며 별도 Custom Task를 생성하지 않습니다. MTEB 지표와 프로젝트의 비반올림 Recall을 비교하고 오차가 반올림 범위를 벗어나면 실패합니다. MTEB의 부가 지표는 원본 JSON에 보존되지만 1차 비교표에는 Recall만 사용합니다.
 
 ## 검증
+
+개발 의존성의 Ruff로 작은따옴표·줄바꿈·import 정렬을 확인하고, mypy는 설치된 Python 환경을 기준으로 전체 `src/llm_benchmark`를 검사합니다. 개별 실험을 추가해도 검사 범위를 해당 실험 하나로 바꾸지 않습니다. 모든 실험의 타입 검사에는 해당 extra의 의존성을 설치합니다.
+
+```bash
+.venv/bin/ruff check src tests scripts docs/posts/scripts
+.venv/bin/ruff format --check src tests scripts docs/posts/scripts
+.venv/bin/mypy
+```
 
 ```bash
 .venv/bin/python -m pytest -q

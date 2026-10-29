@@ -10,10 +10,14 @@ src/llm_benchmark/
     hashing.py       # 파일 SHA-256·기존 JSON 해시 형식 유지
     io.py            # 원자적 JSON·JSONL 읽기/쓰기
   embedding/
+    __main__.py      # CLI 인자 처리와 명령 분기
+    config.py        # YAML 입력 검증과 설정 구성
+    models.py        # 원본 스키마·내부 데이터·단계별 결과 타입
+    parsing.py       # 외부 입력의 자료형 검증
     dataset.py       # EVE 다운로드, 데이터 검증, 정규화, JSON 저장
     embeddings.py    # 모델 로드, 입력 구성, 임베딩, 캐시 검증
     evaluation.py    # 전체 Corpus 정확 검색, Recall 계산, MTEB 검증
-    run.py           # 임베딩 CLI, 실험 순서, probe, 결과 저장
+    run.py           # 실험 순서, probe, 결과 저장
   koblex/
     models.py        # 원본·매핑·분할·평가 데이터 타입
     download.py      # 고정 원본 다운로드·해시 검증
@@ -25,7 +29,9 @@ src/llm_benchmark/
     __main__.py      # KoBLEX 구축 실행 진입점
 ```
 
-`embedding/run.py`의 `run_benchmark()`부터 읽으면 임베딩 실험 전체를 따라갈 수 있습니다. 기존 `embedding-benchmark` 명령은 이 모듈을 실행합니다. KoBLEX는 `python -m llm_benchmark.koblex`로 별도 실행하며 모델을 로드하지 않습니다. `prepare()`는 `load_sources → map_sources → partition_dataset → 검증·저장` 순서로 실행하며, 각 단계는 `SourceDataset → MappedDataset → PreparedDataset` 객체로 연결합니다. 원본 읽기·저장만 파일에 접근합니다.
+`embedding/run.py`의 `run_benchmark()`부터 읽으면 임베딩 실험 전체를 따라갈 수 있습니다. `embedding-benchmark` 명령은 `embedding/__main__.py`의 `main()`을 실행합니다. 기존 `embedding.run` 직접 실행은 새 CLI에 위임합니다. KoBLEX는 `python -m llm_benchmark.koblex`로 별도 실행하며 모델을 로드하지 않습니다. `prepare()`는 `load_sources → map_sources → partition_dataset → 검증·저장` 순서로 실행하며, 각 단계는 `SourceDataset → MappedDataset → PreparedDataset` 객체로 연결합니다. 원본 읽기·저장만 파일에 접근합니다.
+
+실험 내부는 상대 import, 공통 모듈은 절대 import를 사용합니다. 새로 정의하거나 수정하는 내부 dataclass는 `slots=True, kw_only=True`를 기본으로 하고 원본 필드는 TypedDict로 명시합니다. 외부 입력 검증과 기존 파일·캐시의 직렬화 형식 및 필드 순서를 보존합니다.
 
 의존 방향은 `embedding → common`, `koblex → common`입니다. 두 실험은 서로 import하지 않고, `common`도 실험 코드를 import하지 않습니다. `common`은 표준 라이브러리만 사용하며 법률 정답·청킹·검색 지표·모델 설정은 각 실험에 둡니다. JSON 해시는 기존 EVE 캐시와 KoBLEX ID가 바뀌지 않도록 두 직렬화 형식을 명시적으로 유지합니다.
 

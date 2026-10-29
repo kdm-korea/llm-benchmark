@@ -1,0 +1,29 @@
+{
+  "identity": {
+    "schema_version": 1,
+    "model": {
+      "id": "fixture",
+      "revision": "abc"
+    },
+    "kind": "document",
+    "input_hash": "fabb4877d51d8a25207814582a1c7089e703ac82af9d92b6e37c5d39e770032e",
+    "dataset_revision": "dataset",
+    "versions": {
+      "sentence-transformers": "fixture-version",
+      "transformers": "fixture-version",
+      "torch": "fixture-version",
+      "numpy": "fixture-version"
+    },
+    "normalize": true,
+    "prompt": "",
+    "runtime": {
+      "cache_dir": "vectors"
+    },
+    "device": "cpu",
+    "dtype": "float32"
+  },
+  "stats": {
+    "count": 2
+  },
+  "vector_sha256": "f9aa4e4e9747271d3d4dd5aeea3c0ea52ab528d4170c61d0b87f7de6e0be3ca9"
+}
